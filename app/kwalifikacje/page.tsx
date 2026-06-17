@@ -39,6 +39,29 @@ const qualifications = [
   }
 ];
 
+const certificates = [
+  {
+    title: "CIOL — Chartered Institute of Linguists",
+    text: "Członkostwo w brytyjskiej instytucji zawodowej zrzeszającej lingwistów. Numer CIOL: 94280.",
+    tag: "CIOL no. 94280"
+  },
+  {
+    title: "CIOL Certified Translation Member",
+    text: "Potwierdzenie statusu członkowskiego istotnego dla pracy z tłumaczeniami specjalistycznymi i poświadczonymi.",
+    tag: "Certified Translation"
+  },
+  {
+    title: "TEPIS Member 2026",
+    text: "Członkostwo w środowisku tłumaczy przysięgłych i specjalistycznych, ważne w pracy z dokumentami prawnymi i urzędowymi.",
+    tag: "TEPIS"
+  },
+  {
+    title: "Tłumacz przysięgły TP/27/17",
+    text: "Uprawnienia państwowe do sporządzania poświadczonych tłumaczeń pisemnych z języka ukraińskiego.",
+    tag: "Minister Sprawiedliwości"
+  }
+];
+
 const expertise = [
   "dokumenty sądowe",
   "akta spraw karnych",
@@ -156,6 +179,10 @@ export default function KwalifikacjePage() {
           font-size: 13px;
           font-weight: 750;
           color: var(--muted);
+        }
+
+        .nav-links a:hover {
+          color: var(--ink);
         }
 
         .nav-cta {
@@ -333,6 +360,12 @@ export default function KwalifikacjePage() {
           gap: 16px;
         }
 
+        .certificate-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+
         .card {
           border: 1px solid var(--line);
           background: rgba(255,250,242,0.76);
@@ -353,6 +386,52 @@ export default function KwalifikacjePage() {
           color: var(--muted);
           font-size: 16px;
           line-height: 1.55;
+        }
+
+        .certificate-card {
+          min-height: 260px;
+          background:
+            linear-gradient(145deg, rgba(255,250,242,0.92), rgba(239,228,207,0.66));
+          border-color: rgba(182, 138, 58, 0.28);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .certificate-card::after {
+          content: "";
+          position: absolute;
+          width: 180px;
+          height: 180px;
+          right: -70px;
+          bottom: -80px;
+          border-radius: 50%;
+          background: rgba(23, 59, 47, 0.08);
+        }
+
+        .certificate-card h3,
+        .certificate-card p,
+        .certificate-card .tag {
+          position: relative;
+          z-index: 1;
+        }
+
+        .certificate-placeholder {
+          margin-bottom: 18px;
+          width: 100%;
+          height: 110px;
+          border-radius: 18px;
+          border: 1px dashed rgba(23, 59, 47, 0.24);
+          background: rgba(233, 239, 233, 0.72);
+          display: grid;
+          place-items: center;
+          color: var(--green);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          position: relative;
+          z-index: 1;
         }
 
         .tag {
@@ -458,6 +537,12 @@ export default function KwalifikacjePage() {
           flex-wrap: wrap;
         }
 
+        @media (max-width: 1100px) {
+          .certificate-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
         @media (max-width: 980px) {
           .nav-links {
             display: none;
@@ -481,6 +566,12 @@ export default function KwalifikacjePage() {
 
           .section-intro {
             margin-top: 14px;
+          }
+        }
+
+        @media (max-width: 620px) {
+          .certificate-grid {
+            grid-template-columns: 1fr;
           }
         }
 
@@ -592,6 +683,30 @@ export default function KwalifikacjePage() {
         <div className="grid-3">
           {qualifications.map((item) => (
             <article className="card" key={item.title}>
+              <span className="tag">{item.tag}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-header">
+          <div>
+            <div className="section-kicker">Certyfikaty</div>
+            <h2>Dokumenty potwierdzające kwalifikacje.</h2>
+          </div>
+          <p className="section-intro">
+            W kolejnym etapie dodamy tutaj skany i grafiki certyfikatów z folderu
+            public/images/certyfikaty.
+          </p>
+        </div>
+
+        <div className="certificate-grid">
+          {certificates.map((item) => (
+            <article className="card certificate-card" key={item.title}>
+              <div className="certificate-placeholder">Miejsce na certyfikat</div>
               <span className="tag">{item.tag}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
