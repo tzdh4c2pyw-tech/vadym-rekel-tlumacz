@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     "",
+    "/kwalifikacje",
     "/tlumaczenia-sadowe-ukrainski",
     "/tlumaczenia-dla-prokuratury",
     "/tlumaczenia-dla-policji",
@@ -18,6 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.85
+    priority: route === "" ? 1 : route === "/kwalifikacje" ? 0.9 : 0.85
   }));
 }

@@ -178,6 +178,10 @@ export default function Home() {
           white-space: nowrap;
         }
 
+        .nav-links a:hover {
+          color: var(--ink);
+        }
+
         .nav-cta {
           padding: 11px 16px;
           border-radius: 999px;
@@ -592,7 +596,7 @@ export default function Home() {
 
           <div className="nav-links">
             <a href="#uslugi">Usługi</a>
-            <a href="#kwalifikacje">Kwalifikacje</a>
+            <a href="/kwalifikacje">Kwalifikacje</a>
             <a href="#specjalizacja">Specjalizacja</a>
             <a href="#mapa">Lokalizacja</a>
             <a href="#faq">FAQ</a>
@@ -708,6 +712,12 @@ export default function Home() {
                 {item}
               </span>
             ))}
+          </div>
+
+          <div className="actions">
+            <a className="button button-secondary" href="/kwalifikacje">
+              Zobacz pełne kwalifikacje
+            </a>
           </div>
         </div>
       </section>
