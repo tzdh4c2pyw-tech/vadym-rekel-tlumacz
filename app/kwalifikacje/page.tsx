@@ -41,24 +41,46 @@ const qualifications = [
 
 const certificates = [
   {
+    title: "Tłumacz przysięgły języka ukraińskiego TP/27/17",
+    text: "Zaświadczenie Ministra Sprawiedliwości potwierdzające wpis na listę tłumaczy przysięgłych języka ukraińskiego.",
+    tag: "Minister Sprawiedliwości",
+    image: "/images/certyfikaty/tlumacz-przysiegly-ukrainski-tp-27-17-vadym-rekel.png",
+    alt: "Zaświadczenie tłumacza przysięgłego języka ukraińskiego TP 27 17 Vadym Rekel"
+  },
+  {
+    title: "MBA — Master of Business Administration",
+    text: "Certificate of Completion of Postgraduate Studies w zakresie Master of Business Administration, WSB-NLU, 2025.",
+    tag: "MBA · WSB-NLU",
+    image: "/images/certyfikaty/mba-certificate-vadym-rekel-wsb-nlu-2025.png",
+    alt: "Certyfikat MBA Vadym Rekel WSB-NLU 2025"
+  },
+  {
     title: "CIOL — Chartered Institute of Linguists",
-    text: "Członkostwo w brytyjskiej instytucji zawodowej zrzeszającej lingwistów. Numer CIOL: 94280.",
-    tag: "CIOL no. 94280"
+    text: "Certyfikat członkostwa w Chartered Institute of Linguists. Numer CIOL: 94280.",
+    tag: "CIOL no. 94280",
+    image: "/images/certyfikaty/ciol-certificate-vadym-rekel-mcil.png",
+    alt: "Certyfikat CIOL Chartered Institute of Linguists Vadym Rekel MCIL"
+  },
+  {
+    title: "CIOL Associate Membership",
+    text: "Potwierdzenie członkostwa ACIL w Chartered Institute of Linguists.",
+    tag: "CIOL · ACIL",
+    image: "/images/certyfikaty/ciol-membership-vadym-rekel-acil.png",
+    alt: "Certyfikat członkostwa CIOL ACIL Vadym Rekel"
   },
   {
     title: "CIOL Certified Translation Member",
-    text: "Potwierdzenie statusu członkowskiego istotnego dla pracy z tłumaczeniami specjalistycznymi i poświadczonymi.",
-    tag: "Certified Translation"
+    text: "Potwierdzenie statusu członka CIOL w zakresie tłumaczeń specjalistycznych i poświadczonych.",
+    tag: "Certified Translation",
+    image: "/images/certyfikaty/certified%20translation%20ciol%20member%20vadym%20rekel.png",
+    alt: "CIOL Certified Translation Member Vadym Rekel"
   },
   {
     title: "TEPIS Member 2026",
-    text: "Członkostwo w środowisku tłumaczy przysięgłych i specjalistycznych, ważne w pracy z dokumentami prawnymi i urzędowymi.",
-    tag: "TEPIS"
-  },
-  {
-    title: "Tłumacz przysięgły TP/27/17",
-    text: "Uprawnienia państwowe do sporządzania poświadczonych tłumaczeń pisemnych z języka ukraińskiego.",
-    tag: "Minister Sprawiedliwości"
+    text: "Członkostwo w środowisku tłumaczy przysięgłych i specjalistycznych, istotne w pracy z dokumentami prawnymi i urzędowymi.",
+    tag: "TEPIS",
+    image: "/images/certyfikaty/tepis-member-2026-vadym-rekel.png",
+    alt: "TEPIS Member 2026 Vadym Rekel"
   }
 ];
 
@@ -362,7 +384,7 @@ export default function KwalifikacjePage() {
 
         .certificate-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
 
@@ -389,7 +411,7 @@ export default function KwalifikacjePage() {
         }
 
         .certificate-card {
-          min-height: 260px;
+          min-height: 420px;
           background:
             linear-gradient(145deg, rgba(255,250,242,0.92), rgba(239,228,207,0.66));
           border-color: rgba(182, 138, 58, 0.28);
@@ -410,28 +432,30 @@ export default function KwalifikacjePage() {
 
         .certificate-card h3,
         .certificate-card p,
-        .certificate-card .tag {
+        .certificate-card .tag,
+        .certificate-image {
           position: relative;
           z-index: 1;
         }
 
-        .certificate-placeholder {
+        .certificate-image {
           margin-bottom: 18px;
           width: 100%;
-          height: 110px;
+          height: 230px;
           border-radius: 18px;
-          border: 1px dashed rgba(23, 59, 47, 0.24);
-          background: rgba(233, 239, 233, 0.72);
-          display: grid;
-          place-items: center;
-          color: var(--green);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 900;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          position: relative;
-          z-index: 1;
+          overflow: hidden;
+          border: 1px solid rgba(23, 59, 47, 0.16);
+          background: rgba(255, 250, 242, 0.72);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .certificate-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block;
         }
 
         .tag {
@@ -675,8 +699,8 @@ export default function KwalifikacjePage() {
             <h2>Potwierdzone kwalifikacje zawodowe.</h2>
           </div>
           <p className="section-intro">
-            Ta sekcja może później zostać uzupełniona o skany certyfikatów,
-            dyplomów i dokumentów potwierdzających kwalifikacje.
+            Kwalifikacje potwierdzają przygotowanie do pracy z dokumentami
+            sądowymi, urzędowymi, technicznymi i dowodowymi.
           </p>
         </div>
 
@@ -698,15 +722,17 @@ export default function KwalifikacjePage() {
             <h2>Dokumenty potwierdzające kwalifikacje.</h2>
           </div>
           <p className="section-intro">
-            W kolejnym etapie dodamy tutaj skany i grafiki certyfikatów z folderu
-            public/images/certyfikaty.
+            Wybrane dokumenty i certyfikaty potwierdzające uprawnienia,
+            członkostwo zawodowe oraz przygotowanie specjalistyczne.
           </p>
         </div>
 
         <div className="certificate-grid">
           {certificates.map((item) => (
             <article className="card certificate-card" key={item.title}>
-              <div className="certificate-placeholder">Miejsce na certyfikat</div>
+              <div className="certificate-image">
+                <img src={item.image} alt={item.alt} loading="lazy" />
+              </div>
               <span className="tag">{item.tag}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
