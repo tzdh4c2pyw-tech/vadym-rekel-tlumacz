@@ -135,52 +135,58 @@ const languages = [
 
 const officePhotos = [
   {
+    src: "/images/kancelaria-tlumacza-przysieglego-stanowisko-pracy-vadym-rekel.jpg",
+    alt: "Vadym Rekel przy stanowisku pracy w kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Stanowisko pracy tłumacza przysięgłego",
+    text: "Praca z dokumentami procesowymi, urzędowymi, poświadczonymi i materiałami przekazywanymi do spraw formalnych."
+  },
+  {
+    src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-przysieglego-vadym-rekel.jpg",
+    alt: "Stanowisko administracyjne w kancelarii tłumacza przysięgłego Vadym Rekel",
+    title: "Stanowisko administracyjne",
+    text: "Obsługa korespondencji, pieczęci, kompletowanie dokumentów, organizacja zleceń i przygotowanie materiałów do wydania."
+  },
+  {
     src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
     alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
     title: "Kancelaria w Krakowie",
-    text: "Miejsce pracy z dokumentami poświadczonymi, procesowymi i urzędowymi."
+    text: "Realne miejsce pracy z dokumentami poświadczonymi, procesowymi, urzędowymi i materiałami do akt sprawy."
   },
   {
     src: "/images/biuro-tlumacza-przysieglego-jezyk-ukrainski-krakow-vadym-rekel.jpg",
     alt: "Biuro tłumacza przysięgłego języka ukraińskiego w Krakowie",
     title: "Biuro tłumacza przysięgłego",
-    text: "Przestrzeń do pracy z dokumentami wymagającymi zachowania struktury formalnej."
+    text: "Przestrzeń do pracy z dokumentami wymagającymi zachowania struktury, oznaczeń, terminologii i poufności."
   },
   {
     src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
-    alt: "Stanowisko pracy tłumacza przysięgłego języka ukraińskiego",
-    title: "Stanowisko tłumacza",
-    text: "Praca z dokumentami sądowymi, prokuratorskimi, policyjnymi i urzędowymi."
+    alt: "Stanowisko tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Praca z dokumentami i plikami",
+    text: "Opracowanie dokumentów sądowych, prokuratorskich, policyjnych, urzędowych oraz materiałów elektronicznych."
   },
   {
     src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
-    alt: "Stanowisko komputerowe biegłego tłumacza",
+    alt: "Stanowisko komputerowe do pracy z materiałem cyfrowym i dokumentami PDF",
     title: "Materiał cyfrowy",
-    text: "Praca z plikami PDF, raportami, komunikatorami i dużymi zbiorami danych."
-  },
-  {
-    src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-ukrainski-krakow-vadym-rekel.jpg",
-    alt: "Stanowisko administracyjne w kancelarii tłumacza",
-    title: "Stanowisko administracyjne",
-    text: "Obsługa korespondencji, kompletowanie dokumentów i organizacja zleceń."
+    text: "Praca z plikami PDF, raportami, komunikatorami, zrzutami ekranu i dużymi zbiorami danych."
   },
   {
     src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Laptop z zabezpieczeniami w kancelarii tłumacza",
-    title: "Praca z plikami",
-    text: "Obsługa dokumentów elektronicznych, plików PDF, raportów i materiałów źródłowych."
+    alt: "Laptop z zabezpieczeniami w kancelarii tłumacza przysięgłego",
+    title: "Pliki elektroniczne i raporty",
+    text: "Obsługa dokumentów elektronicznych, raportów technicznych, danych źródłowych i materiałów wymagających analizy."
   },
   {
     src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Drukarki w kancelarii tłumacza przysięgłego",
+    alt: "Drukarki w kancelarii tłumacza przysięgłego języka ukraińskiego",
     title: "Druk i kompletowanie",
-    text: "Przygotowanie tłumaczeń poświadczonych do odbioru, wysyłki albo złożenia do akt."
+    text: "Przygotowanie tłumaczeń poświadczonych do odbioru, wysyłki, przekazania do kancelarii albo złożenia do akt."
   },
   {
     src: "/images/niszczarka-dokumentow-hsm-shredstar-x15-kancelaria-vadym-rekel.jpg",
-    alt: "Niszczarka dokumentów w kancelarii tłumacza",
-    title: "Dokumenty robocze",
-    text: "Kontrola obiegu materiałów roboczych zawierających dane osobowe lub informacje procesowe."
+    alt: "Niszczarka dokumentów w kancelarii tłumacza przysięgłego",
+    title: "Dokumenty robocze i poufność",
+    text: "Kontrola obiegu materiałów roboczych zawierających dane osobowe, informacje procesowe albo treści prywatne."
   }
 ];
 
@@ -859,7 +865,7 @@ export default function HomePage() {
 
         .photo-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
 
@@ -868,10 +874,18 @@ export default function HomePage() {
           padding: 0;
         }
 
+        .photo-card.featured-photo {
+          grid-column: span 2;
+        }
+
         .photo {
-          height: 210px;
+          height: 230px;
           overflow: hidden;
           background: var(--paper-2);
+        }
+
+        .featured-photo .photo {
+          height: 360px;
         }
 
         .photo img {
@@ -1079,6 +1093,10 @@ export default function HomePage() {
             grid-template-columns: repeat(2, 1fr);
           }
 
+          .photo-card.featured-photo {
+            grid-column: span 2;
+          }
+
           .hero-profile {
             min-height: auto;
           }
@@ -1110,6 +1128,15 @@ export default function HomePage() {
           .photo-grid,
           .qualification-grid {
             grid-template-columns: 1fr;
+          }
+
+          .photo-card.featured-photo {
+            grid-column: span 1;
+          }
+
+          .featured-photo .photo,
+          .photo {
+            height: 240px;
           }
 
           .hero {
@@ -1440,18 +1467,22 @@ export default function HomePage() {
         <div className="section-header">
           <div>
             <div className="section-kicker">Kancelaria</div>
-            <h2>Kancelaria, sprzęt i obieg dokumentów.</h2>
+            <h2>Kancelaria tłumacza przysięgłego i zaplecze pracy z dokumentami.</h2>
           </div>
           <p className="section-intro">
-            Tłumaczenia poświadczone wymagają nie tylko przekładu, ale również
-            prawidłowego przygotowania dokumentu, druku, kompletowania, kontroli
-            wersji i zachowania poufności materiałów.
+            Tłumaczenia poświadczone i procesowe wymagają nie tylko przekładu,
+            ale również właściwej organizacji dokumentów, kontroli wersji,
+            przygotowania wydruków, kompletowania materiałów oraz zachowania
+            poufności.
           </p>
         </div>
 
         <div className="photo-grid">
-          {officePhotos.map((item) => (
-            <article className="card photo-card" key={item.src}>
+          {officePhotos.map((item, index) => (
+            <article
+              className={`card photo-card ${index === 0 ? "featured-photo" : ""}`}
+              key={item.src}
+            >
               <div className="photo">
                 <img src={item.src} alt={item.alt} loading="lazy" />
               </div>
@@ -1509,8 +1540,8 @@ export default function HomePage() {
           </article>
 
           <article className="card">
-            <span className="tag">Zakres poboczny</span>
-            <h3>Dokumenty prywatne i urzędowe.</h3>
+            <span className="tag">Dokumenty prywatne</span>
+            <h3>Dokumenty prywatne i urzędowe z Ukrainy.</h3>
             <p>
               Kancelaria obsługuje również dokumenty osób prywatnych: dokumenty
               z Ukrainy, akty stanu cywilnego, pełnomocnictwa, oświadczenia,
