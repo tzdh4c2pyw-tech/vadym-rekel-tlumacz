@@ -21,7 +21,10 @@ export const metadata: Metadata = {
   ]
 };
 
-const email = "vadym.rekel@tlumaczrosyjskiegoiukrainskiego.pl";
+const email = "biegly@vadymrekel.pl";
+const phoneDisplay = "883 040 483";
+const phoneHref = "+48883040483";
+const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
 const mainSegments = [
   {
@@ -135,13 +138,13 @@ const languages = [
 
 const officePhotos = [
   {
-    src: "/images/kancelaria-tlumacza-przysieglego-stanowisko-pracy-vadym-rekel.jpg",
+    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
     alt: "Vadym Rekel przy stanowisku pracy w kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
     title: "Stanowisko pracy tłumacza przysięgłego",
     text: "Praca z dokumentami procesowymi, urzędowymi, poświadczonymi i materiałami przekazywanymi do spraw formalnych."
   },
   {
-    src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-przysieglego-vadym-rekel.jpg",
+    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
     alt: "Stanowisko administracyjne w kancelarii tłumacza przysięgłego Vadym Rekel",
     title: "Stanowisko administracyjne",
     text: "Obsługa korespondencji, pieczęci, kompletowanie dokumentów, organizacja zleceń i przygotowanie materiałów do wydania."
@@ -358,7 +361,7 @@ export default function HomePage() {
         }
 
         .nav-cta {
-          padding: 11px 16px;
+          padding: 12px 18px;
           border-radius: 999px;
           background: var(--green);
           color: #fff;
@@ -555,21 +558,6 @@ export default function HomePage() {
           overflow: hidden;
         }
 
-        .signature::before {
-          content: "";
-          position: absolute;
-          left: 18px;
-          right: 18px;
-          bottom: 18px;
-          height: 1px;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(19, 16, 12, 0.26),
-            transparent
-          );
-        }
-
         .signature-name {
           position: relative;
           z-index: 1;
@@ -581,7 +569,6 @@ export default function HomePage() {
           font-weight: 400;
           letter-spacing: -0.06em;
           transform: rotate(-5deg);
-          text-shadow: 0 1px 0 rgba(255,255,255,0.45);
           animation: signatureInk 3.6s ease-in-out infinite;
         }
 
@@ -1061,9 +1048,114 @@ export default function HomePage() {
           font-weight: 850;
         }
 
+        .floating-quote {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 150;
+          width: min(360px, calc(100vw - 32px));
+          border-radius: 26px;
+          background: rgba(255, 250, 242, 0.96);
+          border: 1px solid rgba(182, 138, 58, 0.42);
+          box-shadow: 0 26px 80px rgba(18, 15, 10, 0.26);
+          backdrop-filter: blur(18px);
+          overflow: hidden;
+        }
+
+        .floating-quote-top {
+          padding: 14px 16px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .floating-label {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .floating-label::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--green);
+          animation: pulseGreen 2.2s infinite;
+        }
+
+        @keyframes pulseGreen {
+          0% { box-shadow: 0 0 0 0 rgba(18, 60, 49, 0.42); }
+          70% { box-shadow: 0 0 0 10px rgba(18, 60, 49, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(18, 60, 49, 0); }
+        }
+
+        .floating-close-note {
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 800;
+        }
+
+        .floating-main {
+          padding: 12px 16px 16px;
+        }
+
+        .floating-phone {
+          min-height: 58px;
+          border-radius: 18px;
+          background: linear-gradient(145deg, var(--green), var(--green-2));
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 20px;
+          font-weight: 950;
+          box-shadow: 0 16px 36px rgba(18, 60, 49, 0.26);
+          margin-bottom: 10px;
+        }
+
+        .floating-secondary {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+
+        .floating-link {
+          min-height: 42px;
+          border-radius: 15px;
+          background: rgba(255,255,255,0.72);
+          border: 1px solid var(--line);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 12px;
+          color: var(--ink);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 900;
+        }
+
+        .floating-text {
+          margin: 10px 0 0;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          line-height: 1.45;
+        }
+
         .footer {
           border-top: 1px solid var(--line);
-          padding: 34px 22px 46px;
+          padding: 34px 22px 120px;
           color: var(--muted);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
@@ -1188,13 +1280,35 @@ export default function HomePage() {
             padding-bottom: 72%;
             border-radius: 18px;
           }
+
+          .floating-quote {
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            width: auto;
+            border-radius: 22px;
+          }
+
+          .floating-phone {
+            min-height: 54px;
+            font-size: 18px;
+          }
+
+          .floating-secondary {
+            grid-template-columns: 1fr;
+          }
+
+          .footer {
+            padding-bottom: 230px;
+          }
         }
 
         @media (prefers-reduced-motion: reduce) {
           .pulse-dot,
           .signature,
           .signature-name,
-          .signature-name::after {
+          .signature-name::after,
+          .floating-label::before {
             animation: none;
           }
 
@@ -1229,8 +1343,8 @@ export default function HomePage() {
             <a href="#kancelaria">Kancelaria</a>
             <a href="#lokalizacja">Lokalizacja</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
-            <a className="nav-cta" href={`mailto:${email}`}>
-              Szybka wycena
+            <a className="nav-cta" href={`tel:${phoneHref}`}>
+              {phoneDisplay}
             </a>
           </div>
         </nav>
@@ -1256,8 +1370,8 @@ export default function HomePage() {
             <a className="button button-primary" href={`mailto:${email}`}>
               Prześlij dokument do wyceny
             </a>
-            <a className="button button-secondary" href="#dla-organow">
-              Zobacz zakres pracy
+            <a className="button button-secondary" href={`tel:${phoneHref}`}>
+              Zadzwoń: {phoneDisplay}
             </a>
           </div>
 
@@ -1292,6 +1406,7 @@ export default function HomePage() {
               <span>Wpis na listę Ministra Sprawiedliwości: TP/27/17</span>
               <span>CIOL no. 94280 · TEPIS Member 2026</span>
               <span>Siedziba kancelarii: Kraków</span>
+              <span>Kontakt: {phoneDisplay} · {email}</span>
             </div>
           </div>
         </aside>
@@ -1627,9 +1742,23 @@ export default function HomePage() {
             </p>
 
             <div className="contact-actions" style={{ marginTop: 22 }}>
-              <a className="contact-link" href={`mailto:${email}`}>
-                {email}
+              <a className="contact-link" href={`tel:${phoneHref}`}>
+                Telefon: {phoneDisplay}
               </a>
+
+              <a className="contact-link" href={`mailto:${email}`}>
+                E-mail: {email}
+              </a>
+
+              <a
+                className="contact-link"
+                href={linkedInUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn — Vadym Rekel
+              </a>
+
               <a className="contact-link" href="/kwalifikacje">
                 Kwalifikacje i certyfikaty
               </a>
@@ -1637,6 +1766,39 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <aside className="floating-quote" aria-label="Pływający przycisk szybkiej wyceny">
+        <div className="floating-quote-top">
+          <span className="floating-label">Szybka wycena</span>
+          <span className="floating-close-note">kancelaria</span>
+        </div>
+
+        <div className="floating-main">
+          <a className="floating-phone" href={`tel:${phoneHref}`}>
+            📞 {phoneDisplay}
+          </a>
+
+          <div className="floating-secondary">
+            <a className="floating-link" href={`mailto:${email}`}>
+              Wyślij dokument
+            </a>
+
+            <a
+              className="floating-link"
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+
+          <p className="floating-text">
+            Do wstępnej wyceny wystarczy skan, PDF, zdjęcie dokumentu albo opis
+            czynności.
+          </p>
+        </div>
+      </aside>
 
       <footer className="footer">
         <div className="footer-inner">
