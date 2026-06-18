@@ -25,6 +25,7 @@ const email = "biegly@vadymrekel.pl";
 const phoneDisplay = "883 040 483";
 const phoneHref = "+48883040483";
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
+const googleReviewUrl = "https://g.page/r/CXDrBKfVsJJgEBM/review";
 
 const mainSegments = [
   {
@@ -210,6 +211,14 @@ const qualifications = [
     title: "Przygotowanie specjalistyczne",
     text: "MBA, prawo nowych technologii, prawo własności intelektualnej i nowych technologii, prawo karne materialne i procesowe."
   }
+];
+
+const profileItems = [
+  "tłumacz przysięgły języka ukraińskiego, TP/27/17",
+  "praca z dokumentami procesowymi i materiałem dowodowym",
+  "tłumaczenia ustne przy czynnościach formalnych",
+  "materiał cyfrowy, komunikatory, raporty PDF i zrzuty ekranu",
+  "korespondencja osadzonych i dokumenty transgraniczne z Ukrainą"
 ];
 
 const nearbyPlaces = [
@@ -901,6 +910,140 @@ export default function HomePage() {
           gap: 16px;
         }
 
+        .profile-review-grid {
+          display: grid;
+          grid-template-columns: 1.08fr 0.92fr;
+          gap: 18px;
+          align-items: stretch;
+        }
+
+        .professional-list {
+          margin: 20px 0 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 10px;
+        }
+
+        .professional-list li {
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+          color: var(--muted);
+          font-size: 16px;
+          line-height: 1.45;
+        }
+
+        .professional-list li::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          margin-top: 8px;
+          border-radius: 50%;
+          background: var(--gold);
+          flex: 0 0 auto;
+        }
+
+        .linkedin-card {
+          border-radius: 24px;
+          background: linear-gradient(145deg, #ffffff, #fff8ea);
+          border: 1px solid rgba(0, 119, 181, 0.18);
+          padding: 24px;
+          display: grid;
+          gap: 18px;
+          box-shadow: 0 16px 46px rgba(25, 22, 18, 0.06);
+        }
+
+        .linkedin-head {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+
+        .linkedin-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          display: grid;
+          place-items: center;
+          background: #0077b5;
+          color: #fff;
+          flex: 0 0 auto;
+          box-shadow: 0 12px 26px rgba(0, 119, 181, 0.20);
+        }
+
+        .linkedin-head h3 {
+          margin: 0 0 3px;
+          font-size: 24px;
+          line-height: 1.05;
+          letter-spacing: -0.035em;
+        }
+
+        .linkedin-head p {
+          margin: 0;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+
+        .linkedin-button {
+          min-height: 48px;
+          border-radius: 999px;
+          background: #0077b5;
+          color: #fff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 18px;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 14px;
+          font-weight: 900;
+          box-shadow: 0 12px 28px rgba(0, 119, 181, 0.18);
+        }
+
+        .review-card {
+          border-radius: 24px;
+          background:
+            linear-gradient(145deg, rgba(255,250,242,0.94), rgba(248,241,230,0.86));
+          border: 1px solid rgba(182, 138, 58, 0.30);
+          padding: 28px;
+          box-shadow: 0 16px 46px rgba(25, 22, 18, 0.06);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 22px;
+        }
+
+        .review-card h3 {
+          margin: 0 0 12px;
+          font-size: 30px;
+          line-height: 1.04;
+          letter-spacing: -0.045em;
+        }
+
+        .review-card p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 16px;
+          line-height: 1.55;
+        }
+
+        .review-button {
+          min-height: 50px;
+          border-radius: 999px;
+          background: var(--gold);
+          color: #fff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 20px;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 14px;
+          font-weight: 950;
+          box-shadow: 0 14px 30px rgba(182, 138, 58, 0.22);
+        }
+
         .map-card {
           border-radius: var(--radius);
           background: rgba(255, 250, 242, 0.86);
@@ -1175,7 +1318,8 @@ export default function HomePage() {
           .section-header,
           .feature-band,
           .contact-card,
-          .map-header {
+          .map-header,
+          .profile-review-grid {
             grid-template-columns: 1fr;
           }
 
@@ -1342,6 +1486,7 @@ export default function HomePage() {
             <a href="#material-cyfrowy">Materiał cyfrowy</a>
             <a href="#kancelaria">Kancelaria</a>
             <a href="#lokalizacja">Lokalizacja</a>
+            <a href="#profil">Profil</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
             <a className="nav-cta" href={`tel:${phoneHref}`}>
               {phoneDisplay}
@@ -1406,7 +1551,9 @@ export default function HomePage() {
               <span>Wpis na listę Ministra Sprawiedliwości: TP/27/17</span>
               <span>CIOL no. 94280 · TEPIS Member 2026</span>
               <span>Siedziba kancelarii: Kraków</span>
-              <span>Kontakt: {phoneDisplay} · {email}</span>
+              <span>
+                Kontakt: {phoneDisplay} · {email}
+              </span>
             </div>
           </div>
         </aside>
@@ -1531,7 +1678,9 @@ export default function HomePage() {
       <section className="section">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">Ukraina · dokumenty transgraniczne</div>
+            <div className="section-kicker">
+              Ukraina · dokumenty transgraniczne
+            </div>
             <h2>Pomoc prawna i dokumenty z Ukrainą.</h2>
           </div>
 
@@ -1724,6 +1873,80 @@ export default function HomePage() {
             Małopolski, w tym z Wieliczki, Bochni, Myślenic, Tarnowa, Nowego
             Sącza i Nowego Targu.
           </p>
+        </div>
+      </section>
+
+      <section className="section" id="profil">
+        <div className="profile-review-grid">
+          <article className="card">
+            <span className="tag">Profil zawodowy</span>
+            <h3>Vadym Rekel — tłumacz przysięgły języka ukraińskiego.</h3>
+            <p>
+              Kancelaria obsługuje dokumenty procesowe, materiały dowodowe,
+              czynności ustne, dokumenty transgraniczne z Ukrainą oraz treści
+              specjalistyczne wymagające pracy z precyzyjną terminologią.
+            </p>
+
+            <ul className="professional-list">
+              {profileItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <div className="linkedin-card" style={{ marginTop: 24 }}>
+              <div className="linkedin-head">
+                <div className="linkedin-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
+                  </svg>
+                </div>
+
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p>
+                    Vadym Rekel · profil zawodowy, kwalifikacje i doświadczenie
+                    specjalistyczne.
+                  </p>
+                </div>
+              </div>
+
+              <a
+                className="linkedin-button"
+                href={linkedInUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Zobacz profil LinkedIn
+              </a>
+            </div>
+          </article>
+
+          <article className="review-card" id="opinie">
+            <div>
+              <span className="tag">Opinie Google</span>
+              <h3>Zostaw opinię o kancelarii.</h3>
+              <p>
+                Jeżeli współpraca była pomocna, możesz zostawić opinię w Google.
+                Opinie pomagają klientom ocenić zakres, terminowość i sposób
+                obsługi dokumentów.
+              </p>
+            </div>
+
+            <a
+              className="review-button"
+              href={googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dodaj opinię w Google
+            </a>
+          </article>
         </div>
       </section>
 
