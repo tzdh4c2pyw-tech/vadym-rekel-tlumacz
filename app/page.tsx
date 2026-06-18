@@ -119,6 +119,13 @@ const legalAidItems = [
   "dokumenty transgraniczne"
 ];
 
+const quoteSteps = [
+  "wyraźny skan, zdjęcie albo plik PDF",
+  "informacja o języku i celu wykorzystania",
+  "termin, jeżeli sprawa jest pilna",
+  "wskazanie, czy chodzi o tłumaczenie pisemne, ustne albo materiał cyfrowy"
+];
+
 const languages = [
   {
     title: "Ukraiński",
@@ -859,6 +866,24 @@ export default function HomePage() {
           color: var(--muted);
         }
 
+        .quote-list {
+          margin-top: 20px;
+          display: grid;
+          gap: 10px;
+        }
+
+        .quote-item {
+          border-radius: 18px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.12);
+          padding: 14px 16px;
+          color: rgba(255,255,255,0.78);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 780;
+          line-height: 1.4;
+        }
+
         .photo-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -942,64 +967,6 @@ export default function HomePage() {
           border-radius: 50%;
           background: var(--gold);
           flex: 0 0 auto;
-        }
-
-        .linkedin-card {
-          border-radius: 24px;
-          background: linear-gradient(145deg, #ffffff, #fff8ea);
-          border: 1px solid rgba(0, 119, 181, 0.18);
-          padding: 24px;
-          display: grid;
-          gap: 18px;
-          box-shadow: 0 16px 46px rgba(25, 22, 18, 0.06);
-        }
-
-        .linkedin-head {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
-
-        .linkedin-icon {
-          width: 48px;
-          height: 48px;
-          border-radius: 14px;
-          display: grid;
-          place-items: center;
-          background: #0077b5;
-          color: #fff;
-          flex: 0 0 auto;
-          box-shadow: 0 12px 26px rgba(0, 119, 181, 0.20);
-        }
-
-        .linkedin-head h3 {
-          margin: 0 0 3px;
-          font-size: 24px;
-          line-height: 1.05;
-          letter-spacing: -0.035em;
-        }
-
-        .linkedin-head p {
-          margin: 0;
-          color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          line-height: 1.4;
-        }
-
-        .linkedin-button {
-          min-height: 48px;
-          border-radius: 999px;
-          background: #0077b5;
-          color: #fff;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 18px;
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 14px;
-          font-weight: 900;
-          box-shadow: 0 12px 28px rgba(0, 119, 181, 0.18);
         }
 
         .review-card {
@@ -1307,10 +1274,47 @@ export default function HomePage() {
         .footer-inner {
           max-width: 1220px;
           margin: 0 auto;
-          display: flex;
-          justify-content: space-between;
-          gap: 18px;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: 1.2fr 0.9fr 0.9fr;
+          gap: 22px;
+          align-items: start;
+        }
+
+        .footer-title {
+          display: block;
+          color: var(--ink);
+          font-weight: 900;
+          margin-bottom: 8px;
+        }
+
+        .footer-line {
+          display: block;
+          margin-top: 6px;
+        }
+
+        .footer-links {
+          display: grid;
+          gap: 8px;
+        }
+
+        .footer-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          width: fit-content;
+          color: var(--green);
+          font-weight: 900;
+        }
+
+        .footer-linkedin-icon {
+          width: 20px;
+          height: 20px;
+          border-radius: 5px;
+          display: inline-grid;
+          place-items: center;
+          background: #0077b5;
+          color: #fff;
+          flex: 0 0 auto;
         }
 
         @media (max-width: 1120px) {
@@ -1319,7 +1323,8 @@ export default function HomePage() {
           .feature-band,
           .contact-card,
           .map-header,
-          .profile-review-grid {
+          .profile-review-grid,
+          .footer-inner {
             grid-template-columns: 1fr;
           }
 
@@ -1486,7 +1491,7 @@ export default function HomePage() {
             <a href="#material-cyfrowy">Materiał cyfrowy</a>
             <a href="#kancelaria">Kancelaria</a>
             <a href="#lokalizacja">Lokalizacja</a>
-            <a href="#profil">Profil</a>
+            <a href="#kontakt">Kontakt</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
             <a className="nav-cta" href={`tel:${phoneHref}`}>
               {phoneDisplay}
@@ -1703,6 +1708,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section" id="wycena">
+        <div className="feature-band">
+          <div>
+            <div className="section-kicker">Wycena</div>
+            <h2>Jak przygotować materiał do wstępnej wyceny.</h2>
+          </div>
+
+          <div>
+            <p>
+              Do oceny kosztu i terminu wystarczy przesłać dokument albo krótki
+              opis czynności. W przypadku większych akt, raportów lub materiału
+              cyfrowego warto wskazać, które fragmenty mają znaczenie dla sprawy.
+            </p>
+
+            <div className="quote-list">
+              {quoteSteps.map((item) => (
+                <div className="quote-item" key={item}>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="jezyki">
         <div className="section-header">
           <div>
@@ -1731,7 +1761,9 @@ export default function HomePage() {
         <div className="section-header">
           <div>
             <div className="section-kicker">Kancelaria</div>
-            <h2>Kancelaria tłumacza przysięgłego i zaplecze pracy z dokumentami.</h2>
+            <h2>
+              Kancelaria tłumacza przysięgłego i zaplecze pracy z dokumentami.
+            </h2>
           </div>
           <p className="section-intro">
             Tłumaczenia poświadczone i procesowe wymagają nie tylko przekładu,
@@ -1892,39 +1924,6 @@ export default function HomePage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
-
-            <div className="linkedin-card" style={{ marginTop: 24 }}>
-              <div className="linkedin-head">
-                <div className="linkedin-icon" aria-hidden="true">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                  </svg>
-                </div>
-
-                <div>
-                  <h3>LinkedIn</h3>
-                  <p>
-                    Vadym Rekel · profil zawodowy, kwalifikacje i doświadczenie
-                    specjalistyczne.
-                  </p>
-                </div>
-              </div>
-
-              <a
-                className="linkedin-button"
-                href={linkedInUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Zobacz profil LinkedIn
-              </a>
-            </div>
           </article>
 
           <article className="review-card" id="opinie">
@@ -1973,15 +1972,6 @@ export default function HomePage() {
                 E-mail: {email}
               </a>
 
-              <a
-                className="contact-link"
-                href={linkedInUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn — Vadym Rekel
-              </a>
-
               <a className="contact-link" href="/kwalifikacje">
                 Kwalifikacje i certyfikaty
               </a>
@@ -2006,13 +1996,8 @@ export default function HomePage() {
               Wyślij dokument
             </a>
 
-            <a
-              className="floating-link"
-              href={linkedInUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
+            <a className="floating-link" href="#wycena">
+              Jak przygotować?
             </a>
           </div>
 
@@ -2025,12 +2010,70 @@ export default function HomePage() {
 
       <footer className="footer">
         <div className="footer-inner">
-          <span>
-            © 2026 Kancelaria Vadym Rekel — Tłumacz przysięgły języka
-            ukraińskiego
-          </span>
-          <span>TP/27/17 · CIOL no. 94280 · TEPIS Member 2026</span>
-          <span>ul. Kielecka 2/53, 31-526 Kraków · cała Polska</span>
+          <div>
+            <span className="footer-title">
+              Kancelaria Vadym Rekel
+            </span>
+            <span className="footer-line">
+              Tłumacz przysięgły języka ukraińskiego
+            </span>
+            <span className="footer-line">
+              TP/27/17 · CIOL no. 94280 · TEPIS Member 2026
+            </span>
+          </div>
+
+          <div>
+            <span className="footer-title">Kontakt</span>
+            <span className="footer-line">
+              <a href={`tel:${phoneHref}`}>{phoneDisplay}</a>
+            </span>
+            <span className="footer-line">
+              <a href={`mailto:${email}`}>{email}</a>
+            </span>
+            <span className="footer-line">
+              ul. Kielecka 2/53, 31-526 Kraków
+            </span>
+          </div>
+
+          <div>
+            <span className="footer-title">Profil zawodowy</span>
+
+            <div className="footer-links">
+              <a
+                className="footer-link"
+                href={linkedInUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Vadym Rekel"
+              >
+                <span className="footer-linkedin-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
+                  </svg>
+                </span>
+                LinkedIn — Vadym Rekel
+              </a>
+
+              <a
+                className="footer-link"
+                href={googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Dodaj opinię w Google
+              </a>
+
+              <a className="footer-link" href="/kwalifikacje">
+                Kwalifikacje i certyfikaty
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </main>
