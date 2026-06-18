@@ -2,22 +2,21 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Kancelaria tłumacza przysięgłego języka ukraińskiego | Sąd, Prokuratura, Policja",
+    "Kancelaria tłumacza przysięgłego języka ukraińskiego | Kraków | Sąd, Policja, Prokuratura",
   description:
-    "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie. Tłumaczenia poświadczone i ustne dla sądów, prokuratury i Policji. Dokumenty procesowe, akta spraw, protokoły, czynności, komunikatory, raporty forensic, korespondencja osadzonych i pomoc prawna z Ukrainą.",
+    "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie. Tłumaczenia poświadczone i ustne dla sądów, Policji i prokuratury. Akta spraw, protokoły, czynności procesowe, dokumenty z Ukrainy, komunikatory, raporty forensic i korespondencja osadzonych.",
   keywords: [
+    "tłumacz przysięgły języka ukraińskiego Kraków",
     "kancelaria tłumacza przysięgłego języka ukraińskiego",
-    "tłumacz przysięgły języka ukraińskiego",
-    "tłumacz przysięgły ukraiński Kraków",
     "tłumacz ukraiński sąd",
-    "tłumacz ukraiński prokuratura",
     "tłumacz ukraiński Policja",
+    "tłumacz ukraiński prokuratura",
     "tłumaczenie akt sprawy ukraiński",
     "tłumaczenie protokołów ukraiński",
     "tłumaczenie komunikatorów ukraiński",
     "tłumaczenie raportów forensic",
     "tłumaczenie korespondencji osadzonych ukraiński",
-    "tłumacz ukraiński areszt śledczy"
+    "tłumacz przysięgły ukraiński cała Polska"
   ]
 };
 
@@ -32,67 +31,49 @@ const institutionPhoneHref = "+48883040483";
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 const googleReviewUrl = "https://g.page/r/CXDrBKfVsJJgEBM/review";
 
-const mainSegments = [
-  {
-    title: "Sądy",
-    label: "Dokumenty sądowe i akta spraw",
-    text: "Wyroki, postanowienia, wezwania, pouczenia, protokoły, pisma procesowe, akty oskarżenia, załączniki, opinie i materiały dowodowe.",
-    href: "/tlumaczenia-sadowe-ukrainski"
-  },
-  {
-    title: "Prokuratura",
-    label: "Dokumenty prokuratorskie i karne",
-    text: "Materiały z postępowań przygotowawczych, protokoły przesłuchań, postanowienia, wnioski o pomoc prawną, zawiadomienia i dokumenty organów ścigania.",
-    href: "/tlumaczenia-dla-prokuratury"
-  },
-  {
-    title: "Policja",
-    label: "Czynności policyjne i materiały dowodowe",
-    text: "Tłumaczenia ustne i pisemne przy czynnościach procesowych, przesłuchaniach, protokołach, pouczeniach, notatkach, komunikatorach, zrzutach ekranu, audio i wideo.",
-    href: "/tlumaczenia-dla-policji"
-  }
-];
-
 const trustItems = [
   "TP/27/17",
   "CIOL no. 94280",
   "TEPIS Member 2026",
   "Kraków",
-  "Obsługa dokumentów z całej Polski"
+  "Dokumenty z całej Polski"
 ];
 
-const commonMaterials = [
-  "protokoły przesłuchań",
-  "postanowienia",
-  "akty oskarżenia",
-  "wezwania i pouczenia",
-  "pisma procesowe",
-  "wnioski o pomoc prawną",
-  "odpowiedzi organów Ukrainy",
-  "zrzuty ekranu",
-  "komunikatory",
-  "raporty z telefonu",
-  "nagrania audio i wideo",
-  "pisma odręczne osadzonych"
-];
-
-const digitalItems = [
+const mainSegments = [
   {
-    title: "Komunikatory i wiadomości",
-    text: "Telegram, WhatsApp, Signal, Messenger, Viber, SMS/MMS, e-mail, historia połączeń, kontakty, załączniki i eksporty rozmów."
+    title: "Sądy",
+    label: "Dokumenty sądowe",
+    text: "Wyroki, postanowienia, wezwania, pouczenia, protokoły, pisma procesowe, załączniki i akta spraw.",
+    items: ["wyroki", "postanowienia", "protokoły", "pisma procesowe", "akta spraw", "załączniki"],
+    href: "/tlumaczenia-sadowe-ukrainski"
   },
   {
-    title: "Raporty z urządzeń mobilnych",
-    text: "Tłumaczenie treści z raportów wygenerowanych z telefonu albo innego urządzenia mobilnego: wiadomości, plików, zdjęć, danych aplikacji i fragmentów istotnych dla sprawy."
+    title: "Prokuratura",
+    label: "Postępowania karne",
+    text: "Materiały z postępowań przygotowawczych, protokoły przesłuchań, postanowienia, wnioski i odpowiedzi organów.",
+    items: ["przesłuchania", "postanowienia", "wnioski", "zawiadomienia", "akta", "pomoc prawna"],
+    href: "/tlumaczenia-dla-prokuratury"
   },
   {
-    title: "Duże wolumeny danych",
-    text: "Praca z obszernymi raportami PDF, eksportami rozmów, tabelami i zbiorami danych. Możliwe wyodrębnienie zakresu przeznaczonego do tłumaczenia."
-  },
-  {
-    title: "Oszustwa internetowe i kryptowaluty",
-    text: "Materiały dotyczące fraudów internetowych, portfeli kryptowalutowych, giełd, transakcji cyfrowych, korespondencji z platformami, AML/KYC i przepływów środków."
+    title: "Policja",
+    label: "Czynności i dowody",
+    text: "Tłumaczenia przy czynnościach, protokołach, pouczeniach, notatkach, komunikatorach i materiale cyfrowym.",
+    items: ["czynności", "pouczenia", "notatki", "komunikatory", "zrzuty ekranu", "nagrania"],
+    href: "/tlumaczenia-dla-policji"
   }
+];
+
+const caseMaterials = [
+  "protokół",
+  "dowód",
+  "załącznik",
+  "raport",
+  "komunikator",
+  "pismo odręczne",
+  "nagranie",
+  "zrzut ekranu",
+  "akta",
+  "korespondencja"
 ];
 
 const oralItems = [
@@ -120,6 +101,29 @@ const inmateItems = [
   "pisma do prokuratury"
 ];
 
+const digitalItems = [
+  {
+    code: "CHAT",
+    title: "Komunikatory",
+    text: "Telegram, WhatsApp, Signal, Messenger, Viber, SMS, MMS, e-mail, eksporty rozmów i załączniki."
+  },
+  {
+    code: "PDF",
+    title: "Raporty i duże pliki",
+    text: "Raporty PDF, eksporty danych, zestawienia, tabele, dokumenty wielostronicowe i załączniki."
+  },
+  {
+    code: "SCREEN",
+    title: "Zrzuty ekranu",
+    text: "Zrzuty z telefonu, komunikatorów, stron internetowych, aplikacji, systemów transakcyjnych i paneli użytkownika."
+  },
+  {
+    code: "CRYPTO",
+    title: "Krypto i fraud",
+    text: "Materiały dotyczące oszustw internetowych, transakcji cyfrowych, giełd, portfeli, AML/KYC i przepływów środków."
+  }
+];
+
 const legalAidItems = [
   "wnioski o pomoc prawną",
   "odpowiedzi organów ukraińskich",
@@ -133,10 +137,111 @@ const legalAidItems = [
 ];
 
 const quoteSteps = [
-  "wyraźny skan, zdjęcie albo plik PDF",
-  "informacja o języku i celu wykorzystania",
-  "termin, jeżeli sprawa jest pilna",
-  "wskazanie, czy chodzi o tłumaczenie pisemne, ustne albo materiał cyfrowy"
+  {
+    number: "01",
+    title: "Prześlij plik",
+    text: "Wyraźny skan, zdjęcie albo plik PDF. Przy większych aktach można wskazać wybrane fragmenty."
+  },
+  {
+    number: "02",
+    title: "Podaj cel",
+    text: "Napisz, czy dokument ma być wykorzystany w sądzie, urzędzie, postępowaniu, czynności albo sprawie prywatnej."
+  },
+  {
+    number: "03",
+    title: "Wskaż termin",
+    text: "Jeżeli sprawa jest pilna, podaj oczekiwany termin i sposób odbioru albo przekazania tłumaczenia."
+  },
+  {
+    number: "04",
+    title: "Otrzymaj wycenę",
+    text: "Po sprawdzeniu materiału otrzymasz informację o koszcie, terminie i dalszym trybie pracy."
+  }
+];
+
+const languages = [
+  {
+    title: "Ukraiński",
+    label: "Przysięgły i specjalistyczny",
+    text: "Główny język kancelarii. Tłumaczenia poświadczone pisemne oraz ustne przy czynnościach."
+  },
+  {
+    title: "Rosyjski",
+    label: "Specjalistyczny",
+    text: "Dokumenty prawne, techniczne, urzędowe, korespondencja, materiały cyfrowe i treści formalne."
+  },
+  {
+    title: "Angielski",
+    label: "Specjalistyczny",
+    text: "Dokumentacja prawna, technologiczna, biznesowa, IT, raporty i korespondencja specjalistyczna."
+  }
+];
+
+const officePhotos = [
+  {
+    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
+    alt: "Vadym Rekel przy stanowisku pracy w kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Stanowisko pracy tłumacza",
+    text: "Dokumenty procesowe, urzędowe, poświadczone i materiały przekazywane do spraw formalnych."
+  },
+  {
+    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
+    alt: "Stanowisko administracyjne w kancelarii tłumacza przysięgłego Vadym Rekel",
+    title: "Stanowisko administracyjne",
+    text: "Korespondencja, pieczęcie, kompletowanie dokumentów i przygotowanie materiałów do wydania."
+  },
+  {
+    src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
+    alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Kancelaria w Krakowie",
+    text: "Miejsce pracy z dokumentami poświadczonymi, procesowymi, urzędowymi i materiałami do akt."
+  },
+  {
+    src: "/images/biuro-tlumacza-przysieglego-jezyk-ukrainski-krakow-vadym-rekel.jpg",
+    alt: "Biuro tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Obieg dokumentów",
+    text: "Praca z dokumentami wymagającymi zachowania struktury, oznaczeń, terminologii i poufności."
+  },
+  {
+    src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
+    alt: "Stanowisko tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Praca z plikami",
+    text: "Dokumenty sądowe, prokuratorskie, policyjne, urzędowe oraz materiały elektroniczne."
+  },
+  {
+    src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
+    alt: "Stanowisko komputerowe do pracy z materiałem cyfrowym i dokumentami PDF",
+    title: "Materiał cyfrowy",
+    text: "Pliki PDF, raporty, komunikatory, zrzuty ekranu i większe zbiory danych."
+  },
+  {
+    src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
+    alt: "Laptop z zabezpieczeniami w kancelarii tłumacza przysięgłego",
+    title: "Raporty i dane",
+    text: "Dokumenty elektroniczne, raporty techniczne, dane źródłowe i materiały wymagające analizy."
+  },
+  {
+    src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
+    alt: "Drukarki w kancelarii tłumacza przysięgłego języka ukraińskiego",
+    title: "Druk i kompletowanie",
+    text: "Przygotowanie tłumaczeń poświadczonych do odbioru, wysyłki albo złożenia do akt."
+  },
+  {
+    src: "/images/niszczarka-dokumentow-hsm-shredstar-x15-kancelaria-vadym-rekel.jpg",
+    alt: "Niszczarka dokumentów w kancelarii tłumacza przysięgłego",
+    title: "Poufność materiałów",
+    text: "Kontrola dokumentów roboczych zawierających dane osobowe, informacje procesowe albo treści prywatne."
+  }
+];
+
+const qualifications = [
+  "Tłumacz przysięgły języka ukraińskiego, TP/27/17",
+  "CIOL no. 94280",
+  "TEPIS Member 2026",
+  "MBA",
+  "Prawo nowych technologii",
+  "Prawo własności intelektualnej i nowych technologii",
+  "Prawo karne materialne i procesowe"
 ];
 
 const cities = [
@@ -160,164 +265,92 @@ const cities = [
 
 const faqItems = [
   {
-    question: "Czy dokument można przesłać elektronicznie?",
-    answer:
-      "Tak. Do wstępnej wyceny wystarczy skan, zdjęcie albo plik PDF. Przy większych aktach warto wskazać, które fragmenty mają zostać przetłumaczone."
-  },
-  {
     question: "Który numer wybrać?",
     answer:
-      "Klienci indywidualni mogą kontaktować się pod numerem 735 753 383. W sprawach sądowych, policyjnych, prokuratorskich i czynnościach procesowych właściwy jest numer 883 040 483."
+      "Klienci indywidualni: 735 753 383. Sąd, Policja, prokuratura, czynności i materiał dowodowy: 883 040 483."
+  },
+  {
+    question: "Czy dokument można przesłać elektronicznie?",
+    answer:
+      "Tak. Do wstępnej wyceny wystarczy skan, zdjęcie albo plik PDF. Przy większych aktach warto wskazać właściwy zakres."
   },
   {
     question: "Czy kancelaria obsługuje dokumenty z całej Polski?",
     answer:
-      "Tak. Siedziba kancelarii znajduje się w Krakowie, ale dokumenty do wyceny można przesłać elektronicznie z całej Polski."
+      "Tak. Siedziba kancelarii znajduje się w Krakowie, ale dokumenty do wyceny można przesłać elektronicznie z dowolnego miasta."
   },
   {
     question: "Czy tłumaczone są komunikatory i zrzuty ekranu?",
     answer:
-      "Tak. Kancelaria pracuje z komunikatorami, zrzutami ekranu, raportami PDF, korespondencją, eksportami rozmów i innymi materiałami cyfrowymi przekazanymi do tłumaczenia."
+      "Tak. Kancelaria pracuje z komunikatorami, zrzutami ekranu, raportami PDF, korespondencją i innymi materiałami cyfrowymi."
   },
   {
     question: "Czy rosyjski i angielski są tłumaczeniami przysięgłymi?",
     answer:
-      "Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Język rosyjski i angielski występują w ofercie jako tłumaczenia specjalistyczne."
+      "Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Rosyjski i angielski są oferowane jako tłumaczenia specjalistyczne."
+  },
+  {
+    question: "Czy wykonywane są tłumaczenia ustne?",
+    answer:
+      "Tak. Dotyczy to w szczególności czynności procesowych, przesłuchań, czynności w sądzie, Policji, prokuraturze, aresztach i zakładach karnych."
   }
-];
-
-const languages = [
-  {
-    title: "Ukraiński",
-    label: "Tłumaczenia przysięgłe i specjalistyczne",
-    text: "Główny język kancelarii. Poświadczone tłumaczenia pisemne oraz tłumaczenia ustne przy czynnościach sądowych, prokuratorskich i policyjnych."
-  },
-  {
-    title: "Rosyjski",
-    label: "Tłumaczenia specjalistyczne",
-    text: "Dokumenty prawne, techniczne, urzędowe, korespondencja, materiały cyfrowe i treści wykorzystywane w sprawach formalnych."
-  },
-  {
-    title: "Angielski",
-    label: "Tłumaczenia specjalistyczne",
-    text: "Dokumentacja prawna, technologiczna, biznesowa, IT, raporty, korespondencja i materiały wymagające precyzyjnej terminologii."
-  }
-];
-
-const officePhotos = [
-  {
-    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
-    alt: "Vadym Rekel przy stanowisku pracy w kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Stanowisko pracy tłumacza przysięgłego",
-    text: "Praca z dokumentami procesowymi, urzędowymi, poświadczonymi i materiałami przekazywanymi do spraw formalnych."
-  },
-  {
-    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
-    alt: "Stanowisko administracyjne w kancelarii tłumacza przysięgłego Vadym Rekel",
-    title: "Stanowisko administracyjne",
-    text: "Obsługa korespondencji, pieczęci, kompletowanie dokumentów, organizacja zleceń i przygotowanie materiałów do wydania."
-  },
-  {
-    src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
-    alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Kancelaria w Krakowie",
-    text: "Realne miejsce pracy z dokumentami poświadczonymi, procesowymi, urzędowymi i materiałami do akt sprawy."
-  },
-  {
-    src: "/images/biuro-tlumacza-przysieglego-jezyk-ukrainski-krakow-vadym-rekel.jpg",
-    alt: "Biuro tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Biuro tłumacza przysięgłego",
-    text: "Przestrzeń do pracy z dokumentami wymagającymi zachowania struktury, oznaczeń, terminologii i poufności."
-  },
-  {
-    src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
-    alt: "Stanowisko tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Praca z dokumentami i plikami",
-    text: "Opracowanie dokumentów sądowych, prokuratorskich, policyjnych, urzędowych oraz materiałów elektronicznych."
-  },
-  {
-    src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
-    alt: "Stanowisko komputerowe do pracy z materiałem cyfrowym i dokumentami PDF",
-    title: "Materiał cyfrowy",
-    text: "Praca z plikami PDF, raportami, komunikatorami, zrzutami ekranu i dużymi zbiorami danych."
-  },
-  {
-    src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Laptop z zabezpieczeniami w kancelarii tłumacza przysięgłego",
-    title: "Pliki elektroniczne i raporty",
-    text: "Obsługa dokumentów elektronicznych, raportów technicznych, danych źródłowych i materiałów wymagających analizy."
-  },
-  {
-    src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Drukarki w kancelarii tłumacza przysięgłego języka ukraińskiego",
-    title: "Druk i kompletowanie",
-    text: "Przygotowanie tłumaczeń poświadczonych do odbioru, wysyłki, przekazania do kancelarii albo złożenia do akt."
-  },
-  {
-    src: "/images/niszczarka-dokumentow-hsm-shredstar-x15-kancelaria-vadym-rekel.jpg",
-    alt: "Niszczarka dokumentów w kancelarii tłumacza przysięgłego",
-    title: "Dokumenty robocze i poufność",
-    text: "Kontrola obiegu materiałów roboczych zawierających dane osobowe, informacje procesowe albo treści prywatne."
-  }
-];
-
-const qualifications = [
-  {
-    title: "Tłumacz przysięgły języka ukraińskiego",
-    text: "Wpis na listę tłumaczy przysięgłych Ministra Sprawiedliwości, nr TP/27/17."
-  },
-  {
-    title: "CIOL no. 94280",
-    text: "Członkostwo w Chartered Institute of Linguists."
-  },
-  {
-    title: "TEPIS Member 2026",
-    text: "Członkostwo w środowisku tłumaczy przysięgłych i specjalistycznych."
-  },
-  {
-    title: "Przygotowanie specjalistyczne",
-    text: "MBA, prawo nowych technologii, prawo własności intelektualnej i nowych technologii, prawo karne materialne i procesowe."
-  }
-];
-
-const profileItems = [
-  "tłumacz przysięgły języka ukraińskiego, TP/27/17",
-  "praca z dokumentami procesowymi i materiałem dowodowym",
-  "tłumaczenia ustne przy czynnościach formalnych",
-  "materiał cyfrowy, komunikatory, raporty PDF i zrzuty ekranu",
-  "korespondencja osadzonych i dokumenty transgraniczne z Ukrainą"
 ];
 
 const nearbyPlaces = [
   {
-    icon: "🛂",
-    title: "Małopolski Urząd Wojewódzki – Wydział Spraw Cudzoziemców",
-    address: "ul. Przy Rondzie 6, 31-547 Kraków",
-    note: "kilka minut pieszo od kancelarii, okolice Ronda Mogilskiego",
-    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Przy+Rondzie+6,+31-547+Krak%C3%B3w/"
-  },
-  {
-    icon: "⚖️",
+    icon: "01",
     title: "Sąd Okręgowy w Krakowie",
     address: "ul. Przy Rondzie 7, 31-547 Kraków",
-    note: "ok. 600 m od kancelarii, około 7 minut pieszo",
+    note: "ok. 600 m od kancelarii",
     href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/S%C4%85d+Okr%C4%99gowy+w+Krakowie,+Przy+Rondzie+7,+31-547+Krak%C3%B3w/"
   },
   {
-    icon: "🇺🇦",
-    title: "Konsulat Ukrainy w Krakowie",
-    address: "al. płk. Władysława Beliny-Prażmowskiego 4, 31-514 Kraków",
-    note: "wygodny dojazd tramwajem i pieszo z Ronda Mogilskiego",
-    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Aleja+Pu%C5%82kownika+W%C5%82adys%C5%82awa+Beliny-Pra%C5%BAsmowskiego+4,+31-514+Krak%C3%B3w/"
-  },
-  {
-    icon: "🛡️",
+    icon: "02",
     title: "Prokuratura Okręgowa w Krakowie",
     address: "ul. Lubicz 25, 31-503 Kraków",
-    note: "ok. 650 m od kancelarii, około 8 minut pieszo",
+    note: "ok. 650 m od kancelarii",
     href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Prokuratura+Okr%C4%99gowa+w+Krakowie,+Lubicz+25,+31-503+Krak%C3%B3w/"
+  },
+  {
+    icon: "03",
+    title: "Małopolski Urząd Wojewódzki",
+    address: "ul. Przy Rondzie 6, 31-547 Kraków",
+    note: "okolice Ronda Mogilskiego",
+    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Przy+Rondzie+6,+31-547+Krak%C3%B3w/"
+  },
+  {
+    icon: "04",
+    title: "Konsulat Ukrainy w Krakowie",
+    address: "al. płk. Władysława Beliny-Prażmowskiego 4, 31-514 Kraków",
+    note: "dogodny dojazd z Ronda Mogilskiego",
+    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Aleja+Pu%C5%82kownika+W%C5%82adys%C5%82awa+Beliny-Pra%C5%BAsmowskiego+4,+31-514+Krak%C3%B3w/"
   }
 ];
+
+function SectionHeading({
+  number,
+  kicker,
+  title,
+  text
+}: {
+  number: string;
+  kicker: string;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="section-header">
+      <div>
+        <div className="section-meta">
+          <span>{number}</span>
+          <strong>{kicker}</strong>
+        </div>
+        <h2>{title}</h2>
+      </div>
+      <p className="section-intro">{text}</p>
+    </div>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -336,7 +369,7 @@ export default function HomePage() {
           --gold: #b68a3a;
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
-          --shadow: 0 26px 80px rgba(25, 22, 18, 0.14);
+          --shadow: 0 22px 62px rgba(25, 22, 18, 0.12);
           --radius: 30px;
         }
 
@@ -351,8 +384,8 @@ export default function HomePage() {
         body {
           margin: 0;
           background:
-            radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.18), transparent 30%),
-            radial-gradient(circle at 92% 8%, rgba(18, 60, 49, 0.16), transparent 28%),
+            radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.16), transparent 30%),
+            radial-gradient(circle at 92% 8%, rgba(18, 60, 49, 0.14), transparent 28%),
             linear-gradient(180deg, #f8f3ea 0%, var(--bg) 42%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -372,7 +405,7 @@ export default function HomePage() {
           top: 0;
           z-index: 100;
           backdrop-filter: blur(20px);
-          background: rgba(245, 240, 230, 0.90);
+          background: rgba(245, 240, 230, 0.92);
           border-bottom: 1px solid var(--line);
         }
 
@@ -403,7 +436,7 @@ export default function HomePage() {
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-weight: 950;
           letter-spacing: -0.05em;
-          box-shadow: 0 10px 24px rgba(18, 60, 49, 0.26);
+          box-shadow: 0 10px 24px rgba(18, 60, 49, 0.22);
         }
 
         .brand-title {
@@ -447,7 +480,7 @@ export default function HomePage() {
         .hero {
           max-width: 1220px;
           margin: 0 auto;
-          padding: 44px 22px 24px;
+          padding: 44px 22px 22px;
           display: grid;
           grid-template-columns: 1.02fr 0.98fr;
           gap: 28px;
@@ -472,7 +505,7 @@ export default function HomePage() {
           width: 320px;
           height: 320px;
           border-radius: 50%;
-          background: rgba(182, 138, 58, 0.14);
+          background: rgba(182, 138, 58, 0.13);
         }
 
         .eyebrow {
@@ -501,7 +534,7 @@ export default function HomePage() {
         }
 
         @keyframes pulse {
-          0% { box-shadow: 0 0 0 0 rgba(182, 138, 58, 0.45); }
+          0% { box-shadow: 0 0 0 0 rgba(182, 138, 58, 0.38); }
           70% { box-shadow: 0 0 0 10px rgba(182, 138, 58, 0); }
           100% { box-shadow: 0 0 0 0 rgba(182, 138, 58, 0); }
         }
@@ -555,7 +588,7 @@ export default function HomePage() {
         .button-primary {
           background: var(--green);
           color: #fff;
-          box-shadow: 0 14px 30px rgba(18, 60, 49, 0.22);
+          box-shadow: 0 14px 30px rgba(18, 60, 49, 0.20);
         }
 
         .button-secondary {
@@ -625,7 +658,7 @@ export default function HomePage() {
           background:
             linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(255, 250, 242, 0.88));
           padding: 18px 22px 14px;
-          box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
           transform: rotate(-1.5deg);
           animation: signatureFloat 4.8s ease-in-out infinite;
           display: flex;
@@ -667,14 +700,14 @@ export default function HomePage() {
 
         @keyframes signatureFloat {
           0% { transform: translateY(0) rotate(-1.5deg); }
-          50% { transform: translateY(-7px) rotate(-0.4deg); }
+          50% { transform: translateY(-6px) rotate(-0.4deg); }
           100% { transform: translateY(0) rotate(-1.5deg); }
         }
 
         @keyframes signatureInk {
-          0% { opacity: 0.82; filter: blur(0.15px); }
+          0% { opacity: 0.84; filter: blur(0.15px); }
           50% { opacity: 1; filter: blur(0); }
-          100% { opacity: 0.82; filter: blur(0.15px); }
+          100% { opacity: 0.84; filter: blur(0.15px); }
         }
 
         @keyframes signatureReveal {
@@ -722,16 +755,10 @@ export default function HomePage() {
           line-height: 1.4;
         }
 
-        .section {
-          max-width: 1220px;
-          margin: 0 auto;
-          padding: 54px 22px;
-        }
-
         .trust-strip {
           max-width: 1220px;
           margin: 0 auto;
-          padding: 0 22px 20px;
+          padding: 0 22px 18px;
         }
 
         .trust-inner {
@@ -740,7 +767,7 @@ export default function HomePage() {
           background: rgba(255, 250, 242, 0.72);
           display: grid;
           grid-template-columns: repeat(5, 1fr);
-          box-shadow: 0 14px 40px rgba(25, 22, 18, 0.06);
+          box-shadow: 0 14px 38px rgba(25, 22, 18, 0.06);
           overflow: hidden;
         }
 
@@ -762,6 +789,12 @@ export default function HomePage() {
           border-right: 0;
         }
 
+        .section {
+          max-width: 1220px;
+          margin: 0 auto;
+          padding: 54px 22px;
+        }
+
         .section-header {
           margin-bottom: 26px;
           display: grid;
@@ -770,7 +803,10 @@ export default function HomePage() {
           align-items: end;
         }
 
-        .section-kicker {
+        .section-meta {
+          display: flex;
+          align-items: center;
+          gap: 12px;
           color: var(--gold-dark);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 12px;
@@ -779,8 +815,19 @@ export default function HomePage() {
           letter-spacing: 0.10em;
         }
 
+        .section-meta span {
+          min-width: 38px;
+          height: 28px;
+          border-radius: 999px;
+          border: 1px solid rgba(182, 138, 58, 0.30);
+          background: rgba(255, 250, 242, 0.72);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
         .section h2 {
-          margin: 8px 0 0;
+          margin: 10px 0 0;
           font-size: clamp(34px, 4.1vw, 58px);
           line-height: 0.98;
           letter-spacing: -0.06em;
@@ -791,6 +838,12 @@ export default function HomePage() {
           color: var(--muted);
           font-size: 18px;
           line-height: 1.55;
+        }
+
+        .grid-2 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
         }
 
         .grid-3 {
@@ -805,25 +858,19 @@ export default function HomePage() {
           gap: 16px;
         }
 
-        .grid-2 {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
-        }
-
         .card {
           border-radius: 26px;
           border: 1px solid var(--line);
           background: rgba(255,250,242,0.78);
-          box-shadow: 0 16px 46px rgba(25, 22, 18, 0.06);
+          box-shadow: 0 15px 42px rgba(25, 22, 18, 0.06);
           padding: 28px;
           transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
         }
 
         .card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 22px 60px rgba(25, 22, 18, 0.12);
-          border-color: rgba(182, 138, 58, 0.36);
+          transform: translateY(-3px);
+          box-shadow: 0 19px 54px rgba(25, 22, 18, 0.10);
+          border-color: rgba(182, 138, 58, 0.34);
         }
 
         .card-dark {
@@ -833,7 +880,9 @@ export default function HomePage() {
         }
 
         .card-petrol {
-          background: linear-gradient(150deg, #1d3e4a, #102932);
+          background:
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 20px);
           color: #fff;
           border-color: rgba(255,255,255,0.12);
         }
@@ -878,6 +927,29 @@ export default function HomePage() {
           border: 1px solid rgba(255,255,255,0.10);
         }
 
+        .service-list {
+          margin: 18px 0 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 9px;
+        }
+
+        .service-list li {
+          color: rgba(255,255,255,0.78);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 780;
+          line-height: 1.35;
+          display: flex;
+          gap: 9px;
+        }
+
+        .service-list li::before {
+          content: "—";
+          color: var(--gold);
+        }
+
         .card-link {
           display: inline-flex;
           margin-top: 22px;
@@ -907,8 +979,8 @@ export default function HomePage() {
         .contact-choice-card {
           border-radius: 28px;
           border: 1px solid rgba(182, 138, 58, 0.30);
-          background: linear-gradient(145deg, rgba(255,250,242,0.92), rgba(248,241,230,0.82));
-          box-shadow: 0 18px 54px rgba(25, 22, 18, 0.10);
+          background: linear-gradient(145deg, rgba(255,250,242,0.94), rgba(248,241,230,0.84));
+          box-shadow: 0 18px 50px rgba(25, 22, 18, 0.09);
           padding: 28px;
           display: grid;
           gap: 18px;
@@ -950,7 +1022,7 @@ export default function HomePage() {
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 20px;
           font-weight: 950;
-          box-shadow: 0 16px 36px rgba(182, 138, 58, 0.18);
+          box-shadow: 0 16px 32px rgba(182, 138, 58, 0.17);
         }
 
         .institution .phone-button {
@@ -1012,16 +1084,16 @@ export default function HomePage() {
 
         .feature-band h2,
         .feature-band p,
-        .feature-band .section-kicker,
+        .feature-band .section-meta,
         .feature-band .pill-list,
-        .feature-band .quote-list {
+        .feature-band .quote-steps {
           position: relative;
           z-index: 1;
         }
 
         .feature-band h2 {
           color: #fff;
-          margin: 8px 0 0;
+          margin: 10px 0 0;
         }
 
         .feature-band p {
@@ -1029,6 +1101,11 @@ export default function HomePage() {
           color: rgba(255,255,255,0.74);
           font-size: 18px;
           line-height: 1.6;
+        }
+
+        .feature-band .section-meta span {
+          background: rgba(255,255,255,0.08);
+          border-color: rgba(255,255,255,0.16);
         }
 
         .pill-list {
@@ -1054,27 +1131,57 @@ export default function HomePage() {
           color: var(--muted);
         }
 
-        .quote-list {
-          margin-top: 20px;
-          display: grid;
-          gap: 10px;
+        .digital-code {
+          display: inline-flex;
+          margin-bottom: 14px;
+          padding: 7px 10px;
+          border-radius: 10px;
+          background: rgba(255,255,255,0.08);
+          color: rgba(255,255,255,0.72);
+          border: 1px solid rgba(255,255,255,0.12);
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+          font-size: 12px;
+          letter-spacing: 0.08em;
         }
 
-        .quote-item {
+        .quote-steps {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 12px;
+          margin-top: 22px;
+        }
+
+        .quote-step {
           border-radius: 18px;
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(255,255,255,0.12);
-          padding: 14px 16px;
-          color: rgba(255,255,255,0.78);
+          padding: 16px;
+        }
+
+        .quote-step span {
+          display: inline-flex;
+          margin-bottom: 10px;
+          color: var(--gold);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+        }
+
+        .quote-step h3 {
+          margin: 0 0 8px;
+          color: #fff;
+          font-size: 19px;
+          letter-spacing: -0.03em;
+        }
+
+        .quote-step p {
           font-size: 13px;
-          font-weight: 780;
-          line-height: 1.4;
+          line-height: 1.5;
         }
 
         .photo-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: 1.15fr 0.85fr 0.85fr;
           gap: 16px;
         }
 
@@ -1084,7 +1191,7 @@ export default function HomePage() {
         }
 
         .photo-card.featured-photo {
-          grid-column: span 2;
+          grid-row: span 2;
         }
 
         .photo {
@@ -1094,7 +1201,7 @@ export default function HomePage() {
         }
 
         .featured-photo .photo {
-          height: 360px;
+          height: 490px;
         }
 
         .photo img {
@@ -1106,7 +1213,7 @@ export default function HomePage() {
         }
 
         .photo-card:hover .photo img {
-          transform: scale(1.05);
+          transform: scale(1.04);
         }
 
         .photo-content {
@@ -1117,10 +1224,35 @@ export default function HomePage() {
           font-size: 22px;
         }
 
-        .qualification-grid {
+        .registry {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+        }
+
+        .registry-row {
+          display: grid;
+          grid-template-columns: 62px 1fr;
           gap: 16px;
+          align-items: center;
+          padding: 16px 18px;
+          border-radius: 18px;
+          background: rgba(255,250,242,0.78);
+          border: 1px solid var(--line);
+        }
+
+        .registry-number {
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+          letter-spacing: 0.08em;
+        }
+
+        .registry-text {
+          color: var(--ink);
+          font-size: 18px;
+          line-height: 1.35;
+          font-weight: 700;
         }
 
         .profile-review-grid {
@@ -1163,7 +1295,7 @@ export default function HomePage() {
             linear-gradient(145deg, rgba(255,250,242,0.94), rgba(248,241,230,0.86));
           border: 1px solid rgba(182, 138, 58, 0.30);
           padding: 28px;
-          box-shadow: 0 16px 46px rgba(25, 22, 18, 0.06);
+          box-shadow: 0 15px 42px rgba(25, 22, 18, 0.06);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -1196,49 +1328,33 @@ export default function HomePage() {
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 14px;
           font-weight: 950;
-          box-shadow: 0 14px 30px rgba(182, 138, 58, 0.22);
+          box-shadow: 0 14px 28px rgba(182, 138, 58, 0.20);
         }
 
         .map-card {
           border-radius: var(--radius);
           background: rgba(255, 250, 242, 0.86);
-          border: 1px solid rgba(176, 138, 60, 0.38);
+          border: 1px solid rgba(176, 138, 60, 0.36);
           box-shadow: var(--shadow);
           padding: 34px;
           overflow: hidden;
         }
 
-        .map-header {
+        .map-layout {
           display: grid;
-          grid-template-columns: 0.95fr 1.05fr;
-          gap: 28px;
-          align-items: end;
-          margin-bottom: 22px;
-        }
-
-        .map-header h2 {
-          margin: 8px 0 0;
-          font-size: clamp(32px, 4vw, 54px);
-          line-height: 0.98;
-          letter-spacing: -0.06em;
-        }
-
-        .map-header p {
-          margin: 0;
-          color: var(--muted);
-          font-size: 17px;
-          line-height: 1.55;
+          grid-template-columns: 1.25fr 0.75fr;
+          gap: 18px;
+          margin-top: 22px;
         }
 
         .map-frame {
           position: relative;
           width: 100%;
-          padding-bottom: 52%;
-          height: 0;
+          min-height: 480px;
           overflow: hidden;
           border-radius: 22px;
-          border: 1px solid rgba(176, 138, 60, 0.34);
-          box-shadow: 0 16px 40px rgba(25, 22, 18, 0.10);
+          border: 1px solid rgba(176, 138, 60, 0.30);
+          box-shadow: 0 15px 36px rgba(25, 22, 18, 0.09);
           background: #f8f1e6;
         }
 
@@ -1251,30 +1367,31 @@ export default function HomePage() {
         }
 
         .nearby-grid {
-          margin-top: 18px;
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
           gap: 12px;
         }
 
         .nearby-item {
           display: grid;
-          grid-template-columns: 34px 1fr;
+          grid-template-columns: 42px 1fr;
           gap: 12px;
           padding: 16px;
           border-radius: 18px;
-          border: 1px solid rgba(176, 138, 60, 0.28);
+          border: 1px solid rgba(176, 138, 60, 0.26);
           background: rgba(255, 255, 255, 0.52);
         }
 
         .nearby-icon {
-          width: 34px;
-          height: 34px;
+          width: 42px;
+          height: 42px;
           border-radius: 50%;
           display: grid;
           place-items: center;
           background: var(--green-soft);
-          font-size: 18px;
+          color: var(--green);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
         }
 
         .nearby-item h3 {
@@ -1298,13 +1415,6 @@ export default function HomePage() {
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 12px;
           font-weight: 900;
-        }
-
-        .map-note {
-          margin: 18px 0 0;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.6;
         }
 
         .city-grid {
@@ -1342,17 +1452,17 @@ export default function HomePage() {
           padding: 44px;
         }
 
-        .contact-card h2 {
-          color: #fff;
-          margin: 8px 0 0;
-        }
-
         .contact-top {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 30px;
           align-items: end;
           margin-bottom: 24px;
+        }
+
+        .contact-card h2 {
+          color: #fff;
+          margin: 10px 0 0;
         }
 
         .contact-card p {
@@ -1422,11 +1532,15 @@ export default function HomePage() {
           font-weight: 900;
         }
 
-        .floating-button {
+        .floating-contact {
           position: fixed;
           right: 22px;
           bottom: 22px;
           z-index: 150;
+        }
+
+        .floating-contact summary {
+          list-style: none;
           min-height: 58px;
           border-radius: 999px;
           padding: 0 22px;
@@ -1436,22 +1550,84 @@ export default function HomePage() {
           background: linear-gradient(145deg, var(--green), var(--green-2));
           color: #fff;
           border: 1px solid rgba(255,255,255,0.12);
-          box-shadow: 0 20px 60px rgba(18, 15, 10, 0.26);
+          box-shadow: 0 18px 52px rgba(18, 15, 10, 0.24);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 14px;
           font-weight: 950;
-          letter-spacing: 0.01em;
+          cursor: pointer;
         }
 
-        .floating-button span {
+        .floating-contact summary::-webkit-details-marker {
+          display: none;
+        }
+
+        .floating-contact summary span {
           color: rgba(255,255,255,0.72);
           font-size: 12px;
           font-weight: 850;
         }
 
+        .floating-panel {
+          width: min(340px, calc(100vw - 32px));
+          margin-bottom: 10px;
+          border-radius: 22px;
+          background: rgba(255,250,242,0.97);
+          border: 1px solid rgba(182, 138, 58, 0.36);
+          box-shadow: 0 22px 62px rgba(18,15,10,0.22);
+          padding: 14px;
+          display: grid;
+          gap: 10px;
+        }
+
+        .floating-panel-title {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+
+        .floating-mini-grid {
+          display: grid;
+          gap: 8px;
+        }
+
+        .floating-mini {
+          border-radius: 16px;
+          border: 1px solid var(--line);
+          background: rgba(255,255,255,0.62);
+          padding: 12px;
+        }
+
+        .floating-mini strong {
+          display: block;
+          color: var(--ink);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+          margin-bottom: 6px;
+        }
+
+        .floating-mini a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 40px;
+          border-radius: 12px;
+          background: var(--green);
+          color: #fff;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 15px;
+          font-weight: 950;
+        }
+
         .footer {
           border-top: 1px solid var(--line);
-          padding: 34px 22px 110px;
+          padding: 34px 22px 112px;
           color: var(--muted);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
@@ -1507,12 +1683,12 @@ export default function HomePage() {
           .hero,
           .section-header,
           .feature-band,
-          .map-header,
-          .profile-review-grid,
-          .footer-inner,
-          .contact-top,
           .contact-choice-grid,
-          .contact-final-grid {
+          .contact-top,
+          .contact-final-grid,
+          .profile-review-grid,
+          .map-layout,
+          .footer-inner {
             grid-template-columns: 1fr;
           }
 
@@ -1522,17 +1698,28 @@ export default function HomePage() {
 
           .grid-4,
           .photo-grid,
-          .qualification-grid,
           .faq-grid {
             grid-template-columns: repeat(2, 1fr);
           }
 
+          .grid-3 {
+            grid-template-columns: 1fr;
+          }
+
           .photo-card.featured-photo {
-            grid-column: span 2;
+            grid-row: span 1;
           }
 
           .hero-profile {
             min-height: auto;
+          }
+
+          .quote-steps {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .featured-photo .photo {
+            height: 360px;
           }
         }
 
@@ -1541,9 +1728,7 @@ export default function HomePage() {
             display: none;
           }
 
-          .grid-3,
-          .grid-2,
-          .nearby-grid {
+          .grid-2 {
             grid-template-columns: 1fr;
           }
 
@@ -1560,9 +1745,9 @@ export default function HomePage() {
         @media (max-width: 640px) {
           .grid-4,
           .photo-grid,
-          .qualification-grid,
           .faq-grid,
-          .trust-inner {
+          .trust-inner,
+          .quote-steps {
             grid-template-columns: 1fr;
           }
 
@@ -1575,17 +1760,8 @@ export default function HomePage() {
             border-bottom: 0;
           }
 
-          .photo-card.featured-photo {
-            grid-column: span 1;
-          }
-
-          .featured-photo .photo,
-          .photo {
-            height: 240px;
-          }
-
           .hero {
-            padding: 34px 16px 24px;
+            padding: 34px 16px 20px;
           }
 
           .section,
@@ -1633,21 +1809,34 @@ export default function HomePage() {
             font-size: 44px;
           }
 
+          .photo,
+          .featured-photo .photo {
+            height: 240px;
+          }
+
           .map-frame {
-            padding-bottom: 72%;
+            min-height: 360px;
             border-radius: 18px;
           }
 
-          .floating-button {
+          .floating-contact {
             left: 12px;
             right: 12px;
             bottom: 12px;
+          }
+
+          .floating-contact summary {
+            width: 100%;
             justify-content: center;
             min-height: 54px;
           }
 
+          .floating-panel {
+            width: 100%;
+          }
+
           .footer {
-            padding-bottom: 94px;
+            padding-bottom: 96px;
           }
         }
 
@@ -1707,10 +1896,9 @@ export default function HomePage() {
           <h1>Kancelaria tłumacza przysięgłego języka ukraińskiego.</h1>
 
           <p className="lead">
-            Tłumaczenia poświadczone i ustne dla sądów, prokuratury i Policji.
-            Dokumenty procesowe, akta spraw, protokoły, czynności, materiał
-            dowodowy, komunikatory, raporty forensic i dokumenty transgraniczne
-            z Ukrainą.
+            Tłumaczenia poświadczone i ustne dla sądów, Policji i prokuratury.
+            Akta spraw, protokoły, czynności, materiał dowodowy, komunikatory,
+            raporty forensic i dokumenty transgraniczne z Ukrainą.
           </p>
 
           <div className="hero-actions">
@@ -1718,7 +1906,7 @@ export default function HomePage() {
               Wybierz właściwy kontakt
             </a>
             <a className="button button-secondary" href={`mailto:${email}`}>
-              Wyślij dokument do wyceny
+              Wyślij dokument
             </a>
           </div>
 
@@ -1770,17 +1958,12 @@ export default function HomePage() {
       </section>
 
       <section className="contact-choice" id="kontakt-wybor">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Wybierz kontakt</div>
-            <h2>Inny numer dla klientów indywidualnych, inny dla organów.</h2>
-          </div>
-          <p className="section-intro">
-            Jeżeli chodzi o dokument prywatny albo urzędowy, wybierz kontakt
-            indywidualny. Jeżeli sprawa dotyczy sądu, Policji, prokuratury,
-            czynności albo materiału dowodowego, wybierz kontakt służbowy.
-          </p>
-        </div>
+        <SectionHeading
+          number="01"
+          kicker="Kontakt"
+          title="Inny numer dla klientów indywidualnych, inny dla organów."
+          text="Jeżeli chodzi o dokument prywatny albo urzędowy, wybierz kontakt indywidualny. Jeżeli sprawa dotyczy sądu, Policji, prokuratury, czynności albo materiału dowodowego, wybierz kontakt służbowy."
+        />
 
         <div className="contact-choice-grid">
           <article className="contact-choice-card">
@@ -1831,17 +2014,12 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="dla-organow">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Sąd · Prokuratura · Policja</div>
-            <h2>Tłumaczenia dla organów i czynności formalnych.</h2>
-          </div>
-          <p className="section-intro">
-            Główna oferta kancelarii jest skierowana do spraw, w których
-            dokument, wypowiedź albo materiał cyfrowy może mieć znaczenie
-            procesowe, dowodowe lub urzędowe.
-          </p>
-        </div>
+        <SectionHeading
+          number="02"
+          kicker="Sąd · Prokuratura · Policja"
+          title="Tłumaczenia dla organów i czynności formalnych."
+          text="Główna oferta kancelarii jest skierowana do spraw, w których dokument, wypowiedź albo materiał cyfrowy może mieć znaczenie procesowe, dowodowe lub urzędowe."
+        />
 
         <div className="grid-3">
           {mainSegments.map((item) => (
@@ -1849,6 +2027,13 @@ export default function HomePage() {
               <span className="tag">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
+
+              <ul className="service-list">
+                {item.items.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+
               <a className="card-link" href={item.href}>
                 Zobacz zakres →
               </a>
@@ -1860,7 +2045,10 @@ export default function HomePage() {
       <section className="section">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">Dokument w sprawie</div>
+            <div className="section-meta">
+              <span>03</span>
+              <strong>Dokument w sprawie</strong>
+            </div>
             <h2>Nie każdy dokument jest zwykłym dokumentem.</h2>
           </div>
 
@@ -1868,12 +2056,12 @@ export default function HomePage() {
             <p>
               W sprawie dokument może być protokołem, dowodem, załącznikiem,
               zapisem rozmowy, raportem technicznym, pismem odręcznym albo
-              korespondencją. Dlatego ważny jest kontekst, terminologia i
+              korespondencją. Dlatego znaczenie ma kontekst, terminologia i
               sposób przekazania materiału.
             </p>
 
             <div className="pill-list" style={{ marginTop: 22 }}>
-              {commonMaterials.map((item) => (
+              {caseMaterials.map((item) => (
                 <span className="pill" key={item}>
                   {item}
                 </span>
@@ -1884,6 +2072,13 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="czynnosci">
+        <SectionHeading
+          number="04"
+          kicker="Czynności"
+          title="Tłumaczenia ustne i korespondencja osadzonych."
+          text="Zakres obejmuje zarówno czynności formalne, jak i dokumenty pisane ręcznie, w języku potocznym, skrótowym albo trudnym do odczytania."
+        />
+
         <div className="grid-2">
           <article className="card">
             <span className="tag">Tłumaczenia ustne</span>
@@ -1924,22 +2119,17 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="material-cyfrowy">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">IT · dowody cyfrowe</div>
-            <h2>Komunikatory, raporty forensic i dane cyfrowe.</h2>
-          </div>
-          <p className="section-intro">
-            Tłumaczenie może obejmować nie tylko klasyczne dokumenty, lecz także
-            treści pochodzące z telefonów, komunikatorów, raportów technicznych,
-            zrzutów ekranu, nagrań, zdjęć i dużych plików PDF.
-          </p>
-        </div>
+        <SectionHeading
+          number="05"
+          kicker="IT · dowody cyfrowe"
+          title="Komunikatory, raporty forensic i dane cyfrowe."
+          text="Tłumaczenie może obejmować nie tylko klasyczne dokumenty, lecz także treści pochodzące z telefonów, komunikatorów, raportów technicznych, zrzutów ekranu, nagrań, zdjęć i dużych plików PDF."
+        />
 
         <div className="grid-4">
           {digitalItems.map((item) => (
             <article className="card card-petrol" key={item.title}>
-              <span className="tag">Materiał cyfrowy</span>
+              <span className="digital-code">{item.code}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -1950,8 +2140,9 @@ export default function HomePage() {
       <section className="section">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">
-              Ukraina · dokumenty transgraniczne
+            <div className="section-meta">
+              <span>06</span>
+              <strong>Ukraina</strong>
             </div>
             <h2>Pomoc prawna i dokumenty z Ukrainą.</h2>
           </div>
@@ -1978,7 +2169,10 @@ export default function HomePage() {
       <section className="section" id="wycena">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">Wycena</div>
+            <div className="section-meta">
+              <span>07</span>
+              <strong>Wycena</strong>
+            </div>
             <h2>Jak przygotować materiał do wstępnej wyceny.</h2>
           </div>
 
@@ -1988,30 +2182,27 @@ export default function HomePage() {
               opis czynności. W przypadku większych akt, raportów lub materiału
               cyfrowego warto wskazać, które fragmenty mają znaczenie dla sprawy.
             </p>
-
-            <div className="quote-list">
-              {quoteSteps.map((item) => (
-                <div className="quote-item" key={item}>
-                  {item}
-                </div>
-              ))}
-            </div>
           </div>
+        </div>
+
+        <div className="quote-steps" style={{ marginTop: 16 }}>
+          {quoteSteps.map((step) => (
+            <article className="quote-step" key={step.number}>
+              <span>{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="section" id="jezyki">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Języki pracy</div>
-            <h2>Ukraiński przysięgły. Rosyjski i angielski specjalistyczne.</h2>
-          </div>
-          <p className="section-intro">
-            Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego.
-            Język rosyjski i angielski występują w ofercie jako tłumaczenia
-            specjalistyczne.
-          </p>
-        </div>
+        <SectionHeading
+          number="08"
+          kicker="Języki pracy"
+          title="Ukraiński przysięgły. Rosyjski i angielski specjalistyczne."
+          text="Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Język rosyjski i angielski występują w ofercie jako tłumaczenia specjalistyczne."
+        />
 
         <div className="grid-3">
           {languages.map((item) => (
@@ -2025,20 +2216,12 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="kancelaria">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Kancelaria</div>
-            <h2>
-              Kancelaria tłumacza przysięgłego i zaplecze pracy z dokumentami.
-            </h2>
-          </div>
-          <p className="section-intro">
-            Tłumaczenia poświadczone i procesowe wymagają nie tylko przekładu,
-            ale również właściwej organizacji dokumentów, kontroli wersji,
-            przygotowania wydruków, kompletowania materiałów oraz zachowania
-            poufności.
-          </p>
-        </div>
+        <SectionHeading
+          number="09"
+          kicker="Kancelaria"
+          title="Zaplecze pracy z dokumentami."
+          text="Tłumaczenia poświadczone i procesowe wymagają właściwej organizacji dokumentów, kontroli wersji, przygotowania wydruków, kompletowania materiałów oraz zachowania poufności."
+        />
 
         <div className="photo-grid">
           {officePhotos.map((item, index) => (
@@ -2059,31 +2242,27 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="kwalifikacje">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Kwalifikacje</div>
-            <h2>Uprawnienia zawodowe i przygotowanie specjalistyczne.</h2>
-          </div>
-          <p className="section-intro">
-            Strona kwalifikacji zawiera certyfikaty, dyplomy i dokumenty
-            potwierdzające uprawnienia oraz przygotowanie do pracy z dokumentami
-            prawnymi, technologicznymi i procesowymi.
-          </p>
-        </div>
+        <SectionHeading
+          number="10"
+          kicker="Kwalifikacje"
+          title="Uprawnienia zawodowe i przygotowanie specjalistyczne."
+          text="Na stronie kwalifikacji znajdują się certyfikaty, dyplomy i dokumenty potwierdzające uprawnienia oraz przygotowanie do pracy z dokumentami prawnymi, technologicznymi i procesowymi."
+        />
 
-        <div className="qualification-grid">
-          {qualifications.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">Kwalifikacje</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
+        <div className="registry">
+          {qualifications.map((item, index) => (
+            <div className="registry-row" key={item}>
+              <span className="registry-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span className="registry-text">{item}</span>
+            </div>
           ))}
         </div>
 
         <div className="hero-actions">
           <a className="button button-primary" href="/kwalifikacje">
-            Zobacz kwalifikacje i certyfikaty
+            Zobacz dokumenty potwierdzające kwalifikacje
           </a>
         </div>
       </section>
@@ -2116,77 +2295,60 @@ export default function HomePage() {
 
       <section className="section" id="lokalizacja">
         <div className="map-card">
-          <div className="map-header">
-            <div>
-              <div className="section-kicker">Lokalizacja</div>
-              <h2>Kancelaria przy Rondzie Mogilskim w Krakowie.</h2>
+          <SectionHeading
+            number="11"
+            kicker="Lokalizacja"
+            title="Kancelaria przy Rondzie Mogilskim w Krakowie."
+            text="Kancelaria znajduje się przy ul. Kieleckiej 2/53 w Krakowie. Lokalizacja jest dogodna dla osób i instytucji współpracujących z sądami, prokuraturą, Policją, urzędami oraz Konsulatem Ukrainy."
+          />
+
+          <div className="map-layout">
+            <div className="map-frame">
+              <iframe
+                itemProp="hasMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.453089598971!2d19.961595176701726!3d50.0696491140557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b122aaf12c1%3A0xb1f9ec2649aa6e13!2sKielecka+2%2F53%2C+31-526+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1714890521862!5m2!1spl!2spl"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa dojazdu do kancelarii tłumacza przysięgłego Vadym Rekel w Krakowie"
+                aria-label="Mapa lokalizacji kancelarii tłumacza przysięgłego Vadym Rekel w Krakowie przy Rondzie Mogilskim"
+              />
             </div>
 
-            <p>
-              Kancelaria tłumacza przysięgłego języka ukraińskiego znajduje się
-              przy ul. Kieleckiej 2/53 w Krakowie. Lokalizacja jest dogodna dla
-              osób i instytucji współpracujących z sądami, prokuraturą, Policją,
-              urzędami oraz Konsulatem Ukrainy.
-            </p>
+            <div className="nearby-grid">
+              {nearbyPlaces.map((place) => (
+                <article className="nearby-item" key={place.title}>
+                  <div className="nearby-icon" aria-hidden="true">
+                    {place.icon}
+                  </div>
+
+                  <div>
+                    <h3>{place.title}</h3>
+                    <p>{place.address}</p>
+                    <p>{place.note}</p>
+                    <a
+                      className="nearby-link"
+                      href={place.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Zobacz trasę →
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-
-          <div className="map-frame">
-            <iframe
-              itemProp="hasMap"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.453089598971!2d19.961595176701726!3d50.0696491140557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b122aaf12c1%3A0xb1f9ec2649aa6e13!2sKielecka+2%2F53%2C+31-526+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1714890521862!5m2!1spl!2spl"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mapa dojazdu do kancelarii tłumacza przysięgłego Vadym Rekel w Krakowie"
-              aria-label="Mapa lokalizacji kancelarii tłumacza przysięgłego Vadym Rekel w Krakowie przy Rondzie Mogilskim"
-            />
-          </div>
-
-          <div className="nearby-grid">
-            {nearbyPlaces.map((place) => (
-              <article className="nearby-item" key={place.title}>
-                <div className="nearby-icon" aria-hidden="true">
-                  {place.icon}
-                </div>
-
-                <div>
-                  <h3>{place.title}</h3>
-                  <p>{place.address}</p>
-                  <p>{place.note}</p>
-                  <a
-                    className="nearby-link"
-                    href={place.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Zobacz trasę w Google Maps →
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <p className="map-note">
-            Położenie przy Rondzie Mogilskim zapewnia dogodny dojazd tramwajem i
-            autobusem z większości dzielnic Krakowa, a także z miejscowości
-            Małopolski, w tym z Wieliczki, Bochni, Myślenic, Tarnowa, Nowego
-            Sącza i Nowego Targu.
-          </p>
         </div>
       </section>
 
       <section className="section">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Cała Polska</div>
-            <h2>Dokumenty do wyceny można przesłać elektronicznie.</h2>
-          </div>
-          <p className="section-intro">
-            Siedziba kancelarii znajduje się w Krakowie. Dokumenty są przyjmowane
-            do wstępnej wyceny również z innych miast wojewódzkich i miejscowości
-            w Polsce.
-          </p>
-        </div>
+        <SectionHeading
+          number="12"
+          kicker="Cała Polska"
+          title="Dokumenty do wyceny można przesłać elektronicznie."
+          text="Siedziba kancelarii znajduje się w Krakowie. Dokumenty są przyjmowane do wstępnej wyceny również z innych miast wojewódzkich i miejscowości w Polsce."
+        />
 
         <div className="city-grid">
           {cities.map((city) => (
@@ -2209,9 +2371,11 @@ export default function HomePage() {
             </p>
 
             <ul className="professional-list">
-              {profileItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+              <li>tłumacz przysięgły języka ukraińskiego, TP/27/17</li>
+              <li>praca z dokumentami procesowymi i materiałem dowodowym</li>
+              <li>tłumaczenia ustne przy czynnościach formalnych</li>
+              <li>materiał cyfrowy, komunikatory, raporty PDF i zrzuty ekranu</li>
+              <li>korespondencja osadzonych i dokumenty transgraniczne z Ukrainą</li>
             </ul>
           </article>
 
@@ -2239,16 +2403,12 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">FAQ</div>
-            <h2>Najczęstsze pytania przed wysłaniem dokumentu.</h2>
-          </div>
-          <p className="section-intro">
-            Krótkie odpowiedzi na pytania dotyczące wyceny, kontaktu,
-            dokumentów elektronicznych i zakresu języków.
-          </p>
-        </div>
+        <SectionHeading
+          number="13"
+          kicker="FAQ"
+          title="Najczęstsze pytania przed wysłaniem dokumentu."
+          text="Krótkie odpowiedzi dotyczące wyceny, kontaktu, dokumentów elektronicznych, czynności ustnych i zakresu języków."
+        />
 
         <div className="faq-grid">
           {faqItems.map((item) => (
@@ -2264,7 +2424,10 @@ export default function HomePage() {
         <div className="contact-card">
           <div className="contact-top">
             <div>
-              <div className="section-kicker">Kontakt</div>
+              <div className="section-meta">
+                <span>14</span>
+                <strong>Kontakt</strong>
+              </div>
               <h2>Wybierz właściwy kontakt do sprawy.</h2>
             </div>
 
@@ -2321,10 +2484,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      <a className="floating-button" href="#kontakt" aria-label="Przejdź do kontaktu">
-        Szybka wycena
-        <span>kontakt</span>
-      </a>
+      <details className="floating-contact">
+        <summary>
+          Szybka wycena
+          <span>otwórz / zamknij</span>
+        </summary>
+
+        <div className="floating-panel">
+          <div className="floating-panel-title">
+            <strong>Kontakt</strong>
+            <span>kliknij ponownie, aby zamknąć</span>
+          </div>
+
+          <div className="floating-mini-grid">
+            <div className="floating-mini">
+              <strong>Klienci indywidualni</strong>
+              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+            </div>
+
+            <div className="floating-mini">
+              <strong>Sąd · Policja · Prokuratura</strong>
+              <a href={`tel:${institutionPhoneHref}`}>{institutionPhoneDisplay}</a>
+            </div>
+          </div>
+
+          <a className="choice-link" href={`mailto:${email}`}>
+            Wyślij dokument do wyceny
+          </a>
+        </div>
+      </details>
 
       <footer className="footer">
         <div className="footer-inner">
