@@ -220,7 +220,7 @@ export default function HomePage() {
         }
 
         .nav {
-          max-width: 1160px;
+          max-width: 1220px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -287,25 +287,30 @@ export default function HomePage() {
         }
 
         .hero {
-          max-width: 1160px;
+          max-width: 1220px;
           margin: 0 auto;
-          padding: 52px 22px 28px;
+          padding: 52px 22px 34px;
           display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 22px;
+          grid-template-columns: 0.95fr 1.05fr;
+          gap: 28px;
           align-items: stretch;
         }
 
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 48px;
+          padding: 56px 48px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 650px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -379,24 +384,25 @@ export default function HomePage() {
         }
 
         .hero-side {
+          position: relative;
           border-radius: var(--radius);
           background: linear-gradient(155deg, var(--green), var(--green-dark));
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 28px;
-          min-height: 520px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          padding: 24px;
+          min-height: 650px;
+          overflow: hidden;
         }
 
         .portrait {
-          height: 300px;
-          border-radius: 22px;
+          width: 100%;
+          height: 100%;
+          min-height: 602px;
+          border-radius: 24px;
           overflow: hidden;
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(255,255,255,0.14);
-          margin-bottom: 22px;
+          margin: 0;
         }
 
         .portrait img {
@@ -407,43 +413,14 @@ export default function HomePage() {
           display: block;
         }
 
-        .hero-side h2 {
-          margin: 0;
-          color: #fff;
-          font-size: 35px;
-          line-height: 1;
-          letter-spacing: -0.045em;
-        }
-
-        .hero-side p {
-          margin: 14px 0 0;
-          color: rgba(255,255,255,0.76);
-          font-size: 16px;
-          line-height: 1.55;
-        }
-
+        .hero-side h2,
+        .hero-side p,
         .side-meta {
-          margin-top: 20px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 9px;
-        }
-
-        .side-meta span {
-          border-radius: 999px;
-          padding: 8px 11px;
-          background: rgba(255,255,255,0.10);
-          border: 1px solid rgba(255,255,255,0.14);
-          color: rgba(255,255,255,0.80);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 11px;
-          font-weight: 900;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
+          display: none;
         }
 
         .trust {
-          max-width: 1160px;
+          max-width: 1220px;
           margin: 0 auto;
           padding: 0 22px 34px;
         }
@@ -794,6 +771,18 @@ export default function HomePage() {
             grid-template-columns: 1fr;
           }
 
+          .hero-main {
+            min-height: auto;
+          }
+
+          .hero-side {
+            min-height: auto;
+          }
+
+          .portrait {
+            min-height: 520px;
+          }
+
           .grid-2,
           .grid-3,
           .photo-grid {
@@ -802,10 +791,6 @@ export default function HomePage() {
 
           .nav-links {
             display: none;
-          }
-
-          .hero-side {
-            min-height: auto;
           }
         }
 
@@ -837,7 +822,7 @@ export default function HomePage() {
           }
 
           .portrait {
-            height: 280px;
+            min-height: 420px;
           }
         }
       `}</style>
@@ -900,25 +885,11 @@ export default function HomePage() {
         </div>
 
         <aside className="hero-side">
-          <div>
-            <div className="portrait">
-              <img
-                src="/images/vadym%20rekel.jpg"
-                alt="Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
-              />
-            </div>
-
-            <h2>Vadym Rekel</h2>
-            <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu TP/27/17.
-              Kancelaria w Krakowie.
-            </p>
-
-            <div className="side-meta">
-              <span>TP/27/17</span>
-              <span>język ukraiński</span>
-              <span>Kraków</span>
-            </div>
+          <div className="portrait">
+            <img
+              src="/images/vadym%20rekel.jpg"
+              alt="Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
+            />
           </div>
         </aside>
       </section>
