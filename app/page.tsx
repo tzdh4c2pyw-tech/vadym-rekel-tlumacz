@@ -504,19 +504,65 @@ export default function HomePage() {
           z-index: 2;
           margin: -42px auto 18px;
           width: min(292px, 76%);
+          min-height: 108px;
           border-radius: 22px;
-          background: rgba(255, 250, 242, 0.93);
-          padding: 14px 22px;
+          background:
+            linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(255, 250, 242, 0.88));
+          padding: 18px 22px 14px;
           box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
           transform: rotate(-1.5deg);
           animation: signatureFloat 4.8s ease-in-out infinite;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
         }
 
-        .signature img {
-          display: block;
-          width: 100%;
-          height: auto;
-          filter: contrast(1.08);
+        .signature::before {
+          content: "";
+          position: absolute;
+          left: 18px;
+          right: 18px;
+          bottom: 18px;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(19, 16, 12, 0.26),
+            transparent
+          );
+        }
+
+        .signature-name {
+          position: relative;
+          z-index: 1;
+          display: inline-block;
+          color: #17110d;
+          font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
+          font-size: clamp(42px, 5vw, 62px);
+          line-height: 1;
+          font-weight: 400;
+          letter-spacing: -0.06em;
+          transform: rotate(-5deg);
+          text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+          animation: signatureInk 3.6s ease-in-out infinite;
+        }
+
+        .signature-name::after {
+          content: "";
+          position: absolute;
+          left: -8%;
+          top: 0;
+          width: 116%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 250, 242, 0.95) 0%,
+            rgba(255, 250, 242, 0.78) 38%,
+            rgba(255, 250, 242, 0) 66%
+          );
+          animation: signatureReveal 5.8s ease-in-out infinite;
+          pointer-events: none;
         }
 
         @keyframes signatureFloat {
@@ -530,6 +576,41 @@ export default function HomePage() {
 
           100% {
             transform: translateY(0) rotate(-1.5deg);
+          }
+        }
+
+        @keyframes signatureInk {
+          0% {
+            opacity: 0.82;
+            filter: blur(0.15px);
+          }
+
+          50% {
+            opacity: 1;
+            filter: blur(0);
+          }
+
+          100% {
+            opacity: 0.82;
+            filter: blur(0.15px);
+          }
+        }
+
+        @keyframes signatureReveal {
+          0% {
+            transform: translateX(0);
+          }
+
+          34% {
+            transform: translateX(118%);
+          }
+
+          72% {
+            transform: translateX(118%);
+          }
+
+          100% {
+            transform: translateX(0);
           }
         }
 
@@ -957,6 +1038,30 @@ export default function HomePage() {
           .signature {
             margin-top: -34px;
             width: min(250px, 78%);
+            min-height: 96px;
+          }
+
+          .signature-name {
+            font-size: 44px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .pulse-dot,
+          .signature,
+          .signature-name,
+          .signature-name::after {
+            animation: none;
+          }
+
+          .signature-name::after {
+            display: none;
+          }
+
+          .button,
+          .card,
+          .photo img {
+            transition: none;
           }
         }
       `}</style>
@@ -1028,11 +1133,8 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="signature">
-            <img
-              src="/images/vadym%20rekel%20podpis.gif"
-              alt="Podpis Vadym Rekel"
-            />
+          <div className="signature" aria-label="Podpis Vadym Rekel">
+            <span className="signature-name">Vadym Rekel</span>
           </div>
 
           <div className="profile-card">
