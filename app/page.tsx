@@ -33,25 +33,39 @@ const googleReviewUrl = "https://g.page/r/CXDrBKfVsJJgEBM/review";
 
 const trustItems = [
   {
+    number: "01",
     title: "TP/27/17",
     text: "wpis Ministra Sprawiedliwości"
   },
   {
+    number: "02",
     title: "CIOL no. 94280",
     text: "profil zawodowy i członkostwo"
   },
   {
+    number: "03",
     title: "TEPIS Member 2026",
     text: "tłumaczenia przysięgłe i specjalistyczne"
   },
   {
+    number: "04",
     title: "Kraków",
     text: "ul. Kielecka 2/53"
   },
   {
+    number: "05",
     title: "Cała Polska",
     text: "dokumenty elektronicznie"
   }
+];
+
+const quickScope = [
+  "Sąd",
+  "Policja",
+  "Prokuratura",
+  "Dokumenty prywatne",
+  "Ukraina",
+  "Materiał cyfrowy"
 ];
 
 const mainSegments = [
@@ -111,8 +125,7 @@ const caseMaterials = [
 
 const oralItems = [
   "przesłuchania",
-  "czynności procesowe",
-  "czynności w jednostkach Policji",
+  "czynności w Policji",
   "czynności w prokuraturze",
   "czynności sądowe",
   "areszty śledcze",
@@ -123,8 +136,6 @@ const oralItems = [
 const inmateItems = [
   "pisma odręczne",
   "listy",
-  "oświadczenia",
-  "prośby",
   "skargi",
   "wyjaśnienia",
   "korespondencja procesowa",
@@ -181,18 +192,15 @@ const quoteSteps = [
 const languages = [
   {
     title: "Ukraiński",
-    label: "przysięgły i specjalistyczny",
-    text: "Tłumaczenia poświadczone pisemne oraz ustne przy czynnościach."
+    text: "przysięgły i specjalistyczny"
   },
   {
     title: "Rosyjski",
-    label: "specjalistyczny",
-    text: "Dokumenty prawne, techniczne, urzędowe, korespondencja i materiały formalne."
+    text: "specjalistyczny"
   },
   {
     title: "Angielski",
-    label: "specjalistyczny",
-    text: "Dokumentacja prawna, technologiczna, biznesowa, IT, raporty i korespondencja."
+    text: "specjalistyczny"
   }
 ];
 
@@ -549,6 +557,26 @@ export default function HomePage() {
           z-index: 1;
         }
 
+        .scope-strip {
+          margin-top: 24px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .scope-chip {
+          border-radius: 999px;
+          padding: 9px 12px;
+          background: rgba(255,255,255,0.62);
+          border: 1px solid var(--line);
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 850;
+        }
+
         .hero-actions {
           margin-top: 26px;
           display: flex;
@@ -717,33 +745,37 @@ export default function HomePage() {
           padding: 22px;
         }
 
-        .profile-card h2 {
-          margin: 0 0 10px;
-          font-size: 30px;
-          line-height: 1.02;
-          letter-spacing: -0.045em;
-        }
-
-        .profile-card p {
-          margin: 0;
-          color: rgba(255,255,255,0.74);
-          font-size: 16px;
-          line-height: 1.55;
-        }
-
-        .identity-box {
-          margin-top: 18px;
-          border-radius: 18px;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.12);
-          padding: 16px;
+        .credential-grid {
           display: grid;
-          gap: 8px;
-          color: rgba(255,255,255,0.78);
+          gap: 10px;
+        }
+
+        .credential-row {
+          display: grid;
+          grid-template-columns: 86px 1fr;
+          gap: 14px;
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .credential-row:last-child {
+          border-bottom: 0;
+        }
+
+        .credential-label {
+          color: rgba(255,255,255,0.54);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 750;
-          line-height: 1.4;
+          font-size: 11px;
+          font-weight: 950;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .credential-value {
+          color: rgba(255,255,255,0.88);
+          font-size: 15px;
+          line-height: 1.35;
+          font-weight: 700;
         }
 
         .trust-strip {
@@ -756,42 +788,43 @@ export default function HomePage() {
           border-radius: 22px;
           border: 1px solid var(--line);
           background: rgba(255, 250, 242, 0.72);
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
           box-shadow: 0 14px 38px rgba(25, 22, 18, 0.06);
           overflow: hidden;
         }
 
-        .trust-item {
-          min-height: 70px;
-          display: flex;
-          flex-direction: column;
+        .trust-row {
+          display: grid;
+          grid-template-columns: 64px 1fr 1.35fr;
+          gap: 18px;
           align-items: center;
-          justify-content: center;
-          padding: 12px;
-          text-align: center;
-          border-right: 1px solid var(--line);
+          padding: 16px 20px;
+          border-bottom: 1px solid var(--line);
         }
 
-        .trust-item:last-child {
-          border-right: 0;
+        .trust-row:last-child {
+          border-bottom: 0;
         }
 
-        .trust-item strong {
+        .trust-number {
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+          letter-spacing: 0.08em;
+        }
+
+        .trust-title {
           color: var(--ink);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 950;
         }
 
-        .trust-item span {
-          display: block;
-          margin-top: 4px;
+        .trust-text {
           color: var(--muted);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 11px;
+          font-size: 13px;
           font-weight: 750;
-          line-height: 1.3;
         }
 
         .section {
@@ -955,6 +988,27 @@ export default function HomePage() {
           color: var(--gold);
         }
 
+        .normal-list {
+          margin: 18px 0 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 10px;
+        }
+
+        .normal-list li {
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.42;
+          display: flex;
+          gap: 10px;
+        }
+
+        .normal-list li::before {
+          content: "—";
+          color: var(--gold-dark);
+        }
+
         .card-link {
           display: inline-flex;
           margin-top: 22px;
@@ -988,7 +1042,7 @@ export default function HomePage() {
           box-shadow: 0 18px 50px rgba(25, 22, 18, 0.09);
           padding: 28px;
           display: grid;
-          gap: 18px;
+          gap: 16px;
         }
 
         .contact-choice-card.institution {
@@ -1016,7 +1070,7 @@ export default function HomePage() {
         }
 
         .phone-button {
-          min-height: 58px;
+          min-height: 62px;
           border-radius: 18px;
           display: inline-flex;
           align-items: center;
@@ -1025,7 +1079,7 @@ export default function HomePage() {
           background: linear-gradient(145deg, var(--gold), #d8bb6d);
           color: #17110d;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 20px;
+          font-size: 24px;
           font-weight: 950;
           box-shadow: 0 16px 32px rgba(182, 138, 58, 0.17);
         }
@@ -1060,6 +1114,19 @@ export default function HomePage() {
           color: #fff;
           background: rgba(255,255,255,0.10);
           border-color: rgba(255,255,255,0.16);
+        }
+
+        .contact-hint {
+          margin-top: 14px;
+          padding: 14px 18px;
+          border-radius: 18px;
+          border: 1px solid var(--line);
+          background: rgba(255,250,242,0.68);
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 800;
+          line-height: 1.5;
         }
 
         .feature-band {
@@ -1126,13 +1193,9 @@ export default function HomePage() {
           color: rgba(255,255,255,0.78);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
-          font-weight: 800;
-        }
-
-        .light-pill {
-          background: rgba(255,250,242,0.78);
-          border-color: var(--line);
-          color: var(--muted);
+          font-weight: 900;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
         }
 
         .digital-code {
@@ -1153,6 +1216,7 @@ export default function HomePage() {
           grid-template-columns: repeat(4, 1fr);
           gap: 12px;
           margin-top: 16px;
+          position: relative;
         }
 
         .quote-step {
@@ -1184,6 +1248,39 @@ export default function HomePage() {
           color: var(--muted);
           font-size: 13px;
           line-height: 1.5;
+        }
+
+        .language-strip {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
+          margin-top: 16px;
+        }
+
+        .language-item {
+          border-radius: 18px;
+          background: rgba(255,250,242,0.78);
+          border: 1px solid var(--line);
+          padding: 16px 18px;
+        }
+
+        .language-item strong {
+          display: block;
+          color: var(--ink);
+          font-size: 21px;
+          letter-spacing: -0.04em;
+          line-height: 1.05;
+        }
+
+        .language-item span {
+          display: block;
+          margin-top: 6px;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
         }
 
         .photo-grid {
@@ -1386,6 +1483,7 @@ export default function HomePage() {
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
+          margin-top: 22px;
         }
 
         .city-chip {
@@ -1399,20 +1497,47 @@ export default function HomePage() {
           font-weight: 850;
         }
 
+        .city-note {
+          margin-top: 18px;
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.55;
+        }
+
         .faq-contact-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 0.95fr 1.05fr;
           gap: 18px;
           align-items: start;
         }
 
-        .faq-grid {
+        .faq-list {
           display: grid;
-          gap: 12px;
+          gap: 10px;
         }
 
-        .faq-card h3 {
-          font-size: 21px;
+        .faq-item {
+          border-radius: 18px;
+          border: 1px solid var(--line);
+          background: rgba(255,250,242,0.78);
+          overflow: hidden;
+        }
+
+        .faq-item summary {
+          cursor: pointer;
+          padding: 18px;
+          color: var(--ink);
+          font-size: 19px;
+          font-weight: 800;
+          letter-spacing: -0.03em;
+        }
+
+        .faq-item p {
+          margin: 0;
+          padding: 0 18px 18px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
         }
 
         .review-card {
@@ -1420,15 +1545,15 @@ export default function HomePage() {
           background:
             linear-gradient(145deg, rgba(255,250,242,0.94), rgba(248,241,230,0.86));
           border: 1px solid rgba(182, 138, 58, 0.30);
-          padding: 28px;
+          padding: 22px;
           box-shadow: 0 15px 42px rgba(25, 22, 18, 0.06);
           display: grid;
-          gap: 16px;
+          gap: 14px;
         }
 
         .review-card h3 {
-          margin: 0 0 12px;
-          font-size: 30px;
+          margin: 0 0 8px;
+          font-size: 24px;
           line-height: 1.04;
           letter-spacing: -0.045em;
         }
@@ -1436,21 +1561,21 @@ export default function HomePage() {
         .review-card p {
           margin: 0;
           color: var(--muted);
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.55;
         }
 
         .review-button {
-          min-height: 50px;
+          min-height: 46px;
           border-radius: 999px;
           background: var(--gold);
           color: #fff;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 0 20px;
+          padding: 0 18px;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 950;
           box-shadow: 0 14px 28px rgba(182, 138, 58, 0.20);
         }
@@ -1692,12 +1817,9 @@ export default function HomePage() {
             grid-template-columns: 1fr;
           }
 
-          .trust-inner {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
           .grid-4,
-          .photo-grid {
+          .photo-grid,
+          .language-strip {
             grid-template-columns: repeat(2, 1fr);
           }
 
@@ -1745,19 +1867,18 @@ export default function HomePage() {
         @media (max-width: 640px) {
           .grid-4,
           .photo-grid,
-          .trust-inner,
           .quote-steps,
-          .contact-final-grid {
+          .contact-final-grid,
+          .language-strip {
             grid-template-columns: 1fr;
           }
 
-          .trust-item {
-            border-right: 0;
-            border-bottom: 1px solid var(--line);
+          .trust-row {
+            grid-template-columns: 48px 1fr;
           }
 
-          .trust-item:last-child {
-            border-bottom: 0;
+          .trust-text {
+            grid-column: 2;
           }
 
           .hero {
@@ -1899,6 +2020,14 @@ export default function HomePage() {
             Tłumaczenia poświadczone pisemne oraz ustne przy czynnościach.
           </p>
 
+          <div className="scope-strip">
+            {quickScope.map((item) => (
+              <span className="scope-chip" key={item}>
+                {item}
+              </span>
+            ))}
+          </div>
+
           <div className="hero-actions">
             <a className="button button-primary" href="#kontakt-wybor">
               Wybierz właściwy kontakt
@@ -1927,17 +2056,35 @@ export default function HomePage() {
           </div>
 
           <div className="profile-card">
-            <h2>Vadym Rekel</h2>
-            <p>
-              Tłumacz przysięgły języka ukraińskiego. Dokumenty procesowe,
-              materiał dowodowy, czynności i treści specjalistyczne.
-            </p>
+            <div className="credential-grid">
+              <div className="credential-row">
+                <span className="credential-label">Status</span>
+                <span className="credential-value">
+                  Tłumacz przysięgły języka ukraińskiego
+                </span>
+              </div>
 
-            <div className="identity-box">
-              <span>Wpis na listę Ministra Sprawiedliwości: TP/27/17</span>
-              <span>CIOL no. 94280 · TEPIS Member 2026</span>
-              <span>Siedziba kancelarii: Kraków</span>
-              <span>E-mail: {email}</span>
+              <div className="credential-row">
+                <span className="credential-label">Nr wpisu</span>
+                <span className="credential-value">TP/27/17</span>
+              </div>
+
+              <div className="credential-row">
+                <span className="credential-label">Profil</span>
+                <span className="credential-value">
+                  CIOL no. 94280 · TEPIS Member 2026
+                </span>
+              </div>
+
+              <div className="credential-row">
+                <span className="credential-label">Siedziba</span>
+                <span className="credential-value">Kraków</span>
+              </div>
+
+              <div className="credential-row">
+                <span className="credential-label">E-mail</span>
+                <span className="credential-value">{email}</span>
+              </div>
             </div>
           </div>
         </aside>
@@ -1946,9 +2093,10 @@ export default function HomePage() {
       <section className="trust-strip" aria-label="Dane kancelarii">
         <div className="trust-inner">
           {trustItems.map((item) => (
-            <div className="trust-item" key={item.title}>
-              <strong>{item.title}</strong>
-              <span>{item.text}</span>
+            <div className="trust-row" key={item.title}>
+              <span className="trust-number">{item.number}</span>
+              <span className="trust-title">{item.title}</span>
+              <span className="trust-text">{item.text}</span>
             </div>
           ))}
         </div>
@@ -1966,14 +2114,15 @@ export default function HomePage() {
           <article className="contact-choice-card">
             <span className="tag">Klienci indywidualni</span>
             <h2>Dokumenty prywatne i urzędowe.</h2>
-            <p>
-              Akty stanu cywilnego, pełnomocnictwa, oświadczenia, dokumenty
-              pobytowe, rodzinne i dokumenty z Ukrainy.
-            </p>
 
             <a className="phone-button" href={`tel:${individualPhoneHref}`}>
               {individualPhoneDisplay}
             </a>
+
+            <p>
+              Akty stanu cywilnego, pełnomocnictwa, oświadczenia, dokumenty
+              pobytowe, rodzinne i dokumenty z Ukrainy.
+            </p>
 
             <div className="choice-links">
               <a className="choice-link" href={`mailto:${email}`}>
@@ -1988,14 +2137,15 @@ export default function HomePage() {
           <article className="contact-choice-card institution">
             <span className="tag">Sąd · Policja · Prokuratura</span>
             <h2>Sprawy karne, czynności i materiał dowodowy.</h2>
-            <p>
-              Czynności procesowe, przesłuchania, protokoły, akta spraw,
-              komunikatory, zrzuty ekranu, raporty PDF i pilne materiały.
-            </p>
 
             <a className="phone-button" href={`tel:${institutionPhoneHref}`}>
               {institutionPhoneDisplay}
             </a>
+
+            <p>
+              Czynności procesowe, przesłuchania, protokoły, akta spraw,
+              komunikatory, zrzuty ekranu, raporty PDF i pilne materiały.
+            </p>
 
             <div className="choice-links">
               <a className="choice-link" href={`mailto:${email}`}>
@@ -2006,6 +2156,12 @@ export default function HomePage() {
               </a>
             </div>
           </article>
+        </div>
+
+        <div className="contact-hint">
+          Nie wiesz, który kontakt wybrać? Dokument prywatny lub urzędowy →{" "}
+          {individualPhoneDisplay}. Czynność, akta, sąd, Policja albo
+          prokuratura → {institutionPhoneDisplay}.
         </div>
       </section>
 
@@ -2018,9 +2174,11 @@ export default function HomePage() {
         />
 
         <div className="grid-3">
-          {mainSegments.map((item) => (
+          {mainSegments.map((item, index) => (
             <article className="card card-dark" key={item.title}>
-              <span className="tag">{item.label}</span>
+              <span className="tag">
+                02.{String(index + 1).padStart(2, "0")}
+              </span>
               <h3>{item.title}</h3>
 
               <ul className="service-list">
@@ -2083,13 +2241,11 @@ export default function HomePage() {
               aresztach śledczych i zakładach karnych.
             </p>
 
-            <div className="pill-list" style={{ marginTop: 20 }}>
+            <ul className="normal-list">
               {oralItems.map((item) => (
-                <span className="pill light-pill" key={item}>
-                  {item}
-                </span>
+                <li key={item}>{item}</li>
               ))}
-            </div>
+            </ul>
 
             <div className="hero-actions">
               <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
@@ -2099,20 +2255,19 @@ export default function HomePage() {
           </article>
 
           <article className="card">
-            <span className="tag">Korespondencja osadzonych</span>
-            <h3>Pisma odręczne, listy, skargi i wyjaśnienia.</h3>
+            <span className="tag">Materiał szczególny</span>
+            <h3>Korespondencja osadzonych.</h3>
             <p>
-              Praca z trudnym pismem, skrótami, stylem emocjonalnym, językiem
-              potocznym i kontekstem sprawy.
+              Pisma odręczne, listy, skargi i wyjaśnienia. Istotne jest
+              zachowanie sensu wypowiedzi, struktury pisma i tonu, także gdy
+              język jest potoczny albo emocjonalny.
             </p>
 
-            <div className="pill-list" style={{ marginTop: 20 }}>
+            <ul className="normal-list">
               {inmateItems.map((item) => (
-                <span className="pill light-pill" key={item}>
-                  {item}
-                </span>
+                <li key={item}>{item}</li>
               ))}
-            </div>
+            </ul>
           </article>
         </div>
       </section>
@@ -2172,30 +2327,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="jezyki">
-        <SectionHeading
-          number="07"
-          kicker="Języki pracy"
-          title="Ukraiński przysięgły. Rosyjski i angielski specjalistyczne."
-          text="Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Rosyjski i angielski są oferowane jako języki specjalistyczne."
-        />
-
-        <div className="grid-3">
-          {languages.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">{item.label}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section" id="kancelaria">
         <SectionHeading
-          number="08"
+          number="07"
           kicker="Kancelaria"
-          title="Zaplecze pracy z dokumentami."
+          title="Kancelaria i obieg dokumentów."
           text="Organizacja dokumentów, kontrola wersji, przygotowanie wydruków, kompletowanie materiałów i poufność."
         />
 
@@ -2219,7 +2355,7 @@ export default function HomePage() {
 
       <section className="section" id="kwalifikacje">
         <SectionHeading
-          number="09"
+          number="08"
           kicker="Profil i kwalifikacje"
           title="Uprawnienia zawodowe i przygotowanie specjalistyczne."
           text="Skrót danych zawodowych. Pełne dokumenty, certyfikaty i dyplomy znajdują się na stronie kwalifikacji."
@@ -2228,7 +2364,7 @@ export default function HomePage() {
         <div className="profile-qualification-grid">
           <article className="card">
             <span className="tag">Profil zawodowy</span>
-            <h3>Vadym Rekel — tłumacz przysięgły języka ukraińskiego.</h3>
+            <h3>Tłumacz przysięgły języka ukraińskiego.</h3>
             <p>
               Dokumenty procesowe, materiał dowodowy, czynności ustne, dokumenty
               transgraniczne z Ukrainą oraz treści specjalistyczne.
@@ -2240,6 +2376,15 @@ export default function HomePage() {
               <li>tłumaczenia ustne przy czynnościach formalnych</li>
               <li>materiał cyfrowy, komunikatory, raporty PDF i zrzuty ekranu</li>
             </ul>
+
+            <div className="language-strip">
+              {languages.map((item) => (
+                <div className="language-item" key={item.title}>
+                  <strong>{item.title}</strong>
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
           </article>
 
           <div className="registry">
@@ -2262,7 +2407,7 @@ export default function HomePage() {
       <section className="section" id="lokalizacja">
         <div className="map-card">
           <SectionHeading
-            number="10"
+            number="09"
             kicker="Lokalizacja"
             title="Kancelaria przy Rondzie Mogilskim w Krakowie."
             text="Kancelaria znajduje się przy ul. Kieleckiej 2/53 w Krakowie. Lokalizacja jest dogodna dla spraw sądowych, prokuratorskich, policyjnych, urzędowych i konsularnych."
@@ -2281,47 +2426,46 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="nearby-grid">
-              {nearbyPlaces.map((place) => (
-                <article className="nearby-item" key={place.title}>
-                  <div className="nearby-icon" aria-hidden="true">
-                    {place.number}
-                  </div>
+            <div>
+              <div className="nearby-grid">
+                {nearbyPlaces.map((place) => (
+                  <article className="nearby-item" key={place.title}>
+                    <div className="nearby-icon" aria-hidden="true">
+                      {place.number}
+                    </div>
 
-                  <div>
-                    <h3>{place.title}</h3>
-                    <p>{place.address}</p>
-                    <p>{place.note}</p>
-                    <a
-                      className="nearby-link"
-                      href={place.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Zobacz trasę →
-                    </a>
-                  </div>
-                </article>
-              ))}
+                    <div>
+                      <h3>{place.title}</h3>
+                      <p>{place.address}</p>
+                      <p>{place.note}</p>
+                      <a
+                        className="nearby-link"
+                        href={place.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Zobacz trasę →
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="city-grid">
+                {cities.map((city) => (
+                  <span className="city-chip" key={city}>
+                    {city}
+                  </span>
+                ))}
+              </div>
+
+              <p className="city-note">
+                Kancelaria ma siedzibę w Krakowie. Lista miast oznacza możliwość
+                przesłania dokumentów elektronicznie do wstępnej wyceny, a nie
+                dodatkowe siedziby kancelarii.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          number="11"
-          kicker="Cała Polska"
-          title="Dokumenty do wyceny można przesłać elektronicznie."
-          text="Siedziba kancelarii znajduje się w Krakowie. Dokumenty są przyjmowane do wstępnej wyceny również z innych miast wojewódzkich i miejscowości w Polsce."
-        />
-
-        <div className="city-grid">
-          {cities.map((city) => (
-            <span className="city-chip" key={city}>
-              {city}
-            </span>
-          ))}
         </div>
       </section>
 
@@ -2329,18 +2473,18 @@ export default function HomePage() {
         <div className="faq-contact-grid">
           <div>
             <SectionHeading
-              number="12"
+              number="10"
               kicker="FAQ"
               title="Najczęstsze pytania przed wysłaniem dokumentu."
               text="Krótko o kontakcie, wycenie, dokumentach elektronicznych i zakresie języków."
             />
 
-            <div className="faq-grid">
+            <div className="faq-list">
               {faqItems.map((item) => (
-                <article className="card faq-card" key={item.question}>
-                  <h3>{item.question}</h3>
+                <details className="faq-item" key={item.question}>
+                  <summary>{item.question}</summary>
                   <p>{item.answer}</p>
-                </article>
+                </details>
               ))}
             </div>
           </div>
@@ -2348,7 +2492,7 @@ export default function HomePage() {
           <div>
             <div className="contact-card">
               <div className="section-meta">
-                <span>13</span>
+                <span>11</span>
                 <strong>Kontakt</strong>
               </div>
               <h2>Wybierz właściwy kontakt do sprawy.</h2>
