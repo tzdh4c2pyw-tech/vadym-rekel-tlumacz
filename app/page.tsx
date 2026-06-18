@@ -4,21 +4,18 @@ export const metadata: Metadata = {
   title:
     "Tłumacz przysięgły języka ukraińskiego Kraków | Sąd, Policja, Prokuratura",
   description:
-    "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie. Vadym Rekel, TP/27/17. Tłumaczenia poświadczone i ustne dla sądów, Policji i prokuratury. Sprawy karne, akta, protokoły, dokumenty z Ukrainy, materiał cyfrowy, komunikatory i korespondencja osadzonych. Obsługa dokumentów z całej Polski zdalnie.",
+    "Vadym Rekel, tłumacz przysięgły języka ukraińskiego TP/27/17 w Krakowie. Tłumaczenia poświadczone i ustne dla sądów, Policji, prokuratury oraz dokumenty z Ukrainy. Dokumenty z całej Polski zdalnie.",
   keywords: [
     "tłumacz przysięgły języka ukraińskiego",
     "tłumacz przysięgły ukraiński Kraków",
-    "kancelaria tłumacza przysięgłego języka ukraińskiego",
     "tłumacz ukraiński sąd",
-    "tłumacz ukraiński policja",
+    "tłumacz ukraiński Policja",
     "tłumacz ukraiński prokuratura",
+    "Vadym Rekel",
+    "TP/27/17",
+    "tłumaczenia dokumentów z Ukrainy",
     "tłumaczenie akt sprawy ukraiński",
-    "tłumaczenie protokołów ukraiński",
-    "tłumaczenie dokumentów z Ukrainy",
-    "tłumaczenie korespondencji osadzonych",
-    "tłumaczenie komunikatorów ukraiński",
-    "tłumaczenie materiału cyfrowego ukraiński",
-    "tłumacz przysięgły ukraiński cała Polska"
+    "tłumacz ukraiński sprawy karne"
   ]
 };
 
@@ -32,102 +29,58 @@ const individualPhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
-const organServices = [
+const authorityCards = [
   {
-    title: "Sądy",
-    href: "/tlumaczenia-sadowe-ukrainski",
-    items: [
-      "akta spraw",
-      "wyroki",
-      "postanowienia",
-      "protokoły",
-      "pisma procesowe",
-      "załączniki"
-    ]
+    title: "Sąd",
+    text: "Akta spraw, protokoły, wyroki, postanowienia, pisma procesowe i załączniki.",
+    href: "/tlumaczenia-sadowe-ukrainski"
   },
   {
     title: "Policja",
-    href: "/tlumaczenia-dla-policji",
-    items: [
-      "czynności",
-      "pouczenia",
-      "notatki urzędowe",
-      "protokoły",
-      "komunikatory",
-      "zrzuty ekranu"
-    ]
+    text: "Czynności, pouczenia, notatki urzędowe, protokoły, komunikatory i materiał cyfrowy.",
+    href: "/tlumaczenia-dla-policji"
   },
   {
     title: "Prokuratura",
-    href: "/tlumaczenia-dla-prokuratury",
-    items: [
-      "protokoły przesłuchań",
-      "postanowienia",
-      "zawiadomienia",
-      "materiał dowodowy",
-      "pomoc prawna z Ukrainą",
-      "akta postępowania przygotowawczego"
-    ]
+    text: "Sprawy karne, postępowania przygotowawcze, pomoc prawna z Ukrainą i materiał dowodowy.",
+    href: "/tlumaczenia-dla-prokuratury"
   }
 ];
 
-const digitalItems = [
+const serviceCards = [
   {
-    title: "Komunikatory",
-    text: "Telegram, WhatsApp, Signal, Messenger, SMS, MMS, e-mail, eksporty rozmów i załączniki."
+    title: "Dokumenty z Ukrainy",
+    text: "Dokumenty urzędowe, sądowe, procesowe i prywatne pochodzące z Ukrainy albo kierowane do organów ukraińskich.",
+    href: "/dokumenty-z-ukrainy"
   },
   {
-    title: "Raporty PDF",
-    text: "Raporty z telefonu, eksporty danych, zestawienia, tabele, dokumenty wielostronicowe i załączniki do akt."
+    title: "Materiał cyfrowy",
+    text: "Komunikatory, zrzuty ekranu, raporty PDF, dane z telefonu, oszustwa internetowe i kryptowaluty.",
+    href: "/tlumaczenia-it-krypto"
   },
   {
-    title: "Zrzuty ekranu",
-    text: "Aplikacje, strony internetowe, panele transakcyjne, rozmowy, zdjęcia i materiały przekazywane jako dowód."
-  },
-  {
-    title: "Oszustwa internetowe",
-    text: "Kryptowaluty, portfele, giełdy, AML/KYC, przepływy środków i korespondencja elektroniczna."
+    title: "Korespondencja osadzonych",
+    text: "Listy, skargi, prośby, oświadczenia, wyjaśnienia i pisma odręczne w sprawach karnych.",
+    href: "/tlumaczenie-korespondencji-osadzonych"
   }
 ];
 
-const ukraineItems = [
-  "wnioski o pomoc prawną",
-  "odpowiedzi organów ukraińskich",
-  "wezwania",
-  "pouczenia",
-  "postanowienia",
-  "protokoły przesłuchań",
-  "akty oskarżenia",
-  "korespondencja między organami",
-  "dokumenty urzędowe z Ukrainy"
-];
-
-const oralItems = [
-  "przesłuchania",
-  "czynności w Policji",
-  "czynności w prokuraturze",
-  "czynności sądowe",
-  "areszty śledcze",
-  "zakłady karne",
-  "czynności zdalne, jeżeli forma czynności na to pozwala"
-];
-
-const deliveryMethods = [
+const handoverCards = [
   {
     title: "E-mail",
-    text: "Prześlij skan, zdjęcie albo plik PDF na adres:",
+    text: "Prześlij skan, zdjęcie albo plik PDF.",
     value: email,
     href: `mailto:${email}`
   },
   {
     title: "Adres kancelarii",
-    text: "Dokument można przekazać do kancelarii:",
+    text: "Dokument można przekazać w Krakowie.",
     value: "ul. Kielecka 2/53, 31-526 Kraków",
-    href: "#lokalizacja"
+    href: "#kontakt"
   },
   {
     title: "Odbiór osobisty",
-    text: "Odbiór tłumaczenia w kancelarii jest możliwy po wcześniejszym uzgodnieniu terminu.",
+    text: "Po wcześniejszym uzgodnieniu terminu.",
     value: "po uzgodnieniu",
     href: `tel:${institutionPhoneHref}`
   }
@@ -135,86 +88,19 @@ const deliveryMethods = [
 
 const officePhotos = [
   {
-    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
-    alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie - stanowisko pracy",
-    title: "Stanowisko pracy z dokumentami procesowymi"
-  },
-  {
-    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
-    alt: "Stanowisko administracyjne w kancelarii tłumacza przysięgłego języka ukraińskiego",
-    title: "Obieg dokumentów i korespondencji"
-  },
-  {
     src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
     alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Kancelaria w Krakowie"
+    title: "Kancelaria"
+  },
+  {
+    src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
+    alt: "Stanowisko pracy tłumacza przysięgłego języka ukraińskiego",
+    title: "Dokumenty"
   },
   {
     src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
-    alt: "Praca z materiałem cyfrowym i plikami PDF w kancelarii tłumacza przysięgłego",
-    title: "Materiał cyfrowy i pliki PDF"
-  },
-  {
-    src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Przygotowanie tłumaczeń poświadczonych w kancelarii tłumacza przysięgłego",
-    title: "Przygotowanie tłumaczeń poświadczonych"
-  }
-];
-
-const cities = [
-  "Warszawa",
-  "Wrocław",
-  "Poznań",
-  "Gdańsk",
-  "Katowice",
-  "Łódź",
-  "Lublin",
-  "Rzeszów",
-  "Białystok",
-  "Szczecin",
-  "Bydgoszcz",
-  "Toruń",
-  "Kielce",
-  "Olsztyn",
-  "Opole",
-  "Zielona Góra"
-];
-
-const faqItems = [
-  {
-    question: "Który numer wybrać?",
-    answer:
-      "Sąd, Policja, prokuratura, czynności, akta i materiał dowodowy: 883 040 483. Klienci indywidualni i dokumenty prywatne: 735 753 383."
-  },
-  {
-    question: "Czy dokument można przesłać e-mailem?",
-    answer:
-      "Tak. Do wstępnej wyceny można przesłać skan, zdjęcie albo plik PDF na adres biegly@vadymrekel.pl."
-  },
-  {
-    question: "Czy można przekazać dokument osobiście w kancelarii?",
-    answer:
-      "Tak. Dokument można przekazać do kancelarii przy ul. Kieleckiej 2/53 w Krakowie. Termin najlepiej wcześniej uzgodnić."
-  },
-  {
-    question: "Czy możliwy jest odbiór osobisty tłumaczenia?",
-    answer:
-      "Tak. Odbiór osobisty tłumaczenia w kancelarii jest możliwy po wcześniejszym uzgodnieniu terminu."
-  },
-  {
-    question: "Czy kancelaria obsługuje sądy, Policję i prokuraturę z innych miast?",
-    answer:
-      "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z całej Polski."
-  },
-  {
-    question: "Czy tłumaczone są komunikatory, zrzuty ekranu i raporty z telefonu?",
-    answer:
-      "Tak. Zakres obejmuje komunikatory, zrzuty ekranu, raporty PDF, dane z telefonu, e-mail, SMS i inne materiały cyfrowe."
-  },
-  {
-    question: "Czy rosyjski i angielski są tłumaczeniami przysięgłymi?",
-    answer:
-      "Nie. Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Język rosyjski i angielski są oferowane jako tłumaczenia specjalistyczne."
+    alt: "Praca z materiałem cyfrowym i dokumentami PDF",
+    title: "Materiał cyfrowy"
   }
 ];
 
@@ -243,7 +129,8 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-    image: "https://www.tlumaczrosyjskiegoiukrainskiego.pl/images/vadym%20rekel.jpg",
+    image: "https://www.tlumaczrosyjskiegoiukrainskiego.pl/opengraph-image",
+    url: "https://www.tlumaczrosyjskiegoiukrainskiego.pl",
     telephone: institutionPhoneHref,
     email,
     address: {
@@ -253,18 +140,23 @@ export default function HomePage() {
       postalCode: "31-526",
       addressCountry: "PL"
     },
+    founder: {
+      "@type": "Person",
+      name: "Vadym Rekel",
+      jobTitle: "Tłumacz przysięgły języka ukraińskiego"
+    },
     areaServed: {
       "@type": "Country",
       name: "Polska"
     },
-    founder: {
-      "@type": "Person",
-      name: "Vadym Rekel",
-      jobTitle: "Tłumacz przysięgły języka ukraińskiego",
-      sameAs: linkedInUrl
-    },
-    description:
-      "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie. Obsługa sądów, Policji i prokuratury. Dokumenty z całej Polski zdalnie."
+    serviceType: [
+      "Tłumaczenia poświadczone języka ukraińskiego",
+      "Tłumaczenia ustne języka ukraińskiego",
+      "Tłumaczenia dla sądów",
+      "Tłumaczenia dla Policji",
+      "Tłumaczenia dla prokuratury",
+      "Tłumaczenia dokumentów z Ukrainy"
+    ]
   };
 
   return (
@@ -289,7 +181,7 @@ export default function HomePage() {
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -304,7 +196,7 @@ export default function HomePage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -328,7 +220,7 @@ export default function HomePage() {
         }
 
         .nav {
-          max-width: 1180px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -392,15 +284,14 @@ export default function HomePage() {
           border-radius: 999px;
           background: var(--green);
           color: #fff;
-          box-shadow: 0 10px 25px rgba(18, 60, 49, 0.18);
         }
 
         .hero {
-          max-width: 1180px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.16fr 0.84fr;
+          grid-template-columns: 1.1fr 0.9fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -410,7 +301,7 @@ export default function HomePage() {
           border-radius: var(--radius);
           background: rgba(255, 250, 242, 0.86);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 48px;
         }
 
         .eyebrow {
@@ -429,22 +320,22 @@ export default function HomePage() {
 
         h1 {
           margin: 0;
-          max-width: 820px;
-          font-size: clamp(40px, 5.2vw, 68px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          max-width: 800px;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
-          max-width: 780px;
+          margin: 24px 0 0;
+          max-width: 740px;
           color: var(--muted);
           font-size: 20px;
           line-height: 1.55;
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -483,8 +374,7 @@ export default function HomePage() {
         .hero-note {
           margin-top: 22px;
           color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 1.55;
         }
 
@@ -493,19 +383,20 @@ export default function HomePage() {
           background: linear-gradient(155deg, var(--green), var(--green-dark));
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 22px;
+          padding: 28px;
+          min-height: 520px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 450px;
         }
 
         .portrait {
-          height: 255px;
-          border-radius: 20px;
+          height: 300px;
+          border-radius: 22px;
           overflow: hidden;
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(255,255,255,0.14);
+          margin-bottom: 22px;
         }
 
         .portrait img {
@@ -516,31 +407,45 @@ export default function HomePage() {
           display: block;
         }
 
-        .profile-card {
-          margin-top: 18px;
-          border-top: 1px solid rgba(255,255,255,0.16);
-          padding-top: 18px;
-        }
-
-        .profile-card h2 {
-          margin: 0 0 8px;
+        .hero-side h2 {
+          margin: 0;
           color: #fff;
-          font-size: 31px;
+          font-size: 35px;
           line-height: 1;
           letter-spacing: -0.045em;
         }
 
-        .profile-card p {
-          margin: 0;
-          color: rgba(255,255,255,0.75);
-          font-size: 15px;
-          line-height: 1.5;
+        .hero-side p {
+          margin: 14px 0 0;
+          color: rgba(255,255,255,0.76);
+          font-size: 16px;
+          line-height: 1.55;
+        }
+
+        .side-meta {
+          margin-top: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 9px;
+        }
+
+        .side-meta span {
+          border-radius: 999px;
+          padding: 8px 11px;
+          background: rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.14);
+          color: rgba(255,255,255,0.80);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 900;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
         }
 
         .trust {
-          max-width: 1180px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 0 22px 28px;
+          padding: 0 22px 34px;
         }
 
         .trust-inner {
@@ -557,9 +462,9 @@ export default function HomePage() {
         }
 
         .section {
-          max-width: 1180px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -603,12 +508,6 @@ export default function HomePage() {
         .grid-3 {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
-        }
-
-        .grid-4 {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
           gap: 16px;
         }
 
@@ -681,79 +580,6 @@ export default function HomePage() {
           color: rgba(255,255,255,0.76);
         }
 
-        .phone-main {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 64px;
-          margin: 18px 0;
-          border-radius: 18px;
-          background: #fffaf2;
-          color: var(--green);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
-          font-weight: 950;
-        }
-
-        .phone-gold {
-          background: var(--gold);
-          color: #17110d;
-        }
-
-        .mini-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin-top: 18px;
-        }
-
-        .mini-action {
-          min-height: 40px;
-          border-radius: 999px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 14px;
-          background: rgba(255,255,255,0.10);
-          border: 1px solid rgba(255,255,255,0.14);
-          color: #fff;
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 900;
-        }
-
-        .mini-action-light {
-          background: rgba(255,255,255,0.58);
-          color: var(--ink);
-          border-color: var(--line);
-        }
-
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
-        }
-
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .card-dark .list li,
-        .card-petrol .list li {
-          color: rgba(255,255,255,0.78);
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
-        }
-
         .card-link {
           display: inline-flex;
           margin-top: 20px;
@@ -772,11 +598,11 @@ export default function HomePage() {
           border-radius: var(--radius);
           background: var(--ink);
           color: #fff;
-          padding: 40px;
+          padding: 44px;
           box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
-          gap: 30px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
           align-items: center;
         }
 
@@ -796,7 +622,7 @@ export default function HomePage() {
         }
 
         .labels {
-          margin-top: 20px;
+          margin-top: 22px;
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -817,23 +643,22 @@ export default function HomePage() {
 
         .photo-grid {
           display: grid;
-          grid-template-columns: 1.2fr 0.8fr 0.8fr;
+          grid-template-columns: 1.2fr 0.9fr 0.9fr;
           gap: 14px;
         }
 
         .photo-card {
           position: relative;
-          min-height: 260px;
+          min-height: 310px;
           border-radius: 24px;
           overflow: hidden;
-          background: var(--paper-soft);
+          background: #f8f1e6;
           border: 1px solid var(--line);
           box-shadow: 0 14px 34px rgba(25, 22, 18, 0.055);
         }
 
         .photo-card:first-child {
-          grid-row: span 2;
-          min-height: 536px;
+          min-height: 390px;
         }
 
         .photo-card img {
@@ -847,7 +672,7 @@ export default function HomePage() {
 
         .photo-card:hover img {
           transform: scale(1.045);
-          filter: brightness(0.72);
+          filter: brightness(0.76);
         }
 
         .photo-caption {
@@ -862,68 +687,53 @@ export default function HomePage() {
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
           font-weight: 850;
-          transform: translateY(8px);
-          opacity: 0.92;
-          transition: transform 260ms ease, opacity 260ms ease;
         }
 
-        .photo-card:hover .photo-caption {
-          transform: translateY(0);
-          opacity: 1;
+        .contact-panel {
+          border-radius: var(--radius);
+          background: linear-gradient(150deg, var(--green), var(--green-dark));
+          color: #fff;
+          box-shadow: var(--shadow);
+          padding: 44px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 24px;
+          align-items: center;
         }
 
-        .city-grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin-top: 22px;
+        .contact-panel h2 {
+          margin: 0;
+          color: #fff;
+          font-size: clamp(34px, 4vw, 56px);
+          line-height: 0.98;
+          letter-spacing: -0.055em;
         }
 
-        .city-chip {
-          border-radius: 999px;
-          padding: 9px 13px;
-          background: rgba(255,250,242,0.78);
-          border: 1px solid var(--line);
-          color: var(--muted);
+        .contact-panel p {
+          margin: 18px 0 0;
+          color: rgba(255,255,255,0.76);
+          font-size: 18px;
+          line-height: 1.55;
+        }
+
+        .contact-box {
+          border-radius: 22px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          padding: 24px;
+        }
+
+        .contact-line {
+          display: block;
+          color: rgba(255,255,255,0.78);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-        }
-
-        .note {
-          margin-top: 18px;
-          color: var(--muted);
           font-size: 14px;
           line-height: 1.55;
+          margin-top: 10px;
         }
 
-        .faq-list {
-          display: grid;
-          gap: 10px;
-        }
-
-        .faq-item {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          overflow: hidden;
-        }
-
-        .faq-item summary {
-          cursor: pointer;
-          padding: 18px;
-          color: var(--ink);
-          font-size: 19px;
-          font-weight: 800;
-          letter-spacing: -0.03em;
-        }
-
-        .faq-item p {
-          margin: 0;
-          padding: 0 18px 18px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.55;
+        .contact-line strong {
+          color: #fff;
         }
 
         .footer {
@@ -935,7 +745,7 @@ export default function HomePage() {
         }
 
         .footer-inner {
-          max-width: 1180px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -975,46 +785,27 @@ export default function HomePage() {
           flex: 0 0 auto;
         }
 
-        @media (max-width: 1080px) {
+        @media (max-width: 980px) {
           .hero,
           .section-heading,
           .feature,
+          .contact-panel,
           .footer-inner {
             grid-template-columns: 1fr;
           }
 
-          .grid-4,
+          .grid-2,
+          .grid-3,
           .photo-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .grid-3 {
             grid-template-columns: 1fr;
           }
 
-          .photo-card:first-child {
-            grid-row: span 1;
-            min-height: 300px;
-          }
-        }
-
-        @media (max-width: 860px) {
           .nav-links {
             display: none;
           }
 
-          .grid-2 {
-            grid-template-columns: 1fr;
-          }
-
-          .hero-main,
-          .hero-side,
-          .feature {
-            padding: 28px;
-          }
-
-          h1 {
-            font-size: 42px;
+          .hero-side {
+            min-height: auto;
           }
         }
 
@@ -1030,23 +821,23 @@ export default function HomePage() {
             padding-top: 34px;
           }
 
-          .grid-4,
-          .photo-grid {
-            grid-template-columns: 1fr;
+          .hero-main,
+          .hero-side,
+          .feature,
+          .contact-panel {
+            padding: 28px;
           }
 
-          .button,
-          .phone-main {
+          h1 {
+            font-size: 40px;
+          }
+
+          .button {
             width: 100%;
           }
 
           .portrait {
             height: 280px;
-          }
-
-          .photo-card,
-          .photo-card:first-child {
-            min-height: 255px;
           }
         }
       `}</style>
@@ -1064,10 +855,9 @@ export default function HomePage() {
           </a>
 
           <div className="nav-links">
-            <a href="#dla-organow">Dla organów</a>
-            <a href="#sprawy-karne">Sprawy karne</a>
-            <a href="#material-cyfrowy">Materiał cyfrowy</a>
-            <a href="#ukraina">Dokumenty z Ukrainy</a>
+            <a href="#organy">Dla organów</a>
+            <a href="#specjalizacja">Specjalizacja</a>
+            <a href="#dokumenty">Dokumenty</a>
             <a href="#kancelaria">Kancelaria</a>
             <a href="#kontakt">Kontakt</a>
             <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
@@ -1080,20 +870,18 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Kraków · TP/27/17 · dokumenty z całej Polski zdalnie
+            Kraków · TP/27/17 · język ukraiński
           </span>
 
           <h1>
-            Tłumacz przysięgły języka ukraińskiego w Krakowie — sąd, Policja,
-            prokuratura i dokumenty z całej Polski
+            Tłumacz przysięgły języka ukraińskiego dla sądów, Policji i
+            prokuratury.
           </h1>
 
           <p className="lead">
-            Kancelaria tłumacza przysięgłego języka ukraińskiego TP/27/17.
-            Tłumaczenia poświadczone i ustne w sprawach karnych, sądowych,
-            policyjnych i prokuratorskich: akta spraw, protokoły, dokumenty z
-            Ukrainy, komunikatory, dane z telefonu, raporty PDF i korespondencja
-            osadzonych.
+            Kancelaria Vadym Rekel. Tłumaczenia poświadczone i ustne języka
+            ukraińskiego w sprawach karnych, procesowych, urzędowych oraz w
+            dokumentach z Ukrainy.
           </p>
 
           <div className="hero-actions">
@@ -1107,112 +895,54 @@ export default function HomePage() {
 
           <p className="hero-note">
             Siedziba kancelarii: ul. Kielecka 2/53, 31-526 Kraków. Dokumenty do
-            wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w
-            Polsce.
+            wstępnej wyceny można przesłać elektronicznie z całej Polski.
           </p>
         </div>
 
         <aside className="hero-side">
-          <div className="portrait">
-            <img
-              src="/images/vadym%20rekel.jpg"
-              alt="Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
-            />
-          </div>
+          <div>
+            <div className="portrait">
+              <img
+                src="/images/vadym%20rekel.jpg"
+                alt="Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
+              />
+            </div>
 
-          <div className="profile-card">
             <h2>Vadym Rekel</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Dokumenty z całej Polski zdalnie.
+              Tłumacz przysięgły języka ukraińskiego. Numer wpisu TP/27/17.
+              Kancelaria w Krakowie.
             </p>
+
+            <div className="side-meta">
+              <span>TP/27/17</span>
+              <span>język ukraiński</span>
+              <span>Kraków</span>
+            </div>
           </div>
         </aside>
       </section>
 
       <section className="trust">
         <div className="trust-inner">
-          TP/27/17 · kancelaria w Krakowie · język ukraiński przysięgły ·
-          rosyjski i angielski specjalistycznie · dokumenty z całej Polski
-          zdalnie
+          Tłumaczenia poświadczone i ustne · sprawy karne · dokumenty z Ukrainy
+          · materiał cyfrowy · dokumenty z całej Polski zdalnie
         </div>
       </section>
 
-      <section className="section" id="kontakt">
-        <SectionHeading
-          label="Kontakt"
-          title="Najpierw właściwy kontakt do sprawy."
-          text="Sprawy kierowane przez Sąd, Policję i Prokuraturę obsługiwane są przez osobny kontakt. Dokumenty prywatne i urzędowe mają oddzielny numer."
-        />
-
-        <div className="grid-2">
-          <article className="card card-dark">
-            <span className="tag">Sąd · Policja · Prokuratura</span>
-            <h3>Sprawy karne, czynności i materiał dowodowy.</h3>
-
-            <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
-            </a>
-
-            <p>
-              Czynności procesowe, przesłuchania, protokoły, akta spraw,
-              materiał dowodowy, komunikatory i dokumenty z Ukrainy.
-            </p>
-
-            <div className="mini-actions">
-              <a className="mini-action" href={`mailto:${email}`}>
-                Napisz e-mail
-              </a>
-              <a className="mini-action" href="#dla-organow">
-                Zakres dla organów
-              </a>
-            </div>
-          </article>
-
-          <article className="card">
-            <span className="tag">Klienci indywidualni</span>
-            <h3>Dokumenty prywatne i urzędowe.</h3>
-
-            <a className="phone-main phone-gold" href={`tel:${individualPhoneHref}`}>
-              {individualPhoneDisplay}
-            </a>
-
-            <p>
-              Dokumenty prywatne, urzędowe, pobytowe, rodzinne i dokumenty z
-              Ukrainy.
-            </p>
-
-            <div className="mini-actions">
-              <a className="mini-action mini-action-light" href={`mailto:${email}`}>
-                Wyślij dokument
-              </a>
-              <a className="mini-action mini-action-light" href="#przekazanie">
-                Jak przekazać dokument?
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="section" id="dla-organow">
+      <section className="section" id="organy">
         <SectionHeading
           label="Dla organów"
-          title="Tłumaczenia dla sądów, Policji i prokuratury."
-          text="Zakres obejmuje dokumenty i wypowiedzi, które mogą mieć znaczenie procesowe, dowodowe albo urzędowe."
+          title="Jasny zakres dla sądu, Policji i prokuratury."
+          text="Strona główna pokazuje tylko najważniejsze obszary. Szczegółowy zakres znajduje się na dedykowanych podstronach."
         />
 
         <div className="grid-3">
-          {organServices.map((item) => (
+          {authorityCards.map((item) => (
             <article className="card" key={item.title}>
               <span className="tag">Tłumaczenia dla</span>
               <h3>{item.title}</h3>
-
-              <ul className="list">
-                {item.items.map((service) => (
-                  <li key={service}>{service}</li>
-                ))}
-              </ul>
-
+              <p>{item.text}</p>
               <a className="card-link" href={item.href}>
                 Zobacz zakres →
               </a>
@@ -1221,158 +951,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="sprawy-karne">
+      <section className="section" id="specjalizacja">
         <div className="feature">
           <div>
-            <p className="section-label">Sprawy karne</p>
-            <h2>
-              Tłumaczenia w sprawach karnych, oszustwach internetowych i
-              materiale cyfrowym.
-            </h2>
+            <p className="section-label">Specjalizacja</p>
+            <h2>Sprawy karne, dokumenty procesowe i materiał cyfrowy.</h2>
           </div>
 
           <div>
             <p>
-              Kancelaria pracuje z dokumentami i materiałami występującymi w
-              sprawach dotyczących oszustw internetowych, przepływów środków,
-              komunikatorów, kryptowalut, danych z telefonu, raportów PDF,
-              zrzutów ekranu oraz korespondencji elektronicznej.
-            </p>
-
-            <p style={{ marginTop: 16 }}>
-              W ramach odrębnego przygotowania technicznego możliwa jest praca
-              z materiałem cyfrowym, w tym danymi z telefonu, a następnie
-              tłumaczenie treści istotnych dla sprawy.
+              Kancelaria pracuje z dokumentami i materiałami, które wymagają
+              precyzji językowej, znajomości kontekstu prawnego oraz
+              uporządkowania treści istotnych dla sprawy.
             </p>
 
             <div className="labels">
-              {[
-                "sprawy karne",
-                "oszustwa internetowe",
-                "komunikatory",
-                "raporty PDF",
-                "dane z telefonu",
-                "kryptowaluty"
-              ].map((item) => (
-                <span className="label" key={item}>
-                  {item}
-                </span>
-              ))}
+              <span className="label">akta spraw</span>
+              <span className="label">protokoły</span>
+              <span className="label">komunikatory</span>
+              <span className="label">raporty PDF</span>
+              <span className="label">dane z telefonu</span>
+              <span className="label">oszustwa internetowe</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section" id="material-cyfrowy">
+      <section className="section" id="dokumenty">
         <SectionHeading
-          label="Materiał cyfrowy"
-          title="Komunikatory, raporty PDF, dane z telefonu i zrzuty ekranu."
-          text="Tłumaczenie materiału cyfrowego może obejmować zarówno treść rozmów, jak i raporty, załączniki, eksporty danych oraz opisy kontekstu technicznego."
+          label="Zakres"
+          title="Najczęściej przekazywane materiały."
+          text="Szczegółowe informacje są dostępne na podstronach. Strona główna pozostaje krótka i przejrzysta."
         />
 
-        <div className="grid-4">
-          {digitalItems.map((item) => (
+        <div className="grid-3">
+          {serviceCards.map((item) => (
             <article className="card card-petrol" key={item.title}>
-              <span className="tag">Materiał cyfrowy</span>
+              <span className="tag">Zakres</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
+              <a className="card-link" href={item.href}>
+                Czytaj więcej →
+              </a>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section" id="ukraina">
-        <SectionHeading
-          label="Ukraina"
-          title="Dokumenty z Ukrainy i pomoc prawna."
-          text="Zakres obejmuje dokumenty urzędowe, procesowe i korespondencję między organami w sprawach transgranicznych."
-        />
-
-        <div className="grid-2">
-          <article className="card">
-            <span className="tag">Dokumenty z Ukrainy</span>
-            <h3>Dokumenty urzędowe i procesowe.</h3>
-            <p>
-              Tłumaczenia dokumentów pochodzących z Ukrainy albo kierowanych do
-              organów ukraińskich.
-            </p>
-          </article>
-
-          <article className="card">
-            <span className="tag">Pomoc prawna</span>
-            <h3>Wnioski, odpowiedzi i korespondencja między organami.</h3>
-
-            <ul className="list">
-              {ukraineItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      </section>
-
       <section className="section">
-        <SectionHeading
-          label="Korespondencja osadzonych"
-          title="Korespondencja osadzonych i pisma odręczne."
-          text="Tłumaczenie listów, skarg, próśb, oświadczeń, wyjaśnień i pism do sądu lub prokuratury."
-        />
-
-        <div className="grid-2">
-          <article className="card">
-            <span className="tag">Pisma odręczne</span>
-            <h3>Trudne pismo, skróty i język potoczny.</h3>
-            <p>
-              W takich materiałach znaczenie ma zachowanie sensu, tonu,
-              struktury wypowiedzi oraz praca z trudnym pismem odręcznym.
-            </p>
-          </article>
-
-          <article className="card">
-            <span className="tag">Zakres</span>
-            <h3>Listy, skargi, prośby i wyjaśnienia.</h3>
-            <ul className="list">
-              {[
-                "listy prywatne",
-                "skargi",
-                "prośby",
-                "oświadczenia",
-                "wyjaśnienia",
-                "pisma do sądu",
-                "pisma do prokuratury"
-              ].map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Tłumaczenia ustne"
-          title="Tłumaczenia ustne języka ukraińskiego przy czynnościach."
-          text="Obsługa czynności procesowych, przesłuchań i czynności w jednostkach Policji, prokuraturze, sądzie, aresztach śledczych i zakładach karnych."
-        />
-
-        <article className="card">
-          <ul className="list">
-            {oralItems.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </article>
-      </section>
-
-      <section className="section" id="przekazanie">
         <SectionHeading
           label="Przekazanie dokumentu"
-          title="Jak przekazać dokument do wyceny lub tłumaczenia?"
-          text="Dokument można przesłać e-mailem, przekazać do kancelarii albo odebrać osobiście po wcześniejszym ustaleniu terminu."
+          title="Jak przekazać dokument do wyceny?"
+          text="Najprościej przesłać dokument elektronicznie. Przy większych aktach lub materiale cyfrowym warto krótko wskazać, które fragmenty mają zostać przetłumaczone."
         />
 
         <div className="grid-3">
-          {deliveryMethods.map((item) => (
+          {handoverCards.map((item) => (
             <article className="card" key={item.title}>
               <span className="tag">{item.title}</span>
               <h3>{item.title}</h3>
@@ -1383,18 +1017,13 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-
-        <p className="note">
-          Przy większych aktach, raportach PDF, komunikatorach lub materiale
-          cyfrowym warto wskazać, które fragmenty mają zostać przetłumaczone.
-        </p>
       </section>
 
       <section className="section" id="kancelaria">
         <SectionHeading
           label="Kancelaria"
-          title="Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie."
-          text="Realne miejsce pracy z dokumentami poświadczonymi, procesowymi, urzędowymi i materiałem cyfrowym."
+          title="Realne miejsce pracy w Krakowie."
+          text="Kancelaria obsługuje dokumenty poświadczone, procesowe, urzędowe oraz materiał cyfrowy."
         />
 
         <div className="photo-grid">
@@ -1407,75 +1036,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="kwalifikacje">
-        <SectionHeading
-          label="Uprawnienia"
-          title="Uprawnienia tłumacza przysięgłego języka ukraińskiego."
-          text="Vadym Rekel jest wpisany na listę tłumaczy przysięgłych języka ukraińskiego pod numerem TP/27/17."
-        />
-
-        <div className="grid-2">
-          <article className="card">
-            <span className="tag">TP/27/17</span>
-            <h3>Tłumacz przysięgły języka ukraińskiego.</h3>
+      <section className="section" id="kontakt">
+        <div className="contact-panel">
+          <div>
+            <p className="section-label">Kontakt</p>
+            <h2>Wyślij dokument albo skontaktuj się telefonicznie.</h2>
             <p>
-              Kancelaria specjalizuje się w dokumentach procesowych, sprawach
-              karnych, materiale cyfrowym i dokumentach z Ukrainy.
+              Dla sądów, Policji i prokuratury przeznaczony jest osobny numer
+              kontaktowy.
             </p>
-          </article>
+          </div>
 
-          <article className="card">
-            <span className="tag">Kwalifikacje</span>
-            <h3>Pełny profil zawodowy.</h3>
-            <p>
-              Dokumenty potwierdzające kwalifikacje, przygotowanie specjalistyczne
-              i profil zawodowy znajdują się na osobnej stronie.
-            </p>
+          <div className="contact-box">
+            <span className="contact-line">
+              <strong>Sąd · Policja · Prokuratura:</strong>{" "}
+              <a href={`tel:${institutionPhoneHref}`}>
+                {institutionPhoneDisplay}
+              </a>
+            </span>
+            <span className="contact-line">
+              <strong>Klienci indywidualni:</strong>{" "}
+              <a href={`tel:${individualPhoneHref}`}>
+                {individualPhoneDisplay}
+              </a>
+            </span>
+            <span className="contact-line">
+              <strong>E-mail:</strong> <a href={`mailto:${email}`}>{email}</a>
+            </span>
+            <span className="contact-line">
+              <strong>Adres:</strong> ul. Kielecka 2/53, 31-526 Kraków
+            </span>
 
-            <div className="mini-actions">
-              <a className="mini-action mini-action-light" href="/kwalifikacje">
+            <div className="hero-actions">
+              <a className="button button-secondary" href={`mailto:${email}`}>
+                Wyślij dokument
+              </a>
+              <a className="button button-secondary" href="/kwalifikacje">
                 Zobacz kwalifikacje
               </a>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="section" id="lokalizacja">
-        <SectionHeading
-          label="Kraków · cała Polska"
-          title="Kancelaria w Krakowie — dokumenty z całej Polski zdalnie."
-          text="Siedziba kancelarii znajduje się przy ul. Kieleckiej 2/53 w Krakowie. Dokumenty do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
-        />
-
-        <div className="city-grid">
-          {cities.map((city) => (
-            <span className="city-chip" key={city}>
-              {city}
-            </span>
-          ))}
-        </div>
-
-        <p className="note">
-          Lista miast oznacza możliwość zdalnego przesłania dokumentów do
-          wyceny, a nie dodatkowe siedziby kancelarii.
-        </p>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="FAQ"
-          title="Najczęstsze pytania."
-          text="Krótko o kontakcie, dokumentach elektronicznych, odbiorze osobistym, materiale cyfrowym i zakresie języków."
-        />
-
-        <div className="faq-list">
-          {faqItems.map((item) => (
-            <details className="faq-item" key={item.question}>
-              <summary>{item.question}</summary>
-              <p>{item.answer}</p>
-            </details>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -1502,7 +1102,9 @@ export default function HomePage() {
             </span>
             <span className="footer-line">
               Klienci indywidualni:{" "}
-              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+              <a href={`tel:${individualPhoneHref}`}>
+                {individualPhoneDisplay}
+              </a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
@@ -1517,18 +1119,9 @@ export default function HomePage() {
               href={linkedInUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn Vadym Rekel"
             >
               <span className="linkedin-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                </svg>
+                in
               </span>
               LinkedIn — Vadym Rekel
             </a>
