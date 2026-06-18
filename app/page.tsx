@@ -1584,9 +1584,6 @@ export default function HomePage() {
         }
 
         .floating-panel-title {
-          display: flex;
-          justify-content: space-between;
-          gap: 12px;
           color: var(--gold-dark);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 12px;
@@ -1880,7 +1877,6 @@ export default function HomePage() {
             <a href="#dla-organow">Dla organów</a>
             <a href="#material-cyfrowy">Materiał cyfrowy</a>
             <a href="#kancelaria">Kancelaria</a>
-            <a href="#lokalizacja">Lokalizacja</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
             <a className="nav-cta" href={`tel:${institutionPhoneHref}`}>
               {institutionPhoneDisplay}
@@ -2427,15 +2423,12 @@ export default function HomePage() {
 
       <details className="floating-contact">
         <summary>
-          Szybka wycena
-          <span>kontakt</span>
+          Kontakt
+          <span>wybierz numer</span>
         </summary>
 
         <div className="floating-panel">
-          <div className="floating-panel-title">
-            <strong>Kontakt</strong>
-            <span>kliknij przycisk, aby zamknąć</span>
-          </div>
+          <div className="floating-panel-title">Wybierz kontakt</div>
 
           <div className="floating-mini-grid">
             <div className="floating-mini">
@@ -2489,6 +2482,14 @@ export default function HomePage() {
             <span className="footer-title">Profil zawodowy</span>
 
             <div className="footer-links">
+              <a className="footer-link" href="#dla-organow">
+                Dla organów
+              </a>
+
+              <a className="footer-link" href="#material-cyfrowy">
+                Materiał cyfrowy
+              </a>
+
               <a
                 className="footer-link"
                 href={linkedInUrl}
