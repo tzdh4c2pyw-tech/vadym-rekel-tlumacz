@@ -22,8 +22,13 @@ export const metadata: Metadata = {
 };
 
 const email = "biegly@vadymrekel.pl";
-const phoneDisplay = "883 040 483";
-const phoneHref = "+48883040483";
+
+const individualPhoneDisplay = "735 753 383";
+const individualPhoneHref = "+48735753383";
+
+const institutionPhoneDisplay = "883 040 483";
+const institutionPhoneHref = "+48883040483";
+
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 const googleReviewUrl = "https://g.page/r/CXDrBKfVsJJgEBM/review";
 
@@ -46,6 +51,14 @@ const mainSegments = [
     text: "Tłumaczenia ustne i pisemne przy czynnościach procesowych, przesłuchaniach, protokołach, pouczeniach, notatkach, komunikatorach, zrzutach ekranu, audio i wideo.",
     href: "/tlumaczenia-dla-policji"
   }
+];
+
+const trustItems = [
+  "TP/27/17",
+  "CIOL no. 94280",
+  "TEPIS Member 2026",
+  "Kraków",
+  "Obsługa dokumentów z całej Polski"
 ];
 
 const commonMaterials = [
@@ -124,6 +137,53 @@ const quoteSteps = [
   "informacja o języku i celu wykorzystania",
   "termin, jeżeli sprawa jest pilna",
   "wskazanie, czy chodzi o tłumaczenie pisemne, ustne albo materiał cyfrowy"
+];
+
+const cities = [
+  "Warszawa",
+  "Wrocław",
+  "Poznań",
+  "Gdańsk",
+  "Katowice",
+  "Łódź",
+  "Lublin",
+  "Rzeszów",
+  "Białystok",
+  "Szczecin",
+  "Bydgoszcz",
+  "Toruń",
+  "Kielce",
+  "Olsztyn",
+  "Opole",
+  "Zielona Góra"
+];
+
+const faqItems = [
+  {
+    question: "Czy dokument można przesłać elektronicznie?",
+    answer:
+      "Tak. Do wstępnej wyceny wystarczy skan, zdjęcie albo plik PDF. Przy większych aktach warto wskazać, które fragmenty mają zostać przetłumaczone."
+  },
+  {
+    question: "Który numer wybrać?",
+    answer:
+      "Klienci indywidualni mogą kontaktować się pod numerem 735 753 383. W sprawach sądowych, policyjnych, prokuratorskich i czynnościach procesowych właściwy jest numer 883 040 483."
+  },
+  {
+    question: "Czy kancelaria obsługuje dokumenty z całej Polski?",
+    answer:
+      "Tak. Siedziba kancelarii znajduje się w Krakowie, ale dokumenty do wyceny można przesłać elektronicznie z całej Polski."
+  },
+  {
+    question: "Czy tłumaczone są komunikatory i zrzuty ekranu?",
+    answer:
+      "Tak. Kancelaria pracuje z komunikatorami, zrzutami ekranu, raportami PDF, korespondencją, eksportami rozmów i innymi materiałami cyfrowymi przekazanymi do tłumaczenia."
+  },
+  {
+    question: "Czy rosyjski i angielski są tłumaczeniami przysięgłymi?",
+    answer:
+      "Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Język rosyjski i angielski występują w ofercie jako tłumaczenia specjalistyczne."
+  }
 ];
 
 const languages = [
@@ -387,7 +447,7 @@ export default function HomePage() {
         .hero {
           max-width: 1220px;
           margin: 0 auto;
-          padding: 44px 22px 36px;
+          padding: 44px 22px 24px;
           display: grid;
           grid-template-columns: 1.02fr 0.98fr;
           gap: 28px;
@@ -668,6 +728,40 @@ export default function HomePage() {
           padding: 54px 22px;
         }
 
+        .trust-strip {
+          max-width: 1220px;
+          margin: 0 auto;
+          padding: 0 22px 20px;
+        }
+
+        .trust-inner {
+          border-radius: 22px;
+          border: 1px solid var(--line);
+          background: rgba(255, 250, 242, 0.72);
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          box-shadow: 0 14px 40px rgba(25, 22, 18, 0.06);
+          overflow: hidden;
+        }
+
+        .trust-item {
+          min-height: 58px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 900;
+          text-align: center;
+          border-right: 1px solid var(--line);
+        }
+
+        .trust-item:last-child {
+          border-right: 0;
+        }
+
         .section-header {
           margin-bottom: 26px;
           display: grid;
@@ -798,6 +892,99 @@ export default function HomePage() {
           color: #fff;
         }
 
+        .contact-choice {
+          max-width: 1220px;
+          margin: 0 auto;
+          padding: 34px 22px 16px;
+        }
+
+        .contact-choice-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 18px;
+        }
+
+        .contact-choice-card {
+          border-radius: 28px;
+          border: 1px solid rgba(182, 138, 58, 0.30);
+          background: linear-gradient(145deg, rgba(255,250,242,0.92), rgba(248,241,230,0.82));
+          box-shadow: 0 18px 54px rgba(25, 22, 18, 0.10);
+          padding: 28px;
+          display: grid;
+          gap: 18px;
+        }
+
+        .contact-choice-card.institution {
+          background: linear-gradient(145deg, var(--green), var(--green-2));
+          color: #fff;
+          border-color: rgba(255,255,255,0.12);
+        }
+
+        .contact-choice-card h2 {
+          margin: 0;
+          font-size: clamp(26px, 3vw, 38px);
+          line-height: 1.02;
+          letter-spacing: -0.055em;
+        }
+
+        .contact-choice-card p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 16px;
+          line-height: 1.55;
+        }
+
+        .contact-choice-card.institution p {
+          color: rgba(255,255,255,0.74);
+        }
+
+        .phone-button {
+          min-height: 58px;
+          border-radius: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 18px;
+          background: linear-gradient(145deg, var(--gold), #d8bb6d);
+          color: #17110d;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 20px;
+          font-weight: 950;
+          box-shadow: 0 16px 36px rgba(182, 138, 58, 0.18);
+        }
+
+        .institution .phone-button {
+          background: #fffaf2;
+          color: var(--green);
+        }
+
+        .choice-links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .choice-link {
+          min-height: 42px;
+          border-radius: 999px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 15px;
+          border: 1px solid var(--line);
+          background: rgba(255,255,255,0.54);
+          color: var(--ink);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 900;
+        }
+
+        .institution .choice-link {
+          color: #fff;
+          background: rgba(255,255,255,0.10);
+          border-color: rgba(255,255,255,0.16);
+        }
+
         .feature-band {
           border-radius: var(--radius);
           background: var(--ink);
@@ -826,7 +1013,8 @@ export default function HomePage() {
         .feature-band h2,
         .feature-band p,
         .feature-band .section-kicker,
-        .feature-band .pill-list {
+        .feature-band .pill-list,
+        .feature-band .quote-list {
           position: relative;
           z-index: 1;
         }
@@ -1119,21 +1307,52 @@ export default function HomePage() {
           line-height: 1.6;
         }
 
+        .city-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .city-chip {
+          border-radius: 999px;
+          padding: 10px 14px;
+          background: rgba(255,250,242,0.78);
+          border: 1px solid var(--line);
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 850;
+        }
+
+        .faq-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 14px;
+        }
+
+        .faq-card h3 {
+          font-size: 22px;
+        }
+
         .contact-card {
           border-radius: var(--radius);
           background: linear-gradient(145deg, var(--green), var(--green-2));
           color: #fff;
           box-shadow: var(--shadow);
           padding: 44px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 30px;
-          align-items: center;
         }
 
         .contact-card h2 {
           color: #fff;
           margin: 8px 0 0;
+        }
+
+        .contact-top {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+          align-items: end;
+          margin-bottom: 24px;
         }
 
         .contact-card p {
@@ -1143,129 +1362,96 @@ export default function HomePage() {
           line-height: 1.6;
         }
 
-        .contact-actions {
+        .contact-final-grid {
           display: grid;
-          gap: 12px;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
         }
 
-        .contact-link {
-          border-radius: 18px;
-          padding: 18px;
+        .final-contact-box {
+          border-radius: 22px;
           background: rgba(255,255,255,0.09);
           border: 1px solid rgba(255,255,255,0.12);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 14px;
-          font-weight: 850;
+          padding: 22px;
         }
 
-        .floating-quote {
-          position: fixed;
-          right: 22px;
-          bottom: 22px;
-          z-index: 150;
-          width: min(360px, calc(100vw - 32px));
-          border-radius: 26px;
-          background: rgba(255, 250, 242, 0.96);
-          border: 1px solid rgba(182, 138, 58, 0.42);
-          box-shadow: 0 26px 80px rgba(18, 15, 10, 0.26);
-          backdrop-filter: blur(18px);
-          overflow: hidden;
-        }
-
-        .floating-quote-top {
-          padding: 14px 16px 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 12px;
-        }
-
-        .floating-label {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          color: var(--gold-dark);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 950;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-        }
-
-        .floating-label::before {
-          content: "";
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: var(--green);
-          animation: pulseGreen 2.2s infinite;
-        }
-
-        @keyframes pulseGreen {
-          0% { box-shadow: 0 0 0 0 rgba(18, 60, 49, 0.42); }
-          70% { box-shadow: 0 0 0 10px rgba(18, 60, 49, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(18, 60, 49, 0); }
-        }
-
-        .floating-close-note {
-          color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 11px;
-          font-weight: 800;
-        }
-
-        .floating-main {
-          padding: 12px 16px 16px;
-        }
-
-        .floating-phone {
-          min-height: 58px;
-          border-radius: 18px;
-          background: linear-gradient(145deg, var(--green), var(--green-2));
+        .final-contact-box h3 {
+          margin: 0 0 10px;
           color: #fff;
+          font-size: 24px;
+          line-height: 1.1;
+        }
+
+        .final-contact-box p {
+          font-size: 15px;
+        }
+
+        .final-contact-phone {
+          margin-top: 16px;
+          min-height: 52px;
+          border-radius: 16px;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 10px;
+          background: #fffaf2;
+          color: var(--green);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 20px;
           font-weight: 950;
-          box-shadow: 0 16px 36px rgba(18, 60, 49, 0.26);
-          margin-bottom: 10px;
         }
 
-        .floating-secondary {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 8px;
+        .final-contact-actions {
+          margin-top: 12px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
         }
 
-        .floating-link {
-          min-height: 42px;
-          border-radius: 15px;
-          background: rgba(255,255,255,0.72);
-          border: 1px solid var(--line);
+        .final-contact-action {
+          min-height: 40px;
+          border-radius: 999px;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 0 12px;
-          color: var(--ink);
+          padding: 0 14px;
+          background: rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.14);
+          color: #fff;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
           font-weight: 900;
         }
 
-        .floating-text {
-          margin: 10px 0 0;
-          color: var(--muted);
+        .floating-button {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 150;
+          min-height: 58px;
+          border-radius: 999px;
+          padding: 0 22px;
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          background: linear-gradient(145deg, var(--green), var(--green-2));
+          color: #fff;
+          border: 1px solid rgba(255,255,255,0.12);
+          box-shadow: 0 20px 60px rgba(18, 15, 10, 0.26);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 14px;
+          font-weight: 950;
+          letter-spacing: 0.01em;
+        }
+
+        .floating-button span {
+          color: rgba(255,255,255,0.72);
           font-size: 12px;
-          line-height: 1.45;
+          font-weight: 850;
         }
 
         .footer {
           border-top: 1px solid var(--line);
-          padding: 34px 22px 120px;
+          padding: 34px 22px 110px;
           color: var(--muted);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
@@ -1321,16 +1507,23 @@ export default function HomePage() {
           .hero,
           .section-header,
           .feature-band,
-          .contact-card,
           .map-header,
           .profile-review-grid,
-          .footer-inner {
+          .footer-inner,
+          .contact-top,
+          .contact-choice-grid,
+          .contact-final-grid {
             grid-template-columns: 1fr;
+          }
+
+          .trust-inner {
+            grid-template-columns: repeat(2, 1fr);
           }
 
           .grid-4,
           .photo-grid,
-          .qualification-grid {
+          .qualification-grid,
+          .faq-grid {
             grid-template-columns: repeat(2, 1fr);
           }
 
@@ -1367,8 +1560,19 @@ export default function HomePage() {
         @media (max-width: 640px) {
           .grid-4,
           .photo-grid,
-          .qualification-grid {
+          .qualification-grid,
+          .faq-grid,
+          .trust-inner {
             grid-template-columns: 1fr;
+          }
+
+          .trust-item {
+            border-right: 0;
+            border-bottom: 1px solid var(--line);
+          }
+
+          .trust-item:last-child {
+            border-bottom: 0;
           }
 
           .photo-card.featured-photo {
@@ -1384,7 +1588,9 @@ export default function HomePage() {
             padding: 34px 16px 24px;
           }
 
-          .section {
+          .section,
+          .trust-strip,
+          .contact-choice {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -1393,7 +1599,8 @@ export default function HomePage() {
           .hero-profile,
           .feature-band,
           .contact-card,
-          .map-card {
+          .map-card,
+          .contact-choice-card {
             border-radius: 24px;
             padding: 24px;
           }
@@ -1406,7 +1613,8 @@ export default function HomePage() {
             font-size: 18px;
           }
 
-          .button {
+          .button,
+          .phone-button {
             width: 100%;
           }
 
@@ -1430,25 +1638,16 @@ export default function HomePage() {
             border-radius: 18px;
           }
 
-          .floating-quote {
+          .floating-button {
             left: 12px;
             right: 12px;
             bottom: 12px;
-            width: auto;
-            border-radius: 22px;
-          }
-
-          .floating-phone {
+            justify-content: center;
             min-height: 54px;
-            font-size: 18px;
-          }
-
-          .floating-secondary {
-            grid-template-columns: 1fr;
           }
 
           .footer {
-            padding-bottom: 230px;
+            padding-bottom: 94px;
           }
         }
 
@@ -1456,8 +1655,7 @@ export default function HomePage() {
           .pulse-dot,
           .signature,
           .signature-name,
-          .signature-name::after,
-          .floating-label::before {
+          .signature-name::after {
             animation: none;
           }
 
@@ -1486,15 +1684,14 @@ export default function HomePage() {
           </a>
 
           <div className="nav-links">
+            <a href="#kontakt-wybor">Kontakt</a>
             <a href="#dla-organow">Dla organów</a>
-            <a href="#czynnosci">Czynności</a>
             <a href="#material-cyfrowy">Materiał cyfrowy</a>
             <a href="#kancelaria">Kancelaria</a>
             <a href="#lokalizacja">Lokalizacja</a>
-            <a href="#kontakt">Kontakt</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
-            <a className="nav-cta" href={`tel:${phoneHref}`}>
-              {phoneDisplay}
+            <a className="nav-cta" href={`tel:${institutionPhoneHref}`}>
+              {institutionPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -1511,17 +1708,17 @@ export default function HomePage() {
 
           <p className="lead">
             Tłumaczenia poświadczone i ustne dla sądów, prokuratury i Policji.
-            Dokumenty procesowe, akta spraw, protokoły, czynności, materiały
-            dowodowe, komunikatory, raporty forensic i dokumenty transgraniczne
+            Dokumenty procesowe, akta spraw, protokoły, czynności, materiał
+            dowodowy, komunikatory, raporty forensic i dokumenty transgraniczne
             z Ukrainą.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`mailto:${email}`}>
-              Prześlij dokument do wyceny
+            <a className="button button-primary" href="#kontakt-wybor">
+              Wybierz właściwy kontakt
             </a>
-            <a className="button button-secondary" href={`tel:${phoneHref}`}>
-              Zadzwoń: {phoneDisplay}
+            <a className="button button-secondary" href={`mailto:${email}`}>
+              Wyślij dokument do wyceny
             </a>
           </div>
 
@@ -1556,12 +1753,81 @@ export default function HomePage() {
               <span>Wpis na listę Ministra Sprawiedliwości: TP/27/17</span>
               <span>CIOL no. 94280 · TEPIS Member 2026</span>
               <span>Siedziba kancelarii: Kraków</span>
-              <span>
-                Kontakt: {phoneDisplay} · {email}
-              </span>
+              <span>E-mail: {email}</span>
             </div>
           </div>
         </aside>
+      </section>
+
+      <section className="trust-strip" aria-label="Dane kancelarii">
+        <div className="trust-inner">
+          {trustItems.map((item) => (
+            <div className="trust-item" key={item}>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="contact-choice" id="kontakt-wybor">
+        <div className="section-header">
+          <div>
+            <div className="section-kicker">Wybierz kontakt</div>
+            <h2>Inny numer dla klientów indywidualnych, inny dla organów.</h2>
+          </div>
+          <p className="section-intro">
+            Jeżeli chodzi o dokument prywatny albo urzędowy, wybierz kontakt
+            indywidualny. Jeżeli sprawa dotyczy sądu, Policji, prokuratury,
+            czynności albo materiału dowodowego, wybierz kontakt służbowy.
+          </p>
+        </div>
+
+        <div className="contact-choice-grid">
+          <article className="contact-choice-card">
+            <span className="tag">Klienci indywidualni</span>
+            <h2>Dokumenty prywatne i urzędowe.</h2>
+            <p>
+              Akty stanu cywilnego, pełnomocnictwa, oświadczenia, dokumenty
+              pobytowe, dokumenty rodzinne i dokumenty z Ukrainy.
+            </p>
+
+            <a className="phone-button" href={`tel:${individualPhoneHref}`}>
+              {individualPhoneDisplay}
+            </a>
+
+            <div className="choice-links">
+              <a className="choice-link" href={`mailto:${email}`}>
+                Wyślij dokument
+              </a>
+              <a className="choice-link" href="#wycena">
+                Jak przygotować?
+              </a>
+            </div>
+          </article>
+
+          <article className="contact-choice-card institution">
+            <span className="tag">Sąd · Policja · Prokuratura</span>
+            <h2>Sprawy karne, czynności i materiał dowodowy.</h2>
+            <p>
+              Czynności procesowe, przesłuchania, protokoły, akta spraw,
+              komunikatory, zrzuty ekranu, raporty PDF i pilne materiały do
+              spraw formalnych.
+            </p>
+
+            <a className="phone-button" href={`tel:${institutionPhoneHref}`}>
+              {institutionPhoneDisplay}
+            </a>
+
+            <div className="choice-links">
+              <a className="choice-link" href={`mailto:${email}`}>
+                Kontakt e-mail
+              </a>
+              <a className="choice-link" href="#dla-organow">
+                Zakres dla organów
+              </a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section className="section" id="dla-organow">
@@ -1594,15 +1860,16 @@ export default function HomePage() {
       <section className="section">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">Typowe materiały</div>
-            <h2>Dokumenty i treści kierowane do tłumaczenia.</h2>
+            <div className="section-kicker">Dokument w sprawie</div>
+            <h2>Nie każdy dokument jest zwykłym dokumentem.</h2>
           </div>
 
           <div>
             <p>
-              Zakres pracy obejmuje dokumenty klasyczne, materiały procesowe,
-              korespondencję, treści cyfrowe oraz dokumenty przekazywane w
-              sprawach transgranicznych.
+              W sprawie dokument może być protokołem, dowodem, załącznikiem,
+              zapisem rozmowy, raportem technicznym, pismem odręcznym albo
+              korespondencją. Dlatego ważny jest kontekst, terminologia i
+              sposób przekazania materiału.
             </p>
 
             <div className="pill-list" style={{ marginTop: 22 }}>
@@ -1908,6 +2175,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="section-header">
+          <div>
+            <div className="section-kicker">Cała Polska</div>
+            <h2>Dokumenty do wyceny można przesłać elektronicznie.</h2>
+          </div>
+          <p className="section-intro">
+            Siedziba kancelarii znajduje się w Krakowie. Dokumenty są przyjmowane
+            do wstępnej wyceny również z innych miast wojewódzkich i miejscowości
+            w Polsce.
+          </p>
+        </div>
+
+        <div className="city-grid">
+          {cities.map((city) => (
+            <span className="city-chip" key={city}>
+              {city}
+            </span>
+          ))}
+        </div>
+      </section>
+
       <section className="section" id="profil">
         <div className="profile-review-grid">
           <article className="card">
@@ -1949,71 +2238,98 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="section-header">
+          <div>
+            <div className="section-kicker">FAQ</div>
+            <h2>Najczęstsze pytania przed wysłaniem dokumentu.</h2>
+          </div>
+          <p className="section-intro">
+            Krótkie odpowiedzi na pytania dotyczące wyceny, kontaktu,
+            dokumentów elektronicznych i zakresu języków.
+          </p>
+        </div>
+
+        <div className="faq-grid">
+          {faqItems.map((item) => (
+            <article className="card faq-card" key={item.question}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section" id="kontakt">
         <div className="contact-card">
-          <div>
-            <div className="section-kicker">Kontakt</div>
-            <h2>Prześlij dokument albo informację o czynności.</h2>
-          </div>
+          <div className="contact-top">
+            <div>
+              <div className="section-kicker">Kontakt</div>
+              <h2>Wybierz właściwy kontakt do sprawy.</h2>
+            </div>
 
-          <div>
             <p>
               W wiadomości wskaż język, rodzaj materiału, cel wykorzystania,
               termin oraz informację, czy chodzi o tłumaczenie pisemne, ustne,
               czynność wyjazdową albo materiał cyfrowy.
             </p>
+          </div>
 
-            <div className="contact-actions" style={{ marginTop: 22 }}>
-              <a className="contact-link" href={`tel:${phoneHref}`}>
-                Telefon: {phoneDisplay}
+          <div className="contact-final-grid">
+            <article className="final-contact-box">
+              <h3>Klienci indywidualni</h3>
+              <p>
+                Dokumenty prywatne, urzędowe, pobytowe, rodzinne i dokumenty z
+                Ukrainy.
+              </p>
+
+              <a className="final-contact-phone" href={`tel:${individualPhoneHref}`}>
+                {individualPhoneDisplay}
               </a>
 
-              <a className="contact-link" href={`mailto:${email}`}>
-                E-mail: {email}
+              <div className="final-contact-actions">
+                <a className="final-contact-action" href={`mailto:${email}`}>
+                  Wyślij dokument
+                </a>
+                <a className="final-contact-action" href="#wycena">
+                  Jak przygotować?
+                </a>
+              </div>
+            </article>
+
+            <article className="final-contact-box">
+              <h3>Sąd · Policja · Prokuratura</h3>
+              <p>
+                Sprawy karne, czynności procesowe, akta, protokoły, materiał
+                dowodowy i pilne czynności.
+              </p>
+
+              <a className="final-contact-phone" href={`tel:${institutionPhoneHref}`}>
+                {institutionPhoneDisplay}
               </a>
 
-              <a className="contact-link" href="/kwalifikacje">
-                Kwalifikacje i certyfikaty
-              </a>
-            </div>
+              <div className="final-contact-actions">
+                <a className="final-contact-action" href={`mailto:${email}`}>
+                  Kontakt e-mail
+                </a>
+                <a className="final-contact-action" href="#dla-organow">
+                  Zakres dla organów
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <aside className="floating-quote" aria-label="Pływający przycisk szybkiej wyceny">
-        <div className="floating-quote-top">
-          <span className="floating-label">Szybka wycena</span>
-          <span className="floating-close-note">kancelaria</span>
-        </div>
-
-        <div className="floating-main">
-          <a className="floating-phone" href={`tel:${phoneHref}`}>
-            📞 {phoneDisplay}
-          </a>
-
-          <div className="floating-secondary">
-            <a className="floating-link" href={`mailto:${email}`}>
-              Wyślij dokument
-            </a>
-
-            <a className="floating-link" href="#wycena">
-              Jak przygotować?
-            </a>
-          </div>
-
-          <p className="floating-text">
-            Do wstępnej wyceny wystarczy skan, PDF, zdjęcie dokumentu albo opis
-            czynności.
-          </p>
-        </div>
-      </aside>
+      <a className="floating-button" href="#kontakt" aria-label="Przejdź do kontaktu">
+        Szybka wycena
+        <span>kontakt</span>
+      </a>
 
       <footer className="footer">
         <div className="footer-inner">
           <div>
-            <span className="footer-title">
-              Kancelaria Vadym Rekel
-            </span>
+            <span className="footer-title">Kancelaria Vadym Rekel</span>
             <span className="footer-line">
               Tłumacz przysięgły języka ukraińskiego
             </span>
@@ -2025,14 +2341,17 @@ export default function HomePage() {
           <div>
             <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              <a href={`tel:${phoneHref}`}>{phoneDisplay}</a>
+              Klienci indywidualni:{" "}
+              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+            </span>
+            <span className="footer-line">
+              Sąd · Policja · Prokuratura:{" "}
+              <a href={`tel:${institutionPhoneHref}`}>{institutionPhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
             </span>
-            <span className="footer-line">
-              ul. Kielecka 2/53, 31-526 Kraków
-            </span>
+            <span className="footer-line">ul. Kielecka 2/53, 31-526 Kraków</span>
           </div>
 
           <div>
