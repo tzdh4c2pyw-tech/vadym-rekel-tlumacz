@@ -2,21 +2,22 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Tłumacz przysięgły języka ukraińskiego dla sądów, prokuratury i Policji",
+    "Kancelaria tłumacza przysięgłego języka ukraińskiego | Sąd, Prokuratura, Policja",
   description:
-    "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie. Tłumaczenia pisemne i ustne dla sądów, prokuratury i Policji. Materiały dowodowe, akta spraw, protokoły, komunikatory, raporty forensic, pomoc prawna z Ukrainą. Obsługa dokumentów z całej Polski.",
+    "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie. Tłumaczenia poświadczone i ustne dla sądów, prokuratury i Policji. Dokumenty procesowe, akta spraw, protokoły, czynności, komunikatory, raporty forensic, korespondencja osadzonych i pomoc prawna z Ukrainą.",
   keywords: [
+    "kancelaria tłumacza przysięgłego języka ukraińskiego",
     "tłumacz przysięgły języka ukraińskiego",
-    "tłumacz przysięgły ukraiński",
+    "tłumacz przysięgły ukraiński Kraków",
     "tłumacz ukraiński sąd",
     "tłumacz ukraiński prokuratura",
     "tłumacz ukraiński Policja",
-    "tłumaczenie dokumentów procesowych ukraiński",
     "tłumaczenie akt sprawy ukraiński",
     "tłumaczenie protokołów ukraiński",
     "tłumaczenie komunikatorów ukraiński",
     "tłumaczenie raportów forensic",
-    "tłumacz ukraiński Kraków"
+    "tłumaczenie korespondencji osadzonych ukraiński",
+    "tłumacz ukraiński areszt śledczy"
   ]
 };
 
@@ -24,23 +25,38 @@ const email = "vadym.rekel@tlumaczrosyjskiegoiukrainskiego.pl";
 
 const mainSegments = [
   {
-    title: "Sąd",
-    eyebrow: "Dokumenty do akt sprawy",
+    title: "Sądy",
+    label: "Dokumenty sądowe i akta spraw",
     text: "Wyroki, postanowienia, wezwania, pouczenia, protokoły, pisma procesowe, akty oskarżenia, załączniki, opinie i materiały dowodowe.",
     href: "/tlumaczenia-sadowe-ukrainski"
   },
   {
     title: "Prokuratura",
-    eyebrow: "Postępowanie przygotowawcze",
-    text: "Materiały z postępowań karnych, protokoły przesłuchań, postanowienia, wnioski o pomoc prawną, zawiadomienia i dokumenty organów ścigania.",
+    label: "Dokumenty prokuratorskie i karne",
+    text: "Materiały z postępowań przygotowawczych, protokoły przesłuchań, postanowienia, wnioski o pomoc prawną, zawiadomienia i dokumenty organów ścigania.",
     href: "/tlumaczenia-dla-prokuratury"
   },
   {
     title: "Policja",
-    eyebrow: "Czynności i materiały dowodowe",
+    label: "Czynności policyjne i materiały dowodowe",
     text: "Tłumaczenia ustne i pisemne przy czynnościach procesowych, przesłuchaniach, protokołach, pouczeniach, notatkach, komunikatorach, zrzutach ekranu, audio i wideo.",
     href: "/tlumaczenia-dla-policji"
   }
+];
+
+const commonMaterials = [
+  "protokoły przesłuchań",
+  "postanowienia",
+  "akty oskarżenia",
+  "wezwania i pouczenia",
+  "pisma procesowe",
+  "wnioski o pomoc prawną",
+  "odpowiedzi organów Ukrainy",
+  "zrzuty ekranu",
+  "komunikatory",
+  "raporty z telefonu",
+  "nagrania audio i wideo",
+  "pisma odręczne osadzonych"
 ];
 
 const digitalItems = [
@@ -50,7 +66,7 @@ const digitalItems = [
   },
   {
     title: "Raporty z urządzeń mobilnych",
-    text: "Tłumaczenie treści z raportów wygenerowanych z telefonu lub innego urządzenia mobilnego, w tym wiadomości, plików, zdjęć, danych aplikacji i fragmentów istotnych dla sprawy."
+    text: "Tłumaczenie treści z raportów wygenerowanych z telefonu albo innego urządzenia mobilnego: wiadomości, plików, zdjęć, danych aplikacji i fragmentów istotnych dla sprawy."
   },
   {
     title: "Duże wolumeny danych",
@@ -102,18 +118,18 @@ const legalAidItems = [
 const languages = [
   {
     title: "Ukraiński",
-    label: "Przysięgły i specjalistyczny",
+    label: "Tłumaczenia przysięgłe i specjalistyczne",
     text: "Główny język kancelarii. Poświadczone tłumaczenia pisemne oraz tłumaczenia ustne przy czynnościach sądowych, prokuratorskich i policyjnych."
   },
   {
     title: "Rosyjski",
-    label: "Specjalistyczny",
-    text: "Tłumaczenia specjalistyczne dokumentów prawnych, technicznych, urzędowych, korespondencji, materiałów cyfrowych i treści wykorzystywanych w sprawach formalnych."
+    label: "Tłumaczenia specjalistyczne",
+    text: "Dokumenty prawne, techniczne, urzędowe, korespondencja, materiały cyfrowe i treści wykorzystywane w sprawach formalnych."
   },
   {
     title: "Angielski",
-    label: "Specjalistyczny",
-    text: "Tłumaczenia dokumentacji prawnej, technologicznej, biznesowej, IT, raportów, korespondencji i materiałów wymagających precyzyjnej terminologii."
+    label: "Tłumaczenia specjalistyczne",
+    text: "Dokumentacja prawna, technologiczna, biznesowa, IT, raporty, korespondencja i materiały wymagające precyzyjnej terminologii."
   }
 ];
 
@@ -122,25 +138,31 @@ const officePhotos = [
     src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
     alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
     title: "Kancelaria w Krakowie",
-    text: "Miejsce pracy z dokumentami procesowymi, urzędowymi i poświadczonymi."
+    text: "Miejsce pracy z dokumentami poświadczonymi, procesowymi i urzędowymi."
+  },
+  {
+    src: "/images/biuro-tlumacza-przysieglego-jezyk-ukrainski-krakow-vadym-rekel.jpg",
+    alt: "Biuro tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Biuro tłumacza przysięgłego",
+    text: "Przestrzeń do pracy z dokumentami wymagającymi zachowania struktury formalnej."
   },
   {
     src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
     alt: "Stanowisko pracy tłumacza przysięgłego języka ukraińskiego",
     title: "Stanowisko tłumacza",
-    text: "Praca z dokumentami formalnymi, materiałami dowodowymi i plikami cyfrowymi."
+    text: "Praca z dokumentami sądowymi, prokuratorskimi, policyjnymi i urzędowymi."
   },
   {
     src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
     alt: "Stanowisko komputerowe biegłego tłumacza",
     title: "Materiał cyfrowy",
-    text: "Analiza plików, raportów, komunikatorów, dokumentów PDF i dużych zbiorów danych."
+    text: "Praca z plikami PDF, raportami, komunikatorami i dużymi zbiorami danych."
   },
   {
-    src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Drukarki w kancelarii tłumacza przysięgłego",
-    title: "Druk i kompletowanie",
-    text: "Przygotowanie tłumaczeń poświadczonych do odbioru, wysyłki albo złożenia do akt."
+    src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-ukrainski-krakow-vadym-rekel.jpg",
+    alt: "Stanowisko administracyjne w kancelarii tłumacza",
+    title: "Stanowisko administracyjne",
+    text: "Obsługa korespondencji, kompletowanie dokumentów i organizacja zleceń."
   },
   {
     src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
@@ -149,22 +171,36 @@ const officePhotos = [
     text: "Obsługa dokumentów elektronicznych, plików PDF, raportów i materiałów źródłowych."
   },
   {
+    src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
+    alt: "Drukarki w kancelarii tłumacza przysięgłego",
+    title: "Druk i kompletowanie",
+    text: "Przygotowanie tłumaczeń poświadczonych do odbioru, wysyłki albo złożenia do akt."
+  },
+  {
     src: "/images/niszczarka-dokumentow-hsm-shredstar-x15-kancelaria-vadym-rekel.jpg",
     alt: "Niszczarka dokumentów w kancelarii tłumacza",
-    title: "Poufność dokumentów",
-    text: "Kontrola obiegu materiałów roboczych i dokumentów zawierających dane osobowe."
+    title: "Dokumenty robocze",
+    text: "Kontrola obiegu materiałów roboczych zawierających dane osobowe lub informacje procesowe."
   }
 ];
 
 const qualifications = [
-  "Tłumacz przysięgły języka ukraińskiego, nr TP/27/17",
-  "Wpis na listę Ministra Sprawiedliwości od 2017 r.",
-  "CIOL — Chartered Institute of Linguists, CIOL no. 94280",
-  "TEPIS Member 2026",
-  "MBA — Master of Business Administration",
-  "Prawo nowych technologii",
-  "Prawo własności intelektualnej i nowych technologii",
-  "Prawo karne materialne i procesowe"
+  {
+    title: "Tłumacz przysięgły języka ukraińskiego",
+    text: "Wpis na listę tłumaczy przysięgłych Ministra Sprawiedliwości, nr TP/27/17."
+  },
+  {
+    title: "CIOL no. 94280",
+    text: "Członkostwo w Chartered Institute of Linguists."
+  },
+  {
+    title: "TEPIS Member 2026",
+    text: "Członkostwo w środowisku tłumaczy przysięgłych i specjalistycznych."
+  },
+  {
+    title: "Przygotowanie specjalistyczne",
+    text: "MBA, prawo nowych technologii, prawo własności intelektualnej i nowych technologii, prawo karne materialne i procesowe."
+  }
 ];
 
 export default function HomePage() {
@@ -220,7 +256,7 @@ export default function HomePage() {
           top: 0;
           z-index: 100;
           backdrop-filter: blur(20px);
-          background: rgba(245, 240, 230, 0.88);
+          background: rgba(245, 240, 230, 0.90);
           border-bottom: 1px solid var(--line);
         }
 
@@ -295,7 +331,7 @@ export default function HomePage() {
         .hero {
           max-width: 1220px;
           margin: 0 auto;
-          padding: 46px 22px 36px;
+          padding: 44px 22px 36px;
           display: grid;
           grid-template-columns: 1.02fr 0.98fr;
           gap: 28px;
@@ -305,9 +341,9 @@ export default function HomePage() {
         .hero-copy {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.82);
+          background: rgba(255, 250, 242, 0.84);
           box-shadow: var(--shadow);
-          padding: 46px 46px 42px;
+          padding: 44px 46px 42px;
           position: relative;
           overflow: hidden;
         }
@@ -356,8 +392,8 @@ export default function HomePage() {
 
         h1 {
           margin: 24px 0 20px;
-          font-size: clamp(40px, 4.8vw, 66px);
-          line-height: 0.92;
+          font-size: clamp(40px, 4.65vw, 64px);
+          line-height: 0.93;
           letter-spacing: -0.07em;
           position: relative;
           z-index: 1;
@@ -414,7 +450,7 @@ export default function HomePage() {
 
         .hero-note {
           margin-top: 22px;
-          max-width: 560px;
+          max-width: 580px;
           color: var(--muted);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
@@ -476,22 +512,6 @@ export default function HomePage() {
           animation: signatureFloat 4.8s ease-in-out infinite;
         }
 
-        .signature::after {
-          content: "";
-          position: absolute;
-          left: 22px;
-          right: 22px;
-          bottom: 10px;
-          height: 1px;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(19, 16, 12, 0.28),
-            transparent
-          );
-          opacity: 0.7;
-        }
-
         .signature img {
           display: block;
           width: 100%;
@@ -536,22 +556,19 @@ export default function HomePage() {
           line-height: 1.55;
         }
 
-        .trust-row {
+        .identity-box {
           margin-top: 18px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 9px;
-        }
-
-        .trust-pill {
-          padding: 8px 10px;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.09);
-          border: 1px solid rgba(255,255,255,0.10);
+          border-radius: 18px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.12);
+          padding: 16px;
+          display: grid;
+          gap: 8px;
           color: rgba(255,255,255,0.78);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 800;
+          font-size: 13px;
+          font-weight: 750;
+          line-height: 1.4;
         }
 
         .section {
@@ -760,7 +777,7 @@ export default function HomePage() {
 
         .photo-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 16px;
         }
 
@@ -770,7 +787,7 @@ export default function HomePage() {
         }
 
         .photo {
-          height: 230px;
+          height: 210px;
           overflow: hidden;
           background: var(--paper-2);
         }
@@ -792,25 +809,13 @@ export default function HomePage() {
         }
 
         .photo-content h3 {
-          font-size: 23px;
+          font-size: 22px;
         }
 
-        .qualification-list {
+        .qualification-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
-        }
-
-        .qualification-item {
-          padding: 15px 16px;
-          border-radius: 18px;
-          background: rgba(255,250,242,0.72);
-          border: 1px solid var(--line);
-          color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 14px;
-          font-weight: 750;
-          line-height: 1.35;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
         }
 
         .contact-card {
@@ -869,7 +874,7 @@ export default function HomePage() {
           flex-wrap: wrap;
         }
 
-        @media (max-width: 1080px) {
+        @media (max-width: 1120px) {
           .hero,
           .section-header,
           .feature-band,
@@ -877,7 +882,9 @@ export default function HomePage() {
             grid-template-columns: 1fr;
           }
 
-          .grid-4 {
+          .grid-4,
+          .photo-grid,
+          .qualification-grid {
             grid-template-columns: repeat(2, 1fr);
           }
 
@@ -892,8 +899,7 @@ export default function HomePage() {
           }
 
           .grid-3,
-          .grid-2,
-          .photo-grid {
+          .grid-2 {
             grid-template-columns: 1fr;
           }
 
@@ -909,7 +915,8 @@ export default function HomePage() {
 
         @media (max-width: 640px) {
           .grid-4,
-          .qualification-list {
+          .photo-grid,
+          .qualification-grid {
             grid-template-columns: 1fr;
           }
 
@@ -959,7 +966,7 @@ export default function HomePage() {
           <a className="brand" href="/" aria-label="Strona główna">
             <span className="brand-mark">VR</span>
             <span className="brand-title">
-              Vadym Rekel
+              Kancelaria Vadym Rekel
               <span className="brand-subtitle">
                 Tłumacz przysięgły języka ukraińskiego
               </span>
@@ -968,9 +975,9 @@ export default function HomePage() {
 
           <div className="nav-links">
             <a href="#dla-organow">Dla organów</a>
-            <a href="#material-cyfrowy">Materiał cyfrowy</a>
             <a href="#czynnosci">Czynności</a>
-            <a href="#jezyki">Języki</a>
+            <a href="#material-cyfrowy">Materiał cyfrowy</a>
+            <a href="#kancelaria">Kancelaria</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
             <a className="nav-cta" href={`mailto:${email}`}>
               Szybka wycena
@@ -983,18 +990,18 @@ export default function HomePage() {
         <div className="hero-copy">
           <span className="eyebrow">
             <span className="pulse-dot" />
-            Kraków · cała Polska · online
+            Kancelaria tłumacza przysięgłego · Kraków · cała Polska
           </span>
 
           <h1>
-            Kancelaria tłumacza przysięgłego języka ukraińskiego dla sądów,
-            prokuratury i Policji.
+            Kancelaria tłumacza przysięgłego języka ukraińskiego.
           </h1>
 
           <p className="lead">
-            Poświadczone tłumaczenia pisemne i ustne języka ukraińskiego w
-            sprawach procesowych, dowodowych, karnych i transgranicznych.
-            Siedziba w Krakowie. Obsługa dokumentów z całej Polski.
+            Tłumaczenia poświadczone i ustne dla sądów, prokuratury i Policji.
+            Dokumenty procesowe, akta spraw, protokoły, czynności, materiały
+            dowodowe, komunikatory, raporty forensic i dokumenty transgraniczne
+            z Ukrainą.
           </p>
 
           <div className="hero-actions">
@@ -1002,14 +1009,14 @@ export default function HomePage() {
               Prześlij dokument do wyceny
             </a>
             <a className="button button-secondary" href="#dla-organow">
-              Zobacz zakres
+              Zobacz zakres pracy
             </a>
           </div>
 
           <p className="hero-note">
-            Język ukraiński — tłumaczenia przysięgłe i specjalistyczne. Język
-            rosyjski i angielski — tłumaczenia specjalistyczne dokumentów
-            prawnych, technicznych i cyfrowych.
+            Siedziba kancelarii znajduje się w Krakowie przy ul. Kieleckiej
+            2/53. Dokumenty do wstępnej wyceny można przesłać elektronicznie z
+            dowolnego miejsca w Polsce.
           </p>
         </div>
 
@@ -1031,16 +1038,15 @@ export default function HomePage() {
           <div className="profile-card">
             <h2>Vadym Rekel</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego, nr TP/27/17. Praca z
-              dokumentami procesowymi, materiałami dowodowymi i treściami
+              Tłumacz przysięgły języka ukraińskiego. Praca z dokumentami
+              procesowymi, materiałami dowodowymi, czynnościami i treściami
               specjalistycznymi.
             </p>
 
-            <div className="trust-row">
-              <span className="trust-pill">TP/27/17</span>
-              <span className="trust-pill">CIOL no. 94280</span>
-              <span className="trust-pill">TEPIS 2026</span>
-              <span className="trust-pill">Kraków</span>
+            <div className="identity-box">
+              <span>Wpis na listę Ministra Sprawiedliwości: TP/27/17</span>
+              <span>CIOL no. 94280 · TEPIS Member 2026</span>
+              <span>Siedziba kancelarii: Kraków</span>
             </div>
           </div>
         </aside>
@@ -1049,20 +1055,20 @@ export default function HomePage() {
       <section className="section" id="dla-organow">
         <div className="section-header">
           <div>
-            <div className="section-kicker">Dla organów</div>
-            <h2>Sąd, prokuratura i Policja.</h2>
+            <div className="section-kicker">Sąd · Prokuratura · Policja</div>
+            <h2>Tłumaczenia dla organów i czynności formalnych.</h2>
           </div>
           <p className="section-intro">
-            Główna oferta kancelarii jest skierowana do organów i czynności, w
-            których dokument, wypowiedź albo materiał cyfrowy może mieć
-            znaczenie procesowe, dowodowe lub urzędowe.
+            Główna oferta kancelarii jest skierowana do spraw, w których
+            dokument, wypowiedź albo materiał cyfrowy może mieć znaczenie
+            procesowe, dowodowe lub urzędowe.
           </p>
         </div>
 
         <div className="grid-3">
           {mainSegments.map((item) => (
             <article className="card card-dark" key={item.title}>
-              <span className="tag">{item.eyebrow}</span>
+              <span className="tag">{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
               <a className="card-link" href={item.href}>
@@ -1076,16 +1082,65 @@ export default function HomePage() {
       <section className="section">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">Dokument w sprawie</div>
-            <h2>Nie każdy dokument jest zwykłym dokumentem.</h2>
+            <div className="section-kicker">Typowe materiały</div>
+            <h2>Dokumenty i treści kierowane do tłumaczenia.</h2>
           </div>
-          <p>
-            W postępowaniu dokument może być protokołem, pouczeniem,
-            postanowieniem, dowodem, załącznikiem, korespondencją, raportem
-            technicznym albo zapisem rozmowy. W takich sprawach znaczenie mają
-            daty, nazwiska, sygnatury, kolejność informacji, oznaczenia i
-            kontekst użycia dokumentu.
-          </p>
+
+          <div>
+            <p>
+              Zakres pracy obejmuje dokumenty klasyczne, materiały procesowe,
+              korespondencję, treści cyfrowe oraz dokumenty przekazywane w
+              sprawach transgranicznych.
+            </p>
+
+            <div className="pill-list" style={{ marginTop: 22 }}>
+              {commonMaterials.map((item) => (
+                <span className="pill" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="czynnosci">
+        <div className="grid-2">
+          <article className="card">
+            <span className="tag">Tłumaczenia ustne</span>
+            <h3>Czynności procesowe, wyjazdowe i zdalne.</h3>
+            <p>
+              Tłumaczenia ustne języka ukraińskiego podczas czynności
+              procesowych, przesłuchań, czynności w jednostkach Policji,
+              prokuraturze, sądzie, aresztach śledczych i zakładach karnych.
+            </p>
+
+            <div className="pill-list" style={{ marginTop: 20 }}>
+              {oralItems.map((item) => (
+                <span className="pill light-pill" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </article>
+
+          <article className="card">
+            <span className="tag">Korespondencja osadzonych</span>
+            <h3>Pisma odręczne, listy, skargi i wyjaśnienia.</h3>
+            <p>
+              Tłumaczenie ręcznie sporządzonych pism wymaga pracy z trudnym
+              pismem, skrótami, nieformalnym językiem, emocjonalnym stylem
+              wypowiedzi i kontekstem sprawy.
+            </p>
+
+            <div className="pill-list" style={{ marginTop: 20 }}>
+              {inmateItems.map((item) => (
+                <span className="pill light-pill" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </article>
         </div>
       </section>
 
@@ -1093,7 +1148,7 @@ export default function HomePage() {
         <div className="section-header">
           <div>
             <div className="section-kicker">IT · dowody cyfrowe</div>
-            <h2>Materiały cyfrowe, komunikatory i raporty forensic.</h2>
+            <h2>Komunikatory, raporty forensic i dane cyfrowe.</h2>
           </div>
           <p className="section-intro">
             Tłumaczenie może obejmować nie tylko klasyczne dokumenty, lecz także
@@ -1113,50 +1168,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="czynnosci">
-        <div className="grid-2">
-          <article className="card">
-            <span className="tag">Ustnie i w terenie</span>
-            <h3>Tłumaczenia ustne przy czynnościach.</h3>
-            <p>
-              Tłumaczenia ustne języka ukraińskiego podczas czynności
-              procesowych, przesłuchań, czynności w jednostkach Policji,
-              prokuraturze, sądzie, aresztach śledczych i zakładach karnych.
-            </p>
-
-            <div className="pill-list" style={{ marginTop: 20 }}>
-              {oralItems.map((item) => (
-                <span className="pill light-pill" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
-          </article>
-
-          <article className="card">
-            <span className="tag">Osadzeni</span>
-            <h3>Pisma odręczne i korespondencja osadzonych.</h3>
-            <p>
-              Tłumaczenie ręcznie sporządzonych pism, listów, oświadczeń, próśb,
-              skarg, wyjaśnień i korespondencji wymaga pracy z trudnym pismem,
-              skrótami, nieformalnym językiem i kontekstem sprawy.
-            </p>
-
-            <div className="pill-list" style={{ marginTop: 20 }}>
-              {inmateItems.map((item) => (
-                <span className="pill light-pill" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
-          </article>
-        </div>
-      </section>
-
       <section className="section">
         <div className="feature-band">
           <div>
-            <div className="section-kicker">Ukraina · transgranicznie</div>
+            <div className="section-kicker">Ukraina · dokumenty transgraniczne</div>
             <h2>Pomoc prawna i dokumenty z Ukrainą.</h2>
           </div>
 
@@ -1188,8 +1203,7 @@ export default function HomePage() {
           <p className="section-intro">
             Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego.
             Język rosyjski i angielski występują w ofercie jako tłumaczenia
-            specjalistyczne, szczególnie w dokumentach prawnych, technicznych i
-            cyfrowych.
+            specjalistyczne.
           </p>
         </div>
 
@@ -1208,12 +1222,12 @@ export default function HomePage() {
         <div className="section-header">
           <div>
             <div className="section-kicker">Kancelaria</div>
-            <h2>Realne zaplecze pracy z dokumentami.</h2>
+            <h2>Kancelaria, sprzęt i obieg dokumentów.</h2>
           </div>
           <p className="section-intro">
-            Dokumenty formalne i materiały dowodowe wymagają nie tylko
-            tłumaczenia, ale też odpowiedniego obiegu plików, przygotowania
-            technicznego, druku, kompletowania i zachowania poufności.
+            Tłumaczenia poświadczone wymagają nie tylko przekładu, ale również
+            prawidłowego przygotowania dokumentu, druku, kompletowania, kontroli
+            wersji i zachowania poufności materiałów.
           </p>
         </div>
 
@@ -1232,6 +1246,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section" id="kwalifikacje">
+        <div className="section-header">
+          <div>
+            <div className="section-kicker">Kwalifikacje</div>
+            <h2>Uprawnienia zawodowe i przygotowanie specjalistyczne.</h2>
+          </div>
+          <p className="section-intro">
+            Strona kwalifikacji zawiera certyfikaty, dyplomy i dokumenty
+            potwierdzające uprawnienia oraz przygotowanie do pracy z dokumentami
+            prawnymi, technologicznymi i procesowymi.
+          </p>
+        </div>
+
+        <div className="qualification-grid">
+          {qualifications.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Kwalifikacje</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="hero-actions">
+          <a className="button button-primary" href="/kwalifikacje">
+            Zobacz kwalifikacje i certyfikaty
+          </a>
+        </div>
+      </section>
+
       <section className="section">
         <div className="grid-2">
           <article className="card card-dark">
@@ -1247,45 +1291,14 @@ export default function HomePage() {
           </article>
 
           <article className="card">
-            <span className="tag">Klient indywidualny</span>
+            <span className="tag">Zakres poboczny</span>
             <h3>Dokumenty prywatne i urzędowe.</h3>
             <p>
-              Obsługuję również dokumenty osób prywatnych: dokumenty z Ukrainy,
-              akty stanu cywilnego, pełnomocnictwa, oświadczenia, dokumenty
-              pobytowe, rodzinne i urzędowe. Ten zakres pozostaje poboczny
-              wobec głównej specjalizacji instytucjonalnej.
+              Kancelaria obsługuje również dokumenty osób prywatnych: dokumenty
+              z Ukrainy, akty stanu cywilnego, pełnomocnictwa, oświadczenia,
+              dokumenty pobytowe, rodzinne i urzędowe.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section className="section" id="kwalifikacje">
-        <div className="section-header">
-          <div>
-            <div className="section-kicker">Kwalifikacje</div>
-            <h2>Uprawnienia i przygotowanie specjalistyczne.</h2>
-          </div>
-          <p className="section-intro">
-            Połączenie uprawnień tłumacza przysięgłego języka ukraińskiego z
-            przygotowaniem prawnym, technologicznym i organizacyjnym wspiera
-            pracę z dokumentami złożonymi, dowodowymi i cyfrowymi.
-          </p>
-        </div>
-
-        <div className="card">
-          <div className="qualification-list">
-            {qualifications.map((item) => (
-              <div className="qualification-item" key={item}>
-                {item}
-              </div>
-            ))}
-          </div>
-
-          <div className="hero-actions">
-            <a className="button button-primary" href="/kwalifikacje">
-              Zobacz kwalifikacje i certyfikaty
-            </a>
-          </div>
         </div>
       </section>
 
@@ -1333,7 +1346,7 @@ export default function HomePage() {
 
       <footer className="footer">
         <div className="footer-inner">
-          <span>© 2026 Vadym Rekel — Tłumacz przysięgły języka ukraińskiego</span>
+          <span>© 2026 Kancelaria Vadym Rekel — Tłumacz przysięgły języka ukraińskiego</span>
           <span>TP/27/17 · CIOL no. 94280 · TEPIS Member 2026</span>
           <span>ul. Kielecka 2/53, 31-526 Kraków · cała Polska</span>
         </div>
