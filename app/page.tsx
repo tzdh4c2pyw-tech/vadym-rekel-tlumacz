@@ -203,6 +203,37 @@ const qualifications = [
   }
 ];
 
+const nearbyPlaces = [
+  {
+    icon: "🛂",
+    title: "Małopolski Urząd Wojewódzki – Wydział Spraw Cudzoziemców",
+    address: "ul. Przy Rondzie 6, 31-547 Kraków",
+    note: "kilka minut pieszo od kancelarii, okolice Ronda Mogilskiego",
+    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Przy+Rondzie+6,+31-547+Krak%C3%B3w/"
+  },
+  {
+    icon: "⚖️",
+    title: "Sąd Okręgowy w Krakowie",
+    address: "ul. Przy Rondzie 7, 31-547 Kraków",
+    note: "ok. 600 m od kancelarii, około 7 minut pieszo",
+    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/S%C4%85d+Okr%C4%99gowy+w+Krakowie,+Przy+Rondzie+7,+31-547+Krak%C3%B3w/"
+  },
+  {
+    icon: "🇺🇦",
+    title: "Konsulat Ukrainy w Krakowie",
+    address: "al. płk. Władysława Beliny-Prażmowskiego 4, 31-514 Kraków",
+    note: "wygodny dojazd tramwajem i pieszo z Ronda Mogilskiego",
+    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Aleja+Pu%C5%82kownika+W%C5%82adys%C5%82awa+Beliny-Pra%C5%BAsmowskiego+4,+31-514+Krak%C3%B3w/"
+  },
+  {
+    icon: "🛡️",
+    title: "Prokuratura Okręgowa w Krakowie",
+    address: "ul. Lubicz 25, 31-503 Kraków",
+    note: "ok. 650 m od kancelarii, około 8 minut pieszo",
+    href: "https://www.google.com/maps/dir/Kielecka+2%2F53,+31-526+Krak%C3%B3w/Prokuratura+Okr%C4%99gowa+w+Krakowie,+Lubicz+25,+31-503+Krak%C3%B3w/"
+  }
+];
+
 export default function HomePage() {
   return (
     <main>
@@ -309,7 +340,7 @@ export default function HomePage() {
         .nav-links {
           display: flex;
           align-items: center;
-          gap: 18px;
+          gap: 16px;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
           font-weight: 800;
@@ -566,52 +597,22 @@ export default function HomePage() {
         }
 
         @keyframes signatureFloat {
-          0% {
-            transform: translateY(0) rotate(-1.5deg);
-          }
-
-          50% {
-            transform: translateY(-7px) rotate(-0.4deg);
-          }
-
-          100% {
-            transform: translateY(0) rotate(-1.5deg);
-          }
+          0% { transform: translateY(0) rotate(-1.5deg); }
+          50% { transform: translateY(-7px) rotate(-0.4deg); }
+          100% { transform: translateY(0) rotate(-1.5deg); }
         }
 
         @keyframes signatureInk {
-          0% {
-            opacity: 0.82;
-            filter: blur(0.15px);
-          }
-
-          50% {
-            opacity: 1;
-            filter: blur(0);
-          }
-
-          100% {
-            opacity: 0.82;
-            filter: blur(0.15px);
-          }
+          0% { opacity: 0.82; filter: blur(0.15px); }
+          50% { opacity: 1; filter: blur(0); }
+          100% { opacity: 0.82; filter: blur(0.15px); }
         }
 
         @keyframes signatureReveal {
-          0% {
-            transform: translateX(0);
-          }
-
-          34% {
-            transform: translateX(118%);
-          }
-
-          72% {
-            transform: translateX(118%);
-          }
-
-          100% {
-            transform: translateX(0);
-          }
+          0% { transform: translateX(0); }
+          34% { transform: translateX(118%); }
+          72% { transform: translateX(118%); }
+          100% { transform: translateX(0); }
         }
 
         .profile-card {
@@ -899,6 +900,114 @@ export default function HomePage() {
           gap: 16px;
         }
 
+        .map-card {
+          border-radius: var(--radius);
+          background: rgba(255, 250, 242, 0.86);
+          border: 1px solid rgba(176, 138, 60, 0.38);
+          box-shadow: var(--shadow);
+          padding: 34px;
+          overflow: hidden;
+        }
+
+        .map-header {
+          display: grid;
+          grid-template-columns: 0.95fr 1.05fr;
+          gap: 28px;
+          align-items: end;
+          margin-bottom: 22px;
+        }
+
+        .map-header h2 {
+          margin: 8px 0 0;
+          font-size: clamp(32px, 4vw, 54px);
+          line-height: 0.98;
+          letter-spacing: -0.06em;
+        }
+
+        .map-header p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 17px;
+          line-height: 1.55;
+        }
+
+        .map-frame {
+          position: relative;
+          width: 100%;
+          padding-bottom: 52%;
+          height: 0;
+          overflow: hidden;
+          border-radius: 22px;
+          border: 1px solid rgba(176, 138, 60, 0.34);
+          box-shadow: 0 16px 40px rgba(25, 22, 18, 0.10);
+          background: #f8f1e6;
+        }
+
+        .map-frame iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+
+        .nearby-grid {
+          margin-top: 18px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+
+        .nearby-item {
+          display: grid;
+          grid-template-columns: 34px 1fr;
+          gap: 12px;
+          padding: 16px;
+          border-radius: 18px;
+          border: 1px solid rgba(176, 138, 60, 0.28);
+          background: rgba(255, 255, 255, 0.52);
+        }
+
+        .nearby-icon {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background: var(--green-soft);
+          font-size: 18px;
+        }
+
+        .nearby-item h3 {
+          margin: 0 0 4px;
+          font-size: 17px;
+          line-height: 1.15;
+          letter-spacing: -0.02em;
+        }
+
+        .nearby-item p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 13px;
+          line-height: 1.45;
+        }
+
+        .nearby-link {
+          display: inline-flex;
+          margin-top: 8px;
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 900;
+        }
+
+        .map-note {
+          margin: 18px 0 0;
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
         .contact-card {
           border-radius: var(--radius);
           background: linear-gradient(145deg, var(--green), var(--green-2));
@@ -959,7 +1068,8 @@ export default function HomePage() {
           .hero,
           .section-header,
           .feature-band,
-          .contact-card {
+          .contact-card,
+          .map-header {
             grid-template-columns: 1fr;
           }
 
@@ -980,7 +1090,8 @@ export default function HomePage() {
           }
 
           .grid-3,
-          .grid-2 {
+          .grid-2,
+          .nearby-grid {
             grid-template-columns: 1fr;
           }
 
@@ -1013,7 +1124,8 @@ export default function HomePage() {
           .hero-copy,
           .hero-profile,
           .feature-band,
-          .contact-card {
+          .contact-card,
+          .map-card {
             border-radius: 24px;
             padding: 24px;
           }
@@ -1043,6 +1155,11 @@ export default function HomePage() {
 
           .signature-name {
             font-size: 44px;
+          }
+
+          .map-frame {
+            padding-bottom: 72%;
+            border-radius: 18px;
           }
         }
 
@@ -1083,6 +1200,7 @@ export default function HomePage() {
             <a href="#czynnosci">Czynności</a>
             <a href="#material-cyfrowy">Materiał cyfrowy</a>
             <a href="#kancelaria">Kancelaria</a>
+            <a href="#lokalizacja">Lokalizacja</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
             <a className="nav-cta" href={`mailto:${email}`}>
               Szybka wycena
@@ -1098,9 +1216,7 @@ export default function HomePage() {
             Kancelaria tłumacza przysięgłego · Kraków · cała Polska
           </span>
 
-          <h1>
-            Kancelaria tłumacza przysięgłego języka ukraińskiego.
-          </h1>
+          <h1>Kancelaria tłumacza przysięgłego języka ukraińskiego.</h1>
 
           <p className="lead">
             Tłumaczenia poświadczone i ustne dla sądów, prokuratury i Policji.
@@ -1405,17 +1521,62 @@ export default function HomePage() {
       </section>
 
       <section className="section" id="lokalizacja">
-        <div className="feature-band">
-          <div>
-            <div className="section-kicker">Kraków · cała Polska</div>
-            <h2>Siedziba w Krakowie. Obsługa dokumentów z całej Polski.</h2>
+        <div className="map-card">
+          <div className="map-header">
+            <div>
+              <div className="section-kicker">Lokalizacja</div>
+              <h2>Kancelaria przy Rondzie Mogilskim w Krakowie.</h2>
+            </div>
+
+            <p>
+              Kancelaria tłumacza przysięgłego języka ukraińskiego znajduje się
+              przy ul. Kieleckiej 2/53 w Krakowie. Lokalizacja jest dogodna dla
+              osób i instytucji współpracujących z sądami, prokuraturą, Policją,
+              urzędami oraz Konsulatem Ukrainy.
+            </p>
           </div>
-          <p>
-            Kancelaria mieści się przy ul. Kieleckiej 2/53 w Krakowie, w
-            rejonie Ronda Mogilskiego. Dokumenty do wstępnej wyceny można
-            przesłać elektronicznie z dowolnego miejsca w Polsce. Czynności
-            ustne ustalane są indywidualnie, zależnie od miejsca, terminu i
-            charakteru sprawy.
+
+          <div className="map-frame">
+            <iframe
+              itemProp="hasMap"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.453089598971!2d19.961595176701726!3d50.0696491140557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b122aaf12c1%3A0xb1f9ec2649aa6e13!2sKielecka+2%2F53%2C+31-526+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1714890521862!5m2!1spl!2spl"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mapa dojazdu do kancelarii tłumacza przysięgłego Vadym Rekel w Krakowie"
+              aria-label="Mapa lokalizacji kancelarii tłumacza przysięgłego Vadym Rekel w Krakowie przy Rondzie Mogilskim"
+            />
+          </div>
+
+          <div className="nearby-grid">
+            {nearbyPlaces.map((place) => (
+              <article className="nearby-item" key={place.title}>
+                <div className="nearby-icon" aria-hidden="true">
+                  {place.icon}
+                </div>
+
+                <div>
+                  <h3>{place.title}</h3>
+                  <p>{place.address}</p>
+                  <p>{place.note}</p>
+                  <a
+                    className="nearby-link"
+                    href={place.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Zobacz trasę w Google Maps →
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="map-note">
+            Położenie przy Rondzie Mogilskim zapewnia dogodny dojazd tramwajem i
+            autobusem z większości dzielnic Krakowa, a także z miejscowości
+            Małopolski, w tym z Wieliczki, Bochni, Myślenic, Tarnowa, Nowego
+            Sącza i Nowego Targu.
           </p>
         </div>
       </section>
@@ -1448,7 +1609,10 @@ export default function HomePage() {
 
       <footer className="footer">
         <div className="footer-inner">
-          <span>© 2026 Kancelaria Vadym Rekel — Tłumacz przysięgły języka ukraińskiego</span>
+          <span>
+            © 2026 Kancelaria Vadym Rekel — Tłumacz przysięgły języka
+            ukraińskiego
+          </span>
           <span>TP/27/17 · CIOL no. 94280 · TEPIS Member 2026</span>
           <span>ul. Kielecka 2/53, 31-526 Kraków · cała Polska</span>
         </div>
