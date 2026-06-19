@@ -128,7 +128,8 @@ const officePhotos = [
     src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
     alt: "Mgr Vadym Rekel przy stanowisku pracy tłumacza przysięgłego języka ukraińskiego w Krakowie",
     title: "Mgr Vadym Rekel — stanowisko pracy",
-    featured: true
+    featured: true,
+    emphasis: true
   },
   {
     src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
@@ -739,14 +740,15 @@ export default function HomePage() {
 
         .photo-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 16px;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 18px;
         }
 
         .photo-card {
           position: relative;
-          min-height: 280px;
-          border-radius: 26px;
+          grid-column: span 4;
+          min-height: 310px;
+          border-radius: 28px;
           overflow: hidden;
           background: #f8f1e6;
           border: 1px solid var(--line);
@@ -754,8 +756,13 @@ export default function HomePage() {
         }
 
         .photo-card-featured {
-          grid-column: span 2;
-          min-height: 520px;
+          grid-column: span 6;
+          min-height: 640px;
+        }
+
+        .photo-card-emphasis {
+          border: 1px solid rgba(182, 138, 58, 0.46);
+          box-shadow: 0 26px 70px rgba(25, 22, 18, 0.18);
         }
 
         .photo-card img {
@@ -768,9 +775,13 @@ export default function HomePage() {
           transition: transform 300ms ease, filter 300ms ease;
         }
 
+        .photo-card-emphasis img {
+          filter: contrast(1.1) saturate(1.12) brightness(1.04);
+        }
+
         .photo-card:hover img {
           transform: scale(1.035);
-          filter: brightness(0.78);
+          filter: brightness(0.82) contrast(1.08) saturate(1.08);
         }
 
         .photo-caption {
@@ -778,16 +789,21 @@ export default function HomePage() {
           left: 18px;
           right: 18px;
           bottom: 18px;
-          padding: 14px 16px;
+          padding: 15px 18px;
           border-radius: 18px;
-          background: rgba(19, 16, 12, 0.72);
+          background: rgba(19, 16, 12, 0.74);
           color: #fff;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 14px;
-          font-weight: 900;
+          font-weight: 950;
           line-height: 1.35;
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
+        }
+
+        .photo-card-featured .photo-caption {
+          font-size: 16px;
+          padding: 17px 20px;
         }
 
         .contact-panel {
@@ -1034,12 +1050,9 @@ export default function HomePage() {
             grid-template-columns: 1fr;
           }
 
-          .photo-grid {
-            grid-template-columns: 1fr 1fr;
-          }
-
+          .photo-card,
           .photo-card-featured {
-            grid-column: span 2;
+            grid-column: span 6;
             min-height: 460px;
           }
 
@@ -1079,14 +1092,10 @@ export default function HomePage() {
             min-height: 420px;
           }
 
-          .photo-grid {
-            grid-template-columns: 1fr;
-          }
-
           .photo-card,
           .photo-card-featured {
-            grid-column: auto;
-            min-height: 360px;
+            grid-column: span 12;
+            min-height: 380px;
           }
 
           .floating-contact {
@@ -1265,15 +1274,19 @@ export default function HomePage() {
         <SectionHeading
           label="Kancelaria"
           title="Realne miejsce pracy w Krakowie."
-          text="Kancelaria obsługuje dokumenty poświadczone, procesowe, urzędowe oraz materiał cyfrowy."
+          text="Dwa główne zdjęcia są większe i bardziej czytelne. Pozostałe pokazują zaplecze pracy kancelarii."
         />
 
         <div className="photo-grid">
           {officePhotos.map((photo) => (
             <article
-              className={
-                photo.featured ? "photo-card photo-card-featured" : "photo-card"
-              }
+              className={[
+                "photo-card",
+                photo.featured ? "photo-card-featured" : "",
+                photo.emphasis ? "photo-card-emphasis" : ""
+              ]
+                .filter(Boolean)
+                .join(" ")}
               key={photo.src}
             >
               <img src={photo.src} alt={photo.alt} loading="lazy" />
