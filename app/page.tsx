@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import FloatingTranslatorWidget from "./components/FloatingTranslatorWidget";
 
 const siteUrl = "https://vadym-rekel-tlumacz.vercel.app";
 
@@ -20,7 +19,9 @@ export const metadata: Metadata = {
     "tłumacz ukraiński prokuratura",
     "tłumaczenia dokumentów z Ukrainy",
     "tłumaczenia sprawy karne ukraiński",
-    "tłumaczenie materiału cyfrowego ukraiński"
+    "tłumaczenie materiału cyfrowego ukraiński",
+    "tłumacz przysięgły ukraiński dokumenty z Ukrainy",
+    "tłumacz przysięgły języka ukraińskiego Kraków Kielecka"
   ],
   verification: {
     google: "IRGY-E1KJFL1eUQihR952TtnvoTINcS0GzMSq0XJbfQ"
@@ -124,6 +125,18 @@ const qualificationCards = [
 
 const officePhotos = [
   {
+    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
+    alt: "Mgr Vadym Rekel przy stanowisku pracy tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Mgr Vadym Rekel — stanowisko pracy",
+    featured: true
+  },
+  {
+    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
+    alt: "Stanowisko administracyjne kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    title: "Stanowisko administracyjne kancelarii",
+    featured: true
+  },
+  {
     src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
     alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
     title: "Kancelaria"
@@ -145,22 +158,22 @@ const officePhotos = [
   },
   {
     src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-ukrainski-krakow-vadym-rekel.jpg",
-    alt: "Stanowisko administracyjne kancelarii tłumacza przysięgłego",
+    alt: "Stanowisko administracyjne kancelarii tłumacza ukraińskiego w Krakowie",
     title: "Obsługa kancelarii"
   },
   {
     src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Laptop z zabezpieczeniami w kancelarii tłumacza przysięgłego",
+    alt: "Laptop z zabezpieczeniami BitLocker w kancelarii tłumacza",
     title: "Bezpieczeństwo danych"
   },
   {
     src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
-    alt: "Drukarki w kancelarii tłumacza przysięgłego",
+    alt: "Drukarki HP PageWide w kancelarii tłumacza przysięgłego",
     title: "Druk dokumentów"
   },
   {
     src: "/images/niszczarka-dokumentow-hsm-shredstar-x15-kancelaria-vadym-rekel.jpg",
-    alt: "Niszczarka dokumentów w kancelarii tłumacza",
+    alt: "Niszczarka dokumentów HSM shredstar X15 w kancelarii tłumacza",
     title: "Bezpieczeństwo dokumentów"
   }
 ];
@@ -436,7 +449,7 @@ export default function HomePage() {
         }
 
         .button-secondary {
-          background: rgba(255,255,255,0.70);
+          background: rgba(255, 255, 255, 0.70);
           border-color: var(--line);
           color: var(--ink);
         }
@@ -461,53 +474,34 @@ export default function HomePage() {
           line-height: 1.55;
         }
 
-        .signature-pulse {
-          margin-top: 22px;
+        .signature {
+          margin-top: 24px;
           width: fit-content;
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-          padding: 18px 22px;
-          border-radius: 22px;
-          background:
-            linear-gradient(135deg, rgba(18, 60, 49, 0.10), rgba(182, 138, 58, 0.12)),
-            rgba(255, 250, 242, 0.86);
-          border: 1px solid rgba(18, 60, 49, 0.18);
-          box-shadow: 0 14px 34px rgba(18, 60, 49, 0.10);
-          animation: signaturePulse 2.8s ease-in-out infinite;
-        }
-
-        .signature-pulse span {
-          color: var(--green);
-          font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-          font-size: 30px;
-          font-style: italic;
-          font-weight: 800;
-          letter-spacing: -0.04em;
+          padding: 10px 18px;
+          border-radius: 999px;
+          border: 1px solid rgba(182, 138, 58, 0.32);
+          color: var(--gold-dark);
+          background: rgba(255, 250, 242, 0.76);
+          font-size: 25px;
           line-height: 1;
-        }
-
-        .signature-pulse small {
-          color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 800;
+          font-style: italic;
+          letter-spacing: -0.04em;
+          box-shadow: 0 12px 26px rgba(182, 138, 58, 0.12);
+          animation: signaturePulse 2.7s ease-in-out infinite;
         }
 
         @keyframes signaturePulse {
           0% {
             transform: translateY(0) scale(1);
-            box-shadow: 0 14px 34px rgba(18, 60, 49, 0.10);
+            box-shadow: 0 12px 26px rgba(182, 138, 58, 0.12);
           }
-
           50% {
-            transform: translateY(-3px) scale(1.018);
-            box-shadow: 0 20px 44px rgba(18, 60, 49, 0.18);
+            transform: translateY(-2px) scale(1.025);
+            box-shadow: 0 18px 38px rgba(182, 138, 58, 0.24);
           }
-
           100% {
             transform: translateY(0) scale(1);
-            box-shadow: 0 14px 34px rgba(18, 60, 49, 0.10);
+            box-shadow: 0 12px 26px rgba(182, 138, 58, 0.12);
           }
         }
 
@@ -528,8 +522,8 @@ export default function HomePage() {
           min-height: 602px;
           border-radius: 24px;
           overflow: hidden;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.14);
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.14);
           margin: 0;
         }
 
@@ -556,7 +550,7 @@ export default function HomePage() {
         .trust-item {
           border-radius: 18px;
           border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
+          background: rgba(255, 250, 242, 0.78);
           padding: 18px;
           color: var(--muted);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -625,7 +619,7 @@ export default function HomePage() {
         .card {
           border-radius: 24px;
           border: 1px solid var(--line);
-          background: rgba(255,250,242,0.82);
+          background: rgba(255, 250, 242, 0.82);
           box-shadow: 0 14px 34px rgba(25, 22, 18, 0.055);
           padding: 26px;
           transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
@@ -640,36 +634,9 @@ export default function HomePage() {
         .card-petrol {
           background:
             linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
-            repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
+            repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 22px);
           color: #fff;
-          border-color: rgba(255,255,255,0.12);
-        }
-
-        .card-dark {
-          background: linear-gradient(150deg, var(--green), var(--green-dark));
-          color: #fff;
-          border-color: rgba(255,255,255,0.12);
-        }
-
-        .tag {
-          display: inline-flex;
-          margin-bottom: 14px;
-          padding: 8px 11px;
-          border-radius: 999px;
-          background: var(--green-soft);
-          color: var(--green);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 950;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-        }
-
-        .card-petrol .tag,
-        .card-dark .tag {
-          background: rgba(255,255,255,0.10);
-          color: rgba(255,255,255,0.84);
-          border: 1px solid rgba(255,255,255,0.12);
+          border-color: rgba(255, 255, 255, 0.12);
         }
 
         .card h3 {
@@ -686,9 +653,28 @@ export default function HomePage() {
           line-height: 1.55;
         }
 
-        .card-petrol p,
-        .card-dark p {
-          color: rgba(255,255,255,0.76);
+        .card-petrol p {
+          color: rgba(255, 255, 255, 0.76);
+        }
+
+        .tag {
+          display: inline-flex;
+          margin-bottom: 14px;
+          padding: 8px 11px;
+          border-radius: 999px;
+          background: var(--green-soft);
+          color: var(--green);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .card-petrol .tag {
+          background: rgba(255, 255, 255, 0.10);
+          color: rgba(255, 255, 255, 0.84);
+          border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .card-link {
@@ -700,8 +686,7 @@ export default function HomePage() {
           font-weight: 900;
         }
 
-        .card-petrol .card-link,
-        .card-dark .card-link {
+        .card-petrol .card-link {
           color: #fff;
         }
 
@@ -727,7 +712,7 @@ export default function HomePage() {
 
         .feature p {
           margin: 0;
-          color: rgba(255,255,255,0.76);
+          color: rgba(255, 255, 255, 0.76);
           font-size: 18px;
           line-height: 1.6;
         }
@@ -742,9 +727,9 @@ export default function HomePage() {
         .label {
           border-radius: 999px;
           padding: 9px 12px;
-          border: 1px solid rgba(255,255,255,0.14);
-          color: rgba(255,255,255,0.78);
-          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          color: rgba(255, 255, 255, 0.78);
+          background: rgba(255, 255, 255, 0.08);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 12px;
           font-weight: 900;
@@ -755,27 +740,22 @@ export default function HomePage() {
         .photo-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 14px;
+          gap: 16px;
         }
 
         .photo-card {
           position: relative;
-          min-height: 290px;
-          border-radius: 24px;
+          min-height: 280px;
+          border-radius: 26px;
           overflow: hidden;
           background: #f8f1e6;
           border: 1px solid var(--line);
-          box-shadow: 0 14px 34px rgba(25, 22, 18, 0.055);
+          box-shadow: 0 16px 38px rgba(25, 22, 18, 0.075);
         }
 
-        .photo-card:first-child {
+        .photo-card-featured {
           grid-column: span 2;
-          min-height: 410px;
-        }
-
-        .photo-card:nth-child(2) {
-          grid-column: span 2;
-          min-height: 410px;
+          min-height: 520px;
         }
 
         .photo-card img {
@@ -785,26 +765,29 @@ export default function HomePage() {
           object-fit: cover;
           object-position: center center;
           display: block;
-          transition: transform 260ms ease, filter 260ms ease;
+          transition: transform 300ms ease, filter 300ms ease;
         }
 
         .photo-card:hover img {
-          transform: scale(1.045);
-          filter: brightness(0.76);
+          transform: scale(1.035);
+          filter: brightness(0.78);
         }
 
         .photo-caption {
           position: absolute;
-          left: 16px;
-          right: 16px;
-          bottom: 16px;
-          padding: 13px 14px;
-          border-radius: 16px;
+          left: 18px;
+          right: 18px;
+          bottom: 18px;
+          padding: 14px 16px;
+          border-radius: 18px;
           background: rgba(19, 16, 12, 0.72);
           color: #fff;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
+          font-size: 14px;
+          font-weight: 900;
+          line-height: 1.35;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
         }
 
         .contact-panel {
@@ -829,21 +812,21 @@ export default function HomePage() {
 
         .contact-panel p {
           margin: 18px 0 0;
-          color: rgba(255,255,255,0.76);
+          color: rgba(255, 255, 255, 0.76);
           font-size: 18px;
           line-height: 1.55;
         }
 
         .contact-box {
           border-radius: 22px;
-          background: rgba(255,255,255,0.09);
-          border: 1px solid rgba(255,255,255,0.14);
+          background: rgba(255, 255, 255, 0.09);
+          border: 1px solid rgba(255, 255, 255, 0.14);
           padding: 24px;
         }
 
         .contact-line {
           display: block;
-          color: rgba(255,255,255,0.78);
+          color: rgba(255, 255, 255, 0.78);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 14px;
           line-height: 1.55;
@@ -852,167 +835,6 @@ export default function HomePage() {
 
         .contact-line strong {
           color: #fff;
-        }
-
-        .floating-translator-widget {
-          position: fixed;
-          right: 24px;
-          bottom: 24px;
-          z-index: 9999;
-          width: min(390px, calc(100vw - 32px));
-          display: grid;
-          grid-template-columns: 54px 1fr;
-          gap: 16px;
-          border-radius: 28px;
-          padding: 18px;
-          background:
-            linear-gradient(145deg, rgba(255, 250, 242, 0.98), rgba(248, 241, 230, 0.98)),
-            var(--paper);
-          border: 1px solid rgba(18, 60, 49, 0.18);
-          box-shadow: 0 26px 80px rgba(19, 16, 12, 0.22);
-          animation: floatingTranslatorEnter 360ms ease both;
-        }
-
-        @keyframes floatingTranslatorEnter {
-          from {
-            opacity: 0;
-            transform: translateY(18px) scale(0.96);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
-        .floating-translator-close {
-          position: absolute;
-          top: 10px;
-          right: 12px;
-          width: 32px;
-          height: 32px;
-          border: 0;
-          border-radius: 999px;
-          background: rgba(19, 16, 12, 0.08);
-          color: var(--ink);
-          font-size: 24px;
-          line-height: 1;
-          cursor: pointer;
-        }
-
-        .floating-translator-close:hover {
-          background: rgba(19, 16, 12, 0.14);
-        }
-
-        .floating-translator-mark {
-          width: 54px;
-          height: 54px;
-          border-radius: 18px;
-          display: grid;
-          place-items: center;
-          background: linear-gradient(145deg, var(--green), var(--green-dark));
-          color: #fff;
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 18px;
-          font-weight: 950;
-          box-shadow: 0 14px 28px rgba(18, 60, 49, 0.22);
-        }
-
-        .floating-translator-content {
-          padding-right: 20px;
-        }
-
-        .floating-translator-eyebrow {
-          display: inline-flex;
-          margin-bottom: 8px;
-          color: var(--gold-dark);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 11px;
-          font-weight: 950;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-        }
-
-        .floating-translator-content h2 {
-          margin: 0;
-          color: var(--ink);
-          font-size: 24px;
-          line-height: 1.04;
-          letter-spacing: -0.04em;
-        }
-
-        .floating-translator-content p {
-          margin: 10px 0 0;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.48;
-        }
-
-        .floating-translator-phone {
-          margin-top: 14px;
-          padding: 13px 14px;
-          border-radius: 18px;
-          background: rgba(18, 60, 49, 0.08);
-          border: 1px solid rgba(18, 60, 49, 0.13);
-        }
-
-        .floating-translator-phone span {
-          display: block;
-          color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 11px;
-          font-weight: 900;
-          text-transform: uppercase;
-          letter-spacing: 0.06em;
-        }
-
-        .floating-translator-phone a {
-          display: inline-flex;
-          margin-top: 4px;
-          color: var(--green);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 22px;
-          font-weight: 950;
-        }
-
-        .floating-translator-actions {
-          margin-top: 14px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-
-        .floating-translator-primary,
-        .floating-translator-secondary {
-          min-height: 40px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 999px;
-          padding: 0 14px;
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 950;
-        }
-
-        .floating-translator-primary {
-          background: var(--green);
-          color: #fff;
-        }
-
-        .floating-translator-secondary {
-          background: rgba(255, 255, 255, 0.72);
-          border: 1px solid var(--line);
-          color: var(--ink);
-        }
-
-        .floating-translator-content small {
-          display: block;
-          margin-top: 10px;
-          color: var(--muted);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 800;
         }
 
         .footer {
@@ -1064,6 +886,127 @@ export default function HomePage() {
           flex: 0 0 auto;
         }
 
+        .floating-toggle {
+          display: none;
+        }
+
+        .floating-contact {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 300;
+          width: min(390px, calc(100vw - 32px));
+          border-radius: 28px;
+          background:
+            linear-gradient(145deg, rgba(18, 60, 49, 0.98), rgba(13, 41, 35, 0.98)),
+            radial-gradient(circle at 20% 0%, rgba(182, 138, 58, 0.28), transparent 38%);
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          box-shadow: 0 28px 80px rgba(18, 60, 49, 0.34);
+          padding: 24px;
+          animation: floatingEnter 700ms ease both;
+        }
+
+        @keyframes floatingEnter {
+          from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .floating-toggle:checked + .floating-contact {
+          display: none;
+        }
+
+        .floating-close {
+          position: absolute;
+          top: 14px;
+          right: 14px;
+          width: 34px;
+          height: 34px;
+          border-radius: 999px;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.12);
+          color: rgba(255, 255, 255, 0.86);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 22px;
+          line-height: 1;
+        }
+
+        .floating-mark {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background: rgba(255, 255, 255, 0.12);
+          color: #fff;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-weight: 950;
+          letter-spacing: -0.05em;
+          margin-bottom: 14px;
+        }
+
+        .floating-contact h2 {
+          margin: 0;
+          font-size: 28px;
+          line-height: 1.02;
+          letter-spacing: -0.05em;
+        }
+
+        .floating-contact p {
+          margin: 12px 0 0;
+          color: rgba(255, 255, 255, 0.76);
+          font-size: 15px;
+          line-height: 1.5;
+        }
+
+        .floating-phone {
+          margin-top: 18px;
+          display: block;
+          border-radius: 18px;
+          padding: 15px 16px;
+          background: rgba(255, 255, 255, 0.10);
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          color: #fff;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-weight: 950;
+          text-align: center;
+        }
+
+        .floating-actions {
+          margin-top: 12px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+
+        .floating-actions a {
+          border-radius: 999px;
+          padding: 12px 14px;
+          text-align: center;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 900;
+        }
+
+        .floating-primary {
+          background: #fff;
+          color: var(--green);
+        }
+
+        .floating-secondary {
+          background: rgba(255, 255, 255, 0.10);
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
         @media (max-width: 980px) {
           .hero,
           .section-heading,
@@ -1087,14 +1030,17 @@ export default function HomePage() {
 
           .grid-3,
           .grid-4,
-          .photo-grid,
           .trust-inner {
             grid-template-columns: 1fr;
           }
 
-          .photo-card:first-child,
-          .photo-card:nth-child(2) {
-            grid-column: auto;
+          .photo-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .photo-card-featured {
+            grid-column: span 2;
+            min-height: 460px;
           }
 
           .nav-links {
@@ -1133,30 +1079,21 @@ export default function HomePage() {
             min-height: 420px;
           }
 
-          .signature-pulse {
-            width: 100%;
+          .photo-grid {
+            grid-template-columns: 1fr;
           }
 
-          .floating-translator-widget {
+          .photo-card,
+          .photo-card-featured {
+            grid-column: auto;
+            min-height: 360px;
+          }
+
+          .floating-contact {
+            left: 16px;
             right: 16px;
             bottom: 16px;
-            grid-template-columns: 44px 1fr;
-            border-radius: 22px;
-            padding: 14px;
-          }
-
-          .floating-translator-mark {
-            width: 44px;
-            height: 44px;
-            border-radius: 15px;
-          }
-
-          .floating-translator-content h2 {
-            font-size: 21px;
-          }
-
-          .floating-translator-actions a {
-            flex: 1 1 auto;
+            width: auto;
           }
         }
       `}</style>
@@ -1221,10 +1158,7 @@ export default function HomePage() {
             sprawy karne, dokumenty z Ukrainy i materiał cyfrowy.
           </div>
 
-          <div className="signature-pulse" aria-label="Podpis Vadym Rekel">
-            <span>Vadym Rekel</span>
-            <small>tłumacz przysięgły języka ukraińskiego · TP/27/17</small>
-          </div>
+          <div className="signature">Mgr Vadym Rekel</div>
         </div>
 
         <aside className="hero-side">
@@ -1336,7 +1270,12 @@ export default function HomePage() {
 
         <div className="photo-grid">
           {officePhotos.map((photo) => (
-            <article className="photo-card" key={photo.src}>
+            <article
+              className={
+                photo.featured ? "photo-card photo-card-featured" : "photo-card"
+              }
+              key={photo.src}
+            >
               <img src={photo.src} alt={photo.alt} loading="lazy" />
               <div className="photo-caption">{photo.title}</div>
             </article>
@@ -1448,13 +1387,51 @@ export default function HomePage() {
               <span className="linkedin-icon" aria-hidden="true">
                 in
               </span>
-              LinkedIn — Vadym Rekel
+              LinkedIn — Mgr Vadym Rekel
             </a>
           </div>
         </div>
       </footer>
 
-      <FloatingTranslatorWidget />
+      <input
+        className="floating-toggle"
+        id="close-floating-contact"
+        type="checkbox"
+        aria-hidden="true"
+      />
+
+      <aside className="floating-contact" aria-label="Szybki kontakt z kancelarią">
+        <label
+          className="floating-close"
+          htmlFor="close-floating-contact"
+          aria-label="Zamknij okno kontaktu"
+        >
+          ×
+        </label>
+
+        <div className="floating-mark">VR</div>
+
+        <h2>Potrzebujesz tłumacza przysięgłego?</h2>
+
+        <p>
+          Zadzwoń lub wyślij dokument do wstępnej wyceny. Obsługa spraw sądowych,
+          policyjnych, prokuratorskich, dokumentów z Ukrainy i materiału
+          cyfrowego.
+        </p>
+
+        <a className="floating-phone" href={`tel:${expertPhoneHref}`}>
+          {expertPhoneDisplay}
+        </a>
+
+        <div className="floating-actions">
+          <a className="floating-primary" href={`tel:${expertPhoneHref}`}>
+            Zadzwoń
+          </a>
+          <a className="floating-secondary" href={`mailto:${email}`}>
+            Wyślij e-mail
+          </a>
+        </div>
+      </aside>
     </main>
   );
 }
