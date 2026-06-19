@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+const siteUrl = "https://vadym-rekel-tlumacz.vercel.app";
+
 export const metadata: Metadata = {
   title:
     "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
@@ -17,7 +19,39 @@ export const metadata: Metadata = {
     "tłumaczenia dokumentów z Ukrainy",
     "tłumaczenia sprawy karne ukraiński",
     "tłumaczenie materiału cyfrowego ukraiński"
-  ]
+  ],
+  verification: {
+    google: "IRGY-E1KJFL1eUQihR952TtnvoTINcS0GzMSq0XJbfQ"
+  },
+  alternates: {
+    canonical: siteUrl
+  },
+  openGraph: {
+    title:
+      "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
+    description:
+      "Tłumaczenia poświadczone i ustne języka ukraińskiego dla sądów, Policji, prokuratury, kancelarii prawnych, instytucji i osób prywatnych.",
+    url: siteUrl,
+    type: "website",
+    locale: "pl_PL",
+    siteName: "Kancelaria Vadym Rekel",
+    images: [
+      {
+        url: `${siteUrl}/images/vadym%20rekel.jpg`,
+        width: 1200,
+        height: 1600,
+        alt: "Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
+    description:
+      "Tłumaczenia poświadczone i ustne języka ukraińskiego dla sądów, Policji, prokuratury i kancelarii prawnych.",
+    images: [`${siteUrl}/images/vadym%20rekel.jpg`]
+  }
 };
 
 const email = "biegly@vadymrekel.pl";
@@ -144,8 +178,8 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-    image: "https://www.tlumaczrosyjskiegoiukrainskiego.pl/opengraph-image",
-    url: "https://www.tlumaczrosyjskiegoiukrainskiego.pl",
+    image: `${siteUrl}/images/vadym%20rekel.jpg`,
+    url: siteUrl,
     telephone: expertPhoneHref,
     email,
     address: {
@@ -173,7 +207,8 @@ export default function HomePage() {
       "Tłumaczenia w sprawach karnych",
       "Tłumaczenia dokumentów z Ukrainy",
       "Tłumaczenia materiału cyfrowego"
-    ]
+    ],
+    sameAs: [linkedInUrl]
   };
 
   return (
@@ -234,6 +269,7 @@ export default function HomePage() {
           border-bottom: 1px solid var(--line);
           background: rgba(245, 240, 230, 0.94);
           backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
         }
 
         .nav {
@@ -898,13 +934,9 @@ export default function HomePage() {
 
       <section className="hero">
         <div className="hero-main">
-          <span className="eyebrow">
-            Kraków · TP/27/17 · język ukraiński
-          </span>
+          <span className="eyebrow">Kraków · TP/27/17 · język ukraiński</span>
 
-          <h1>
-            Tłumacz przysięgły języka ukraińskiego w Krakowie.
-          </h1>
+          <h1>Tłumacz przysięgły języka ukraińskiego w Krakowie.</h1>
 
           <p className="lead">
             Kancelaria Vadym Rekel. Tłumaczenia poświadczone i ustne języka
