@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
+import FloatingTranslatorWidget from "./components/FloatingTranslatorWidget";
 
 const siteUrl = "https://vadym-rekel-tlumacz.vercel.app";
 
 export const metadata: Metadata = {
   title:
-    "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
+    "Tłumacz przysięgły języka ukraińskiego Kraków | Mgr Vadym Rekel TP/27/17",
   description:
-    "Vadym Rekel, tłumacz przysięgły języka ukraińskiego TP/27/17 w Krakowie. Tłumaczenia poświadczone i ustne dla sądów, Policji, prokuratury, dokumenty z Ukrainy, sprawy karne i materiał cyfrowy.",
+    "Mgr Vadym Rekel, tłumacz przysięgły języka ukraińskiego TP/27/17 w Krakowie. Tłumaczenia poświadczone i ustne dla sądów, Policji, prokuratury, dokumenty z Ukrainy, sprawy karne i materiał cyfrowy.",
   keywords: [
     "tłumacz przysięgły języka ukraińskiego",
     "tłumacz przysięgły ukraiński Kraków",
     "tłumacz ukraiński Kraków",
     "Vadym Rekel",
+    "Mgr Vadym Rekel",
     "TP/27/17",
     "tłumacz ukraiński sąd",
     "tłumacz ukraiński Policja",
@@ -28,26 +30,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
+      "Tłumacz przysięgły języka ukraińskiego Kraków | Mgr Vadym Rekel TP/27/17",
     description:
       "Tłumaczenia poświadczone i ustne języka ukraińskiego dla sądów, Policji, prokuratury, kancelarii prawnych, instytucji i osób prywatnych.",
     url: siteUrl,
     type: "website",
     locale: "pl_PL",
-    siteName: "Kancelaria Vadym Rekel",
+    siteName: "Kancelaria Mgr Vadym Rekel",
     images: [
       {
         url: `${siteUrl}/images/vadym%20rekel.jpg`,
         width: 1200,
         height: 1600,
-        alt: "Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
+        alt: "Mgr Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
+      "Tłumacz przysięgły języka ukraińskiego Kraków | Mgr Vadym Rekel TP/27/17",
     description:
       "Tłumaczenia poświadczone i ustne języka ukraińskiego dla sądów, Policji, prokuratury i kancelarii prawnych.",
     images: [`${siteUrl}/images/vadym%20rekel.jpg`]
@@ -142,6 +144,16 @@ const officePhotos = [
     title: "Materiał cyfrowy"
   },
   {
+    src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-ukrainski-krakow-vadym-rekel.jpg",
+    alt: "Stanowisko administracyjne kancelarii tłumacza przysięgłego",
+    title: "Obsługa kancelarii"
+  },
+  {
+    src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
+    alt: "Laptop z zabezpieczeniami w kancelarii tłumacza przysięgłego",
+    title: "Bezpieczeństwo danych"
+  },
+  {
     src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
     alt: "Drukarki w kancelarii tłumacza przysięgłego",
     title: "Druk dokumentów"
@@ -177,7 +189,7 @@ export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
+    name: "Kancelaria Mgr Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
     image: `${siteUrl}/images/vadym%20rekel.jpg`,
     url: siteUrl,
     telephone: expertPhoneHref,
@@ -191,7 +203,7 @@ export default function HomePage() {
     },
     founder: {
       "@type": "Person",
-      name: "Vadym Rekel",
+      name: "Mgr Vadym Rekel",
       jobTitle: "Tłumacz przysięgły języka ukraińskiego"
     },
     areaServed: {
@@ -449,6 +461,56 @@ export default function HomePage() {
           line-height: 1.55;
         }
 
+        .signature-pulse {
+          margin-top: 22px;
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding: 18px 22px;
+          border-radius: 22px;
+          background:
+            linear-gradient(135deg, rgba(18, 60, 49, 0.10), rgba(182, 138, 58, 0.12)),
+            rgba(255, 250, 242, 0.86);
+          border: 1px solid rgba(18, 60, 49, 0.18);
+          box-shadow: 0 14px 34px rgba(18, 60, 49, 0.10);
+          animation: signaturePulse 2.8s ease-in-out infinite;
+        }
+
+        .signature-pulse span {
+          color: var(--green);
+          font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+          font-size: 30px;
+          font-style: italic;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+          line-height: 1;
+        }
+
+        .signature-pulse small {
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 800;
+        }
+
+        @keyframes signaturePulse {
+          0% {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 14px 34px rgba(18, 60, 49, 0.10);
+          }
+
+          50% {
+            transform: translateY(-3px) scale(1.018);
+            box-shadow: 0 20px 44px rgba(18, 60, 49, 0.18);
+          }
+
+          100% {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 14px 34px rgba(18, 60, 49, 0.10);
+          }
+        }
+
         .hero-side {
           position: relative;
           border-radius: var(--radius);
@@ -692,13 +754,13 @@ export default function HomePage() {
 
         .photo-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 14px;
         }
 
         .photo-card {
           position: relative;
-          min-height: 320px;
+          min-height: 290px;
           border-radius: 24px;
           overflow: hidden;
           background: #f8f1e6;
@@ -707,6 +769,11 @@ export default function HomePage() {
         }
 
         .photo-card:first-child {
+          grid-column: span 2;
+          min-height: 410px;
+        }
+
+        .photo-card:nth-child(2) {
           grid-column: span 2;
           min-height: 410px;
         }
@@ -787,6 +854,167 @@ export default function HomePage() {
           color: #fff;
         }
 
+        .floating-translator-widget {
+          position: fixed;
+          right: 24px;
+          bottom: 24px;
+          z-index: 9999;
+          width: min(390px, calc(100vw - 32px));
+          display: grid;
+          grid-template-columns: 54px 1fr;
+          gap: 16px;
+          border-radius: 28px;
+          padding: 18px;
+          background:
+            linear-gradient(145deg, rgba(255, 250, 242, 0.98), rgba(248, 241, 230, 0.98)),
+            var(--paper);
+          border: 1px solid rgba(18, 60, 49, 0.18);
+          box-shadow: 0 26px 80px rgba(19, 16, 12, 0.22);
+          animation: floatingTranslatorEnter 360ms ease both;
+        }
+
+        @keyframes floatingTranslatorEnter {
+          from {
+            opacity: 0;
+            transform: translateY(18px) scale(0.96);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .floating-translator-close {
+          position: absolute;
+          top: 10px;
+          right: 12px;
+          width: 32px;
+          height: 32px;
+          border: 0;
+          border-radius: 999px;
+          background: rgba(19, 16, 12, 0.08);
+          color: var(--ink);
+          font-size: 24px;
+          line-height: 1;
+          cursor: pointer;
+        }
+
+        .floating-translator-close:hover {
+          background: rgba(19, 16, 12, 0.14);
+        }
+
+        .floating-translator-mark {
+          width: 54px;
+          height: 54px;
+          border-radius: 18px;
+          display: grid;
+          place-items: center;
+          background: linear-gradient(145deg, var(--green), var(--green-dark));
+          color: #fff;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 18px;
+          font-weight: 950;
+          box-shadow: 0 14px 28px rgba(18, 60, 49, 0.22);
+        }
+
+        .floating-translator-content {
+          padding-right: 20px;
+        }
+
+        .floating-translator-eyebrow {
+          display: inline-flex;
+          margin-bottom: 8px;
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 950;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .floating-translator-content h2 {
+          margin: 0;
+          color: var(--ink);
+          font-size: 24px;
+          line-height: 1.04;
+          letter-spacing: -0.04em;
+        }
+
+        .floating-translator-content p {
+          margin: 10px 0 0;
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.48;
+        }
+
+        .floating-translator-phone {
+          margin-top: 14px;
+          padding: 13px 14px;
+          border-radius: 18px;
+          background: rgba(18, 60, 49, 0.08);
+          border: 1px solid rgba(18, 60, 49, 0.13);
+        }
+
+        .floating-translator-phone span {
+          display: block;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+        }
+
+        .floating-translator-phone a {
+          display: inline-flex;
+          margin-top: 4px;
+          color: var(--green);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 22px;
+          font-weight: 950;
+        }
+
+        .floating-translator-actions {
+          margin-top: 14px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .floating-translator-primary,
+        .floating-translator-secondary {
+          min-height: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          padding: 0 14px;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 950;
+        }
+
+        .floating-translator-primary {
+          background: var(--green);
+          color: #fff;
+        }
+
+        .floating-translator-secondary {
+          background: rgba(255, 255, 255, 0.72);
+          border: 1px solid var(--line);
+          color: var(--ink);
+        }
+
+        .floating-translator-content small {
+          display: block;
+          margin-top: 10px;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 800;
+        }
+
         .footer {
           border-top: 1px solid var(--line);
           padding: 34px 22px 54px;
@@ -864,7 +1092,8 @@ export default function HomePage() {
             grid-template-columns: 1fr;
           }
 
-          .photo-card:first-child {
+          .photo-card:first-child,
+          .photo-card:nth-child(2) {
             grid-column: auto;
           }
 
@@ -903,6 +1132,32 @@ export default function HomePage() {
           .portrait {
             min-height: 420px;
           }
+
+          .signature-pulse {
+            width: 100%;
+          }
+
+          .floating-translator-widget {
+            right: 16px;
+            bottom: 16px;
+            grid-template-columns: 44px 1fr;
+            border-radius: 22px;
+            padding: 14px;
+          }
+
+          .floating-translator-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 15px;
+          }
+
+          .floating-translator-content h2 {
+            font-size: 21px;
+          }
+
+          .floating-translator-actions a {
+            flex: 1 1 auto;
+          }
         }
       `}</style>
 
@@ -911,7 +1166,7 @@ export default function HomePage() {
           <a className="brand" href="/" aria-label="Strona główna">
             <span className="brand-mark">VR</span>
             <span>
-              <span className="brand-title">Kancelaria Vadym Rekel</span>
+              <span className="brand-title">Kancelaria Mgr Vadym Rekel</span>
               <span className="brand-subtitle">
                 Tłumacz przysięgły języka ukraińskiego
               </span>
@@ -939,7 +1194,7 @@ export default function HomePage() {
           <h1>Tłumacz przysięgły języka ukraińskiego w Krakowie.</h1>
 
           <p className="lead">
-            Kancelaria Vadym Rekel. Tłumaczenia poświadczone i ustne języka
+            Kancelaria Mgr Vadym Rekel. Tłumaczenia poświadczone i ustne języka
             ukraińskiego dla sądów, Policji, prokuratury, kancelarii prawnych,
             instytucji i osób prywatnych.
           </p>
@@ -965,13 +1220,18 @@ export default function HomePage() {
             Najważniejsza specjalizacja: język ukraiński, dokumenty procesowe,
             sprawy karne, dokumenty z Ukrainy i materiał cyfrowy.
           </div>
+
+          <div className="signature-pulse" aria-label="Podpis Vadym Rekel">
+            <span>Vadym Rekel</span>
+            <small>tłumacz przysięgły języka ukraińskiego · TP/27/17</small>
+          </div>
         </div>
 
         <aside className="hero-side">
           <div className="portrait">
             <img
               src="/images/vadym%20rekel.jpg"
-              alt="Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
+              alt="Mgr Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
             />
           </div>
         </aside>
@@ -1151,7 +1411,7 @@ export default function HomePage() {
       <footer className="footer">
         <div className="footer-inner">
           <div>
-            <span className="footer-title">Kancelaria Vadym Rekel</span>
+            <span className="footer-title">Kancelaria Mgr Vadym Rekel</span>
             <span className="footer-line">
               Tłumacz przysięgły języka ukraińskiego
             </span>
@@ -1193,6 +1453,8 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <FloatingTranslatorWidget />
     </main>
   );
 }
