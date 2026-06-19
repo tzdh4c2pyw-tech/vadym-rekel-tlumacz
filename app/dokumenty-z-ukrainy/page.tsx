@@ -2,124 +2,143 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Tłumaczenia dokumentów z Ukrainy | Tłumacz przysięgły ukraiński Kraków",
+    "Tłumaczenie dokumentów z Ukrainy | Tłumacz przysięgły ukraiński Kraków",
   description:
-    "Tłumacz przysięgły języka ukraińskiego TP/27/17. Tłumaczenia dokumentów z Ukrainy, pomocy prawnej, pism sądowych, prokuratorskich, policyjnych, urzędowych i procesowych. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
+    "Tłumacz przysięgły języka ukraińskiego TP/27/17. Tłumaczenie dokumentów z Ukrainy: akty stanu cywilnego, dokumenty sądowe, urzędowe, prokuratorskie, policyjne, szkolne, medyczne i dokumenty do spraw karnych. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
   keywords: [
     "tłumaczenie dokumentów z Ukrainy",
     "tłumacz przysięgły ukraiński dokumenty z Ukrainy",
     "tłumacz przysięgły języka ukraińskiego Kraków",
-    "tłumaczenie pomocy prawnej Ukraina",
-    "tłumaczenie dokumentów ukraińskich",
+    "tłumaczenie aktu urodzenia z Ukrainy",
+    "tłumaczenie aktu małżeństwa z Ukrainy",
+    "tłumaczenie zaświadczenia z Ukrainy",
     "tłumaczenie dokumentów sądowych z Ukrainy",
-    "tłumaczenie dokumentów prokuratury Ukraina",
-    "tłumaczenie akt z Ukrainy",
-    "tłumacz ukraiński dokumenty urzędowe"
+    "tłumaczenie dokumentów urzędowych z Ukrainy",
+    "dokumenty ukraińskie tłumaczenie przysięgłe",
+    "Vadym Rekel tłumacz przysięgły",
+    "TP/27/17"
   ]
 };
 
 const email = "biegly@vadymrekel.pl";
 
-const institutionPhoneDisplay = "883 040 483";
-const institutionPhoneHref = "+48883040483";
+const expertPhoneDisplay = "883 040 483";
+const expertPhoneHref = "+48883040483";
 
-const individualPhoneDisplay = "735 753 383";
-const individualPhoneHref = "+48735753383";
+const officePhoneDisplay = "735 753 383";
+const officePhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
-const documentTypes = [
-  "akty stanu cywilnego",
+const ukrainianDocuments = [
+  {
+    title: "Akty stanu cywilnego",
+    text: "Akty urodzenia, małżeństwa, zgonu, zmiany imienia lub nazwiska oraz odpisy dokumentów stanu cywilnego."
+  },
+  {
+    title: "Dokumenty urzędowe",
+    text: "Zaświadczenia, decyzje, potwierdzenia, dokumenty administracyjne, dokumenty pobytowe i dokumenty kierowane do urzędów."
+  },
+  {
+    title: "Dokumenty sądowe",
+    text: "Wyroki, postanowienia, pisma procesowe, wezwania, zawiadomienia, protokoły i dokumenty do spraw sądowych."
+  },
+  {
+    title: "Dokumenty policyjne i prokuratorskie",
+    text: "Dokumenty związane z postępowaniami karnymi, pomocą prawną, zawiadomieniami, protokołami i materiałem dowodowym."
+  },
+  {
+    title: "Dokumenty edukacyjne",
+    text: "Dyplomy, świadectwa, zaświadczenia o nauce, suplementy, certyfikaty i dokumenty szkolne albo akademickie."
+  },
+  {
+    title: "Dokumenty prywatne i korespondencja",
+    text: "Oświadczenia, pełnomocnictwa, zgody, listy, korespondencja, pisma odręczne i dokumenty przygotowane do spraw urzędowych."
+  }
+];
+
+const relatedPages = [
+  {
+    title: "Sprawy karne",
+    text: "Dokumenty z Ukrainy w aktach, protokołach, pomocy prawnej, materiale dowodowym i sprawach procesowych.",
+    href: "/tlumaczenia-sprawy-karne-ukrainski"
+  },
+  {
+    title: "Tłumaczenia sądowe",
+    text: "Dokumenty z Ukrainy przekazywane do sądu, w tym wyroki, postanowienia, protokoły i pisma procesowe.",
+    href: "/tlumaczenia-sadowe-ukrainski"
+  },
+  {
+    title: "Tłumaczenia dla Policji",
+    text: "Dokumenty z Ukrainy przekazywane do czynności policyjnych, protokołów, zawiadomień i akt sprawy.",
+    href: "/tlumaczenia-dla-policji"
+  },
+  {
+    title: "Tłumaczenia dla prokuratury",
+    text: "Dokumenty z Ukrainy w postępowaniach przygotowawczych i pomocy prawnej między organami.",
+    href: "/tlumaczenia-dla-prokuratury"
+  }
+];
+
+const processSteps = [
+  {
+    title: "Prześlij dokument",
+    text: "Do wstępnej wyceny można przesłać skan, zdjęcie, plik PDF albo opis dokumentu."
+  },
+  {
+    title: "Podaj cel tłumaczenia",
+    text: "Warto wskazać, czy dokument jest do sądu, urzędu, Policji, prokuratury, kancelarii prawnej czy do użytku prywatnego."
+  },
+  {
+    title: "Sprawdź czytelność",
+    text: "Znaczenie ma widoczność pieczęci, podpisów, numerów dokumentów, dat, nazw organów i wszystkich stron dokumentu."
+  },
+  {
+    title: "Ustal odbiór",
+    text: "Tłumaczenie można odebrać w kancelarii po wcześniejszym uzgodnieniu albo ustalić inną formę przekazania."
+  }
+];
+
+const caseTypes = [
+  "akty urodzenia",
+  "akty małżeństwa",
+  "akty zgonu",
   "zaświadczenia",
+  "decyzje administracyjne",
+  "dokumenty sądowe",
+  "dokumenty prokuratorskie",
+  "dokumenty policyjne",
+  "dokumenty edukacyjne",
   "pełnomocnictwa",
   "oświadczenia",
-  "wezwania",
-  "pouczenia",
-  "postanowienia",
-  "protokoły przesłuchań",
-  "pisma sądowe",
-  "pisma prokuratorskie",
-  "dokumenty urzędowe",
-  "korespondencja między organami"
-];
-
-const legalAssistanceItems = [
-  "wnioski o pomoc prawną",
-  "odpowiedzi organów ukraińskich",
-  "wezwania do czynności",
-  "pouczenia procesowe",
-  "postanowienia",
-  "protokoły przesłuchań",
-  "korespondencja między organami",
-  "dokumenty do akt",
-  "załączniki do sprawy"
-];
-
-const recipientGroups = [
-  {
-    title: "Sądy",
-    text: "Dokumenty sądowe z Ukrainy, załączniki do akt, orzeczenia, postanowienia, protokoły, pisma procesowe i korespondencja."
-  },
-  {
-    title: "Prokuratura",
-    text: "Dokumenty w sprawach karnych, pomoc prawna, protokoły, postanowienia, zawiadomienia, materiał dowodowy i korespondencja między organami."
-  },
-  {
-    title: "Policja",
-    text: "Dokumenty do czynności, pouczenia, protokoły, zawiadomienia, notatki, komunikatory i inne materiały przekazywane dalej w sprawie."
-  },
-  {
-    title: "Klienci indywidualni",
-    text: "Dokumenty rodzinne, pobytowe, urzędowe, prywatne, oświadczenia, pełnomocnictwa, akty i zaświadczenia z Ukrainy."
-  }
-];
-
-const deliveryMethods = [
-  {
-    title: "E-mail",
-    text: "Prześlij skan, zdjęcie albo plik PDF na adres:",
-    value: email,
-    href: `mailto:${email}`
-  },
-  {
-    title: "Adres kancelarii",
-    text: "Dokument można przekazać do kancelarii:",
-    value: "ul. Kielecka 2/53, 31-526 Kraków",
-    href: "#kontakt"
-  },
-  {
-    title: "Odbiór osobisty",
-    text: "Odbiór tłumaczenia w kancelarii jest możliwy po wcześniejszym uzgodnieniu terminu.",
-    value: "po uzgodnieniu",
-    href: `tel:${individualPhoneHref}`
-  }
+  "pisma odręczne"
 ];
 
 const faqItems = [
   {
-    question: "Czy dokument z Ukrainy można przesłać e-mailem?",
+    question: "Czy dokument z Ukrainy musi być tłumaczony przez tłumacza przysięgłego?",
     answer:
-      "Tak. Do wstępnej wyceny można przesłać skan, zdjęcie albo plik PDF na adres biegly@vadymrekel.pl."
+      "Jeżeli dokument ma być złożony w sądzie, urzędzie, instytucji albo postępowaniu formalnym, zwykle wymagane jest tłumaczenie poświadczone. Ostateczny wymóg zależy od organu albo instytucji, do której dokument jest składany."
   },
   {
-    question: "Czy tłumaczenie dokumentów z Ukrainy może być przysięgłe?",
+    question: "Czy można przesłać zdjęcie dokumentu do wyceny?",
     answer:
-      "Tak. Vadym Rekel jest tłumaczem przysięgłym języka ukraińskiego, numer wpisu TP/27/17."
+      "Tak. Do wstępnej wyceny można przesłać zdjęcie, skan albo plik PDF. Ważne, aby dokument był czytelny i obejmował wszystkie strony, pieczęcie, podpisy oraz adnotacje."
   },
   {
-    question: "Czy tłumaczone są dokumenty w ramach pomocy prawnej?",
+    question: "Czy kancelaria tłumaczy dokumenty z Ukrainy do spraw karnych?",
     answer:
-      "Tak. Zakres obejmuje wnioski o pomoc prawną, odpowiedzi organów ukraińskich, protokoły, wezwania, pouczenia, postanowienia i korespondencję między organami."
+      "Tak. Dokumenty z Ukrainy mogą być tłumaczone do spraw sądowych, policyjnych, prokuratorskich i karnych, w tym do akt sprawy i pomocy prawnej."
   },
   {
-    question: "Czy dokument można przekazać osobiście w kancelarii?",
-    answer:
-      "Tak. Dokument można przekazać w kancelarii przy ul. Kieleckiej 2/53 w Krakowie. Termin najlepiej wcześniej uzgodnić."
-  },
-  {
-    question: "Czy kancelaria obsługuje dokumenty z całej Polski?",
+    question: "Czy dokumenty można przesłać z innego miasta niż Kraków?",
     answer:
       "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
+  },
+  {
+    question: "Który numer telefonu wybrać?",
+    answer:
+      "Wszystkie sprawy można zgłaszać na oba numery. Numer 883 040 483 służy do bezpośredniego kontaktu z tłumaczem / biegłym, a numer 735 753 383 do kontaktu z kancelarią."
   }
 ];
 
@@ -143,15 +162,15 @@ function SectionHeading({
   );
 }
 
-export default function UkraineDocumentsPage() {
+export default function DocumentsFromUkrainePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Tłumaczenia dokumentów z Ukrainy",
+    name: "Tłumaczenie dokumentów z Ukrainy",
     provider: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-      telephone: institutionPhoneHref,
+      telephone: expertPhoneHref,
       email,
       address: {
         "@type": "PostalAddress",
@@ -166,7 +185,7 @@ export default function UkraineDocumentsPage() {
       name: "Polska"
     },
     serviceType:
-      "Tłumaczenia poświadczone dokumentów z Ukrainy i dokumentów w ramach pomocy prawnej"
+      "Tłumaczenia poświadczone dokumentów z Ukrainy z języka ukraińskiego"
   };
 
   return (
@@ -180,6 +199,7 @@ export default function UkraineDocumentsPage() {
         :root {
           --bg: #f5f0e6;
           --paper: #fffaf2;
+          --paper-soft: #f8f1e6;
           --ink: #13100c;
           --muted: #6e6256;
           --line: rgba(19, 16, 12, 0.14);
@@ -190,7 +210,7 @@ export default function UkraineDocumentsPage() {
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -205,7 +225,7 @@ export default function UkraineDocumentsPage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -225,7 +245,7 @@ export default function UkraineDocumentsPage() {
         }
 
         .nav {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -292,11 +312,11 @@ export default function UkraineDocumentsPage() {
         }
 
         .hero {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.14fr 0.86fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -304,13 +324,14 @@ export default function UkraineDocumentsPage() {
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 52px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -326,13 +347,13 @@ export default function UkraineDocumentsPage() {
         h1 {
           margin: 0;
           max-width: 820px;
-          font-size: clamp(40px, 5.1vw, 66px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
+          margin: 24px 0 0;
           max-width: 760px;
           color: var(--muted);
           font-size: 20px;
@@ -340,7 +361,7 @@ export default function UkraineDocumentsPage() {
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -376,75 +397,72 @@ export default function UkraineDocumentsPage() {
           color: var(--ink);
         }
 
+        .hero-note {
+          margin-top: 22px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
         .hero-side {
           border-radius: var(--radius);
-          background: linear-gradient(155deg, var(--green), var(--green-dark));
+          background:
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 30px;
+          padding: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 410px;
         }
 
         .hero-side h2 {
           margin: 0;
           color: #fff;
-          font-size: 35px;
-          line-height: 1;
+          font-size: 38px;
+          line-height: 0.98;
           letter-spacing: -0.045em;
         }
 
         .hero-side p {
           margin: 16px 0 0;
           color: rgba(255,255,255,0.76);
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1.55;
         }
 
-        .phone-main {
+        .phone-large {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 64px;
-          margin-top: 22px;
+          min-height: 68px;
+          margin-top: 28px;
           border-radius: 18px;
           background: #fffaf2;
           color: var(--green);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
+          font-size: 27px;
           font-weight: 950;
         }
 
-        .phone-gold {
-          background: var(--gold);
-          color: #17110d;
-        }
-
-        .trust {
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 22px 28px;
-        }
-
-        .trust-inner {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          padding: 14px 18px;
-          color: var(--muted);
+        .notice {
+          margin-top: 18px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          padding: 18px;
+          color: rgba(255,255,255,0.82);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-          line-height: 1.5;
-          text-align: center;
+          font-size: 14px;
+          font-weight: 800;
+          line-height: 1.55;
         }
 
         .section {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -491,6 +509,12 @@ export default function UkraineDocumentsPage() {
           gap: 16px;
         }
 
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+
         .card {
           border-radius: 24px;
           border: 1px solid var(--line);
@@ -512,6 +536,14 @@ export default function UkraineDocumentsPage() {
           border-color: rgba(255,255,255,0.12);
         }
 
+        .card-petrol {
+          background:
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
+          color: #fff;
+          border-color: rgba(255,255,255,0.12);
+        }
+
         .tag {
           display: inline-flex;
           margin-bottom: 14px;
@@ -526,7 +558,8 @@ export default function UkraineDocumentsPage() {
           text-transform: uppercase;
         }
 
-        .card-dark .tag {
+        .card-dark .tag,
+        .card-petrol .tag {
           background: rgba(255,255,255,0.10);
           color: rgba(255,255,255,0.84);
           border: 1px solid rgba(255,255,255,0.12);
@@ -546,33 +579,9 @@ export default function UkraineDocumentsPage() {
           line-height: 1.55;
         }
 
-        .card-dark p {
+        .card-dark p,
+        .card-petrol p {
           color: rgba(255,255,255,0.76);
-        }
-
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
-        }
-
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .card-dark .list li {
-          color: rgba(255,255,255,0.78);
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
         }
 
         .card-link {
@@ -584,15 +593,20 @@ export default function UkraineDocumentsPage() {
           font-weight: 900;
         }
 
+        .card-dark .card-link,
+        .card-petrol .card-link {
+          color: #fff;
+        }
+
         .feature {
           border-radius: var(--radius);
           background: var(--ink);
           color: #fff;
-          padding: 40px;
+          padding: 44px;
           box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
-          gap: 30px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
           align-items: center;
         }
 
@@ -612,7 +626,7 @@ export default function UkraineDocumentsPage() {
         }
 
         .labels {
-          margin-top: 20px;
+          margin-top: 22px;
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -629,13 +643,6 @@ export default function UkraineDocumentsPage() {
           font-weight: 900;
           letter-spacing: 0.06em;
           text-transform: uppercase;
-        }
-
-        .note {
-          margin-top: 18px;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.55;
         }
 
         .faq-list {
@@ -676,7 +683,7 @@ export default function UkraineDocumentsPage() {
         }
 
         .footer-inner {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -725,7 +732,8 @@ export default function UkraineDocumentsPage() {
           }
 
           .grid-2,
-          .grid-3 {
+          .grid-3,
+          .grid-4 {
             grid-template-columns: 1fr;
           }
 
@@ -736,8 +744,7 @@ export default function UkraineDocumentsPage() {
 
         @media (max-width: 620px) {
           .hero,
-          .section,
-          .trust {
+          .section {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -753,11 +760,11 @@ export default function UkraineDocumentsPage() {
           }
 
           h1 {
-            font-size: 38px;
+            font-size: 40px;
           }
 
           .button,
-          .phone-main {
+          .phone-large {
             width: 100%;
           }
         }
@@ -777,12 +784,13 @@ export default function UkraineDocumentsPage() {
 
           <div className="nav-links">
             <a href="/">Strona główna</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Sądy</a>
             <a href="/tlumaczenia-dla-policji">Policja</a>
             <a href="/tlumaczenia-dla-prokuratury">Prokuratura</a>
-            <a href="/kwalifikacje">Kwalifikacje</a>
-            <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
+            <a href="/kontakt">Kontakt</a>
+            <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
+              {expertPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -791,110 +799,145 @@ export default function UkraineDocumentsPage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Dokumenty z Ukrainy · tłumacz przysięgły ukraiński · Kraków · cała Polska
+            Dokumenty z Ukrainy · język ukraiński · TP/27/17
           </span>
 
-          <h1>Tłumaczenia dokumentów z Ukrainy.</h1>
+          <h1>Tłumaczenie dokumentów z Ukrainy.</h1>
 
           <p className="lead">
-            Tłumaczenia poświadczone dokumentów ukraińskich oraz dokumentów w
-            ramach pomocy prawnej: pisma sądowe, prokuratorskie, policyjne,
-            urzędowe, protokoły, pouczenia, postanowienia i korespondencja
-            między organami.
+            Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia
+            poświadczone dokumentów urzędowych, sądowych, policyjnych,
+            prokuratorskich, edukacyjnych, prywatnych oraz dokumentów z Ukrainy
+            do spraw formalnych i procesowych.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
-              Sąd · Policja · Prokuratura: {institutionPhoneDisplay}
+            <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
+              Tłumacz / biegły: {expertPhoneDisplay}
             </a>
-            <a className="button button-secondary" href={`mailto:${email}`}>
+            <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
+              Kancelaria: {officePhoneDisplay}
+            </a>
+            <a className="button button-secondary" href="/kontakt">
               Wyślij dokument do wyceny
             </a>
           </div>
+
+          <p className="hero-note">
+            Wszystkie sprawy można zgłaszać na oba numery telefonu. Numer{" "}
+            {expertPhoneDisplay} służy do bezpośredniego kontaktu z tłumaczem /
+            biegłym, a numer {officePhoneDisplay} do kontaktu z kancelarią.
+          </p>
         </div>
 
         <aside className="hero-side">
           <div>
-            <h2>Vadym Rekel</h2>
+            <h2>Dokument z Ukrainy powinien być czytelny i kompletny.</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Dokumenty z Ukrainy można przesłać do
-              wstępnej wyceny elektronicznie z całej Polski.
+              Przy wycenie znaczenie mają wszystkie strony dokumentu, pieczęcie,
+              podpisy, numery, daty, adnotacje, nazwy organów oraz cel, w jakim
+              tłumaczenie ma zostać wykorzystane.
             </p>
+
+            <div className="notice">
+              Kancelaria ma siedzibę w Krakowie. Dokumenty do wstępnej wyceny
+              można przesłać elektronicznie z dowolnego miasta w Polsce.
+            </div>
           </div>
 
-          <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-            {institutionPhoneDisplay}
+          <a className="phone-large" href={`tel:${expertPhoneHref}`}>
+            {expertPhoneDisplay}
           </a>
         </aside>
-      </section>
-
-      <section className="trust">
-        <div className="trust-inner">
-          TP/27/17 · tłumaczenia przysięgłe języka ukraińskiego · dokumenty z
-          Ukrainy · kancelaria w Krakowie · dokumenty z całej Polski zdalnie
-        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="Zakres"
-          title="Dokumenty ukraińskie, urzędowe, procesowe i prywatne."
-          text="Zakres obejmuje dokumenty pochodzące z Ukrainy, dokumenty kierowane do organów ukraińskich oraz dokumenty wykorzystywane w Polsce."
+          title="Jakie dokumenty z Ukrainy można przekazać do tłumaczenia?"
+          text="Zakres zależy od rodzaju dokumentu, celu wykorzystania i wymagań organu albo instytucji, do której dokument ma trafić."
         />
 
         <div className="grid-3">
-          <article className="card">
-            <span className="tag">Dokumenty prywatne i urzędowe</span>
-            <h3>Akty, zaświadczenia i oświadczenia.</h3>
-            <ul className="list">
-              {documentTypes.slice(0, 6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card">
-            <span className="tag">Dokumenty procesowe</span>
-            <h3>Sądy, Policja i prokuratura.</h3>
-            <ul className="list">
-              {documentTypes.slice(6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card card-dark">
-            <span className="tag">Kontakt</span>
-            <h3>Dokument do sprawy lub czynności.</h3>
-            <p>
-              W sprawach kierowanych przez organy właściwy kontakt to numer dla
-              sądów, Policji i prokuratury.
-            </p>
-            <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
-            </a>
-          </article>
+          {ukrainianDocuments.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Dokumenty z Ukrainy</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="section">
         <div className="feature">
           <div>
-            <p className="section-label">Pomoc prawna</p>
-            <h2>Dokumenty w ramach pomocy prawnej z Ukrainą.</h2>
+            <p className="section-label">Sprawy formalne i procesowe</p>
+            <h2>Dokumenty z Ukrainy w urzędach, sądach i sprawach karnych.</h2>
           </div>
 
           <div>
             <p>
-              W sprawach transgranicznych dokument może pochodzić z organu
-              ukraińskiego albo być kierowany do Ukrainy. Znaczenie ma precyzja
-              terminologii, oznaczenie organów, dat, osób, podstaw prawnych i
-              celu czynności.
+              Dokumenty ukraińskie mogą być potrzebne w postępowaniach
+              sądowych, policyjnych, prokuratorskich, administracyjnych,
+              pobytowych, rodzinnych, edukacyjnych i prywatnych.
+            </p>
+
+            <div className="hero-actions">
+              <a
+                className="button button-secondary"
+                href="/tlumaczenia-sprawy-karne-ukrainski"
+              >
+                Zobacz stronę: sprawy karne
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Powiązane obszary"
+          title="Dokumenty z Ukrainy często trafiają do spraw sądowych, policyjnych i prokuratorskich."
+          text="Dlatego ta strona jest połączona z podstronami dotyczącymi spraw karnych oraz organów procesowych."
+        />
+
+        <div className="grid-4">
+          {relatedPages.map((item) => (
+            <article className="card card-petrol" key={item.title}>
+              <span className="tag">Powiązana usługa</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <a className="card-link" href={item.href}>
+                Czytaj więcej →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Typowe dokumenty"
+          title="Najczęściej tłumaczone dokumenty ukraińskie."
+          text="Przy nietypowym dokumencie wystarczy przesłać skan albo zdjęcie do wstępnej oceny."
+        />
+
+        <div className="feature">
+          <div>
+            <p className="section-label">Dokumenty</p>
+            <h2>Akty, zaświadczenia, decyzje i pisma.</h2>
+          </div>
+
+          <div>
+            <p>
+              Tłumaczenie powinno obejmować wszystkie istotne elementy
+              dokumentu: treść główną, pieczęcie, podpisy, oznaczenia, numery,
+              daty, nazwy organów oraz adnotacje.
             </p>
 
             <div className="labels">
-              {legalAssistanceItems.map((item) => (
+              {caseTypes.map((item) => (
                 <span className="label" key={item}>
                   {item}
                 </span>
@@ -906,14 +949,15 @@ export default function UkraineDocumentsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Dla kogo"
-          title="Dokumenty z Ukrainy dla organów, urzędów i osób prywatnych."
-          text="Ten sam dokument może mieć różny cel: sądowy, prokuratorski, policyjny, urzędowy albo prywatny. Przy wycenie warto wskazać, gdzie dokument będzie składany."
+          label="Organizacja"
+          title="Jak przesłać dokument z Ukrainy do wyceny?"
+          text="Najlepiej przesłać czytelny skan albo zdjęcie całego dokumentu oraz wskazać, do jakiego celu tłumaczenie jest potrzebne."
         />
 
-        <div className="grid-2">
-          {recipientGroups.map((item) => (
+        <div className="grid-4">
+          {processSteps.map((item) => (
             <article className="card" key={item.title}>
+              <span className="tag">Etap</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -923,35 +967,54 @@ export default function UkraineDocumentsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Przekazanie dokumentu"
-          title="Jak przekazać dokument do wyceny lub tłumaczenia?"
-          text="Dokument można przesłać e-mailem, przekazać do kancelarii albo odebrać osobiście po wcześniejszym ustaleniu terminu."
+          label="Kontakt"
+          title="Przekaż dokument do wstępnej wyceny."
+          text="Dokument można przesłać elektronicznie. Przy dokumentach wielostronicowych warto upewnić się, że wszystkie strony są czytelne."
         />
 
         <div className="grid-3">
-          {deliveryMethods.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">{item.title}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <a className="card-link" href={item.href}>
-                {item.value}
-              </a>
-            </article>
-          ))}
-        </div>
+          <article className="card card-dark">
+            <span className="tag">Kontakt bezpośredni</span>
+            <h3>{expertPhoneDisplay}</h3>
+            <p>
+              Kontakt z tłumaczem / biegłym w sprawach dokumentów z Ukrainy,
+              dokumentów do sądu, Policji, prokuratury i spraw pilnych.
+            </p>
+            <a className="card-link" href={`tel:${expertPhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
 
-        <p className="note">
-          Przy dokumentach do sądu, Policji, prokuratury albo urzędu warto
-          wskazać, do jakiej sprawy lub procedury dokument będzie wykorzystany.
-        </p>
+          <article className="card">
+            <span className="tag">Kancelaria</span>
+            <h3>{officePhoneDisplay}</h3>
+            <p>
+              Obsługa kancelaryjna, terminy, przekazanie dokumentów, odbiór
+              tłumaczenia i sprawy organizacyjne.
+            </p>
+            <a className="card-link" href={`tel:${officePhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
+
+          <article className="card">
+            <span className="tag">E-mail</span>
+            <h3>{email}</h3>
+            <p>
+              Prześlij skan, zdjęcie, plik PDF albo opis dokumentu z Ukrainy.
+            </p>
+            <a className="card-link" href={`mailto:${email}`}>
+              Wyślij dokument →
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="FAQ"
-          title="Najczęstsze pytania dotyczące dokumentów z Ukrainy."
-          text="Krótko o przesłaniu dokumentu, tłumaczeniu przysięgłym, pomocy prawnej i odbiorze osobistym."
+          title="Najczęstsze pytania o tłumaczenie dokumentów z Ukrainy."
+          text="Krótko o tłumaczeniach poświadczonych, zdjęciach dokumentów, sprawach karnych, dokumentach z całej Polski i kontakcie."
         />
 
         <div className="faq-list">
@@ -964,7 +1027,7 @@ export default function UkraineDocumentsPage() {
         </div>
       </section>
 
-      <footer className="footer" id="kontakt">
+      <footer className="footer">
         <div className="footer-inner">
           <div>
             <span className="footer-title">Kancelaria Vadym Rekel</span>
@@ -980,14 +1043,12 @@ export default function UkraineDocumentsPage() {
           <div>
             <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              Sąd · Policja · Prokuratura:{" "}
-              <a href={`tel:${institutionPhoneHref}`}>
-                {institutionPhoneDisplay}
-              </a>
+              Tłumacz / biegły:{" "}
+              <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
             </span>
             <span className="footer-line">
-              Klienci indywidualni:{" "}
-              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+              Kancelaria:{" "}
+              <a href={`tel:${officePhoneHref}`}>{officePhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
@@ -1004,15 +1065,7 @@ export default function UkraineDocumentsPage() {
               rel="noopener noreferrer"
             >
               <span className="linkedin-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                </svg>
+                in
               </span>
               LinkedIn — Vadym Rekel
             </a>

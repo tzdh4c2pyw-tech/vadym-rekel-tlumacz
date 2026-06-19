@@ -2,179 +2,198 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Kwalifikacje | Vadym Rekel tłumacz przysięgły języka ukraińskiego TP/27/17",
+    "Kwalifikacje | Vadym Rekel tłumacz przysięgły języka ukraińskiego",
   description:
-    "Kwalifikacje zawodowe Vadym Rekel, tłumacza przysięgłego języka ukraińskiego TP/27/17. Kancelaria w Krakowie. Uprawnienia, dokumenty, profil zawodowy, przygotowanie prawnicze i technologiczne.",
+    "Kwalifikacje zawodowe Vadym Rekel: tłumacz przysięgły języka ukraińskiego TP/27/17, MBA, CIOL, TEPIS, LanguageCert C1, prawo nowych technologii, własność intelektualna, prawo karne i specjalizacja w materiale procesowym oraz cyfrowym.",
   keywords: [
     "Vadym Rekel kwalifikacje",
-    "Vadym Rekel tłumacz przysięgły",
     "tłumacz przysięgły języka ukraińskiego TP/27/17",
-    "tłumacz przysięgły ukraiński Kraków",
-    "kwalifikacje tłumacza przysięgłego ukraińskiego",
-    "kancelaria tłumacza przysięgłego języka ukraińskiego Kraków",
-    "tłumacz ukraiński sprawy karne",
-    "tłumacz ukraiński dokumenty z Ukrainy",
-    "tłumacz ukraiński materiał cyfrowy"
+    "Vadym Rekel TP/27/17",
+    "tłumacz przysięgły ukraiński Kraków kwalifikacje",
+    "CIOL Vadym Rekel",
+    "TEPIS Vadym Rekel",
+    "LanguageCert C1 Vadym Rekel",
+    "MBA Vadym Rekel",
+    "prawo nowych technologii tłumacz",
+    "prawo własności intelektualnej tłumacz",
+    "tłumacz ukraiński sprawy karne"
   ]
 };
 
 const email = "biegly@vadymrekel.pl";
 
-const institutionPhoneDisplay = "883 040 483";
-const institutionPhoneHref = "+48883040483";
+const expertPhoneDisplay = "883 040 483";
+const expertPhoneHref = "+48883040483";
 
-const individualPhoneDisplay = "735 753 383";
-const individualPhoneHref = "+48735753383";
+const officePhoneDisplay = "735 753 383";
+const officePhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
-const qualificationGroups = [
+const primaryQualifications = [
   {
-    title: "Uprawnienia tłumacza przysięgłego",
-    lead: "Podstawą działalności kancelarii jest wpis na listę tłumaczy przysięgłych języka ukraińskiego.",
-    items: [
-      "tłumacz przysięgły języka ukraińskiego",
-      "numer wpisu: TP/27/17",
-      "tłumaczenia poświadczone języka ukraińskiego",
-      "tłumaczenia ustne języka ukraińskiego przy czynnościach"
-    ]
+    label: "Wpis państwowy",
+    title: "Tłumacz przysięgły języka ukraińskiego",
+    value: "TP/27/17",
+    text: "Wpis na listę tłumaczy przysięgłych języka ukraińskiego. To podstawowa kwalifikacja zawodowa kancelarii i główny element zaufania dla sądów, Policji, prokuratury, urzędów i klientów prywatnych.",
+    href: "/images/certyfikaty/Zaświadczenie wpis na listę tłumacz przysięgły języka ukraińskiego kraków Vadym Rekel.pdf"
   },
   {
-    title: "Specjalizacja prawnicza",
-    lead: "Kancelaria koncentruje się na dokumentach procesowych, sprawach karnych i materiałach wykorzystywanych przez organy.",
-    items: [
-      "sprawy sądowe, policyjne i prokuratorskie",
-      "akta spraw, protokoły, postanowienia i pouczenia",
-      "dokumenty z Ukrainy i pomoc prawna",
-      "korespondencja osadzonych i pisma odręczne"
-    ]
+    label: "Studia podyplomowe",
+    title: "MBA — Master of Business Administration",
+    value: "WSB-NLU · 2025",
+    text: "Studia podyplomowe z zakresu zarządzania, procesów, strategii, innowacji, przywództwa, finansów i technologii przemysłu 4.0.",
+    href: "/images/certyfikaty/CERTIFICATE-MBA-vadym-rekel.pdf"
   },
   {
-    title: "Materiał cyfrowy",
-    lead: "Zakres pracy obejmuje również materiał cyfrowy, który pojawia się w sprawach karnych i oszustwach internetowych.",
-    items: [
-      "komunikatory, zrzuty ekranu i raporty PDF",
-      "dane z telefonu i eksporty rozmów",
-      "materiały dotyczące oszustw internetowych",
-      "kryptowaluty, giełdy, portfele i przepływy środków"
-    ]
+    label: "Organizacja zawodowa",
+    title: "CIOL — Chartered Institute of Linguists",
+    value: "CIOL no. 94280",
+    text: "Członkostwo w Chartered Institute of Linguists. Dokumenty potwierdzają status w zakresie języka angielskiego oraz języki natywne: polski, ukraiński i rosyjski.",
+    href: "/images/certyfikaty/membership_certificate vadym rekel.pdf"
   },
   {
-    title: "Języki pracy",
-    lead: "Uprawnienia przysięgłe dotyczą języka ukraińskiego. Rosyjski i angielski są obsługiwane jako języki specjalistyczne.",
-    items: [
-      "ukraiński — tłumaczenia przysięgłe i specjalistyczne",
-      "rosyjski — tłumaczenia specjalistyczne",
-      "angielski — tłumaczenia specjalistyczne"
-    ]
+    label: "Organizacja branżowa",
+    title: "TEPIS Member 2026",
+    value: "TEPIS",
+    text: "Członkostwo w środowisku zawodowym tłumaczy prawniczych i specjalistycznych. Na stronie prezentowane jako element kwalifikacji pomocniczych, bez dominowania nad TP/27/17.",
+    href: "/images/certyfikaty/tepis-member-2026-vadym-rekel.png"
   }
 ];
 
-const certificates = [
+const legalQualifications = [
   {
-    title: "Wpis na listę tłumaczy przysięgłych",
-    text: "Potwierdzenie uprawnień tłumacza przysięgłego języka ukraińskiego. Numer wpisu: TP/27/17.",
-    file: "/images/certyfikaty/zaswiadczenie-tlumacz-przysiegly-ukrainski-vadym-rekel.pdf",
-    type: "PDF"
+    title: "Prawo nowych technologii",
+    text: "Kwalifikacja szczególnie istotna przy pracy z materiałem cyfrowym, komunikatorami, raportami PDF, danymi z telefonu, sprawami internetowymi i dowodami elektronicznymi."
+  },
+  {
+    title: "Prawo własności intelektualnej i nowych technologii",
+    text: "Przydatne przy tłumaczeniach specjalistycznych obejmujących technologie, prawa niematerialne, dokumenty formalne i materiały techniczne."
+  },
+  {
+    title: "Prawo karne",
+    text: "Obszar powiązany z główną specjalizacją kancelarii: akta spraw, protokoły, materiał dowodowy, korespondencja osadzonych i dokumenty procesowe."
+  },
+  {
+    title: "Seminarium doktorskie z zakresu prawa",
+    text: "Element profilu akademicko-prawnego, wzmacniający pozycjonowanie kancelarii w pracy z dokumentami sądowymi, procesowymi i specjalistycznymi."
+  }
+];
+
+const languageQualifications = [
+  {
+    title: "LanguageCert English C1 — Listening, Reading",
+    value: "Level 2 Certificate in ESOL International",
+    text: "Certyfikat LanguageCert Test of English C1 w zakresie Listening i Reading, wydany 13 sierpnia 2025 r.",
+    href: "/images/certyfikaty/e-cert 11 vadym rekel.pdf"
+  },
+  {
+    title: "LanguageCert English C1 — Speaking",
+    value: "Level 2 Certificate in ESOL International",
+    text: "Certyfikat LanguageCert Test of English C1 w zakresie Speaking, wydany 13 sierpnia 2025 r.",
+    href: "/images/certyfikaty/e-cert 12 vadym rekel.pdf"
+  },
+  {
+    title: "CIOL — ACIL",
+    value: "Associate · English",
+    text: "Dokument CIOL wskazujący status Associate w zakresie języka angielskiego oraz języki natywne: polski, ukraiński i rosyjski.",
+    href: "/images/certyfikaty/membership_certificate vadym rekel.pdf"
+  },
+  {
+    title: "CIOL — MCIL",
+    value: "Member · English",
+    text: "Dokument CIOL wskazujący status MCIL w zakresie języka angielskiego oraz numer członkowski 94280.",
+    href: "/images/certyfikaty/membership_certificate-3 vadym rekel.pdf"
+  }
+];
+
+const practiceAreas = [
+  "tłumaczenia poświadczone języka ukraińskiego",
+  "tłumaczenia ustne języka ukraińskiego",
+  "akta sądowe",
+  "protokoły przesłuchań",
+  "sprawy karne",
+  "materiał cyfrowy",
+  "komunikatory",
+  "raporty PDF",
+  "dane z telefonu",
+  "oszustwa internetowe",
+  "kryptowaluty",
+  "korespondencja osadzonych",
+  "pisma odręczne",
+  "dokumenty z Ukrainy",
+  "pomoc prawna z Ukrainą",
+  "dokumenty dla sądu, Policji i prokuratury"
+];
+
+const certificateLinks = [
+  {
+    title: "Zaświadczenie — tłumacz przysięgły języka ukraińskiego",
+    text: "Dokument potwierdzający wpis na listę tłumaczy przysięgłych.",
+    href: "/images/certyfikaty/Zaświadczenie wpis na listę tłumacz przysięgły języka ukraińskiego kraków Vadym Rekel.pdf"
+  },
+  {
+    title: "MBA — Master of Business Administration",
+    text: "Świadectwo ukończenia studiów podyplomowych MBA.",
+    href: "/images/certyfikaty/CERTIFICATE-MBA-vadym-rekel.pdf"
+  },
+  {
+    title: "CIOL — ACIL",
+    text: "Chartered Institute of Linguists — dokument członkowski.",
+    href: "/images/certyfikaty/membership_certificate vadym rekel.pdf"
+  },
+  {
+    title: "CIOL — MCIL",
+    text: "Chartered Institute of Linguists — dokument członkowski.",
+    href: "/images/certyfikaty/membership_certificate-3 vadym rekel.pdf"
   },
   {
     title: "TEPIS Member 2026",
-    text: "Potwierdzenie członkostwa w TEPIS na rok 2026.",
-    file: "/images/certyfikaty/tepis-member-2026-vadym-rekel.png",
-    type: "PNG"
+    text: "Dokument członkowski TEPIS.",
+    href: "/images/certyfikaty/tepis-member-2026-vadym-rekel.png"
   },
   {
-    title: "CIOL — Certified Translation",
-    text: "Potwierdzenie profilu zawodowego w zakresie certified translation.",
-    file: "/images/certyfikaty/ciol-certified-translation-vadym-rekel.png",
-    type: "PNG"
+    title: "CIOL — Certified Translation Member",
+    text: "Dokument / grafika potwierdzająca status CIOL w zakresie tłumaczeń.",
+    href: "/images/certyfikaty/certified translation ciol member vadym rekel.png"
   },
   {
-    title: "Studia MBA",
-    text: "Dokument potwierdzający ukończenie studiów podyplomowych MBA.",
-    file: "/images/certyfikaty/certificate-mba-vadym-rekel.pdf",
-    type: "PDF"
+    title: "LanguageCert C1 — Listening, Reading",
+    text: "Certyfikat języka angielskiego C1.",
+    href: "/images/certyfikaty/e-cert 11 vadym rekel.pdf"
   },
   {
-    title: "Certyfikat zawodowy",
-    text: "Dokument potwierdzający dodatkowe przygotowanie zawodowe.",
-    file: "/images/certyfikaty/vadym-rekel-certificate-180925.pdf",
-    type: "PDF"
+    title: "LanguageCert C1 — Speaking",
+    text: "Certyfikat języka angielskiego C1.",
+    href: "/images/certyfikaty/e-cert 12 vadym rekel.pdf"
   },
   {
-    title: "Certyfikat członkowski",
-    text: "Dokument potwierdzający członkostwo lub aktywność zawodową.",
-    file: "/images/certyfikaty/membership-certificate-vadym-rekel.pdf",
-    type: "PDF"
-  },
-  {
-    title: "Certyfikat członkowski — wariant 2",
-    text: "Dodatkowy dokument potwierdzający członkostwo lub aktywność zawodową.",
-    file: "/images/certyfikaty/membership-certificate-3-vadym-rekel.pdf",
-    type: "PDF"
-  },
-  {
-    title: "Certyfikat językowy / specjalistyczny",
-    text: "Dokument potwierdzający dodatkowe przygotowanie językowe lub specjalistyczne.",
-    file: "/images/certyfikaty/e-cert-11-vadym-rekel.pdf",
-    type: "PDF"
-  },
-  {
-    title: "Certyfikat językowy / specjalistyczny — wariant 2",
-    text: "Dokument potwierdzający dodatkowe przygotowanie językowe lub specjalistyczne.",
-    file: "/images/certyfikaty/e-cert-12-vadym-rekel.pdf",
-    type: "PDF"
-  }
-];
-
-const officePhotos = [
-  {
-    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
-    alt: "Vadym Rekel przy stanowisku pracy w kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Stanowisko pracy tłumacza"
-  },
-  {
-    src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
-    alt: "Stanowisko administracyjne w kancelarii tłumacza przysięgłego języka ukraińskiego",
-    title: "Obieg dokumentów"
-  },
-  {
-    src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
-    alt: "Stanowisko komputerowe do pracy z materiałem cyfrowym i dokumentami PDF",
-    title: "Materiał cyfrowy"
-  },
-  {
-    src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
-    alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Kancelaria w Krakowie"
+    title: "Certificate 180925",
+    text: "Dodatkowy certyfikat zawodowy / językowy.",
+    href: "/images/certyfikaty/Vadym Rekel certificate 180925.pdf"
   }
 ];
 
 const faqItems = [
   {
-    question: "Jaki jest numer wpisu na listę tłumaczy przysięgłych?",
+    question: "Która kwalifikacja jest najważniejsza dla strony kancelarii?",
     answer:
-      "Vadym Rekel jest tłumaczem przysięgłym języka ukraińskiego wpisanym pod numerem TP/27/17."
+      "Najważniejsza jest kwalifikacja tłumacza przysięgłego języka ukraińskiego i numer wpisu TP/27/17. Pozostałe kwalifikacje wzmacniają profil specjalistyczny, ale nie powinny dominować nad podstawowym statusem zawodowym."
   },
   {
-    question: "Czy język rosyjski i angielski są tłumaczeniami przysięgłymi?",
+    question: "Czy MBA powinno być mocno eksponowane na stronie głównej?",
     answer:
-      "Nie. Uprawnienia tłumacza przysięgłego dotyczą języka ukraińskiego. Język rosyjski i angielski są oferowane jako tłumaczenia specjalistyczne."
+      "Nie. MBA warto pokazać na stronie kwalifikacji jako element profilu zarządczego i organizacyjnego kancelarii, natomiast na stronie głównej powinny dominować: tłumacz przysięgły języka ukraińskiego, TP/27/17, sąd, Policja i prokuratura."
   },
   {
-    question: "Dlaczego na stronie pokazane są kwalifikacje prawnicze i technologiczne?",
+    question: "Czy CIOL, TEPIS i LanguageCert są istotne dla SEO?",
     answer:
-      "Ponieważ kancelaria specjalizuje się w dokumentach procesowych, sprawach karnych, materiale cyfrowym, komunikatorach, raportach PDF i dokumentach z Ukrainy."
+      "Są istotne dla zaufania, ale raczej na stronie kwalifikacji. SEO kancelarii powinno nadal opierać się przede wszystkim na frazach dotyczących tłumacza przysięgłego języka ukraińskiego, spraw karnych, dokumentów z Ukrainy i materiału cyfrowego."
   },
   {
-    question: "Czy pełne dokumenty można zobaczyć online?",
+    question: "Czy kwalifikacje prawne warto pokazywać?",
     answer:
-      "Tak. Część dokumentów potwierdzających kwalifikacje jest dostępna w formie plików PDF lub skanów na tej stronie."
-  },
-  {
-    question: "Czy kancelaria obsługuje dokumenty z całej Polski?",
-    answer:
-      "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
+      "Tak. Prawo nowych technologii, własność intelektualna, prawo karne i seminarium doktorskie wzmacniają profil specjalistyczny w sprawach procesowych, cyfrowych i karnych."
   }
 ];
 
@@ -204,12 +223,12 @@ export default function QualificationsPage() {
     "@type": "Person",
     name: "Vadym Rekel",
     jobTitle: "Tłumacz przysięgły języka ukraińskiego",
-    url: linkedInUrl,
+    email,
+    telephone: expertPhoneHref,
+    url: "https://www.tlumaczrosyjskiegoiukrainskiego.pl/kwalifikacje",
     worksFor: {
       "@type": "ProfessionalService",
-      name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-      telephone: institutionPhoneHref,
-      email,
+      name: "Kancelaria Vadym Rekel",
       address: {
         "@type": "PostalAddress",
         streetAddress: "ul. Kielecka 2/53",
@@ -218,8 +237,34 @@ export default function QualificationsPage() {
         addressCountry: "PL"
       }
     },
-    knowsLanguage: ["ukraiński", "polski", "rosyjski", "angielski"],
-    sameAs: linkedInUrl
+    knowsAbout: [
+      "tłumaczenia poświadczone języka ukraińskiego",
+      "tłumaczenia sądowe",
+      "tłumaczenia dla Policji",
+      "tłumaczenia dla prokuratury",
+      "sprawy karne",
+      "prawo nowych technologii",
+      "materiał cyfrowy",
+      "dokumenty z Ukrainy"
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Tłumacz przysięgły języka ukraińskiego TP/27/17"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Master of Business Administration"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "CIOL — Chartered Institute of Linguists"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "LanguageCert English C1"
+      }
+    ]
   };
 
   return (
@@ -233,6 +278,7 @@ export default function QualificationsPage() {
         :root {
           --bg: #f5f0e6;
           --paper: #fffaf2;
+          --paper-soft: #f8f1e6;
           --ink: #13100c;
           --muted: #6e6256;
           --line: rgba(19, 16, 12, 0.14);
@@ -241,8 +287,9 @@ export default function QualificationsPage() {
           --green-soft: #e7eee8;
           --gold: #b68a3a;
           --gold-dark: #7c5a1d;
+          --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -257,7 +304,7 @@ export default function QualificationsPage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -265,10 +312,6 @@ export default function QualificationsPage() {
         a {
           color: inherit;
           text-decoration: none;
-        }
-
-        img {
-          max-width: 100%;
         }
 
         .topbar {
@@ -281,7 +324,7 @@ export default function QualificationsPage() {
         }
 
         .nav {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -348,11 +391,11 @@ export default function QualificationsPage() {
         }
 
         .hero {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.14fr 0.86fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -360,13 +403,14 @@ export default function QualificationsPage() {
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 52px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -382,13 +426,13 @@ export default function QualificationsPage() {
         h1 {
           margin: 0;
           max-width: 820px;
-          font-size: clamp(40px, 5.1vw, 66px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
+          margin: 24px 0 0;
           max-width: 760px;
           color: var(--muted);
           font-size: 20px;
@@ -396,7 +440,7 @@ export default function QualificationsPage() {
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -432,87 +476,59 @@ export default function QualificationsPage() {
           color: var(--ink);
         }
 
+        .hero-note {
+          margin-top: 22px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
         .hero-side {
           border-radius: var(--radius);
-          background: linear-gradient(155deg, var(--green), var(--green-dark));
+          background: linear-gradient(150deg, var(--green), var(--green-dark));
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 30px;
+          padding: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 410px;
-        }
-
-        .portrait {
-          height: 250px;
-          border-radius: 20px;
-          overflow: hidden;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.14);
-          margin-bottom: 20px;
-        }
-
-        .portrait img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center top;
-          display: block;
         }
 
         .hero-side h2 {
           margin: 0;
           color: #fff;
-          font-size: 35px;
-          line-height: 1;
+          font-size: 38px;
+          line-height: 0.98;
           letter-spacing: -0.045em;
         }
 
         .hero-side p {
           margin: 16px 0 0;
           color: rgba(255,255,255,0.76);
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1.55;
         }
 
-        .phone-main {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 64px;
-          margin-top: 22px;
-          border-radius: 18px;
-          background: #fffaf2;
-          color: var(--green);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
-          font-weight: 950;
+        .hero-side-list {
+          margin: 24px 0 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 10px;
         }
 
-        .trust {
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 22px 28px;
-        }
-
-        .trust-inner {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          padding: 14px 18px;
-          color: var(--muted);
+        .hero-side-list li {
+          color: rgba(255,255,255,0.82);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-          line-height: 1.5;
-          text-align: center;
+          font-size: 14px;
+          font-weight: 750;
+          line-height: 1.45;
         }
 
         .section {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -559,6 +575,12 @@ export default function QualificationsPage() {
           gap: 16px;
         }
 
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+
         .card {
           border-radius: 24px;
           border: 1px solid var(--line);
@@ -580,6 +602,14 @@ export default function QualificationsPage() {
           border-color: rgba(255,255,255,0.12);
         }
 
+        .card-petrol {
+          background:
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
+          color: #fff;
+          border-color: rgba(255,255,255,0.12);
+        }
+
         .tag {
           display: inline-flex;
           margin-bottom: 14px;
@@ -592,6 +622,13 @@ export default function QualificationsPage() {
           font-weight: 950;
           letter-spacing: 0.04em;
           text-transform: uppercase;
+        }
+
+        .card-dark .tag,
+        .card-petrol .tag {
+          background: rgba(255,255,255,0.10);
+          color: rgba(255,255,255,0.84);
+          border: 1px solid rgba(255,255,255,0.12);
         }
 
         .card h3 {
@@ -608,29 +645,23 @@ export default function QualificationsPage() {
           line-height: 1.55;
         }
 
-        .card-dark p {
+        .card-dark p,
+        .card-petrol p {
           color: rgba(255,255,255,0.76);
         }
 
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
+        .card-value {
+          display: block;
+          margin: -4px 0 14px;
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 950;
         }
 
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
+        .card-dark .card-value,
+        .card-petrol .card-value {
+          color: rgba(255,255,255,0.82);
         }
 
         .card-link {
@@ -642,75 +673,100 @@ export default function QualificationsPage() {
           font-weight: 900;
         }
 
-        .certificate-grid {
+        .card-dark .card-link,
+        .card-petrol .card-link {
+          color: #fff;
+        }
+
+        .feature {
+          border-radius: var(--radius);
+          background: var(--ink);
+          color: #fff;
+          padding: 44px;
+          box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
+          align-items: center;
         }
 
-        .certificate-card {
+        .feature h2 {
+          margin: 0;
+          color: #fff;
+          font-size: clamp(34px, 4vw, 56px);
+          line-height: 0.98;
+          letter-spacing: -0.055em;
+        }
+
+        .feature p {
+          margin: 0;
+          color: rgba(255,255,255,0.76);
+          font-size: 18px;
+          line-height: 1.6;
+        }
+
+        .labels {
+          margin-top: 22px;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          min-height: 250px;
+          flex-wrap: wrap;
+          gap: 10px;
         }
 
-        .file-badge {
-          width: fit-content;
-          display: inline-flex;
-          margin-bottom: 14px;
-          padding: 8px 10px;
-          border-radius: 10px;
-          background: var(--green-soft);
-          color: var(--green);
-          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        .label {
+          border-radius: 999px;
+          padding: 9px 12px;
+          border: 1px solid rgba(255,255,255,0.14);
+          color: rgba(255,255,255,0.78);
+          background: rgba(255,255,255,0.08);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 12px;
           font-weight: 900;
-          letter-spacing: 0.08em;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
         }
 
-        .photo-grid {
+        .certificate-list {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 14px;
+          gap: 10px;
         }
 
-        .photo-card {
-          position: relative;
-          min-height: 255px;
-          border-radius: 24px;
-          overflow: hidden;
-          background: #f8f1e6;
+        .certificate-item {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 16px;
+          align-items: center;
           border: 1px solid var(--line);
-          box-shadow: 0 14px 34px rgba(25, 22, 18, 0.055);
+          border-radius: 18px;
+          background: rgba(255,250,242,0.78);
+          padding: 18px;
         }
 
-        .photo-card img {
-          width: 100%;
-          height: 100%;
-          min-height: inherit;
-          object-fit: cover;
-          display: block;
-          transition: transform 260ms ease, filter 260ms ease;
+        .certificate-item h3 {
+          margin: 0 0 6px;
+          font-size: 20px;
+          letter-spacing: -0.035em;
         }
 
-        .photo-card:hover img {
-          transform: scale(1.045);
-          filter: brightness(0.72);
+        .certificate-item p {
+          margin: 0;
+          color: var(--muted);
+          font-size: 14px;
+          line-height: 1.45;
         }
 
-        .photo-caption {
-          position: absolute;
-          left: 16px;
-          right: 16px;
-          bottom: 16px;
-          padding: 13px 14px;
-          border-radius: 16px;
-          background: rgba(19, 16, 12, 0.72);
+        .small-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          white-space: nowrap;
+          border-radius: 999px;
+          min-height: 42px;
+          padding: 0 16px;
+          background: var(--green);
           color: #fff;
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           font-size: 13px;
-          font-weight: 850;
+          font-weight: 900;
         }
 
         .faq-list {
@@ -751,7 +807,7 @@ export default function QualificationsPage() {
         }
 
         .footer-inner {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -794,26 +850,33 @@ export default function QualificationsPage() {
         @media (max-width: 980px) {
           .hero,
           .section-heading,
+          .feature,
           .footer-inner {
             grid-template-columns: 1fr;
           }
 
           .grid-2,
           .grid-3,
-          .certificate-grid,
-          .photo-grid {
+          .grid-4 {
             grid-template-columns: 1fr;
           }
 
           .nav-links {
             display: none;
           }
+
+          .certificate-item {
+            grid-template-columns: 1fr;
+          }
+
+          .small-link {
+            width: fit-content;
+          }
         }
 
         @media (max-width: 620px) {
           .hero,
-          .section,
-          .trust {
+          .section {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -823,21 +886,17 @@ export default function QualificationsPage() {
           }
 
           .hero-main,
-          .hero-side {
+          .hero-side,
+          .feature {
             padding: 28px;
           }
 
           h1 {
-            font-size: 38px;
+            font-size: 40px;
           }
 
-          .button,
-          .phone-main {
+          .button {
             width: 100%;
-          }
-
-          .portrait {
-            height: 280px;
           }
         }
       `}</style>
@@ -856,12 +915,13 @@ export default function QualificationsPage() {
 
           <div className="nav-links">
             <a href="/">Strona główna</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Sądy</a>
             <a href="/tlumaczenia-dla-policji">Policja</a>
             <a href="/tlumaczenia-dla-prokuratury">Prokuratura</a>
-            <a href="/tlumaczenia-it-krypto">Materiał cyfrowy</a>
-            <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
+            <a href="/kontakt">Kontakt</a>
+            <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
+              {expertPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -870,77 +930,140 @@ export default function QualificationsPage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Kwalifikacje · TP/27/17 · Kraków · język ukraiński
+            Kwalifikacje · dokumenty · profil zawodowy
           </span>
 
-          <h1>Kwalifikacje tłumacza przysięgłego języka ukraińskiego.</h1>
+          <h1>Potwierdzone kwalifikacje zawodowe.</h1>
 
           <p className="lead">
-            Vadym Rekel jest tłumaczem przysięgłym języka ukraińskiego wpisanym
-            pod numerem TP/27/17. Kancelaria w Krakowie specjalizuje się w
-            dokumentach procesowych, sprawach karnych, materiale cyfrowym,
-            dokumentach z Ukrainy i korespondencji osadzonych.
+            Vadym Rekel — tłumacz przysięgły języka ukraińskiego TP/27/17.
+            Profil zawodowy łączy praktykę tłumaczeniową dla sądów, Policji i
+            prokuratury z przygotowaniem prawnym, językowym, organizacyjnym i
+            specjalizacją w materiale procesowym oraz cyfrowym.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
-              Sąd · Policja · Prokuratura: {institutionPhoneDisplay}
+            <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
+              Tłumacz / biegły: {expertPhoneDisplay}
             </a>
-            <a className="button button-secondary" href={`mailto:${email}`}>
+            <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
+              Kancelaria: {officePhoneDisplay}
+            </a>
+            <a className="button button-secondary" href="/kontakt">
               Wyślij dokument do wyceny
             </a>
           </div>
+
+          <p className="hero-note">
+            Najważniejszą kwalifikacją dla kancelarii jest wpis na listę
+            tłumaczy przysięgłych języka ukraińskiego: TP/27/17. Pozostałe
+            kwalifikacje uzupełniają profil specjalistyczny.
+          </p>
         </div>
 
         <aside className="hero-side">
           <div>
-            <div className="portrait">
-              <img
-                src="/images/vadym%20rekel.jpg"
-                alt="Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
-              />
-            </div>
-
-            <h2>Vadym Rekel</h2>
+            <h2>Główna oś profilu: język ukraiński, prawo i materiał procesowy.</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Dokumenty z całej Polski zdalnie.
+              Kwalifikacje prezentowane na tej stronie służą pokazaniu
+              wiarygodności zawodowej w pracy z dokumentami poświadczonymi,
+              aktami spraw, dokumentami z Ukrainy, materiałem cyfrowym i
+              dokumentacją dla organów.
             </p>
-          </div>
 
-          <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-            {institutionPhoneDisplay}
-          </a>
+            <ul className="hero-side-list">
+              <li>TP/27/17 — tłumacz przysięgły języka ukraińskiego</li>
+              <li>Sprawy karne, sądowe, policyjne i prokuratorskie</li>
+              <li>Prawo nowych technologii i materiał cyfrowy</li>
+              <li>CIOL, TEPIS, LanguageCert C1, MBA</li>
+            </ul>
+          </div>
         </aside>
       </section>
 
-      <section className="trust">
-        <div className="trust-inner">
-          TP/27/17 · język ukraiński przysięgły · rosyjski i angielski
-          specjalistycznie · sprawy karne · materiał cyfrowy · dokumenty z
-          Ukrainy
+      <section className="section">
+        <SectionHeading
+          label="Najważniejsze"
+          title="Kwalifikacje główne."
+          text="Te elementy budują podstawowy profil kancelarii. Najważniejszy pozostaje status tłumacza przysięgłego języka ukraińskiego."
+        />
+
+        <div className="grid-4">
+          {primaryQualifications.map((item) => (
+            <article className="card card-petrol" key={item.title}>
+              <span className="tag">{item.label}</span>
+              <h3>{item.title}</h3>
+              <span className="card-value">{item.value}</span>
+              <p>{item.text}</p>
+              <a className="card-link" href={item.href} target="_blank">
+                Zobacz dokument →
+              </a>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="section">
         <SectionHeading
-          label="Profil"
-          title="Uprawnienia, specjalizacja i języki pracy."
-          text="Ta strona porządkuje informacje o kwalifikacjach. Strona główna pozostaje skoncentrowana na usłudze, kontakcie i zakresie pracy kancelarii."
+          label="Prawo"
+          title="Przygotowanie prawne i specjalistyczne."
+          text="Ta część profilu jest szczególnie ważna przy tłumaczeniach procesowych, karnych, technologicznych i cyfrowych."
         />
 
-        <div className="grid-2">
-          {qualificationGroups.map((group) => (
-            <article className="card" key={group.title}>
-              <span className="tag">{group.title}</span>
-              <h3>{group.title}</h3>
-              <p>{group.lead}</p>
+        <div className="grid-4">
+          {legalQualifications.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Obszar</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
-              <ul className="list">
-                {group.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+      <section className="section">
+        <div className="feature">
+          <div>
+            <p className="section-label">Specjalizacja praktyczna</p>
+            <h2>Dokumenty jako dowód, załącznik lub element postępowania.</h2>
+          </div>
+
+          <div>
+            <p>
+              Kwalifikacje są przedstawione nie jako katalog ozdobny, lecz jako
+              uzasadnienie praktyki: tłumaczenia dokumentów do sądu, Policji,
+              prokuratury, spraw karnych, dokumentów z Ukrainy, materiału
+              cyfrowego i korespondencji osadzonych.
+            </p>
+
+            <div className="labels">
+              {practiceAreas.map((item) => (
+                <span className="label" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Języki i organizacje"
+          title="Kwalifikacje językowe i członkostwa."
+          text="Te dokumenty wzmacniają profil zawodowy, ale na stronie nie powinny zastępować głównego komunikatu: tłumacz przysięgły języka ukraińskiego TP/27/17."
+        />
+
+        <div className="grid-4">
+          {languageQualifications.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Dokument</span>
+              <h3>{item.title}</h3>
+              <span className="card-value">{item.value}</span>
+              <p>{item.text}</p>
+              <a className="card-link" href={item.href} target="_blank">
+                Zobacz dokument →
+              </a>
             </article>
           ))}
         </div>
@@ -950,20 +1073,18 @@ export default function QualificationsPage() {
         <SectionHeading
           label="Dokumenty"
           title="Dokumenty potwierdzające kwalifikacje."
-          text="Poniżej znajdują się dokumenty i potwierdzenia kwalifikacji zawodowych. Na stronie głównej pokazany jest tylko skrót, żeby nie przeciążać przekazu."
+          text="Lista dokumentów z folderu certyfikatów. Jeżeli zmienisz nazwy plików w folderze public/images/certyfikaty, trzeba będzie odpowiednio zmienić ścieżki w kodzie."
         />
 
-        <div className="certificate-grid">
-          {certificates.map((item) => (
-            <article className="card certificate-card" key={item.title}>
+        <div className="certificate-list">
+          {certificateLinks.map((item) => (
+            <article className="certificate-item" key={item.title}>
               <div>
-                <span className="file-badge">{item.type}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
-
-              <a className="card-link" href={item.file} target="_blank">
-                Otwórz dokument →
+              <a className="small-link" href={item.href} target="_blank">
+                Otwórz
               </a>
             </article>
           ))}
@@ -972,47 +1093,46 @@ export default function QualificationsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Kancelaria"
-          title="Realne miejsce pracy z dokumentami i materiałem cyfrowym."
-          text="Zdjęcia kancelarii potwierdzają realne zaplecze pracy z dokumentami poświadczonymi, procesowymi, urzędowymi i cyfrowymi."
+          label="SEO"
+          title="Jak te kwalifikacje pracują dla strony?"
+          text="Strona kwalifikacji ma budować zaufanie, ale nie może rozpraszać głównego pozycjonowania kancelarii."
         />
 
-        <div className="photo-grid">
-          {officePhotos.map((photo) => (
-            <article className="photo-card" key={photo.src}>
-              <img src={photo.src} alt={photo.alt} loading="lazy" />
-              <div className="photo-caption">{photo.title}</div>
-            </article>
-          ))}
+        <div className="grid-3">
+          <article className="card card-dark">
+            <span className="tag">Główna pozycja</span>
+            <h3>TP/27/17</h3>
+            <p>
+              Numer wpisu i status tłumacza przysięgłego języka ukraińskiego są
+              najważniejszym elementem strony kwalifikacji.
+            </p>
+          </article>
+
+          <article className="card">
+            <span className="tag">Wsparcie eksperckie</span>
+            <h3>Prawo i technologia</h3>
+            <p>
+              Prawo nowych technologii, prawo karne i materiał cyfrowy wzmacniają
+              wiarygodność w sprawach procesowych i karnych.
+            </p>
+          </article>
+
+          <article className="card">
+            <span className="tag">Zaufanie</span>
+            <h3>CIOL, TEPIS, MBA, C1</h3>
+            <p>
+              Członkostwa, certyfikaty językowe i MBA są dobrym uzupełnieniem
+              profilu, szczególnie na dedykowanej stronie kwalifikacji.
+            </p>
+          </article>
         </div>
       </section>
 
       <section className="section">
         <SectionHeading
-          label="LinkedIn"
-          title="Profil zawodowy."
-          text="LinkedIn pełni funkcję profilu zawodowego. Nie zastępuje uprawnień tłumacza przysięgłego, lecz uzupełnia prezentację kwalifikacji."
-        />
-
-        <article className="card card-dark">
-          <span className="tag">Profil zawodowy</span>
-          <h3>LinkedIn — Vadym Rekel</h3>
-          <p>
-            Profil zawodowy może być wykorzystany do weryfikacji doświadczenia,
-            specjalizacji i aktywności zawodowej.
-          </p>
-
-          <a className="phone-main" href={linkedInUrl} target="_blank">
-            Otwórz LinkedIn
-          </a>
-        </article>
-      </section>
-
-      <section className="section">
-        <SectionHeading
           label="FAQ"
-          title="Najczęstsze pytania dotyczące kwalifikacji."
-          text="Krótko o numerze wpisu, językach pracy, dokumentach i zakresie specjalizacji."
+          title="Najczęstsze pytania o kwalifikacje."
+          text="Krótko o tym, które kwalifikacje warto eksponować i jaką pełnią funkcję na stronie."
         />
 
         <div className="faq-list">
@@ -1025,7 +1145,7 @@ export default function QualificationsPage() {
         </div>
       </section>
 
-      <footer className="footer" id="kontakt">
+      <footer className="footer">
         <div className="footer-inner">
           <div>
             <span className="footer-title">Kancelaria Vadym Rekel</span>
@@ -1041,14 +1161,12 @@ export default function QualificationsPage() {
           <div>
             <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              Sąd · Policja · Prokuratura:{" "}
-              <a href={`tel:${institutionPhoneHref}`}>
-                {institutionPhoneDisplay}
-              </a>
+              Tłumacz / biegły:{" "}
+              <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
             </span>
             <span className="footer-line">
-              Klienci indywidualni:{" "}
-              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+              Kancelaria:{" "}
+              <a href={`tel:${officePhoneHref}`}>{officePhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>

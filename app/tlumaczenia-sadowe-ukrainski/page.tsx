@@ -2,112 +2,127 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Tłumacz przysięgły ukraiński dla sądu | Tłumaczenia sądowe Kraków",
+    "Tłumaczenia sądowe ukraiński | Tłumacz przysięgły języka ukraińskiego Kraków",
   description:
-    "Tłumacz przysięgły języka ukraińskiego dla sądów. Tłumaczenia akt spraw, wyroków, postanowień, protokołów, pism procesowych, dokumentów z Ukrainy, komunikatorów i materiału cyfrowego. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
+    "Tłumacz przysięgły języka ukraińskiego TP/27/17. Tłumaczenia sądowe: akta spraw, protokoły, postanowienia, wyroki, pisma procesowe, dokumenty z Ukrainy i materiał cyfrowy. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
   keywords: [
-    "tłumacz przysięgły ukraiński dla sądu",
-    "tłumacz ukraiński sąd",
     "tłumaczenia sądowe ukraiński",
-    "tłumaczenie akt sprawy ukraiński",
-    "tłumaczenie protokołu sądowego ukraiński",
+    "tłumacz przysięgły ukraiński sąd",
+    "tłumacz ukraiński sąd",
+    "tłumacz przysięgły języka ukraińskiego Kraków",
+    "tłumaczenie akt sądowych ukraiński",
+    "tłumaczenie protokołu ukraiński",
     "tłumaczenie wyroku ukraiński",
     "tłumaczenie postanowienia ukraiński",
-    "tłumacz przysięgły języka ukraińskiego Kraków sąd",
-    "tłumaczenie dokumentów sądowych z Ukrainy"
+    "Vadym Rekel tłumacz przysięgły",
+    "TP/27/17"
   ]
 };
 
 const email = "biegly@vadymrekel.pl";
 
-const institutionPhoneDisplay = "883 040 483";
-const institutionPhoneHref = "+48883040483";
+const expertPhoneDisplay = "883 040 483";
+const expertPhoneHref = "+48883040483";
 
-const individualPhoneDisplay = "735 753 383";
-const individualPhoneHref = "+48735753383";
+const officePhoneDisplay = "735 753 383";
+const officePhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
 const courtMaterials = [
-  "akta spraw",
-  "wyroki",
-  "postanowienia",
-  "protokoły rozpraw",
-  "protokoły przesłuchań",
-  "pisma procesowe",
-  "wezwania",
-  "pouczenia",
-  "załączniki do akt",
-  "dokumenty z Ukrainy",
-  "korespondencja stron",
-  "materiał cyfrowy"
-];
-
-const caseGroups = [
+  {
+    title: "Akta sprawy",
+    text: "Dokumenty procesowe, załączniki, pisma stron, dokumenty urzędowe, dokumenty z Ukrainy oraz materiał dołączony do akt."
+  },
+  {
+    title: "Protokoły i czynności",
+    text: "Protokoły rozpraw, przesłuchań, posiedzeń, czynności procesowych oraz dokumenty powiązane z przebiegiem postępowania."
+  },
+  {
+    title: "Orzeczenia i postanowienia",
+    text: "Wyroki, postanowienia, zarządzenia, uzasadnienia, pouczenia oraz pisma kierowane do stron postępowania."
+  },
   {
     title: "Sprawy karne",
-    text: "Protokoły, postanowienia, materiał dowodowy, dokumenty z Ukrainy, komunikatory, zrzuty ekranu i korespondencja elektroniczna."
+    text: "Dokumenty w sprawach karnych, materiał dowodowy, korespondencja osadzonych, komunikatory, raporty PDF i dane cyfrowe."
   },
   {
-    title: "Sprawy cywilne",
-    text: "Pisma procesowe, załączniki, oświadczenia, pełnomocnictwa, dokumenty urzędowe, dokumenty rodzinne i korespondencja."
-  },
-  {
-    title: "Sprawy rodzinne",
-    text: "Akty stanu cywilnego, dokumenty dotyczące dzieci, orzeczenia, dokumenty z Ukrainy, pisma i załączniki."
+    title: "Dokumenty z Ukrainy",
+    text: "Dokumenty sądowe, prokuratorskie, administracyjne, urzędowe i prywatne pochodzące z Ukrainy albo kierowane do Ukrainy."
   },
   {
     title: "Materiał cyfrowy",
-    text: "Komunikatory, SMS, e-mail, zrzuty ekranu, raporty PDF i dane przekazywane jako załączniki do akt."
+    text: "Zrzuty ekranu, wiadomości, komunikatory, e-mail, pliki PDF, raporty z telefonu i inny materiał przekazywany do tłumaczenia."
   }
 ];
 
-const deliveryMethods = [
+const relatedPages = [
   {
-    title: "E-mail",
-    text: "Prześlij skan, zdjęcie albo plik PDF na adres:",
-    value: email,
-    href: `mailto:${email}`
+    title: "Sprawy karne",
+    text: "Akta, protokoły, materiał cyfrowy, korespondencja osadzonych i dokumenty z Ukrainy.",
+    href: "/tlumaczenia-sprawy-karne-ukrainski"
   },
   {
-    title: "Adres kancelarii",
-    text: "Dokument można przekazać do kancelarii:",
-    value: "ul. Kielecka 2/53, 31-526 Kraków",
-    href: "#kontakt"
+    title: "Tłumaczenia dla Policji",
+    text: "Czynności, notatki, protokoły, pouczenia, komunikatory i materiał dowodowy.",
+    href: "/tlumaczenia-dla-policji"
   },
   {
-    title: "Odbiór osobisty",
-    text: "Odbiór tłumaczenia w kancelarii jest możliwy po wcześniejszym uzgodnieniu terminu.",
-    value: "po uzgodnieniu",
-    href: `tel:${institutionPhoneHref}`
+    title: "Tłumaczenia dla prokuratury",
+    text: "Postępowania przygotowawcze, pomoc prawna z Ukrainą, akta i materiał dowodowy.",
+    href: "/tlumaczenia-dla-prokuratury"
+  },
+  {
+    title: "Materiał cyfrowy",
+    text: "Komunikatory, raporty PDF, zrzuty ekranu, dane z telefonu, oszustwa internetowe i kryptowaluty.",
+    href: "/tlumaczenia-it-krypto"
+  }
+];
+
+const processSteps = [
+  {
+    title: "Przekazanie materiału",
+    text: "Dokumenty można przesłać elektronicznie do wstępnej wyceny albo przekazać w kancelarii po wcześniejszym uzgodnieniu."
+  },
+  {
+    title: "Określenie zakresu",
+    text: "Przy większych aktach warto wskazać, które dokumenty, strony albo fragmenty mają zostać objęte tłumaczeniem."
+  },
+  {
+    title: "Ustalenie terminu",
+    text: "Termin zależy od objętości materiału, rodzaju dokumentów, czytelności skanów oraz charakteru sprawy."
+  },
+  {
+    title: "Realizacja tłumaczenia",
+    text: "Tłumaczenie jest przygotowywane z zachowaniem precyzji terminologicznej i przeznaczenia procesowego dokumentu."
   }
 ];
 
 const faqItems = [
   {
-    question: "Czy można przesłać akta sprawy elektronicznie?",
+    question: "Czy tłumaczenie sądowe musi być tłumaczeniem poświadczonym?",
     answer:
-      "Tak. Do wstępnej wyceny można przesłać skan, zdjęcie albo plik PDF. Przy większych aktach warto wskazać konkretne strony, protokoły albo załączniki do tłumaczenia."
+      "W wielu przypadkach dokument przeznaczony do sądu powinien zostać przetłumaczony przez tłumacza przysięgłego. Ostateczny wymóg zależy jednak od celu dokumentu i decyzji organu albo pełnomocnika."
   },
   {
-    question: "Czy tłumaczenie może dotyczyć tylko części akt?",
+    question: "Czy można przesłać akta sprawy do wyceny elektronicznie?",
     answer:
-      "Tak. Przy większych materiałach można wskazać wybrane fragmenty, strony, protokoły, załączniki albo dokumenty istotne dla sprawy."
+      "Tak. Do wstępnej wyceny można przesłać skany, zdjęcia, pliki PDF albo opis zakresu materiału. Przy większych aktach warto wskazać najważniejsze dokumenty albo numery stron."
   },
   {
-    question: "Czy tłumaczone są dokumenty sądowe z Ukrainy?",
+    question: "Czy kancelaria obsługuje sprawy karne?",
     answer:
-      "Tak. Zakres obejmuje dokumenty sądowe, urzędowe i procesowe pochodzące z Ukrainy albo kierowane do organów ukraińskich."
+      "Tak. Kancelaria obsługuje tłumaczenia języka ukraińskiego w sprawach karnych, w tym akta, protokoły, materiał cyfrowy, korespondencję osadzonych i dokumenty z Ukrainy."
   },
   {
-    question: "Czy tłumaczone są komunikatory jako załącznik do sprawy?",
+    question: "Czy dokumenty można przesłać z innego miasta niż Kraków?",
     answer:
-      "Tak. Kancelaria pracuje z komunikatorami, zrzutami ekranu, raportami PDF, korespondencją elektroniczną i innym materiałem cyfrowym."
+      "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
   },
   {
-    question: "Czy kancelaria obsługuje sądy spoza Krakowa?",
+    question: "Który numer telefonu wybrać?",
     answer:
-      "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z całej Polski."
+      "Wszystkie sprawy można zgłaszać na oba numery. Numer 883 040 483 służy do bezpośredniego kontaktu z tłumaczem / biegłym, a numer 735 753 383 do kontaktu z kancelarią."
   }
 ];
 
@@ -139,7 +154,7 @@ export default function CourtTranslationsPage() {
     provider: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-      telephone: institutionPhoneHref,
+      telephone: expertPhoneHref,
       email,
       address: {
         "@type": "PostalAddress",
@@ -154,7 +169,7 @@ export default function CourtTranslationsPage() {
       name: "Polska"
     },
     serviceType:
-      "Tłumaczenia poświadczone i sądowe języka ukraińskiego dla sądów"
+      "Tłumaczenia poświadczone i ustne języka ukraińskiego dla sądów"
   };
 
   return (
@@ -179,7 +194,7 @@ export default function CourtTranslationsPage() {
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -194,7 +209,7 @@ export default function CourtTranslationsPage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -214,7 +229,7 @@ export default function CourtTranslationsPage() {
         }
 
         .nav {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -281,11 +296,11 @@ export default function CourtTranslationsPage() {
         }
 
         .hero {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.14fr 0.86fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -293,13 +308,14 @@ export default function CourtTranslationsPage() {
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 52px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -315,13 +331,13 @@ export default function CourtTranslationsPage() {
         h1 {
           margin: 0;
           max-width: 820px;
-          font-size: clamp(40px, 5.1vw, 66px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
+          margin: 24px 0 0;
           max-width: 760px;
           color: var(--muted);
           font-size: 20px;
@@ -329,7 +345,7 @@ export default function CourtTranslationsPage() {
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -365,70 +381,72 @@ export default function CourtTranslationsPage() {
           color: var(--ink);
         }
 
+        .hero-note {
+          margin-top: 22px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
         .hero-side {
           border-radius: var(--radius);
-          background: linear-gradient(155deg, var(--green), var(--green-dark));
+          background:
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 30px;
+          padding: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 410px;
         }
 
         .hero-side h2 {
           margin: 0;
           color: #fff;
-          font-size: 35px;
-          line-height: 1;
+          font-size: 38px;
+          line-height: 0.98;
           letter-spacing: -0.045em;
         }
 
         .hero-side p {
           margin: 16px 0 0;
           color: rgba(255,255,255,0.76);
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1.55;
         }
 
-        .phone-main {
+        .phone-large {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 64px;
-          margin-top: 22px;
+          min-height: 68px;
+          margin-top: 28px;
           border-radius: 18px;
           background: #fffaf2;
           color: var(--green);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
+          font-size: 27px;
           font-weight: 950;
         }
 
-        .trust {
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 22px 28px;
-        }
-
-        .trust-inner {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          padding: 14px 18px;
-          color: var(--muted);
+        .notice {
+          margin-top: 18px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          padding: 18px;
+          color: rgba(255,255,255,0.82);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-          line-height: 1.5;
-          text-align: center;
+          font-size: 14px;
+          font-weight: 800;
+          line-height: 1.55;
         }
 
         .section {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -472,6 +490,12 @@ export default function CourtTranslationsPage() {
         .grid-3 {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+        }
+
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
           gap: 16px;
         }
 
@@ -544,32 +568,6 @@ export default function CourtTranslationsPage() {
           color: rgba(255,255,255,0.76);
         }
 
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
-        }
-
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .card-dark .list li,
-        .card-petrol .list li {
-          color: rgba(255,255,255,0.78);
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
-        }
-
         .card-link {
           display: inline-flex;
           margin-top: 20px;
@@ -588,11 +586,11 @@ export default function CourtTranslationsPage() {
           border-radius: var(--radius);
           background: var(--ink);
           color: #fff;
-          padding: 40px;
+          padding: 44px;
           box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
-          gap: 30px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
           align-items: center;
         }
 
@@ -609,33 +607,6 @@ export default function CourtTranslationsPage() {
           color: rgba(255,255,255,0.76);
           font-size: 18px;
           line-height: 1.6;
-        }
-
-        .labels {
-          margin-top: 20px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-        }
-
-        .label {
-          border-radius: 999px;
-          padding: 9px 12px;
-          border: 1px solid rgba(255,255,255,0.14);
-          color: rgba(255,255,255,0.78);
-          background: rgba(255,255,255,0.08);
-          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 12px;
-          font-weight: 900;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-        }
-
-        .note {
-          margin-top: 18px;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.55;
         }
 
         .faq-list {
@@ -676,7 +647,7 @@ export default function CourtTranslationsPage() {
         }
 
         .footer-inner {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -724,11 +695,9 @@ export default function CourtTranslationsPage() {
             grid-template-columns: 1fr;
           }
 
-          .grid-3 {
-            grid-template-columns: 1fr;
-          }
-
-          .grid-2 {
+          .grid-2,
+          .grid-3,
+          .grid-4 {
             grid-template-columns: 1fr;
           }
 
@@ -739,8 +708,7 @@ export default function CourtTranslationsPage() {
 
         @media (max-width: 620px) {
           .hero,
-          .section,
-          .trust {
+          .section {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -756,11 +724,11 @@ export default function CourtTranslationsPage() {
           }
 
           h1 {
-            font-size: 38px;
+            font-size: 40px;
           }
 
           .button,
-          .phone-main {
+          .phone-large {
             width: 100%;
           }
         }
@@ -780,12 +748,13 @@ export default function CourtTranslationsPage() {
 
           <div className="nav-links">
             <a href="/">Strona główna</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
+            <a href="/tlumaczenia-sadowe-ukrainski">Sądy</a>
             <a href="/tlumaczenia-dla-policji">Policja</a>
             <a href="/tlumaczenia-dla-prokuratury">Prokuratura</a>
-            <a href="/dokumenty-z-ukrainy">Dokumenty z Ukrainy</a>
-            <a href="/kwalifikacje">Kwalifikacje</a>
-            <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
+            <a href="/kontakt">Kontakt</a>
+            <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
+              {expertPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -794,102 +763,69 @@ export default function CourtTranslationsPage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Tłumacz przysięgły ukraiński · sąd · Kraków · cała Polska
+            Tłumaczenia sądowe · język ukraiński · TP/27/17
           </span>
 
-          <h1>Tłumacz przysięgły języka ukraińskiego dla sądu.</h1>
+          <h1>Tłumaczenia sądowe języka ukraińskiego.</h1>
 
           <p className="lead">
-            Tłumaczenia sądowe języka ukraińskiego: akta spraw, wyroki,
-            postanowienia, protokoły, pisma procesowe, załączniki, dokumenty z
-            Ukrainy oraz materiał cyfrowy przekazywany do akt.
+            Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia akt
+            spraw, protokołów, wyroków, postanowień, pism procesowych,
+            dokumentów z Ukrainy oraz materiału cyfrowego przekazywanego do
+            postępowań sądowych.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
-              Sąd: {institutionPhoneDisplay}
+            <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
+              Tłumacz / biegły: {expertPhoneDisplay}
             </a>
-            <a className="button button-secondary" href={`mailto:${email}`}>
+            <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
+              Kancelaria: {officePhoneDisplay}
+            </a>
+            <a className="button button-secondary" href="/kontakt">
               Wyślij dokument do wyceny
             </a>
           </div>
+
+          <p className="hero-note">
+            Wszystkie sprawy można zgłaszać na oba numery telefonu. Numer{" "}
+            {expertPhoneDisplay} służy do bezpośredniego kontaktu z tłumaczem /
+            biegłym, a numer {officePhoneDisplay} do kontaktu z kancelarią.
+          </p>
         </div>
 
         <aside className="hero-side">
           <div>
-            <h2>Vadym Rekel</h2>
+            <h2>Dokument sądowy wymaga precyzyjnego kontekstu.</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Dokumenty sądowe można przesłać do
-              wstępnej wyceny elektronicznie z całej Polski.
+              Przy tłumaczeniu materiałów sądowych znaczenie ma nie tylko treść,
+              ale również funkcja dokumentu w aktach, etap postępowania, dane
+              stron, terminy, oznaczenia załączników i zgodność terminologiczna.
             </p>
+
+            <div className="notice">
+              Kancelaria ma siedzibę w Krakowie. Dokumenty do wstępnej wyceny
+              można przesłać elektronicznie z dowolnego miasta w Polsce.
+            </div>
           </div>
 
-          <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-            {institutionPhoneDisplay}
+          <a className="phone-large" href={`tel:${expertPhoneHref}`}>
+            {expertPhoneDisplay}
           </a>
         </aside>
       </section>
 
-      <section className="trust">
-        <div className="trust-inner">
-          TP/27/17 · tłumaczenia sądowe języka ukraińskiego · kancelaria w
-          Krakowie · dokumenty z całej Polski zdalnie
-        </div>
-      </section>
-
       <section className="section">
         <SectionHeading
-          label="Zakres sądowy"
-          title="Dokumenty sądowe i materiał do akt."
-          text="Tłumaczenie może obejmować zarówno klasyczne dokumenty procesowe, jak i załączniki, korespondencję, materiał cyfrowy oraz dokumenty z Ukrainy."
+          label="Zakres"
+          title="Jakie materiały sądowe można przekazać do tłumaczenia?"
+          text="Zakres zależy od rodzaju sprawy, celu wykorzystania dokumentów i tego, czy tłumaczenie ma być poświadczone."
         />
 
         <div className="grid-3">
-          <article className="card">
-            <span className="tag">Akta i pisma</span>
-            <h3>Dokumenty procesowe.</h3>
-            <ul className="list">
-              {courtMaterials.slice(0, 6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card">
-            <span className="tag">Dowody i załączniki</span>
-            <h3>Materiał do sprawy.</h3>
-            <ul className="list">
-              {courtMaterials.slice(6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card card-dark">
-            <span className="tag">Kontakt dla sądu</span>
-            <h3>Akta, protokół albo czynność.</h3>
-            <p>
-              W sprawach sądowych i materiałach do akt właściwy kontakt to numer
-              dla organów.
-            </p>
-            <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Rodzaje spraw"
-          title="Tłumaczenia w sprawach karnych, cywilnych i rodzinnych."
-          text="Zakres zależy od materiału, celu procesowego i sposobu wykorzystania dokumentu w sprawie."
-        />
-
-        <div className="grid-2">
-          {caseGroups.map((item) => (
+          {courtMaterials.map((item) => (
             <article className="card" key={item.title}>
+              <span className="tag">Sąd</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -900,32 +836,24 @@ export default function CourtTranslationsPage() {
       <section className="section">
         <div className="feature">
           <div>
-            <p className="section-label">Dokument w sprawie</p>
-            <h2>Nie każdy dokument sądowy jest zwykłym dokumentem.</h2>
+            <p className="section-label">Sprawy karne</p>
+            <h2>Sądowe tłumaczenia w sprawach karnych.</h2>
           </div>
 
           <div>
             <p>
-              W sprawie dokument może być protokołem, dowodem, załącznikiem,
-              zapisem rozmowy, raportem technicznym, pismem odręcznym albo
-              korespondencją. Znaczenie ma kontekst, terminologia i sposób
-              przekazania materiału.
+              W sprawach karnych materiały sądowe często łączą akta, protokoły,
+              postanowienia, dokumenty z Ukrainy, komunikatory, korespondencję
+              osadzonych, raporty PDF i dane cyfrowe.
             </p>
 
-            <div className="labels">
-              {[
-                "akta",
-                "protokół",
-                "dowód",
-                "załącznik",
-                "raport",
-                "komunikator",
-                "pismo odręczne"
-              ].map((item) => (
-                <span className="label" key={item}>
-                  {item}
-                </span>
-              ))}
+            <div className="hero-actions">
+              <a
+                className="button button-secondary"
+                href="/tlumaczenia-sprawy-karne-ukrainski"
+              >
+                Zobacz stronę: sprawy karne
+              </a>
             </div>
           </div>
         </div>
@@ -933,35 +861,94 @@ export default function CourtTranslationsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Przekazanie dokumentu"
-          title="Jak przekazać dokument sądowy do wyceny lub tłumaczenia?"
-          text="Dokument można przesłać e-mailem, przekazać do kancelarii albo odebrać osobiście po wcześniejszym ustaleniu terminu."
+          label="Powiązane obszary"
+          title="Sąd, Policja i prokuratura często korzystają z tych samych materiałów."
+          text="Dlatego strona sądowa jest połączona z podstronami dotyczącymi spraw karnych, Policji, prokuratury i materiału cyfrowego."
         />
 
-        <div className="grid-3">
-          {deliveryMethods.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">{item.title}</span>
+        <div className="grid-4">
+          {relatedPages.map((item) => (
+            <article className="card card-petrol" key={item.title}>
+              <span className="tag">Powiązana usługa</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
               <a className="card-link" href={item.href}>
-                {item.value}
+                Czytaj więcej →
               </a>
             </article>
           ))}
         </div>
+      </section>
 
-        <p className="note">
-          Przy większych aktach, raportach PDF, komunikatorach lub materiale
-          cyfrowym warto wskazać, które fragmenty mają zostać przetłumaczone.
-        </p>
+      <section className="section">
+        <SectionHeading
+          label="Organizacja"
+          title="Jak przekazać dokumenty sądowe do wyceny?"
+          text="Najprościej przesłać dokumenty elektronicznie. Przy większych aktach warto określić zakres, liczbę stron i oczekiwany termin."
+        />
+
+        <div className="grid-4">
+          {processSteps.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Etap</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Kontakt"
+          title="Przekaż dokument albo ustal zakres telefonicznie."
+          text="Dokumenty, skany, zdjęcia i pliki PDF można przesłać do wstępnej wyceny na e-mail kancelarii."
+        />
+
+        <div className="grid-3">
+          <article className="card card-dark">
+            <span className="tag">Kontakt bezpośredni</span>
+            <h3>{expertPhoneDisplay}</h3>
+            <p>
+              Kontakt z tłumaczem / biegłym w sprawach sądowych, akt,
+              czynności, materiału cyfrowego i pilnych ustaleń.
+            </p>
+            <a className="card-link" href={`tel:${expertPhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
+
+          <article className="card">
+            <span className="tag">Kancelaria</span>
+            <h3>{officePhoneDisplay}</h3>
+            <p>
+              Obsługa kancelaryjna, terminy, przekazanie dokumentów, odbiór
+              tłumaczenia i sprawy organizacyjne.
+            </p>
+            <a className="card-link" href={`tel:${officePhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
+
+          <article className="card">
+            <span className="tag">E-mail</span>
+            <h3>{email}</h3>
+            <p>
+              Prześlij skan, zdjęcie, PDF, raport, zrzuty ekranu albo opis
+              materiału sądowego.
+            </p>
+            <a className="card-link" href={`mailto:${email}`}>
+              Wyślij dokument →
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="FAQ"
-          title="Najczęstsze pytania dotyczące tłumaczeń sądowych."
-          text="Krótko o aktach, dokumentach elektronicznych, zakresie tłumaczenia i materiale cyfrowym."
+          title="Najczęstsze pytania o tłumaczenia sądowe."
+          text="Krótko o tłumaczeniach poświadczonych, aktach, przesłaniu dokumentów i kontakcie."
         />
 
         <div className="faq-list">
@@ -983,16 +970,19 @@ export default function CourtTranslationsPage() {
             </span>
             <span className="footer-line">TP/27/17</span>
             <span className="footer-line">
-              Kraków · dokumenty sądowe z całej Polski zdalnie
+              Kraków · dokumenty z całej Polski zdalnie
             </span>
           </div>
 
           <div>
-            <span className="footer-title">Kontakt dla organów</span>
+            <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              <a href={`tel:${institutionPhoneHref}`}>
-                {institutionPhoneDisplay}
-              </a>
+              Tłumacz / biegły:{" "}
+              <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
+            </span>
+            <span className="footer-line">
+              Kancelaria:{" "}
+              <a href={`tel:${officePhoneHref}`}>{officePhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
@@ -1009,15 +999,7 @@ export default function CourtTranslationsPage() {
               rel="noopener noreferrer"
             >
               <span className="linkedin-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                </svg>
+                in
               </span>
               LinkedIn — Vadym Rekel
             </a>

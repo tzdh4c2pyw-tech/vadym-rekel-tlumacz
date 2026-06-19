@@ -2,153 +2,143 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Tłumaczenie materiału cyfrowego ukraiński | Komunikatory, oszustwa internetowe, krypto",
+    "Tłumaczenia materiału cyfrowego ukraiński | IT, krypto, komunikatory",
   description:
-    "Tłumacz przysięgły języka ukraińskiego TP/27/17. Tłumaczenie materiału cyfrowego, komunikatorów, zrzutów ekranu, raportów PDF, danych z telefonu, dokumentów w sprawach oszustw internetowych i kryptowalut. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
+    "Tłumacz przysięgły języka ukraińskiego TP/27/17. Tłumaczenia materiału cyfrowego: komunikatory, zrzuty ekranu, raporty PDF, dane z telefonu, oszustwa internetowe, kryptowaluty i dokumenty do spraw karnych. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
   keywords: [
     "tłumaczenie materiału cyfrowego ukraiński",
     "tłumaczenie komunikatorów ukraiński",
     "tłumaczenie zrzutów ekranu ukraiński",
-    "tłumaczenie raportu z telefonu ukraiński",
-    "tłumaczenie danych z telefonu ukraiński",
-    "tłumaczenie oszustwa internetowe ukraiński",
+    "tłumaczenie raportu PDF z telefonu ukraiński",
+    "tłumaczenia IT ukraiński",
+    "tłumaczenia krypto ukraiński",
     "tłumaczenie kryptowaluty ukraiński",
-    "tłumacz przysięgły ukraiński sprawy karne",
-    "tłumaczenie WhatsApp ukraiński",
-    "tłumaczenie Telegram ukraiński",
-    "tłumaczenie Signal ukraiński"
+    "tłumaczenie oszustwa internetowe ukraiński",
+    "tłumacz ukraiński sprawy karne materiał cyfrowy",
+    "Vadym Rekel tłumacz przysięgły",
+    "TP/27/17"
   ]
 };
 
 const email = "biegly@vadymrekel.pl";
 
-const institutionPhoneDisplay = "883 040 483";
-const institutionPhoneHref = "+48883040483";
+const expertPhoneDisplay = "883 040 483";
+const expertPhoneHref = "+48883040483";
 
-const individualPhoneDisplay = "735 753 383";
-const individualPhoneHref = "+48735753383";
+const officePhoneDisplay = "735 753 383";
+const officePhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
 const digitalMaterials = [
-  "Telegram",
-  "WhatsApp",
-  "Signal",
-  "Messenger",
-  "SMS i MMS",
-  "e-mail",
-  "zrzuty ekranu",
-  "raporty PDF",
-  "dane z telefonu",
-  "eksporty rozmów",
-  "załączniki multimedialne",
-  "panele transakcyjne"
-];
-
-const caseGroups = [
-  {
-    title: "Oszustwa internetowe",
-    text: "Korespondencja elektroniczna, komunikatory, zrzuty ekranu, dane logowania, panele użytkownika, potwierdzenia płatności i materiały przekazywane jako dowód."
-  },
-  {
-    title: "Kryptowaluty",
-    text: "Materiały dotyczące giełd, portfeli, transakcji, historii przepływów, AML/KYC, potwierdzeń operacji i korespondencji z platformami."
-  },
-  {
-    title: "Dane z telefonu",
-    text: "Praca z materiałem cyfrowym, w tym danymi z telefonu, a następnie tłumaczenie treści istotnych dla sprawy."
-  },
-  {
-    title: "Sprawy karne",
-    text: "Materiał cyfrowy wykorzystywany w sprawach karnych, czynnościach Policji, postępowaniach prokuratorskich i sprawach sądowych."
-  }
-];
-
-const reportItems = [
   {
     title: "Komunikatory",
-    text: "Telegram, WhatsApp, Signal, Messenger, Viber, SMS, MMS, e-mail, eksporty rozmów i załączniki."
+    text: "Rozmowy z komunikatorów, eksporty czatów, wiadomości tekstowe, wiadomości głosowe, załączniki i chronologia rozmów."
   },
   {
     title: "Zrzuty ekranu",
-    text: "Zrzuty z aplikacji, stron internetowych, paneli transakcyjnych, giełd, portfeli, rozmów i kont użytkownika."
+    text: "Screenshoty rozmów, profili, transakcji, paneli użytkownika, aplikacji, giełd, portfeli i platform internetowych."
   },
   {
     title: "Raporty PDF",
-    text: "Raporty z telefonu, eksporty danych, zestawienia, tabele, dokumenty wielostronicowe i załączniki do akt."
+    text: "Raporty z telefonu, raporty z narzędzi informatycznych, zestawienia danych, eksporty wiadomości i pliki dołączane do akt."
   },
   {
-    title: "Krypto i fraud",
-    text: "Materiały dotyczące oszustw internetowych, kryptowalut, przepływów środków, giełd, portfeli i AML/KYC."
+    title: "Dane z telefonu",
+    text: "SMS, e-mail, historia połączeń, komunikatory, pliki, zdjęcia, nazwy kontaktów, daty, godziny i dane techniczne."
+  },
+  {
+    title: "Oszustwa internetowe",
+    text: "Materiały dotyczące platform inwestycyjnych, fałszywych kont, przelewów, komunikatorów, wiadomości i kontaktów sprawców."
+  },
+  {
+    title: "Kryptowaluty",
+    text: "Materiały dotyczące portfeli, giełd, adresów, transakcji, platform, potwierdzeń, instrukcji i korespondencji."
   }
 ];
 
-const contextItems = [
-  "oznaczenie nadawcy i odbiorcy",
-  "daty i godziny wiadomości",
-  "kolejność rozmowy",
-  "załączniki i multimedia",
-  "nazwy użytkowników",
-  "adresy e-mail",
-  "numery telefonu",
-  "linki i identyfikatory",
-  "kwoty i waluty",
-  "transakcje",
-  "statusy płatności",
-  "nazwy platform"
+const relatedPages = [
+  {
+    title: "Sprawy karne",
+    text: "Akta, protokoły, materiał cyfrowy, korespondencja osadzonych i dokumenty z Ukrainy.",
+    href: "/tlumaczenia-sprawy-karne-ukrainski"
+  },
+  {
+    title: "Tłumaczenia dla Policji",
+    text: "Czynności, notatki, protokoły, pouczenia, komunikatory i materiał dowodowy.",
+    href: "/tlumaczenia-dla-policji"
+  },
+  {
+    title: "Tłumaczenia dla prokuratury",
+    text: "Postępowania przygotowawcze, pomoc prawna z Ukrainą, akta i materiał dowodowy.",
+    href: "/tlumaczenia-dla-prokuratury"
+  },
+  {
+    title: "Tłumaczenia sądowe",
+    text: "Akta spraw, protokoły, wyroki, postanowienia, pisma procesowe i załączniki.",
+    href: "/tlumaczenia-sadowe-ukrainski"
+  }
 ];
 
-const deliveryMethods = [
+const processSteps = [
   {
-    title: "E-mail",
-    text: "Prześlij plik PDF, zrzuty ekranu, eksport rozmów albo opis materiału na adres:",
-    value: email,
-    href: `mailto:${email}`
+    title: "Przekazanie materiału",
+    text: "Do wstępnej wyceny można przesłać PDF, zrzuty ekranu, eksport rozmów, pliki tekstowe, zdjęcia albo opis materiału."
   },
   {
-    title: "Adres kancelarii",
-    text: "Nośnik albo dokument można przekazać do kancelarii:",
-    value: "ul. Kielecka 2/53, 31-526 Kraków",
-    href: "#kontakt"
+    title: "Opis zakresu",
+    text: "Warto wskazać, które rozmowy, daty, strony, pliki albo fragmenty mają zostać objęte tłumaczeniem."
   },
   {
-    title: "Odbiór osobisty",
-    text: "Odbiór tłumaczenia albo przekazanie większego materiału jest możliwe po wcześniejszym uzgodnieniu terminu.",
-    value: "po uzgodnieniu",
-    href: `tel:${institutionPhoneHref}`
+    title: "Ocena czytelności",
+    text: "Znaczenie ma jakość zrzutów, kolejność wiadomości, kompletność danych, widoczność dat i oznaczeń uczestników."
+  },
+  {
+    title: "Realizacja tłumaczenia",
+    text: "Tłumaczenie jest przygotowywane z zachowaniem układu, chronologii, oznaczeń technicznych i kontekstu sprawy."
   }
+];
+
+const caseTypes = [
+  "komunikatory",
+  "zrzuty ekranu",
+  "raporty PDF",
+  "SMS",
+  "e-mail",
+  "dane z telefonu",
+  "portfele kryptowalut",
+  "giełdy kryptowalut",
+  "platformy inwestycyjne",
+  "potwierdzenia przelewów",
+  "oszustwa internetowe",
+  "materiał do akt"
 ];
 
 const faqItems = [
   {
-    question: "Czy tłumaczone są komunikatory, takie jak Telegram, WhatsApp albo Signal?",
+    question: "Czy można przetłumaczyć zrzuty ekranu z komunikatora?",
     answer:
-      "Tak. Tłumaczenie może obejmować treść rozmów, daty, godziny, oznaczenia nadawców, załączniki oraz inne elementy potrzebne do zrozumienia materiału."
+      "Tak. Do wstępnej wyceny można przesłać zrzuty ekranu rozmów, eksporty czatów, raporty PDF albo opis materiału. Przy większej liczbie zrzutów warto wskazać zakres istotny dla sprawy."
   },
   {
-    question: "Czy można przesłać zrzuty ekranu do wyceny?",
+    question: "Czy tłumaczenie może obejmować materiał z telefonu?",
     answer:
-      "Tak. Do wstępnej wyceny można przesłać zrzuty ekranu, plik PDF, eksport rozmów albo opis materiału na adres biegly@vadymrekel.pl."
+      "Tak. Zakres może obejmować SMS, e-mail, komunikatory, historię rozmów, raporty PDF, dane kontaktowe, daty, godziny oraz inne elementy utrwalone w materiale."
   },
   {
-    question: "Czy tłumaczone są raporty z telefonu?",
+    question: "Czy kancelaria tłumaczy materiały dotyczące kryptowalut?",
     answer:
-      "Tak. Zakres może obejmować raporty PDF, eksporty danych, tabele, komunikatory, SMS, e-mail, załączniki i inne materiały cyfrowe."
+      "Tak. Tłumaczenie może obejmować korespondencję, potwierdzenia, adresy portfeli, transakcje, platformy, giełdy, instrukcje oraz materiał związany z oszustwami internetowymi."
   },
   {
-    question: "Czy strona dotyczy odzyskiwania danych z telefonu?",
+    question: "Czy taki materiał może być tłumaczony do sprawy karnej?",
     answer:
-      "Zakres strony dotyczy przede wszystkim tłumaczenia materiału cyfrowego. W ramach odrębnego przygotowania technicznego możliwa jest praca z materiałem cyfrowym, w tym danymi z telefonu, a następnie tłumaczenie treści istotnych dla sprawy."
+      "Tak. Materiał cyfrowy często występuje w sprawach karnych, policyjnych, prokuratorskich i sądowych."
   },
   {
-    question: "Czy tłumaczone są materiały dotyczące kryptowalut?",
+    question: "Który numer telefonu wybrać?",
     answer:
-      "Tak. Tłumaczenie może obejmować materiały dotyczące giełd, portfeli, transakcji, AML/KYC, przepływów środków i korespondencji z platformami."
-  },
-  {
-    question: "Czy kancelaria obsługuje dokumenty z całej Polski?",
-    answer:
-      "Tak. Kancelaria ma siedzibę w Krakowie, ale materiał do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
+      "Wszystkie sprawy można zgłaszać na oba numery. Numer 883 040 483 służy do bezpośredniego kontaktu z tłumaczem / biegłym, a numer 735 753 383 do kontaktu z kancelarią."
   }
 ];
 
@@ -172,15 +162,15 @@ function SectionHeading({
   );
 }
 
-export default function ItCryptoTranslationsPage() {
+export default function DigitalCryptoTranslationsPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Tłumaczenie materiału cyfrowego z języka ukraińskiego",
+    name: "Tłumaczenia materiału cyfrowego z języka ukraińskiego",
     provider: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-      telephone: institutionPhoneHref,
+      telephone: expertPhoneHref,
       email,
       address: {
         "@type": "PostalAddress",
@@ -195,7 +185,7 @@ export default function ItCryptoTranslationsPage() {
       name: "Polska"
     },
     serviceType:
-      "Tłumaczenie komunikatorów, zrzutów ekranu, raportów PDF, danych z telefonu i materiałów w sprawach oszustw internetowych"
+      "Tłumaczenia materiału cyfrowego, komunikatorów, raportów PDF i kryptowalut z języka ukraińskiego"
   };
 
   return (
@@ -209,6 +199,7 @@ export default function ItCryptoTranslationsPage() {
         :root {
           --bg: #f5f0e6;
           --paper: #fffaf2;
+          --paper-soft: #f8f1e6;
           --ink: #13100c;
           --muted: #6e6256;
           --line: rgba(19, 16, 12, 0.14);
@@ -219,7 +210,7 @@ export default function ItCryptoTranslationsPage() {
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -234,7 +225,7 @@ export default function ItCryptoTranslationsPage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -254,7 +245,7 @@ export default function ItCryptoTranslationsPage() {
         }
 
         .nav {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -321,11 +312,11 @@ export default function ItCryptoTranslationsPage() {
         }
 
         .hero {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.14fr 0.86fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -333,13 +324,14 @@ export default function ItCryptoTranslationsPage() {
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 52px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -355,13 +347,13 @@ export default function ItCryptoTranslationsPage() {
         h1 {
           margin: 0;
           max-width: 820px;
-          font-size: clamp(40px, 5.1vw, 66px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
+          margin: 24px 0 0;
           max-width: 760px;
           color: var(--muted);
           font-size: 20px;
@@ -369,7 +361,7 @@ export default function ItCryptoTranslationsPage() {
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -405,72 +397,72 @@ export default function ItCryptoTranslationsPage() {
           color: var(--ink);
         }
 
+        .hero-note {
+          margin-top: 22px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
         .hero-side {
           border-radius: var(--radius);
           background:
-            linear-gradient(150deg, rgba(29, 62, 74, 0.98), rgba(16, 41, 50, 0.99)),
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
             repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 30px;
+          padding: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 410px;
         }
 
         .hero-side h2 {
           margin: 0;
           color: #fff;
-          font-size: 35px;
-          line-height: 1;
+          font-size: 38px;
+          line-height: 0.98;
           letter-spacing: -0.045em;
         }
 
         .hero-side p {
           margin: 16px 0 0;
           color: rgba(255,255,255,0.76);
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1.55;
         }
 
-        .phone-main {
+        .phone-large {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 64px;
-          margin-top: 22px;
+          min-height: 68px;
+          margin-top: 28px;
           border-radius: 18px;
           background: #fffaf2;
           color: var(--green);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
+          font-size: 27px;
           font-weight: 950;
         }
 
-        .trust {
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 22px 28px;
-        }
-
-        .trust-inner {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          padding: 14px 18px;
-          color: var(--muted);
+        .notice {
+          margin-top: 18px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          padding: 18px;
+          color: rgba(255,255,255,0.82);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-          line-height: 1.5;
-          text-align: center;
+          font-size: 14px;
+          font-weight: 800;
+          line-height: 1.55;
         }
 
         .section {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -592,32 +584,6 @@ export default function ItCryptoTranslationsPage() {
           color: rgba(255,255,255,0.76);
         }
 
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
-        }
-
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .card-dark .list li,
-        .card-petrol .list li {
-          color: rgba(255,255,255,0.78);
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
-        }
-
         .card-link {
           display: inline-flex;
           margin-top: 20px;
@@ -627,15 +593,20 @@ export default function ItCryptoTranslationsPage() {
           font-weight: 900;
         }
 
+        .card-dark .card-link,
+        .card-petrol .card-link {
+          color: #fff;
+        }
+
         .feature {
           border-radius: var(--radius);
           background: var(--ink);
           color: #fff;
-          padding: 40px;
+          padding: 44px;
           box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
-          gap: 30px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
           align-items: center;
         }
 
@@ -655,7 +626,7 @@ export default function ItCryptoTranslationsPage() {
         }
 
         .labels {
-          margin-top: 20px;
+          margin-top: 22px;
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -672,13 +643,6 @@ export default function ItCryptoTranslationsPage() {
           font-weight: 900;
           letter-spacing: 0.06em;
           text-transform: uppercase;
-        }
-
-        .note {
-          margin-top: 18px;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.55;
         }
 
         .faq-list {
@@ -719,7 +683,7 @@ export default function ItCryptoTranslationsPage() {
         }
 
         .footer-inner {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -780,8 +744,7 @@ export default function ItCryptoTranslationsPage() {
 
         @media (max-width: 620px) {
           .hero,
-          .section,
-          .trust {
+          .section {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -797,11 +760,11 @@ export default function ItCryptoTranslationsPage() {
           }
 
           h1 {
-            font-size: 38px;
+            font-size: 40px;
           }
 
           .button,
-          .phone-main {
+          .phone-large {
             width: 100%;
           }
         }
@@ -821,12 +784,13 @@ export default function ItCryptoTranslationsPage() {
 
           <div className="nav-links">
             <a href="/">Strona główna</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Sądy</a>
             <a href="/tlumaczenia-dla-policji">Policja</a>
             <a href="/tlumaczenia-dla-prokuratury">Prokuratura</a>
-            <a href="/dokumenty-z-ukrainy">Dokumenty z Ukrainy</a>
-            <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
+            <a href="/kontakt">Kontakt</a>
+            <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
+              {expertPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -835,121 +799,69 @@ export default function ItCryptoTranslationsPage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Materiał cyfrowy · komunikatory · oszustwa internetowe · krypto
+            Materiał cyfrowy · IT · krypto · język ukraiński
           </span>
 
-          <h1>
-            Tłumaczenie materiału cyfrowego z języka ukraińskiego.
-          </h1>
+          <h1>Tłumaczenia materiału cyfrowego w języku ukraińskim.</h1>
 
           <p className="lead">
-            Tłumaczenie komunikatorów, zrzutów ekranu, raportów PDF, danych z
-            telefonu, korespondencji elektronicznej oraz dokumentów w sprawach
-            oszustw internetowych i kryptowalut.
+            Tłumaczenia komunikatorów, zrzutów ekranu, raportów PDF, danych z
+            telefonu, materiałów dotyczących oszustw internetowych, kryptowalut
+            oraz dokumentów cyfrowych wykorzystywanych w sprawach karnych.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
-              Sąd · Policja · Prokuratura: {institutionPhoneDisplay}
+            <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
+              Tłumacz / biegły: {expertPhoneDisplay}
             </a>
-            <a className="button button-secondary" href={`mailto:${email}`}>
+            <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
+              Kancelaria: {officePhoneDisplay}
+            </a>
+            <a className="button button-secondary" href="/kontakt">
               Wyślij materiał do wyceny
             </a>
           </div>
+
+          <p className="hero-note">
+            Wszystkie sprawy można zgłaszać na oba numery telefonu. Numer{" "}
+            {expertPhoneDisplay} służy do bezpośredniego kontaktu z tłumaczem /
+            biegłym, a numer {officePhoneDisplay} do kontaktu z kancelarią.
+          </p>
         </div>
 
         <aside className="hero-side">
           <div>
-            <h2>Vadym Rekel</h2>
+            <h2>Materiał cyfrowy wymaga zachowania chronologii i struktury.</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Materiał cyfrowy można przesłać do
-              wstępnej wyceny elektronicznie z całej Polski.
+              Przy tłumaczeniu rozmów, zrzutów ekranu, raportów i danych z
+              telefonu znaczenie mają daty, godziny, uczestnicy, załączniki,
+              kolejność wiadomości i kontekst sprawy.
             </p>
+
+            <div className="notice">
+              Do wyceny można przesłać pliki PDF, zrzuty ekranu, eksporty
+              rozmów, zdjęcia albo opis materiału. Kancelaria ma siedzibę w
+              Krakowie, ale materiały można przekazać elektronicznie z całej
+              Polski.
+            </div>
           </div>
 
-          <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-            {institutionPhoneDisplay}
+          <a className="phone-large" href={`tel:${expertPhoneHref}`}>
+            {expertPhoneDisplay}
           </a>
         </aside>
-      </section>
-
-      <section className="trust">
-        <div className="trust-inner">
-          TP/27/17 · tłumaczenie materiału cyfrowego · komunikatory · raporty
-          PDF · dane z telefonu · dokumenty z całej Polski zdalnie
-        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="Zakres"
-          title="Komunikatory, zrzuty ekranu, raporty PDF i dane z telefonu."
-          text="Materiał cyfrowy może być przekazywany jako załącznik do sprawy, materiał dowodowy, dokumentacja czynności albo część akt."
+          title="Jakie materiały cyfrowe można przekazać do tłumaczenia?"
+          text="Zakres zależy od rodzaju plików, celu tłumaczenia, czytelności materiału i tego, które fragmenty mają znaczenie dla sprawy."
         />
 
         <div className="grid-3">
-          <article className="card">
-            <span className="tag">Komunikatory i rozmowy</span>
-            <h3>Rozmowy, wiadomości i załączniki.</h3>
-            <ul className="list">
-              {digitalMaterials.slice(0, 6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card">
-            <span className="tag">Raporty i dane</span>
-            <h3>Raporty PDF, dane z telefonu i eksporty.</h3>
-            <ul className="list">
-              {digitalMaterials.slice(6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card card-dark">
-            <span className="tag">Kontakt</span>
-            <h3>Materiał do sprawy albo akt.</h3>
-            <p>
-              W sprawach kierowanych przez organy właściwy kontakt to numer dla
-              sądów, Policji i prokuratury.
-            </p>
-            <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Sprawy"
-          title="Oszustwa internetowe, kryptowaluty, dane z telefonu i sprawy karne."
-          text="Zakres zależy od materiału, celu tłumaczenia i sposobu wykorzystania dokumentów w dalszym postępowaniu."
-        />
-
-        <div className="grid-2">
-          {caseGroups.map((item) => (
+          {digitalMaterials.map((item) => (
             <article className="card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Typy materiałów"
-          title="Materiał cyfrowy wymagający uporządkowania kontekstu."
-          text="W tłumaczeniu materiału cyfrowego znaczenie mają nie tylko słowa, ale także daty, osoby, identyfikatory, załączniki, kolejność wiadomości i kontekst techniczny."
-        />
-
-        <div className="grid-4">
-          {reportItems.map((item) => (
-            <article className="card card-petrol" key={item.title}>
               <span className="tag">Materiał cyfrowy</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
@@ -961,22 +873,73 @@ export default function ItCryptoTranslationsPage() {
       <section className="section">
         <div className="feature">
           <div>
-            <p className="section-label">Kontekst techniczny</p>
-            <h2>
-              W materiale cyfrowym ważne są osoby, daty, kolejność i źródło danych.
-            </h2>
+            <p className="section-label">Sprawy karne</p>
+            <h2>Komunikatory, raporty i dane cyfrowe jako materiał dowodowy.</h2>
           </div>
 
           <div>
             <p>
-              Wiadomości, raporty i zrzuty ekranu mogą mieć znaczenie procesowe
-              dopiero po zachowaniu kontekstu: kto pisał, kiedy, do kogo, w
-              jakiej aplikacji, jakiego załącznika dotyczy rozmowa i jaki jest
-              związek z pozostałym materiałem.
+              Materiał cyfrowy często występuje w sprawach policyjnych,
+              prokuratorskich i sądowych. Może obejmować rozmowy, pliki,
+              raporty, wiadomości, dane z telefonu, potwierdzenia transakcji i
+              inne elementy istotne dla przebiegu sprawy.
+            </p>
+
+            <div className="hero-actions">
+              <a
+                className="button button-secondary"
+                href="/tlumaczenia-sprawy-karne-ukrainski"
+              >
+                Zobacz stronę: sprawy karne
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Powiązane obszary"
+          title="Materiał cyfrowy często trafia do akt Policji, prokuratury i sądu."
+          text="Dlatego ta strona jest połączona z podstronami dotyczącymi spraw karnych oraz organów procesowych."
+        />
+
+        <div className="grid-4">
+          {relatedPages.map((item) => (
+            <article className="card card-petrol" key={item.title}>
+              <span className="tag">Powiązana usługa</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <a className="card-link" href={item.href}>
+                Czytaj więcej →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Typowe materiały"
+          title="Najczęstsze rodzaje materiału cyfrowego."
+          text="Przy większym materiale warto wskazać dokładny zakres tłumaczenia: strony raportu, daty, rozmówców albo konkretne fragmenty."
+        />
+
+        <div className="feature">
+          <div>
+            <p className="section-label">Pliki i dane</p>
+            <h2>Rozmowy, raporty, transakcje i dane z urządzeń.</h2>
+          </div>
+
+          <div>
+            <p>
+              Tłumaczenie materiału cyfrowego powinno umożliwiać zrozumienie
+              treści, kolejności zdarzeń, oznaczeń uczestników i charakteru
+              załączników.
             </p>
 
             <div className="labels">
-              {contextItems.map((item) => (
+              {caseTypes.map((item) => (
                 <span className="label" key={item}>
                   {item}
                 </span>
@@ -988,65 +951,73 @@ export default function ItCryptoTranslationsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Dane z telefonu"
-          title="Praca z materiałem cyfrowym i tłumaczenie treści istotnych dla sprawy."
-          text="Zakres strony dotyczy przede wszystkim tłumaczenia materiału cyfrowego. W ramach odrębnego przygotowania technicznego możliwa jest praca z materiałem cyfrowym, w tym danymi z telefonu, a następnie tłumaczenie treści istotnych dla sprawy."
+          label="Organizacja"
+          title="Jak przesłać materiał cyfrowy do wyceny?"
+          text="Najlepiej przesłać plik albo próbkę materiału oraz krótko opisać, które fragmenty mają zostać przetłumaczone."
         />
 
-        <div className="grid-2">
-          <article className="card">
-            <span className="tag">Tłumaczenie</span>
-            <h3>Treść rozmów, raportów i dokumentów.</h3>
-            <p>
-              Tłumaczenie może obejmować wiadomości, opisy, dane z raportów,
-              elementy interfejsu, oznaczenia osób, daty, godziny, komentarze i
-              załączniki.
-            </p>
-          </article>
-
-          <article className="card">
-            <span className="tag">Porządkowanie materiału</span>
-            <h3>Zakres, fragmenty i priorytety.</h3>
-            <p>
-              Przy dużych raportach, eksportach rozmów albo wielu zrzutach
-              ekranu warto wskazać, które fragmenty mają zostać przetłumaczone.
-            </p>
-          </article>
+        <div className="grid-4">
+          {processSteps.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Etap</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="section">
         <SectionHeading
-          label="Przekazanie materiału"
-          title="Jak przekazać materiał cyfrowy do wyceny lub tłumaczenia?"
-          text="Materiał można przesłać e-mailem, przekazać do kancelarii albo odebrać osobiście po wcześniejszym ustaleniu terminu."
+          label="Kontakt"
+          title="Przekaż plik, raport albo zrzuty ekranu do wstępnej wyceny."
+          text="Materiał można przesłać elektronicznie. Przy większych plikach warto najpierw ustalić zakres i sposób przekazania."
         />
 
         <div className="grid-3">
-          {deliveryMethods.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">{item.title}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <a className="card-link" href={item.href}>
-                {item.value}
-              </a>
-            </article>
-          ))}
-        </div>
+          <article className="card card-dark">
+            <span className="tag">Kontakt bezpośredni</span>
+            <h3>{expertPhoneDisplay}</h3>
+            <p>
+              Kontakt z tłumaczem / biegłym w sprawach materiału cyfrowego,
+              komunikatorów, akt, czynności i pilnych ustaleń.
+            </p>
+            <a className="card-link" href={`tel:${expertPhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
 
-        <p className="note">
-          Przy większych raportach PDF, komunikatorach, zrzutach ekranu lub
-          danych z telefonu warto wskazać, które fragmenty mają zostać
-          przetłumaczone.
-        </p>
+          <article className="card">
+            <span className="tag">Kancelaria</span>
+            <h3>{officePhoneDisplay}</h3>
+            <p>
+              Obsługa kancelaryjna, terminy, przekazanie plików, odbiór
+              tłumaczenia i sprawy organizacyjne.
+            </p>
+            <a className="card-link" href={`tel:${officePhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
+
+          <article className="card">
+            <span className="tag">E-mail</span>
+            <h3>{email}</h3>
+            <p>
+              Prześlij PDF, zrzuty ekranu, eksport rozmów, plik tekstowy,
+              zdjęcie albo opis materiału.
+            </p>
+            <a className="card-link" href={`mailto:${email}`}>
+              Wyślij materiał →
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="FAQ"
-          title="Najczęstsze pytania dotyczące materiału cyfrowego."
-          text="Krótko o komunikatorach, zrzutach ekranu, raportach PDF, danych z telefonu i sprawach kryptowalutowych."
+          title="Najczęstsze pytania o tłumaczenie materiału cyfrowego."
+          text="Krótko o komunikatorach, zrzutach ekranu, raportach PDF, kryptowalutach i materiale do spraw karnych."
         />
 
         <div className="faq-list">
@@ -1059,7 +1030,7 @@ export default function ItCryptoTranslationsPage() {
         </div>
       </section>
 
-      <footer className="footer" id="kontakt">
+      <footer className="footer">
         <div className="footer-inner">
           <div>
             <span className="footer-title">Kancelaria Vadym Rekel</span>
@@ -1075,14 +1046,12 @@ export default function ItCryptoTranslationsPage() {
           <div>
             <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              Sąd · Policja · Prokuratura:{" "}
-              <a href={`tel:${institutionPhoneHref}`}>
-                {institutionPhoneDisplay}
-              </a>
+              Tłumacz / biegły:{" "}
+              <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
             </span>
             <span className="footer-line">
-              Klienci indywidualni:{" "}
-              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+              Kancelaria:{" "}
+              <a href={`tel:${officePhoneHref}`}>{officePhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
@@ -1099,15 +1068,7 @@ export default function ItCryptoTranslationsPage() {
               rel="noopener noreferrer"
             >
               <span className="linkedin-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                </svg>
+                in
               </span>
               LinkedIn — Vadym Rekel
             </a>

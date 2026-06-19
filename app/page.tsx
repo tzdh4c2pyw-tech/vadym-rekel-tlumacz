@@ -49,6 +49,11 @@ const authorityCards = [
 
 const serviceCards = [
   {
+    title: "Sprawy karne",
+    text: "Akta, protokoły, dokumenty procesowe, materiał cyfrowy, komunikatory, korespondencja osadzonych i dokumenty z Ukrainy.",
+    href: "/tlumaczenia-sprawy-karne-ukrainski"
+  },
+  {
     title: "Dokumenty z Ukrainy",
     text: "Dokumenty urzędowe, sądowe, procesowe i prywatne pochodzące z Ukrainy albo kierowane do organów ukraińskich.",
     href: "/dokumenty-z-ukrainy"
@@ -155,7 +160,9 @@ export default function HomePage() {
       "Tłumaczenia dla sądów",
       "Tłumaczenia dla Policji",
       "Tłumaczenia dla prokuratury",
-      "Tłumaczenia dokumentów z Ukrainy"
+      "Tłumaczenia w sprawach karnych",
+      "Tłumaczenia dokumentów z Ukrainy",
+      "Tłumaczenia materiału cyfrowego"
     ]
   };
 
@@ -495,6 +502,12 @@ export default function HomePage() {
           gap: 16px;
         }
 
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+
         .card {
           border-radius: 24px;
           border: 1px solid var(--line);
@@ -792,6 +805,7 @@ export default function HomePage() {
 
           .grid-2,
           .grid-3,
+          .grid-4,
           .photo-grid {
             grid-template-columns: 1fr;
           }
@@ -848,6 +862,7 @@ export default function HomePage() {
 
           <div className="nav-links">
             <a href="#organy">Dla organów</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="#specjalizacja">Specjalizacja</a>
             <a href="#dokumenty">Dokumenty</a>
             <a href="#kancelaria">Kancelaria</a>
@@ -960,6 +975,15 @@ export default function HomePage() {
               <span className="label">dane z telefonu</span>
               <span className="label">oszustwa internetowe</span>
             </div>
+
+            <div className="hero-actions">
+              <a
+                className="button button-secondary"
+                href="/tlumaczenia-sprawy-karne-ukrainski"
+              >
+                Zobacz stronę: sprawy karne
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -971,7 +995,7 @@ export default function HomePage() {
           text="Szczegółowe informacje są dostępne na podstronach. Strona główna pozostaje krótka i przejrzysta."
         />
 
-        <div className="grid-3">
+        <div className="grid-4">
           {serviceCards.map((item) => (
             <article className="card card-petrol" key={item.title}>
               <span className="tag">Zakres</span>

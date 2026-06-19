@@ -2,152 +2,143 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Transkrypcje nagrań audio i wideo | Język ukraiński, sprawy karne, sąd, Policja",
+    "Transkrypcje nagrań audio i wideo ukraiński | Tłumacz przysięgły",
   description:
-    "Transkrypcje nagrań audio i wideo w języku ukraińskim oraz tłumaczenie treści nagrań. Materiały do spraw karnych, sądowych, policyjnych i prokuratorskich. Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie, dokumenty z całej Polski zdalnie.",
+    "Transkrypcje i tłumaczenia nagrań audio/wideo w języku ukraińskim. Tłumacz przysięgły języka ukraińskiego TP/27/17. Nagrania do spraw sądowych, policyjnych, prokuratorskich i karnych. Kancelaria w Krakowie, materiały z całej Polski zdalnie.",
   keywords: [
-    "transkrypcje nagrań ukraiński",
+    "transkrypcja nagrania ukraiński",
+    "tłumaczenie nagrania ukraiński",
     "transkrypcja audio ukraiński",
     "transkrypcja wideo ukraiński",
-    "tłumaczenie nagrań ukraiński",
-    "tłumacz przysięgły ukraiński nagrania",
-    "transkrypcja nagrania do sądu",
-    "transkrypcja nagrania dla Policji",
-    "transkrypcja nagrania dla prokuratury",
-    "tłumaczenie rozmów ukraiński",
-    "tłumaczenie materiału dowodowego ukraiński"
+    "tłumacz przysięgły ukraiński nagranie",
+    "tłumaczenie nagrania do sądu ukraiński",
+    "tłumaczenie wiadomości głosowych ukraiński",
+    "tłumaczenie rozmowy ukraiński",
+    "tłumacz ukraiński sprawy karne nagranie",
+    "Vadym Rekel tłumacz przysięgły",
+    "TP/27/17"
   ]
 };
 
 const email = "biegly@vadymrekel.pl";
 
-const institutionPhoneDisplay = "883 040 483";
-const institutionPhoneHref = "+48883040483";
+const expertPhoneDisplay = "883 040 483";
+const expertPhoneHref = "+48883040483";
 
-const individualPhoneDisplay = "735 753 383";
-const individualPhoneHref = "+48735753383";
+const officePhoneDisplay = "735 753 383";
+const officePhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
-const recordingTypes = [
-  "nagrania rozmów",
-  "nagrania z telefonu",
-  "pliki audio",
-  "pliki wideo",
-  "wiadomości głosowe",
-  "nagrania z komunikatorów",
-  "materiał z czynności",
-  "nagrania dowodowe",
-  "rozmowy w sprawach karnych",
-  "materiały do akt",
-  "fragmenty nagrań",
-  "załączniki cyfrowe"
-];
-
-const serviceScopes = [
+const recordingMaterials = [
   {
-    title: "Transkrypcja",
-    text: "Sporządzenie zapisu treści nagrania w języku źródłowym, z uwzględnieniem kolejności wypowiedzi, rozmówców i kontekstu rozmowy."
+    title: "Nagrania audio",
+    text: "Rozmowy, wypowiedzi, wiadomości głosowe, nagrania z telefonu, pliki dźwiękowe i materiał przekazywany do sprawy."
+  },
+  {
+    title: "Nagrania wideo",
+    text: "Nagrania z obrazem i dźwiękiem, wypowiedzi uczestników, fragmenty rozmów, rejestracje zdarzeń i załączniki wideo."
+  },
+  {
+    title: "Wiadomości głosowe",
+    text: "Wiadomości z komunikatorów, nagrania przesłane w aplikacjach, krótkie wypowiedzi i fragmenty rozmów."
+  },
+  {
+    title: "Materiał do spraw karnych",
+    text: "Nagrania przekazywane do akt sądowych, policyjnych, prokuratorskich, kancelarii prawnych albo pełnomocników."
+  },
+  {
+    title: "Transkrypcja treści",
+    text: "Spisanie treści nagrania z oznaczeniem wypowiedzi, kolejności, fragmentów istotnych i ewentualnych problemów z czytelnością dźwięku."
   },
   {
     title: "Tłumaczenie treści nagrania",
-    text: "Tłumaczenie wypowiedzi ukraińskich na język polski, zwłaszcza gdy nagranie ma być użyte jako materiał w sprawie."
-  },
-  {
-    title: "Materiał do akt",
-    text: "Praca z nagraniami przekazywanymi jako załączniki, materiał dowodowy, fragment akt albo dokumentacja czynności."
-  },
-  {
-    title: "Sprawy karne i oszustwa internetowe",
-    text: "Nagrania rozmów, wiadomości głosowe, komunikatory, kontekst oszustw internetowych, przepływów środków i działań sprawców."
+    text: "Tłumaczenie wypowiedzi ukraińskich na język polski, w zakresie ustalonym po wstępnej ocenie materiału."
   }
 ];
 
-const contextItems = [
-  "oznaczenie rozmówców",
-  "kolejność wypowiedzi",
-  "czas nagrania",
-  "daty i godziny",
-  "fragmenty niezrozumiałe",
-  "pauzy i przerwania",
-  "język potoczny",
-  "wulgaryzmy",
-  "emocjonalny ton",
-  "nazwy własne",
-  "kwoty i waluty",
-  "istotne załączniki"
-];
-
-const recipientGroups = [
+const relatedPages = [
   {
-    title: "Sądy",
-    text: "Transkrypcje i tłumaczenia nagrań składanych jako materiał do akt, załącznik, dowód albo fragment dokumentacji sprawy."
+    title: "Sprawy karne",
+    text: "Nagrania jako materiał w aktach, czynnościach, postępowaniach przygotowawczych i sprawach sądowych.",
+    href: "/tlumaczenia-sprawy-karne-ukrainski"
   },
   {
-    title: "Policja",
-    text: "Nagrania rozmów, wiadomości głosowe, komunikatory, zrzuty ekranu i inne materiały przekazywane w związku z czynnościami."
+    title: "Tłumaczenia dla Policji",
+    text: "Nagrania, komunikatory, wiadomości głosowe, protokoły i materiał do czynności policyjnych.",
+    href: "/tlumaczenia-dla-policji"
   },
   {
-    title: "Prokuratura",
-    text: "Materiały audio i wideo w sprawach karnych, oszustwach internetowych, czynnościach procesowych i postępowaniach przygotowawczych."
+    title: "Tłumaczenia dla prokuratury",
+    text: "Nagrania i materiał dowodowy w postępowaniach przygotowawczych oraz aktach prokuratorskich.",
+    href: "/tlumaczenia-dla-prokuratury"
   },
   {
-    title: "Klienci indywidualni",
-    text: "Nagrania prywatne, rozmowy, wiadomości głosowe i materiały przygotowywane do konsultacji, pełnomocnika lub instytucji."
+    title: "Materiał cyfrowy",
+    text: "Komunikatory, raporty PDF, dane z telefonu, wiadomości, zrzuty ekranu i pliki cyfrowe.",
+    href: "/tlumaczenia-it-krypto"
   }
 ];
 
-const deliveryMethods = [
+const processSteps = [
   {
-    title: "E-mail",
-    text: "Prześlij plik, link do pobrania albo opis nagrania na adres:",
-    value: email,
-    href: `mailto:${email}`
+    title: "Prześlij materiał",
+    text: "Do wstępnej oceny można przesłać plik audio, wideo, wiadomość głosową albo próbkę nagrania."
   },
   {
-    title: "Adres kancelarii",
-    text: "Nośnik z nagraniem można przekazać do kancelarii:",
-    value: "ul. Kielecka 2/53, 31-526 Kraków",
-    href: "#kontakt"
+    title: "Opisz cel",
+    text: "Warto wskazać, czy materiał jest do sądu, Policji, prokuratury, kancelarii prawnej albo do użytku prywatnego."
   },
   {
-    title: "Odbiór osobisty",
-    text: "Odbiór tłumaczenia lub przekazanie nośnika jest możliwe po wcześniejszym uzgodnieniu terminu.",
-    value: "po uzgodnieniu",
-    href: `tel:${institutionPhoneHref}`
+    title: "Wskaż zakres",
+    text: "Przy dłuższym nagraniu należy określić fragmenty, minuty, rozmówców albo części istotne dla sprawy."
+  },
+  {
+    title: "Ocena jakości",
+    text: "Termin i możliwość realizacji zależą od jakości dźwięku, liczby rozmówców, zakłóceń, długości nagrania i języka wypowiedzi."
   }
+];
+
+const caseTypes = [
+  "nagrania audio",
+  "nagrania wideo",
+  "wiadomości głosowe",
+  "rozmowy telefoniczne",
+  "komunikatory",
+  "materiał dowodowy",
+  "sprawy karne",
+  "czynności procesowe",
+  "sąd",
+  "Policja",
+  "prokuratura",
+  "akta sprawy"
 ];
 
 const faqItems = [
   {
-    question: "Czy można przesłać nagranie do wstępnej wyceny?",
+    question: "Czy można przetłumaczyć nagranie w języku ukraińskim?",
     answer:
-      "Tak. Do wstępnej wyceny można przesłać plik, link do pobrania albo opis materiału na adres biegly@vadymrekel.pl. Warto podać długość nagrania, język, cel tłumaczenia i oczekiwany termin."
+      "Tak. Można przesłać nagranie audio, wideo albo wiadomość głosową do wstępnej oceny. Możliwość i termin realizacji zależą od jakości dźwięku, długości nagrania, liczby rozmówców i zakresu tłumaczenia."
   },
   {
-    question: "Czy możliwa jest transkrypcja tylko fragmentu nagrania?",
+    question: "Czy najpierw wykonywana jest transkrypcja?",
     answer:
-      "Tak. Przy dłuższych nagraniach można wskazać zakres czasowy albo fragmenty, które mają zostać przepisane lub przetłumaczone."
+      "W wielu przypadkach najpierw konieczne jest ustalenie treści nagrania, czyli transkrypcja, a następnie tłumaczenie treści. Zakres zależy od celu wykorzystania materiału."
   },
   {
-    question: "Czy tłumaczone są wiadomości głosowe z komunikatorów?",
+    question: "Czy można przetłumaczyć tylko fragment nagrania?",
     answer:
-      "Tak. Zakres może obejmować wiadomości głosowe, nagrania rozmów, komunikatory, pliki audio, pliki wideo i inne materiały cyfrowe."
+      "Tak. Przy dłuższym materiale można wskazać konkretne minuty, fragmenty, wypowiedzi albo rozmówców, których ma dotyczyć transkrypcja lub tłumaczenie."
   },
   {
-    question: "Czy transkrypcja może być użyta w sprawie sądowej albo karnej?",
+    question: "Czy nagrania mogą być tłumaczone do sprawy karnej?",
     answer:
-      "Transkrypcja i tłumaczenie mogą zostać przygotowane jako materiał pomocniczy lub załącznik. O sposobie wykorzystania materiału decyduje organ, sąd, prokuratura albo pełnomocnik."
+      "Tak. Nagrania audio i wideo mogą występować jako materiał w sprawach sądowych, policyjnych, prokuratorskich i karnych."
   },
   {
-    question: "Czy słaba jakość nagrania uniemożliwia pracę?",
+    question: "Który numer telefonu wybrać?",
     answer:
-      "Nie zawsze. Jeżeli nagranie jest częściowo zrozumiałe, można pracować nad czytelnymi fragmentami. Fragmenty niezrozumiałe powinny być oznaczone w sposób ostrożny."
-  },
-  {
-    question: "Czy kancelaria obsługuje materiały z całej Polski?",
-    answer:
-      "Tak. Kancelaria ma siedzibę w Krakowie, ale materiały do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
+      "Wszystkie sprawy można zgłaszać na oba numery. Numer 883 040 483 służy do bezpośredniego kontaktu z tłumaczem / biegłym, a numer 735 753 383 do kontaktu z kancelarią."
   }
 ];
 
@@ -171,15 +162,15 @@ function SectionHeading({
   );
 }
 
-export default function AudioVideoTranscriptionsPage() {
+export default function AudioVideoTranscriptionPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Transkrypcje nagrań audio i wideo w języku ukraińskim",
+    name: "Transkrypcje i tłumaczenia nagrań audio/wideo z języka ukraińskiego",
     provider: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-      telephone: institutionPhoneHref,
+      telephone: expertPhoneHref,
       email,
       address: {
         "@type": "PostalAddress",
@@ -194,7 +185,7 @@ export default function AudioVideoTranscriptionsPage() {
       name: "Polska"
     },
     serviceType:
-      "Transkrypcje i tłumaczenia nagrań audio i wideo w języku ukraińskim"
+      "Transkrypcje i tłumaczenia nagrań audio/wideo w języku ukraińskim"
   };
 
   return (
@@ -208,6 +199,7 @@ export default function AudioVideoTranscriptionsPage() {
         :root {
           --bg: #f5f0e6;
           --paper: #fffaf2;
+          --paper-soft: #f8f1e6;
           --ink: #13100c;
           --muted: #6e6256;
           --line: rgba(19, 16, 12, 0.14);
@@ -218,7 +210,7 @@ export default function AudioVideoTranscriptionsPage() {
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -233,7 +225,7 @@ export default function AudioVideoTranscriptionsPage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -253,7 +245,7 @@ export default function AudioVideoTranscriptionsPage() {
         }
 
         .nav {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -320,11 +312,11 @@ export default function AudioVideoTranscriptionsPage() {
         }
 
         .hero {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.14fr 0.86fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -332,13 +324,14 @@ export default function AudioVideoTranscriptionsPage() {
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 52px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -354,13 +347,13 @@ export default function AudioVideoTranscriptionsPage() {
         h1 {
           margin: 0;
           max-width: 820px;
-          font-size: clamp(40px, 5.1vw, 66px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
+          margin: 24px 0 0;
           max-width: 760px;
           color: var(--muted);
           font-size: 20px;
@@ -368,7 +361,7 @@ export default function AudioVideoTranscriptionsPage() {
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -404,72 +397,72 @@ export default function AudioVideoTranscriptionsPage() {
           color: var(--ink);
         }
 
+        .hero-note {
+          margin-top: 22px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
         .hero-side {
           border-radius: var(--radius);
           background:
-            linear-gradient(150deg, rgba(29, 62, 74, 0.98), rgba(16, 41, 50, 0.99)),
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
             repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 30px;
+          padding: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 410px;
         }
 
         .hero-side h2 {
           margin: 0;
           color: #fff;
-          font-size: 35px;
-          line-height: 1;
+          font-size: 38px;
+          line-height: 0.98;
           letter-spacing: -0.045em;
         }
 
         .hero-side p {
           margin: 16px 0 0;
           color: rgba(255,255,255,0.76);
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1.55;
         }
 
-        .phone-main {
+        .phone-large {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 64px;
-          margin-top: 22px;
+          min-height: 68px;
+          margin-top: 28px;
           border-radius: 18px;
           background: #fffaf2;
           color: var(--green);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
+          font-size: 27px;
           font-weight: 950;
         }
 
-        .trust {
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 22px 28px;
-        }
-
-        .trust-inner {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          padding: 14px 18px;
-          color: var(--muted);
+        .notice {
+          margin-top: 18px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          padding: 18px;
+          color: rgba(255,255,255,0.82);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-          line-height: 1.5;
-          text-align: center;
+          font-size: 14px;
+          font-weight: 800;
+          line-height: 1.55;
         }
 
         .section {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -591,32 +584,6 @@ export default function AudioVideoTranscriptionsPage() {
           color: rgba(255,255,255,0.76);
         }
 
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
-        }
-
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .card-dark .list li,
-        .card-petrol .list li {
-          color: rgba(255,255,255,0.78);
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
-        }
-
         .card-link {
           display: inline-flex;
           margin-top: 20px;
@@ -626,15 +593,20 @@ export default function AudioVideoTranscriptionsPage() {
           font-weight: 900;
         }
 
+        .card-dark .card-link,
+        .card-petrol .card-link {
+          color: #fff;
+        }
+
         .feature {
           border-radius: var(--radius);
           background: var(--ink);
           color: #fff;
-          padding: 40px;
+          padding: 44px;
           box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
-          gap: 30px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
           align-items: center;
         }
 
@@ -654,7 +626,7 @@ export default function AudioVideoTranscriptionsPage() {
         }
 
         .labels {
-          margin-top: 20px;
+          margin-top: 22px;
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -671,13 +643,6 @@ export default function AudioVideoTranscriptionsPage() {
           font-weight: 900;
           letter-spacing: 0.06em;
           text-transform: uppercase;
-        }
-
-        .note {
-          margin-top: 18px;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.55;
         }
 
         .faq-list {
@@ -718,7 +683,7 @@ export default function AudioVideoTranscriptionsPage() {
         }
 
         .footer-inner {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -779,8 +744,7 @@ export default function AudioVideoTranscriptionsPage() {
 
         @media (max-width: 620px) {
           .hero,
-          .section,
-          .trust {
+          .section {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -796,11 +760,11 @@ export default function AudioVideoTranscriptionsPage() {
           }
 
           h1 {
-            font-size: 38px;
+            font-size: 40px;
           }
 
           .button,
-          .phone-main {
+          .phone-large {
             width: 100%;
           }
         }
@@ -820,12 +784,13 @@ export default function AudioVideoTranscriptionsPage() {
 
           <div className="nav-links">
             <a href="/">Strona główna</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Sądy</a>
             <a href="/tlumaczenia-dla-policji">Policja</a>
             <a href="/tlumaczenia-dla-prokuratury">Prokuratura</a>
-            <a href="/tlumaczenia-it-krypto">Materiał cyfrowy</a>
-            <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
+            <a href="/kontakt">Kontakt</a>
+            <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
+              {expertPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -834,102 +799,69 @@ export default function AudioVideoTranscriptionsPage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Transkrypcje · audio · wideo · język ukraiński
+            Audio · wideo · wiadomości głosowe · język ukraiński
           </span>
 
-          <h1>Transkrypcje nagrań audio i wideo w języku ukraińskim.</h1>
+          <h1>Transkrypcje i tłumaczenia nagrań audio/wideo.</h1>
 
           <p className="lead">
-            Sporządzanie zapisu treści nagrań oraz tłumaczenie wypowiedzi z
-            języka ukraińskiego. Materiały do spraw sądowych, policyjnych,
-            prokuratorskich, karnych i związanych z oszustwami internetowymi.
+            Transkrypcja i tłumaczenie nagrań w języku ukraińskim: rozmów,
+            wiadomości głosowych, plików audio, nagrań wideo i materiałów
+            wykorzystywanych w sprawach sądowych, policyjnych, prokuratorskich
+            i karnych.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
-              Sąd · Policja · Prokuratura: {institutionPhoneDisplay}
+            <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
+              Tłumacz / biegły: {expertPhoneDisplay}
             </a>
-            <a className="button button-secondary" href={`mailto:${email}`}>
+            <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
+              Kancelaria: {officePhoneDisplay}
+            </a>
+            <a className="button button-secondary" href="/kontakt">
               Wyślij nagranie do wyceny
             </a>
           </div>
+
+          <p className="hero-note">
+            Wszystkie sprawy można zgłaszać na oba numery telefonu. Numer{" "}
+            {expertPhoneDisplay} służy do bezpośredniego kontaktu z tłumaczem /
+            biegłym, a numer {officePhoneDisplay} do kontaktu z kancelarią.
+          </p>
         </div>
 
         <aside className="hero-side">
           <div>
-            <h2>Vadym Rekel</h2>
+            <h2>Najpierw oceniamy jakość dźwięku i zakres materiału.</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Nagrania można przesłać do wstępnej wyceny
-              elektronicznie z całej Polski.
+              Przy nagraniach znaczenie mają długość pliku, liczba rozmówców,
+              zakłócenia, język wypowiedzi, chronologia i cel wykorzystania
+              transkrypcji albo tłumaczenia.
             </p>
+
+            <div className="notice">
+              Do wstępnej oceny można przesłać nagranie, próbkę, wiadomość
+              głosową albo wskazać fragmenty, które mają zostać przetłumaczone.
+            </div>
           </div>
 
-          <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-            {institutionPhoneDisplay}
+          <a className="phone-large" href={`tel:${expertPhoneHref}`}>
+            {expertPhoneDisplay}
           </a>
         </aside>
-      </section>
-
-      <section className="trust">
-        <div className="trust-inner">
-          TP/27/17 · transkrypcje nagrań audio i wideo · język ukraiński ·
-          sprawy karne · dokumenty z całej Polski zdalnie
-        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="Zakres"
-          title="Nagrania rozmów, wiadomości głosowe, audio, wideo i materiał do akt."
-          text="Nagranie może być materiałem pomocniczym, dowodowym, załącznikiem do akt albo elementem dokumentacji sprawy."
+          title="Jakie nagrania można przekazać do transkrypcji albo tłumaczenia?"
+          text="Zakres zależy od jakości dźwięku, długości nagrania, liczby rozmówców i celu wykorzystania materiału."
         />
 
         <div className="grid-3">
-          <article className="card">
-            <span className="tag">Nagrania i rozmowy</span>
-            <h3>Audio, wideo i wiadomości głosowe.</h3>
-            <ul className="list">
-              {recordingTypes.slice(0, 6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card">
-            <span className="tag">Materiał do sprawy</span>
-            <h3>Załączniki, czynności i akta.</h3>
-            <ul className="list">
-              {recordingTypes.slice(6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card card-dark">
-            <span className="tag">Kontakt</span>
-            <h3>Nagranie do sprawy albo akt.</h3>
-            <p>
-              W sprawach kierowanych przez organy właściwy kontakt to numer dla
-              sądów, Policji i prokuratury.
-            </p>
-            <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Rodzaj pracy"
-          title="Transkrypcja, tłumaczenie i przygotowanie materiału do sprawy."
-          text="Zakres zależy od jakości nagrania, długości materiału, celu wykorzystania oraz tego, czy potrzebna jest sama transkrypcja, tłumaczenie, czy oba elementy."
-        />
-
-        <div className="grid-2">
-          {serviceScopes.map((item) => (
+          {recordingMaterials.map((item) => (
             <article className="card" key={item.title}>
+              <span className="tag">Nagrania</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -940,20 +872,73 @@ export default function AudioVideoTranscriptionsPage() {
       <section className="section">
         <div className="feature">
           <div>
-            <p className="section-label">Kontekst nagrania</p>
-            <h2>W nagraniu znaczenie ma nie tylko wypowiedziany tekst.</h2>
+            <p className="section-label">Sprawy karne</p>
+            <h2>Nagrania jako materiał w sprawie.</h2>
           </div>
 
           <div>
             <p>
-              Przy transkrypcji i tłumaczeniu nagrań istotne są rozmówcy,
-              kolejność wypowiedzi, kontekst rozmowy, przerwania, fragmenty
-              niezrozumiałe, nazwy własne, kwoty, daty, emocjonalny ton i
-              powiązanie nagrania z pozostałym materiałem.
+              Nagrania audio, wideo i wiadomości głosowe mogą pojawiać się w
+              aktach spraw sądowych, policyjnych i prokuratorskich. W takich
+              materiałach ważne jest oznaczenie wypowiedzi, kolejności zdarzeń,
+              czasu i kontekstu rozmowy.
+            </p>
+
+            <div className="hero-actions">
+              <a
+                className="button button-secondary"
+                href="/tlumaczenia-sprawy-karne-ukrainski"
+              >
+                Zobacz stronę: sprawy karne
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Powiązane obszary"
+          title="Nagrania często łączą się ze sprawami karnymi i materiałem cyfrowym."
+          text="Dlatego ta strona jest połączona z podstronami dotyczącymi Policji, prokuratury, sądu i materiału cyfrowego."
+        />
+
+        <div className="grid-4">
+          {relatedPages.map((item) => (
+            <article className="card card-petrol" key={item.title}>
+              <span className="tag">Powiązana usługa</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <a className="card-link" href={item.href}>
+                Czytaj więcej →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Typowe materiały"
+          title="Najczęstsze rodzaje nagrań i plików dźwiękowych."
+          text="Przy dłuższych nagraniach warto wskazać minuty, fragmenty lub wypowiedzi, które są istotne dla sprawy."
+        />
+
+        <div className="feature">
+          <div>
+            <p className="section-label">Audio / wideo</p>
+            <h2>Rozmowy, wiadomości głosowe i pliki do akt.</h2>
+          </div>
+
+          <div>
+            <p>
+              Przy transkrypcji i tłumaczeniu ważne jest, aby materiał pozwalał
+              ustalić treść wypowiedzi, kolejność rozmówców i fragmenty istotne
+              dla dalszego wykorzystania.
             </p>
 
             <div className="labels">
-              {contextItems.map((item) => (
+              {caseTypes.map((item) => (
                 <span className="label" key={item}>
                   {item}
                 </span>
@@ -965,14 +950,15 @@ export default function AudioVideoTranscriptionsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Dla kogo"
-          title="Nagrania dla sądu, Policji, prokuratury i klientów indywidualnych."
-          text="Ten sam plik audio lub wideo może być wykorzystany w różnym celu: jako załącznik, materiał dowodowy, materiał dla pełnomocnika albo dokumentacja sprawy."
+          label="Organizacja"
+          title="Jak przesłać nagranie do wyceny?"
+          text="Najlepiej przesłać plik albo próbkę i krótko opisać, jaki zakres materiału ma zostać opracowany."
         />
 
-        <div className="grid-2">
-          {recipientGroups.map((item) => (
+        <div className="grid-4">
+          {processSteps.map((item) => (
             <article className="card" key={item.title}>
+              <span className="tag">Etap</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -982,36 +968,55 @@ export default function AudioVideoTranscriptionsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Przekazanie nagrania"
-          title="Jak przekazać nagranie do wyceny lub tłumaczenia?"
-          text="Materiał można przesłać e-mailem, przekazać do kancelarii albo dostarczyć na nośniku po wcześniejszym ustaleniu terminu."
+          label="Kontakt"
+          title="Przekaż nagranie albo próbkę do wstępnej oceny."
+          text="Przy dłuższych nagraniach warto ustalić, czy potrzebna jest pełna transkrypcja, tłumaczenie całości, czy tylko określone fragmenty."
         />
 
         <div className="grid-3">
-          {deliveryMethods.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">{item.title}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <a className="card-link" href={item.href}>
-                {item.value}
-              </a>
-            </article>
-          ))}
-        </div>
+          <article className="card card-dark">
+            <span className="tag">Kontakt bezpośredni</span>
+            <h3>{expertPhoneDisplay}</h3>
+            <p>
+              Kontakt z tłumaczem / biegłym w sprawach nagrań, materiału
+              cyfrowego, akt, czynności i pilnych ustaleń.
+            </p>
+            <a className="card-link" href={`tel:${expertPhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
 
-        <p className="note">
-          Przy dłuższych nagraniach warto wskazać fragmenty czasowe, które mają
-          zostać przepisane albo przetłumaczone. Warto także podać cel
-          wykorzystania materiału.
-        </p>
+          <article className="card">
+            <span className="tag">Kancelaria</span>
+            <h3>{officePhoneDisplay}</h3>
+            <p>
+              Obsługa kancelaryjna, terminy, przekazanie plików, odbiór
+              tłumaczenia i sprawy organizacyjne.
+            </p>
+            <a className="card-link" href={`tel:${officePhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
+
+          <article className="card">
+            <span className="tag">E-mail</span>
+            <h3>{email}</h3>
+            <p>
+              Prześlij plik, próbkę nagrania, wiadomość głosową albo opis
+              materiału do wstępnej oceny.
+            </p>
+            <a className="card-link" href={`mailto:${email}`}>
+              Wyślij materiał →
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="FAQ"
-          title="Najczęstsze pytania dotyczące transkrypcji nagrań."
-          text="Krótko o przesyłaniu nagrań, fragmentach, wiadomościach głosowych, jakości nagrania i materiale do sprawy."
+          title="Najczęstsze pytania o transkrypcje i tłumaczenie nagrań."
+          text="Krótko o nagraniach audio/wideo, wiadomościach głosowych, fragmentach nagrań, sprawach karnych i kontakcie."
         />
 
         <div className="faq-list">
@@ -1024,7 +1029,7 @@ export default function AudioVideoTranscriptionsPage() {
         </div>
       </section>
 
-      <footer className="footer" id="kontakt">
+      <footer className="footer">
         <div className="footer-inner">
           <div>
             <span className="footer-title">Kancelaria Vadym Rekel</span>
@@ -1033,21 +1038,19 @@ export default function AudioVideoTranscriptionsPage() {
             </span>
             <span className="footer-line">TP/27/17</span>
             <span className="footer-line">
-              Kraków · materiały z całej Polski zdalnie
+              Kraków · dokumenty z całej Polski zdalnie
             </span>
           </div>
 
           <div>
             <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              Sąd · Policja · Prokuratura:{" "}
-              <a href={`tel:${institutionPhoneHref}`}>
-                {institutionPhoneDisplay}
-              </a>
+              Tłumacz / biegły:{" "}
+              <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
             </span>
             <span className="footer-line">
-              Klienci indywidualni:{" "}
-              <a href={`tel:${individualPhoneHref}`}>{individualPhoneDisplay}</a>
+              Kancelaria:{" "}
+              <a href={`tel:${officePhoneHref}`}>{officePhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
@@ -1064,15 +1067,7 @@ export default function AudioVideoTranscriptionsPage() {
               rel="noopener noreferrer"
             >
               <span className="linkedin-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                </svg>
+                in
               </span>
               LinkedIn — Vadym Rekel
             </a>

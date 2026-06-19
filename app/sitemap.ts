@@ -13,6 +13,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0
     },
     {
+      url: `${baseUrl}/kontakt`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.9
+    },
+    {
+      url: `${baseUrl}/tlumaczenia-sprawy-karne-ukrainski`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.92
+    },
+    {
       url: `${baseUrl}/tlumaczenia-sadowe-ukrainski`,
       lastModified: now,
       changeFrequency: "weekly" as const,

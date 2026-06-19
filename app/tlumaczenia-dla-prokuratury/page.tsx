@@ -2,152 +2,143 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Tłumacz przysięgły ukraiński dla prokuratury | Sprawy karne i pomoc prawna",
+    "Tłumaczenia dla prokuratury ukraiński | Tłumacz przysięgły języka ukraińskiego",
   description:
-    "Tłumacz przysięgły języka ukraińskiego dla prokuratury. Tłumaczenia protokołów przesłuchań, postanowień, zawiadomień, akt postępowania przygotowawczego, dokumentów z Ukrainy, materiału dowodowego, komunikatorów i raportów PDF. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
+    "Tłumacz przysięgły języka ukraińskiego TP/27/17. Tłumaczenia dla prokuratury: postępowania przygotowawcze, akta, protokoły, postanowienia, pomoc prawna z Ukrainą, materiał cyfrowy i dokumenty procesowe. Kancelaria w Krakowie, dokumenty z całej Polski zdalnie.",
   keywords: [
-    "tłumacz przysięgły ukraiński dla prokuratury",
-    "tłumacz ukraiński prokuratura",
     "tłumaczenia dla prokuratury ukraiński",
-    "tłumaczenie protokołów przesłuchań ukraiński",
-    "tłumaczenie akt postępowania przygotowawczego ukraiński",
-    "tłumaczenie postanowienia prokuratury ukraiński",
-    "tłumaczenie pomocy prawnej Ukraina",
+    "tłumacz ukraiński prokuratura",
+    "tłumacz przysięgły ukraiński prokuratura",
+    "tłumacz przysięgły języka ukraińskiego Kraków",
+    "tłumaczenie akt prokuratorskich ukraiński",
+    "tłumaczenie postanowienia prokuratura ukraiński",
+    "tłumaczenie protokołu prokuratura ukraiński",
+    "pomoc prawna Ukraina tłumaczenie",
     "tłumaczenie materiału dowodowego ukraiński",
-    "tłumaczenie komunikatorów ukraiński prokuratura"
+    "Vadym Rekel tłumacz przysięgły",
+    "TP/27/17"
   ]
 };
 
 const email = "biegly@vadymrekel.pl";
 
-const institutionPhoneDisplay = "883 040 483";
-const institutionPhoneHref = "+48883040483";
+const expertPhoneDisplay = "883 040 483";
+const expertPhoneHref = "+48883040483";
+
+const officePhoneDisplay = "735 753 383";
+const officePhoneHref = "+48735753383";
 
 const linkedInUrl = "https://www.linkedin.com/in/vadym-rekel/";
 
-const prosecutionMaterials = [
-  "protokoły przesłuchań",
-  "postanowienia",
-  "zawiadomienia",
-  "wnioski",
-  "pouczenia",
-  "akta postępowania przygotowawczego",
-  "materiał dowodowy",
-  "dokumenty z Ukrainy",
-  "pomoc prawna z Ukrainą",
-  "komunikatory",
-  "zrzuty ekranu",
-  "raporty PDF"
-];
-
-const caseGroups = [
+const prosecutorMaterials = [
   {
-    title: "Sprawy karne",
-    text: "Tłumaczenia dokumentów i materiałów związanych z postępowaniem przygotowawczym, czynnościami procesowymi i materiałem dowodowym."
+    title: "Akta postępowania przygotowawczego",
+    text: "Dokumenty procesowe, protokoły, zawiadomienia, postanowienia, załączniki i materiał dowodowy przekazywany do tłumaczenia."
   },
   {
-    title: "Oszustwa internetowe",
-    text: "Komunikatory, korespondencja elektroniczna, zrzuty ekranu, panele transakcyjne, kryptowaluty, raporty PDF i dane z telefonu."
+    title: "Protokoły i czynności",
+    text: "Protokoły przesłuchań, czynności procesowych, oględzin, zatrzymań, konfrontacji oraz innych działań prowadzonych w sprawie."
+  },
+  {
+    title: "Postanowienia i pisma",
+    text: "Postanowienia, zarządzenia, wezwania, pouczenia, zawiadomienia, wnioski i pisma kierowane do stron albo innych organów."
   },
   {
     title: "Pomoc prawna z Ukrainą",
-    text: "Wnioski o pomoc prawną, odpowiedzi organów ukraińskich, protokoły, wezwania, pouczenia i korespondencja między organami."
+    text: "Dokumenty związane z międzynarodową pomocą prawną, korespondencją organów, wnioskami i materiałem przekazywanym do Ukrainy."
   },
   {
-    title: "Korespondencja osadzonych",
-    text: "Listy, skargi, prośby, oświadczenia i wyjaśnienia sporządzone pismem odręcznym albo językiem potocznym."
+    title: "Materiał cyfrowy",
+    text: "Komunikatory, zrzuty ekranu, raporty PDF, dane z telefonu, wiadomości, e-mail, załączniki i eksporty rozmów."
+  },
+  {
+    title: "Sprawy karne i oszustwa internetowe",
+    text: "Materiały dotyczące oszustw internetowych, kryptowalut, platform inwestycyjnych, przelewów, komunikatorów i przepływów środków."
   }
 ];
 
-const digitalItems = [
+const relatedPages = [
   {
-    title: "Komunikatory",
-    text: "Telegram, WhatsApp, Signal, Messenger, SMS, e-mail, eksporty rozmów i załączniki."
+    title: "Sprawy karne",
+    text: "Akta, protokoły, materiał cyfrowy, korespondencja osadzonych i dokumenty z Ukrainy.",
+    href: "/tlumaczenia-sprawy-karne-ukrainski"
   },
   {
-    title: "Raporty PDF",
-    text: "Raporty z telefonu, eksporty danych, zestawienia, tabele i dokumenty wielostronicowe przekazywane do akt."
+    title: "Tłumaczenia sądowe",
+    text: "Akta spraw, protokoły, wyroki, postanowienia, pisma procesowe i załączniki.",
+    href: "/tlumaczenia-sadowe-ukrainski"
   },
   {
-    title: "Zrzuty ekranu",
-    text: "Aplikacje, strony internetowe, panele użytkownika, systemy transakcyjne, rozmowy i zdjęcia."
+    title: "Tłumaczenia dla Policji",
+    text: "Czynności, notatki, protokoły, pouczenia, komunikatory i materiał dowodowy.",
+    href: "/tlumaczenia-dla-policji"
   },
   {
-    title: "Kryptowaluty i fraud",
-    text: "Materiały dotyczące giełd, portfeli, przepływów środków, AML/KYC i oszustw internetowych."
+    title: "Materiał cyfrowy",
+    text: "Komunikatory, raporty PDF, zrzuty ekranu, dane z telefonu, oszustwa internetowe i kryptowaluty.",
+    href: "/tlumaczenia-it-krypto"
   }
 ];
 
-const assistanceItems = [
-  "wnioski o pomoc prawną",
-  "odpowiedzi organów ukraińskich",
-  "wezwania",
-  "pouczenia",
-  "postanowienia",
+const processSteps = [
+  {
+    title: "Przekazanie dokumentów",
+    text: "Do wstępnej wyceny można przesłać skany, pliki PDF, zdjęcia dokumentów, raporty albo opis zakresu akt."
+  },
+  {
+    title: "Określenie charakteru sprawy",
+    text: "Warto wskazać, czy materiał dotyczy postępowania przygotowawczego, pomocy prawnej, czynności procesowej czy załączników do akt."
+  },
+  {
+    title: "Ustalenie zakresu",
+    text: "Przy większych aktach należy określić dokumenty, strony albo fragmenty, które mają zostać objęte tłumaczeniem."
+  },
+  {
+    title: "Realizacja tłumaczenia",
+    text: "Tłumaczenie jest przygotowywane z uwzględnieniem terminologii procesowej, danych osób, chronologii i funkcji dokumentu."
+  }
+];
+
+const caseTypes = [
+  "postępowania przygotowawcze",
   "protokoły przesłuchań",
-  "akty oskarżenia",
-  "korespondencja między organami",
-  "dokumenty urzędowe z Ukrainy"
-];
-
-const oralItems = [
-  "przesłuchania",
-  "czynności w prokuraturze",
-  "czynności z osobą zatrzymaną",
-  "czynności z podejrzanym",
-  "czynności z pokrzywdzonym",
-  "czynności z udziałem świadka",
-  "areszty śledcze",
-  "zakłady karne",
-  "czynności zdalne, jeżeli forma czynności na to pozwala"
-];
-
-const deliveryMethods = [
-  {
-    title: "E-mail",
-    text: "Prześlij skan, zdjęcie albo plik PDF na adres:",
-    value: email,
-    href: `mailto:${email}`
-  },
-  {
-    title: "Adres kancelarii",
-    text: "Dokument można przekazać do kancelarii:",
-    value: "ul. Kielecka 2/53, 31-526 Kraków",
-    href: "#kontakt"
-  },
-  {
-    title: "Odbiór osobisty",
-    text: "Odbiór tłumaczenia w kancelarii jest możliwy po wcześniejszym uzgodnieniu terminu.",
-    value: "po uzgodnieniu",
-    href: `tel:${institutionPhoneHref}`
-  }
+  "postanowienia",
+  "pouczenia",
+  "pomoc prawna z Ukrainą",
+  "materiał dowodowy",
+  "komunikatory",
+  "zrzuty ekranu",
+  "raporty PDF",
+  "dane z telefonu",
+  "oszustwa internetowe",
+  "kryptowaluty"
 ];
 
 const faqItems = [
   {
-    question: "Czy można przesłać akta postępowania przygotowawczego elektronicznie?",
+    question: "Czy kancelaria wykonuje tłumaczenia dla prokuratury?",
     answer:
-      "Tak. Do wstępnej wyceny można przesłać skan, zdjęcie albo plik PDF. Przy większych aktach warto wskazać konkretne strony, protokoły albo załączniki do tłumaczenia."
+      "Tak. Kancelaria obsługuje tłumaczenia języka ukraińskiego dla prokuratury, w tym akta postępowania przygotowawczego, protokoły, postanowienia, dokumenty procesowe, materiał cyfrowy i dokumenty z Ukrainy."
   },
   {
-    question: "Czy tłumaczenie może dotyczyć tylko części materiału?",
+    question: "Czy tłumaczenia mogą obejmować pomoc prawną z Ukrainą?",
     answer:
-      "Tak. Przy większych materiałach można wskazać wybrane fragmenty, strony, protokoły, dokumenty albo załączniki istotne dla sprawy."
+      "Tak. Tłumaczenia mogą obejmować dokumenty związane z pomocą prawną z Ukrainą, korespondencję organów, dokumenty procesowe oraz materiały przekazywane między organami."
   },
   {
-    question: "Czy tłumaczone są dokumenty w ramach pomocy prawnej z Ukrainą?",
+    question: "Czy można przesłać materiał cyfrowy do wyceny?",
     answer:
-      "Tak. Zakres obejmuje wnioski o pomoc prawną, odpowiedzi organów ukraińskich, protokoły, wezwania, pouczenia, postanowienia i korespondencję między organami."
+      "Tak. Do wstępnej wyceny można przesłać komunikatory, zrzuty ekranu, raporty PDF, wiadomości, e-mail, dane z telefonu albo opis materiału cyfrowego."
   },
   {
-    question: "Czy tłumaczone są komunikatory, zrzuty ekranu i raporty PDF?",
+    question: "Czy dokumenty można przesłać z innego miasta niż Kraków?",
     answer:
-      "Tak. Kancelaria pracuje z komunikatorami, zrzutami ekranu, raportami PDF, korespondencją elektroniczną i innym materiałem cyfrowym."
+      "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z dowolnego miasta w Polsce."
   },
   {
-    question: "Czy kancelaria obsługuje prokuratury spoza Krakowa?",
+    question: "Który numer telefonu wybrać?",
     answer:
-      "Tak. Kancelaria ma siedzibę w Krakowie, ale dokumenty do wstępnej wyceny można przesłać elektronicznie z całej Polski."
+      "Wszystkie sprawy można zgłaszać na oba numery. Numer 883 040 483 służy do bezpośredniego kontaktu z tłumaczem / biegłym, a numer 735 753 383 do kontaktu z kancelarią."
   }
 ];
 
@@ -171,15 +162,15 @@ function SectionHeading({
   );
 }
 
-export default function ProsecutionTranslationsPage() {
+export default function ProsecutorTranslationsPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Tłumaczenia języka ukraińskiego dla prokuratury",
+    name: "Tłumaczenia dla prokuratury z języka ukraińskiego",
     provider: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
-      telephone: institutionPhoneHref,
+      telephone: expertPhoneHref,
       email,
       address: {
         "@type": "PostalAddress",
@@ -208,6 +199,7 @@ export default function ProsecutionTranslationsPage() {
         :root {
           --bg: #f5f0e6;
           --paper: #fffaf2;
+          --paper-soft: #f8f1e6;
           --ink: #13100c;
           --muted: #6e6256;
           --line: rgba(19, 16, 12, 0.14);
@@ -218,7 +210,7 @@ export default function ProsecutionTranslationsPage() {
           --gold-dark: #7c5a1d;
           --petrol: #244c5a;
           --shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
-          --radius: 24px;
+          --radius: 28px;
         }
 
         * {
@@ -233,7 +225,7 @@ export default function ProsecutionTranslationsPage() {
           margin: 0;
           background:
             radial-gradient(circle at 8% 0%, rgba(182, 138, 58, 0.12), transparent 30%),
-            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 50%, #f1ebdf 100%);
+            linear-gradient(180deg, #f8f3ea 0%, var(--bg) 52%, #f1ebdf 100%);
           color: var(--ink);
           font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         }
@@ -253,7 +245,7 @@ export default function ProsecutionTranslationsPage() {
         }
 
         .nav {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           padding: 14px 22px;
           display: flex;
@@ -320,11 +312,11 @@ export default function ProsecutionTranslationsPage() {
         }
 
         .hero {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 48px 22px 20px;
+          padding: 52px 22px 28px;
           display: grid;
-          grid-template-columns: 1.14fr 0.86fr;
+          grid-template-columns: 1.08fr 0.92fr;
           gap: 22px;
           align-items: stretch;
         }
@@ -332,13 +324,14 @@ export default function ProsecutionTranslationsPage() {
         .hero-main {
           border: 1px solid var(--line);
           border-radius: var(--radius);
-          background: rgba(255, 250, 242, 0.86);
+          background: rgba(255, 250, 242, 0.88);
           box-shadow: var(--shadow);
-          padding: 44px;
+          padding: 52px;
         }
 
         .eyebrow {
           display: inline-flex;
+          width: fit-content;
           margin-bottom: 22px;
           padding: 9px 13px;
           border-radius: 999px;
@@ -354,13 +347,13 @@ export default function ProsecutionTranslationsPage() {
         h1 {
           margin: 0;
           max-width: 820px;
-          font-size: clamp(40px, 5.1vw, 66px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(42px, 5.4vw, 72px);
+          line-height: 0.94;
+          letter-spacing: -0.07em;
         }
 
         .lead {
-          margin: 22px 0 0;
+          margin: 24px 0 0;
           max-width: 760px;
           color: var(--muted);
           font-size: 20px;
@@ -368,7 +361,7 @@ export default function ProsecutionTranslationsPage() {
         }
 
         .hero-actions {
-          margin-top: 28px;
+          margin-top: 30px;
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
@@ -404,70 +397,72 @@ export default function ProsecutionTranslationsPage() {
           color: var(--ink);
         }
 
+        .hero-note {
+          margin-top: 22px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
         .hero-side {
           border-radius: var(--radius);
-          background: linear-gradient(155deg, var(--green), var(--green-dark));
+          background:
+            linear-gradient(150deg, rgba(29, 62, 74, 0.96), rgba(16, 41, 50, 0.98)),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 22px);
           color: #fff;
           box-shadow: var(--shadow);
-          padding: 30px;
+          padding: 32px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          min-height: 410px;
         }
 
         .hero-side h2 {
           margin: 0;
           color: #fff;
-          font-size: 35px;
-          line-height: 1;
+          font-size: 38px;
+          line-height: 0.98;
           letter-spacing: -0.045em;
         }
 
         .hero-side p {
           margin: 16px 0 0;
           color: rgba(255,255,255,0.76);
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1.55;
         }
 
-        .phone-main {
+        .phone-large {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 64px;
-          margin-top: 22px;
+          min-height: 68px;
+          margin-top: 28px;
           border-radius: 18px;
           background: #fffaf2;
           color: var(--green);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 25px;
+          font-size: 27px;
           font-weight: 950;
         }
 
-        .trust {
-          max-width: 1120px;
-          margin: 0 auto;
-          padding: 0 22px 28px;
-        }
-
-        .trust-inner {
-          border-radius: 18px;
-          border: 1px solid var(--line);
-          background: rgba(255,250,242,0.78);
-          padding: 14px 18px;
-          color: var(--muted);
+        .notice {
+          margin-top: 18px;
+          border-radius: 20px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          padding: 18px;
+          color: rgba(255,255,255,0.82);
           font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-          font-size: 13px;
-          font-weight: 850;
-          line-height: 1.5;
-          text-align: center;
+          font-size: 14px;
+          font-weight: 800;
+          line-height: 1.55;
         }
 
         .section {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
-          padding: 50px 22px;
+          padding: 52px 22px;
         }
 
         .section-heading {
@@ -589,32 +584,6 @@ export default function ProsecutionTranslationsPage() {
           color: rgba(255,255,255,0.76);
         }
 
-        .list {
-          margin: 18px 0 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          gap: 9px;
-        }
-
-        .list li {
-          display: flex;
-          gap: 9px;
-          color: var(--muted);
-          font-size: 15px;
-          line-height: 1.42;
-        }
-
-        .card-dark .list li,
-        .card-petrol .list li {
-          color: rgba(255,255,255,0.78);
-        }
-
-        .list li::before {
-          content: "—";
-          color: var(--gold);
-        }
-
         .card-link {
           display: inline-flex;
           margin-top: 20px;
@@ -633,11 +602,11 @@ export default function ProsecutionTranslationsPage() {
           border-radius: var(--radius);
           background: var(--ink);
           color: #fff;
-          padding: 40px;
+          padding: 44px;
           box-shadow: var(--shadow);
           display: grid;
-          grid-template-columns: 0.92fr 1.08fr;
-          gap: 30px;
+          grid-template-columns: 0.94fr 1.06fr;
+          gap: 34px;
           align-items: center;
         }
 
@@ -657,7 +626,7 @@ export default function ProsecutionTranslationsPage() {
         }
 
         .labels {
-          margin-top: 20px;
+          margin-top: 22px;
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -674,13 +643,6 @@ export default function ProsecutionTranslationsPage() {
           font-weight: 900;
           letter-spacing: 0.06em;
           text-transform: uppercase;
-        }
-
-        .note {
-          margin-top: 18px;
-          color: var(--muted);
-          font-size: 14px;
-          line-height: 1.55;
         }
 
         .faq-list {
@@ -721,7 +683,7 @@ export default function ProsecutionTranslationsPage() {
         }
 
         .footer-inner {
-          max-width: 1120px;
+          max-width: 1160px;
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1.2fr 1fr 0.8fr;
@@ -782,8 +744,7 @@ export default function ProsecutionTranslationsPage() {
 
         @media (max-width: 620px) {
           .hero,
-          .section,
-          .trust {
+          .section {
             padding-left: 16px;
             padding-right: 16px;
           }
@@ -799,11 +760,11 @@ export default function ProsecutionTranslationsPage() {
           }
 
           h1 {
-            font-size: 38px;
+            font-size: 40px;
           }
 
           .button,
-          .phone-main {
+          .phone-large {
             width: 100%;
           }
         }
@@ -823,12 +784,13 @@ export default function ProsecutionTranslationsPage() {
 
           <div className="nav-links">
             <a href="/">Strona główna</a>
+            <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Sądy</a>
             <a href="/tlumaczenia-dla-policji">Policja</a>
-            <a href="/tlumaczenia-it-krypto">Materiał cyfrowy</a>
-            <a href="/dokumenty-z-ukrainy">Dokumenty z Ukrainy</a>
-            <a className="nav-phone" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
+            <a href="/tlumaczenia-dla-prokuratury">Prokuratura</a>
+            <a href="/kontakt">Kontakt</a>
+            <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
+              {expertPhoneDisplay}
             </a>
           </div>
         </nav>
@@ -837,120 +799,69 @@ export default function ProsecutionTranslationsPage() {
       <section className="hero">
         <div className="hero-main">
           <span className="eyebrow">
-            Tłumacz przysięgły ukraiński · prokuratura · Kraków · cała Polska
+            Prokuratura · język ukraiński · TP/27/17
           </span>
 
-          <h1>Tłumacz przysięgły języka ukraińskiego dla prokuratury.</h1>
+          <h1>Tłumaczenia języka ukraińskiego dla prokuratury.</h1>
 
           <p className="lead">
-            Tłumaczenia w sprawach karnych i postępowaniach przygotowawczych:
-            protokoły przesłuchań, postanowienia, zawiadomienia, akta,
-            dokumenty z Ukrainy, pomoc prawna, komunikatory, raporty PDF i
-            materiał cyfrowy.
+            Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia akt
+            postępowań przygotowawczych, protokołów, postanowień, dokumentów z
+            Ukrainy, pomocy prawnej, materiału dowodowego i materiału cyfrowego.
           </p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href={`tel:${institutionPhoneHref}`}>
-              Prokuratura: {institutionPhoneDisplay}
+            <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
+              Tłumacz / biegły: {expertPhoneDisplay}
             </a>
-            <a className="button button-secondary" href={`mailto:${email}`}>
+            <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
+              Kancelaria: {officePhoneDisplay}
+            </a>
+            <a className="button button-secondary" href="/kontakt">
               Wyślij dokument do wyceny
             </a>
           </div>
+
+          <p className="hero-note">
+            Wszystkie sprawy można zgłaszać na oba numery telefonu. Numer{" "}
+            {expertPhoneDisplay} służy do bezpośredniego kontaktu z tłumaczem /
+            biegłym, a numer {officePhoneDisplay} do kontaktu z kancelarią.
+          </p>
         </div>
 
         <aside className="hero-side">
           <div>
-            <h2>Vadym Rekel</h2>
+            <h2>Materiał prokuratorski wymaga precyzji i zachowania funkcji procesowej.</h2>
             <p>
-              Tłumacz przysięgły języka ukraińskiego. Numer wpisu: TP/27/17.
-              Kancelaria w Krakowie. Dokumenty można przesłać do wstępnej
-              wyceny elektronicznie z całej Polski.
+              W tłumaczeniu dokumentów dla prokuratury znaczenie mają
+              kwalifikacja dokumentu, etap postępowania, dane osób, daty,
+              oznaczenia załączników, materiał dowodowy i zgodność
+              terminologiczna.
             </p>
+
+            <div className="notice">
+              Kancelaria ma siedzibę w Krakowie. Dokumenty do wstępnej wyceny
+              można przesłać elektronicznie z dowolnego miasta w Polsce.
+            </div>
           </div>
 
-          <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-            {institutionPhoneDisplay}
+          <a className="phone-large" href={`tel:${expertPhoneHref}`}>
+            {expertPhoneDisplay}
           </a>
         </aside>
       </section>
 
-      <section className="trust">
-        <div className="trust-inner">
-          TP/27/17 · tłumaczenia języka ukraińskiego dla prokuratury · sprawy
-          karne · dokumenty z Ukrainy · dokumenty z całej Polski zdalnie
-        </div>
-      </section>
-
       <section className="section">
         <SectionHeading
-          label="Zakres dla prokuratury"
-          title="Postępowanie przygotowawcze, protokoły i materiał dowodowy."
-          text="Zakres obejmuje tłumaczenia pisemne dokumentów oraz tłumaczenia ustne przy czynnościach procesowych."
+          label="Zakres"
+          title="Jakie materiały prokuratorskie można przekazać do tłumaczenia?"
+          text="Zakres zależy od rodzaju postępowania, celu wykorzystania dokumentów i charakteru materiału dowodowego."
         />
 
         <div className="grid-3">
-          <article className="card">
-            <span className="tag">Dokumenty</span>
-            <h3>Protokoły, postanowienia i zawiadomienia.</h3>
-            <ul className="list">
-              {prosecutionMaterials.slice(0, 6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card">
-            <span className="tag">Dowody i akta</span>
-            <h3>Materiał dowodowy i cyfrowy.</h3>
-            <ul className="list">
-              {prosecutionMaterials.slice(6).map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="card card-dark">
-            <span className="tag">Kontakt dla prokuratury</span>
-            <h3>Czynność, akta albo materiał dowodowy.</h3>
-            <p>
-              W sprawach prokuratorskich właściwy kontakt to numer dla organów.
-            </p>
-            <a className="phone-main" href={`tel:${institutionPhoneHref}`}>
-              {institutionPhoneDisplay}
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Rodzaje spraw"
-          title="Sprawy karne, oszustwa internetowe i pomoc prawna z Ukrainą."
-          text="Zakres zależy od materiału, celu czynności i sposobu wykorzystania tłumaczenia w dalszym postępowaniu."
-        />
-
-        <div className="grid-2">
-          {caseGroups.map((item) => (
+          {prosecutorMaterials.map((item) => (
             <article className="card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading
-          label="Materiał cyfrowy"
-          title="Komunikatory, raporty PDF, zrzuty ekranu i dane z telefonu."
-          text="Tłumaczenie materiału cyfrowego może obejmować treść rozmów, raporty, załączniki, eksporty danych i opisy kontekstu technicznego."
-        />
-
-        <div className="grid-4">
-          {digitalItems.map((item) => (
-            <article className="card card-petrol" key={item.title}>
-              <span className="tag">Materiał cyfrowy</span>
+              <span className="tag">Prokuratura</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -961,20 +872,73 @@ export default function ProsecutionTranslationsPage() {
       <section className="section">
         <div className="feature">
           <div>
-            <p className="section-label">Pomoc prawna</p>
-            <h2>Dokumenty z Ukrainy i korespondencja między organami.</h2>
+            <p className="section-label">Sprawy karne</p>
+            <h2>Postępowania przygotowawcze i materiał dowodowy.</h2>
           </div>
 
           <div>
             <p>
-              W sprawach transgranicznych dokument może pochodzić z organu
-              ukraińskiego albo być kierowany do Ukrainy. Znaczenie ma precyzja
-              terminologii, oznaczenie organów, dat, osób, podstaw prawnych i
-              celu czynności.
+              W sprawach karnych materiały prokuratorskie często obejmują akta,
+              protokoły, postanowienia, dokumenty z Ukrainy, komunikatory,
+              dane z telefonu, raporty PDF, korespondencję i dokumenty
+              przekazywane w ramach pomocy prawnej.
+            </p>
+
+            <div className="hero-actions">
+              <a
+                className="button button-secondary"
+                href="/tlumaczenia-sprawy-karne-ukrainski"
+              >
+                Zobacz stronę: sprawy karne
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Powiązane obszary"
+          title="Prokuratura, Policja i sąd często korzystają z tych samych materiałów."
+          text="Dlatego strona prokuratorska jest połączona z podstronami dotyczącymi spraw karnych, sądu, Policji i materiału cyfrowego."
+        />
+
+        <div className="grid-4">
+          {relatedPages.map((item) => (
+            <article className="card card-petrol" key={item.title}>
+              <span className="tag">Powiązana usługa</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <a className="card-link" href={item.href}>
+                Czytaj więcej →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Typowe sprawy"
+          title="Materiały często występujące w postępowaniach przygotowawczych."
+          text="Tłumaczenie może obejmować zarówno klasyczne dokumenty procesowe, jak i materiał cyfrowy albo dokumenty z Ukrainy."
+        />
+
+        <div className="feature">
+          <div>
+            <p className="section-label">Materiał</p>
+            <h2>Akta, dokumenty procesowe i dane cyfrowe.</h2>
+          </div>
+
+          <div>
+            <p>
+              Przy większym materiale warto wskazać zakres tłumaczenia:
+              konkretne dokumenty, strony akt, załączniki, daty rozmów, numery
+              plików albo fragmenty istotne dla sprawy.
             </p>
 
             <div className="labels">
-              {assistanceItems.map((item) => (
+              {caseTypes.map((item) => (
                 <span className="label" key={item}>
                   {item}
                 </span>
@@ -986,51 +950,73 @@ export default function ProsecutionTranslationsPage() {
 
       <section className="section">
         <SectionHeading
-          label="Czynności"
-          title="Tłumaczenia ustne języka ukraińskiego przy czynnościach."
-          text="Obsługa czynności procesowych w prokuraturze oraz czynności powiązanych z postępowaniem karnym."
+          label="Organizacja"
+          title="Jak przekazać materiał prokuratorski do wyceny?"
+          text="Najprościej przesłać dokumenty elektronicznie. Przy aktach i większym materiale warto określić zakres i oczekiwany termin."
         />
 
-        <article className="card">
-          <ul className="list">
-            {oralItems.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </article>
+        <div className="grid-4">
+          {processSteps.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Etap</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section">
         <SectionHeading
-          label="Przekazanie dokumentu"
-          title="Jak przekazać dokument do wyceny lub tłumaczenia?"
-          text="Dokument można przesłać e-mailem, przekazać do kancelarii albo odebrać osobiście po wcześniejszym ustaleniu terminu."
+          label="Kontakt"
+          title="Przekaż dokument albo ustal zakres telefonicznie."
+          text="Dokumenty, skany, zdjęcia, pliki PDF, komunikatory i zrzuty ekranu można przesłać do wstępnej wyceny na e-mail kancelarii."
         />
 
         <div className="grid-3">
-          {deliveryMethods.map((item) => (
-            <article className="card" key={item.title}>
-              <span className="tag">{item.title}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <a className="card-link" href={item.href}>
-                {item.value}
-              </a>
-            </article>
-          ))}
-        </div>
+          <article className="card card-dark">
+            <span className="tag">Kontakt bezpośredni</span>
+            <h3>{expertPhoneDisplay}</h3>
+            <p>
+              Kontakt z tłumaczem / biegłym w sprawach akt, czynności, pomocy
+              prawnej, materiału cyfrowego i pilnych ustaleń.
+            </p>
+            <a className="card-link" href={`tel:${expertPhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
 
-        <p className="note">
-          Przy większych aktach, raportach PDF, komunikatorach lub materiale
-          cyfrowym warto wskazać, które fragmenty mają zostać przetłumaczone.
-        </p>
+          <article className="card">
+            <span className="tag">Kancelaria</span>
+            <h3>{officePhoneDisplay}</h3>
+            <p>
+              Obsługa kancelaryjna, terminy, przekazanie dokumentów, odbiór
+              tłumaczenia i sprawy organizacyjne.
+            </p>
+            <a className="card-link" href={`tel:${officePhoneHref}`}>
+              Zadzwoń →
+            </a>
+          </article>
+
+          <article className="card">
+            <span className="tag">E-mail</span>
+            <h3>{email}</h3>
+            <p>
+              Prześlij skan, zdjęcie, PDF, raport, zrzuty ekranu albo opis
+              materiału prokuratorskiego.
+            </p>
+            <a className="card-link" href={`mailto:${email}`}>
+              Wyślij dokument →
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="section">
         <SectionHeading
           label="FAQ"
-          title="Najczęstsze pytania dotyczące tłumaczeń dla prokuratury."
-          text="Krótko o aktach, dokumentach z Ukrainy, materiale cyfrowym i dokumentach elektronicznych."
+          title="Najczęstsze pytania o tłumaczenia dla prokuratury."
+          text="Krótko o aktach, pomocy prawnej z Ukrainą, materiale cyfrowym, dokumentach z całej Polski i kontakcie."
         />
 
         <div className="faq-list">
@@ -1057,11 +1043,14 @@ export default function ProsecutionTranslationsPage() {
           </div>
 
           <div>
-            <span className="footer-title">Kontakt dla organów</span>
+            <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              <a href={`tel:${institutionPhoneHref}`}>
-                {institutionPhoneDisplay}
-              </a>
+              Tłumacz / biegły:{" "}
+              <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
+            </span>
+            <span className="footer-line">
+              Kancelaria:{" "}
+              <a href={`tel:${officePhoneHref}`}>{officePhoneDisplay}</a>
             </span>
             <span className="footer-line">
               <a href={`mailto:${email}`}>{email}</a>
@@ -1078,15 +1067,7 @@ export default function ProsecutionTranslationsPage() {
               rel="noopener noreferrer"
             >
               <span className="linkedin-icon" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="13"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.795-1.75-1.732s.784-1.732 1.75-1.732 1.75.795 1.75 1.732-.784 1.732-1.75 1.732zm13.5 11.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.867 0-2.154 1.459-2.154 2.968v5.697h-3v-10h2.882v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.04 0 3.6 2.003 3.6 4.609v5.587z" />
-                </svg>
+                in
               </span>
               LinkedIn — Vadym Rekel
             </a>
