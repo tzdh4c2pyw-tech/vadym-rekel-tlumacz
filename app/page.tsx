@@ -108,6 +108,34 @@ const specializationCards = [
   }
 ];
 
+const cityLinks = [
+  ["Warszawa", "/tlumacz-przysiegly-ukrainski-warszawa"],
+  ["Kraków", "/tlumacz-przysiegly-ukrainski-krakow"],
+  ["Wrocław", "/tlumacz-przysiegly-ukrainski-wroclaw"],
+  ["Poznań", "/tlumacz-przysiegly-ukrainski-poznan"],
+  ["Gdańsk", "/tlumacz-przysiegly-ukrainski-gdansk"],
+  ["Łódź", "/tlumacz-przysiegly-ukrainski-lodz"],
+  ["Katowice", "/tlumacz-przysiegly-ukrainski-katowice"],
+  ["Lublin", "/tlumacz-przysiegly-ukrainski-lublin"],
+  ["Rzeszów", "/tlumacz-przysiegly-ukrainski-rzeszow"],
+  ["Szczecin", "/tlumacz-przysiegly-ukrainski-szczecin"],
+  ["Bydgoszcz", "/tlumacz-przysiegly-ukrainski-bydgoszcz"],
+  ["Białystok", "/tlumacz-przysiegly-ukrainski-bialystok"],
+  ["Toruń", "/tlumacz-przysiegly-ukrainski-torun"],
+  ["Olsztyn", "/tlumacz-przysiegly-ukrainski-olsztyn"],
+  ["Opole", "/tlumacz-przysiegly-ukrainski-opole"],
+  ["Kielce", "/tlumacz-przysiegly-ukrainski-kielce"],
+  ["Radom", "/tlumacz-przysiegly-ukrainski-radom"],
+  ["Częstochowa", "/tlumacz-przysiegly-ukrainski-czestochowa"],
+  ["Gliwice", "/tlumacz-przysiegly-ukrainski-gliwice"],
+  ["Gdynia", "/tlumacz-przysiegly-ukrainski-gdynia"],
+  ["Sopot", "/tlumacz-przysiegly-ukrainski-sopot"],
+  ["Zielona Góra", "/tlumacz-przysiegly-ukrainski-zielona-gora"],
+  ["Gorzów Wielkopolski", "/tlumacz-przysiegly-ukrainski-gorzow-wielkopolski"],
+  ["Bytom", "/tlumacz-przysiegly-ukrainski-bytom"],
+  ["Sosnowiec", "/tlumacz-przysiegly-ukrainski-sosnowiec"],
+];
+
 const qualificationCards = [
   {
     title: "TP/27/17",
@@ -1023,6 +1051,47 @@ export default function HomePage() {
           border: 1px solid rgba(255, 255, 255, 0.14);
         }
 
+        .city-links {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 12px;
+        }
+
+        .city-link {
+          display: flex;
+          align-items: center;
+          min-height: 54px;
+          padding: 15px 16px;
+          border-radius: 18px;
+          border: 1px solid var(--line);
+          background: rgba(255, 250, 242, 0.82);
+          color: var(--green);
+          box-shadow: 0 12px 28px rgba(25, 22, 18, 0.06);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 1.25;
+        }
+
+        .city-link:hover {
+          border-color: rgba(18, 60, 49, 0.28);
+          background: #fffaf2;
+          transform: translateY(-2px);
+        }
+
+        @media (max-width: 980px) {
+          .city-links {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 560px) {
+          .city-links {
+            grid-template-columns: 1fr;
+          }
+        }
+
+
         @media (max-width: 980px) {
           .hero,
           .section-heading,
@@ -1317,6 +1386,22 @@ export default function HomePage() {
           <a className="button button-secondary" href="/kwalifikacje">
             Zobacz pełne kwalifikacje
           </a>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          label="Miasta"
+          title="Tłumacz przysięgły ukraiński w dużych miastach."
+          text="Obsługuję tłumaczenia przysięgłe języka ukraińskiego dla osób prywatnych, kancelarii, firm, sądów, Policji i prokuratury w całej Polsce. Dokumenty można przesłać do wstępnej wyceny online."
+        />
+
+        <div className="city-links">
+          {cityLinks.map(([city, href]) => (
+            <a href={href} key={href} className="city-link">
+              Tłumacz przysięgły ukraiński {city}
+            </a>
+          ))}
         </div>
       </section>
 
