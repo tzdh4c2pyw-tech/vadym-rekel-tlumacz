@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://www.tlumaczrosyjskiegoiukrainskiego.pl";
+const baseUrl = "https://vadym-rekel-tlumacz.vercel.app";
 
 const mainRoutes = [
   "",
