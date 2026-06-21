@@ -2165,6 +2165,81 @@ export default function HomePage() {
           color: #fff;
         }
 
+
+        .why-office {
+          max-width: 1220px;
+          margin: 0 auto;
+          padding: 18px 22px 34px;
+        }
+
+        .why-office-header {
+          max-width: 900px;
+          margin-bottom: 20px;
+        }
+
+        .why-office-header h2 {
+          margin: 0;
+          max-width: 860px;
+          font-size: clamp(34px, 4.2vw, 58px);
+          line-height: 0.96;
+          letter-spacing: -0.065em;
+        }
+
+        .why-office-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+        }
+
+        .why-office-card {
+          min-height: 250px;
+          border: 1px solid rgba(19, 16, 12, 0.12);
+          border-radius: 30px;
+          padding: 28px;
+          background:
+            linear-gradient(145deg, rgba(255, 250, 242, 0.94), rgba(248, 241, 230, 0.78)),
+            radial-gradient(circle at 100% 0%, rgba(182, 138, 58, 0.13), transparent 38%);
+          box-shadow: 0 18px 44px rgba(25, 22, 18, 0.075);
+        }
+
+        .why-office-card span {
+          display: inline-flex;
+          margin-bottom: 18px;
+          padding: 8px 11px;
+          border-radius: 999px;
+          background: rgba(18, 60, 49, 0.08);
+          color: var(--green);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 950;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+
+        .why-office-card h3 {
+          margin: 0;
+          font-size: 28px;
+          line-height: 1.02;
+          letter-spacing: -0.045em;
+        }
+
+        .why-office-card p {
+          margin: 14px 0 0;
+          color: var(--muted);
+          font-size: 16px;
+          line-height: 1.55;
+        }
+
+        @media (max-width: 920px) {
+          .why-office-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .why-office-card {
+            min-height: auto;
+          }
+        }
+
       `}</style>
 
       <div className="topbar">
@@ -2258,6 +2333,34 @@ export default function HomePage() {
             <strong>Zdalna wycena</strong>
             dokumenty z całej Polski elektronicznie
           </div>
+        </div>
+      </section>
+
+
+      <section className="why-office" aria-label="Dlaczego ta kancelaria">
+        <div className="why-office-header">
+          <p className="section-label">Dlaczego ta kancelaria</p>
+          <h2>Precyzja tłumacza przysięgłego. Doświadczenie w dokumentach procesowych.</h2>
+        </div>
+
+        <div className="why-office-grid">
+          <article className="why-office-card">
+            <span>TP/27/17</span>
+            <h3>Tłumacz przysięgły języka ukraińskiego</h3>
+            <p>Wpis na listę tłumaczy przysięgłych. Tłumaczenia poświadczone dokumentów urzędowych, sądowych i prywatnych.</p>
+          </article>
+
+          <article className="why-office-card">
+            <span>Sprawy procesowe</span>
+            <h3>Sądy, Policja, prokuratura</h3>
+            <p>Akta spraw, protokoły, postanowienia, pouczenia, pisma procesowe i materiał dowodowy w języku ukraińskim.</p>
+          </article>
+
+          <article className="why-office-card">
+            <span>Online</span>
+            <h3>Wycena dokumentów z całej Polski</h3>
+            <p>Dokument można przesłać elektronicznie. W odpowiedzi otrzymasz informację o terminie i orientacyjnym koszcie.</p>
+          </article>
         </div>
       </section>
 
