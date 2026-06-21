@@ -2381,6 +2381,74 @@ footer {
           }
         }
 
+
+        .final-profile-map-marker {
+          display: none;
+        }
+
+        .feature {
+          background:
+            linear-gradient(145deg, rgba(255, 250, 242, 0.98), rgba(248, 241, 230, 0.94)),
+            radial-gradient(circle at 100% 0%, rgba(182, 138, 58, 0.13), transparent 36%);
+          border: 1px solid rgba(19, 16, 12, 0.14);
+          color: #13100c;
+          box-shadow: 0 18px 48px rgba(25, 22, 18, 0.09);
+        }
+
+        .feature h2,
+        .feature .section-label {
+          color: #13100c;
+          text-shadow: none;
+        }
+
+        .feature p {
+          color: rgba(19, 16, 12, 0.76);
+          text-shadow: none;
+        }
+
+        .feature .label,
+        .labels .label {
+          background: rgba(18, 60, 49, 0.08);
+          border: 1px solid rgba(18, 60, 49, 0.14);
+          color: #123c31;
+          text-shadow: none;
+        }
+
+        .feature::before,
+        .feature::after {
+          opacity: 0.08;
+        }
+
+        .map-section {
+          padding-top: 42px;
+        }
+
+        .map-card {
+          overflow: hidden;
+          border-radius: 34px;
+          border: 1px solid rgba(19, 16, 12, 0.14);
+          background: rgba(255, 250, 242, 0.94);
+          box-shadow: 0 18px 48px rgba(25, 22, 18, 0.10);
+        }
+
+        .map-card iframe {
+          display: block;
+          width: 100%;
+          height: 430px;
+          border: 0;
+          filter: saturate(0.92) contrast(0.96);
+        }
+
+        @media (max-width: 760px) {
+          .map-card {
+            border-radius: 24px;
+          }
+
+          .map-card iframe {
+            height: 340px;
+          }
+        }
+
       `}</style>
 
       <div className="topbar">
@@ -2689,6 +2757,24 @@ footer {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+
+      <section className="section map-section" aria-label="Mapa dojazdu do kancelarii">
+        <SectionHeading
+          label="Mapa"
+          title="Kancelaria w Krakowie."
+          text="Adres kancelarii: ul. Kielecka 2/53, 31-526 Kraków. Dokumenty można przekazać osobiście albo przesłać elektronicznie do wstępnej wyceny."
+        />
+
+        <div className="map-card">
+          <iframe
+            title="Mapa dojazdu do Kancelarii Mgr Vadym Rekel w Krakowie"
+            src="https://www.google.com/maps?q=Kielecka%202%2F53%2C%2031-526%20Krak%C3%B3w&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </section>
 
