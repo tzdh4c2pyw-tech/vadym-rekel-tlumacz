@@ -155,30 +155,30 @@ const officePhotos = [
   {
     src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
     alt: "Mgr Vadym Rekel przy stanowisku pracy tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Mgr Vadym Rekel — stanowisko pracy",
+    title: "Stanowisko pracy",
     featured: true,
     emphasis: true
   },
   {
     src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
     alt: "Stanowisko administracyjne kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Stanowisko administracyjne kancelarii",
+    title: "Administracja",
     featured: true
   },
   {
     src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
     alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Kancelaria"
+    title: "Kancelaria w Krakowie"
   },
   {
     src: "/images/biuro-tlumacza-przysieglego-jezyk-ukrainski-krakow-vadym-rekel.jpg",
     alt: "Biuro tłumacza przysięgłego języka ukraińskiego w Krakowie",
-    title: "Biuro"
+    title: "Biuro kancelarii"
   },
   {
     src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
     alt: "Stanowisko pracy tłumacza przysięgłego języka ukraińskiego",
-    title: "Stanowisko tłumacza"
+    title: "Praca z dokumentami"
   },
   {
     src: "/images/stanowisko-komputerowe-bieglego-tlumacza-macbook-pro-vadym-rekel.jpg",
@@ -188,7 +188,7 @@ const officePhotos = [
   {
     src: "/images/stanowisko-administracyjne-kancelaria-tlumacza-ukrainski-krakow-vadym-rekel.jpg",
     alt: "Stanowisko administracyjne kancelarii tłumacza ukraińskiego w Krakowie",
-    title: "Obsługa kancelarii"
+    title: "Administracja"
   },
   {
     src: "/images/laptop-windows-bitlocker-kancelaria-tlumacza-vadym-rekel.jpg",
@@ -198,12 +198,12 @@ const officePhotos = [
   {
     src: "/images/drukarki-hp-pagewide-kancelaria-tlumacza-vadym-rekel.jpg",
     alt: "Drukarki HP PageWide w kancelarii tłumacza przysięgłego",
-    title: "Druk dokumentów"
+    title: "Druk i kompletacja"
   },
   {
     src: "/images/niszczarka-dokumentow-hsm-shredstar-x15-kancelaria-vadym-rekel.jpg",
     alt: "Niszczarka dokumentów HSM shredstar X15 w kancelarii tłumacza",
-    title: "Bezpieczeństwo dokumentów"
+    title: "Ochrona dokumentów"
   }
 ];
 
@@ -2082,6 +2082,79 @@ export default function HomePage() {
           }
         }
 
+
+        .compact-contact {
+          max-width: 350px;
+          padding: 20px;
+        }
+
+        .compact-head {
+          display: grid;
+          grid-template-columns: 46px 1fr;
+          gap: 12px;
+          align-items: center;
+        }
+
+        .compact-kicker {
+          display: block;
+          margin-bottom: 4px;
+          color: var(--gold-dark);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 950;
+          letter-spacing: 0.11em;
+          text-transform: uppercase;
+        }
+
+        .compact-contact h2 {
+          margin: 0;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: -0.045em;
+        }
+
+        .compact-contact p {
+          margin: 16px 0 14px;
+          font-size: 13.5px;
+          line-height: 1.48;
+        }
+
+        .compact-contact .floating-phone {
+          min-height: 48px;
+          font-size: 18px;
+          border-radius: 16px;
+        }
+
+        .compact-contact .floating-actions {
+          margin-top: 10px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+
+        .compact-contact .floating-primary,
+        .compact-contact .floating-secondary {
+          min-height: 44px;
+          border-radius: 999px;
+          font-size: 13px;
+        }
+
+        .compact-contact .floating-close {
+          top: 12px;
+          right: 12px;
+        }
+
+        @media (max-width: 760px) {
+          .compact-contact {
+            max-width: none;
+            padding: 18px;
+          }
+
+          .compact-contact h2 {
+            font-size: 22px;
+          }
+        }
+
       `}</style>
 
       <div className="topbar">
@@ -2406,7 +2479,7 @@ export default function HomePage() {
         aria-hidden="true"
       />
 
-      <aside className="floating-contact" aria-label="Szybki kontakt z kancelarią">
+      <aside className="floating-contact compact-contact" aria-label="Szybki kontakt z kancelarią">
         <label
           className="floating-close"
           htmlFor="close-floating-contact"
@@ -2415,14 +2488,16 @@ export default function HomePage() {
           ×
         </label>
 
-        <div className="floating-mark">VR</div>
-
-        <h2>Potrzebujesz tłumacza przysięgłego?</h2>
+        <div className="compact-head">
+          <div className="floating-mark">VR</div>
+          <div>
+            <span className="compact-kicker">Szybka wycena</span>
+            <h2>Tłumacz przysięgły ukraiński</h2>
+          </div>
+        </div>
 
         <p>
-          Zadzwoń lub wyślij dokument do wstępnej wyceny. Obsługa spraw sądowych,
-          policyjnych, prokuratorskich, dokumentów z Ukrainy i materiału
-          cyfrowego.
+          Wyślij skan dokumentu albo zadzwoń bezpośrednio do tłumacza.
         </p>
 
         <a className="floating-phone" href={`tel:${expertPhoneHref}`}>
@@ -2434,7 +2509,7 @@ export default function HomePage() {
             Zadzwoń
           </a>
           <a className="floating-secondary" href={`mailto:${email}`}>
-            Wyślij e-mail
+            E-mail
           </a>
         </div>
       </aside>
