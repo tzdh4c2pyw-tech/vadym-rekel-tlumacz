@@ -1174,6 +1174,11 @@ export default function HomePage() {
             width: auto;
           }
         }
+
+        .premium-ui-note {
+          display: none;
+        }
+
         .section {
           max-width: 1220px;
           margin: 0 auto;
@@ -1346,7 +1351,17 @@ export default function HomePage() {
           aspect-ratio: 4 / 3;
           object-fit: cover;
         }
-footer {
+
+        .floating-cta,
+        .sticky-cta {
+          right: 22px;
+          bottom: 22px;
+          max-width: 390px;
+          border-radius: 28px;
+          box-shadow: 0 22px 70px rgba(18, 60, 49, 0.22);
+        }
+
+        footer {
           margin-top: 48px;
         }
 
@@ -1418,7 +1433,21 @@ footer {
             text-align: left;
             padding: 15px 18px;
           }
-}
+
+          .floating-cta,
+          .sticky-cta {
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            max-width: none;
+          }
+        }
+
+
+        .premium-v2-marker {
+          display: none;
+        }
+
         body {
           background:
             radial-gradient(circle at 12% -4%, rgba(182, 138, 58, 0.18), transparent 32%),
@@ -1789,7 +1818,23 @@ footer {
           border-top: 1px solid rgba(19, 16, 12, 0.10);
           background: rgba(18, 60, 49, 0.04);
         }
-@media (max-width: 1120px) {
+
+        .floating-cta,
+        .sticky-cta {
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          background:
+            linear-gradient(135deg, rgba(18, 60, 49, 0.97), rgba(13, 41, 35, 0.98));
+          color: #fff;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+        }
+
+        .floating-cta p,
+        .sticky-cta p {
+          color: rgba(255, 255, 255, 0.74);
+        }
+
+        @media (max-width: 1120px) {
           .gallery,
           .photo-grid,
           .office-photos,
@@ -1865,7 +1910,43 @@ footer {
             border-radius: 26px;
           }
         }
-.floating-cta *,
+
+
+        .premium-cta-v3-marker {
+          display: none;
+        }
+
+        .floating-cta,
+        .sticky-cta {
+          width: min(390px, calc(100vw - 32px));
+          right: 24px;
+          bottom: 24px;
+          padding: 24px;
+          border-radius: 32px;
+          border: 1px solid rgba(255, 255, 255, 0.28);
+          background:
+            linear-gradient(145deg, rgba(255, 250, 242, 0.94), rgba(239, 229, 213, 0.90)),
+            radial-gradient(circle at 0% 0%, rgba(182, 138, 58, 0.18), transparent 36%);
+          color: var(--ink);
+          box-shadow:
+            0 28px 80px rgba(25, 22, 18, 0.22),
+            0 8px 24px rgba(18, 60, 49, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.78);
+          backdrop-filter: blur(22px) saturate(1.12);
+          -webkit-backdrop-filter: blur(22px) saturate(1.12);
+        }
+
+        .floating-cta::before,
+        .sticky-cta::before {
+          content: "";
+          position: absolute;
+          inset: 10px;
+          pointer-events: none;
+          border: 1px solid rgba(182, 138, 58, 0.22);
+          border-radius: 24px;
+        }
+
+        .floating-cta *,
         .sticky-cta * {
           position: relative;
           z-index: 1;
@@ -1885,7 +1966,57 @@ footer {
             0 16px 34px rgba(18, 60, 49, 0.22),
             inset 0 1px 0 rgba(255, 255, 255, 0.18);
         }
-.floating-cta a,
+
+        .floating-cta h2,
+        .floating-cta h3,
+        .floating-cta strong,
+        .sticky-cta h2,
+        .sticky-cta h3,
+        .sticky-cta strong {
+          color: var(--ink);
+          font-size: clamp(24px, 2.3vw, 34px);
+          line-height: 0.98;
+          letter-spacing: -0.055em;
+          text-wrap: balance;
+        }
+
+        .floating-cta p,
+        .sticky-cta p {
+          margin-top: 12px;
+          color: rgba(19, 16, 12, 0.66);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 14px;
+          line-height: 1.55;
+          font-weight: 650;
+        }
+
+        .floating-cta a[href^="tel"],
+        .sticky-cta a[href^="tel"] {
+          min-height: 54px;
+          border-radius: 18px;
+          background:
+            linear-gradient(135deg, var(--green), var(--green-dark));
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          box-shadow:
+            0 16px 34px rgba(18, 60, 49, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.16);
+          font-size: 17px;
+          letter-spacing: 0.02em;
+        }
+
+        .floating-cta a[href^="mailto"],
+        .sticky-cta a[href^="mailto"] {
+          min-height: 48px;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.74);
+          color: var(--green);
+          border: 1px solid rgba(18, 60, 49, 0.16);
+          font-weight: 950;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+        }
+
+        .floating-cta a,
         .sticky-cta a {
           transition:
             transform 160ms ease,
@@ -1897,7 +2028,21 @@ footer {
         .sticky-cta a:hover {
           transform: translateY(-2px);
         }
-.floating-cta button:hover,
+
+        .floating-cta button,
+        .sticky-cta button,
+        .floating-cta [aria-label="Close"],
+        .sticky-cta [aria-label="Close"] {
+          width: 34px;
+          height: 34px;
+          border-radius: 999px;
+          border: 1px solid rgba(19, 16, 12, 0.10);
+          background: rgba(255, 255, 255, 0.62);
+          color: rgba(19, 16, 12, 0.58);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+        }
+
+        .floating-cta button:hover,
         .sticky-cta button:hover,
         .floating-cta [aria-label="Close"]:hover,
         .sticky-cta [aria-label="Close"]:hover {
@@ -1906,7 +2051,36 @@ footer {
         }
 
         @media (max-width: 760px) {
-}
+          .floating-cta,
+          .sticky-cta {
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            width: auto;
+            padding: 20px;
+            border-radius: 26px;
+          }
+
+          .floating-cta::before,
+          .sticky-cta::before {
+            inset: 8px;
+            border-radius: 20px;
+          }
+
+          .floating-cta h2,
+          .floating-cta h3,
+          .floating-cta strong,
+          .sticky-cta h2,
+          .sticky-cta h3,
+          .sticky-cta strong {
+            font-size: 25px;
+          }
+
+          .floating-cta p,
+          .sticky-cta p {
+            font-size: 13px;
+          }
+        }
 
 
         .compact-contact {
