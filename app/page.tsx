@@ -2163,6 +2163,224 @@ footer {
           }
         }
 
+
+        .final-readability-v2-marker {
+          display: none;
+        }
+
+        main,
+        .hero,
+        .hero-main,
+        .section,
+        .trust,
+        .why-office,
+        .feature,
+        .contact-panel,
+        .card,
+        .card-petrol,
+        .why-office-card,
+        .photo-card {
+          opacity: 1;
+          filter: none;
+        }
+
+        .card,
+        .card-petrol,
+        .why-office-card {
+          background:
+            linear-gradient(145deg, rgba(255, 250, 242, 0.98), rgba(248, 241, 230, 0.94));
+          color: #13100c;
+          border-color: rgba(19, 16, 12, 0.16);
+        }
+
+        .card h3,
+        .card-petrol h3,
+        .why-office-card h3,
+        .feature h2,
+        .section-heading h2 {
+          color: #13100c;
+        }
+
+        .card p,
+        .card-petrol p,
+        .why-office-card p,
+        .feature p,
+        .section-heading > p,
+        .hero-note,
+        .lead {
+          color: rgba(19, 16, 12, 0.76);
+        }
+
+        .card-link {
+          color: #123c31;
+          font-weight: 950;
+        }
+
+        .hero-side {
+          min-height: 560px;
+          padding: 22px;
+        }
+
+        .portrait {
+          margin: 0;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .portrait img {
+          height: 100%;
+          max-height: 500px;
+          object-fit: cover;
+          object-position: center top;
+          border-radius: 26px;
+        }
+
+        .portrait figcaption {
+          padding: 16px 18px;
+          border-radius: 20px;
+          background: rgba(255, 250, 242, 0.96);
+          color: #13100c;
+          box-shadow: 0 14px 34px rgba(25, 22, 18, 0.14);
+        }
+
+        .portrait figcaption strong {
+          display: block;
+          font-size: 18px;
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+        }
+
+        .portrait figcaption span {
+          display: block;
+          margin-top: 4px;
+          color: rgba(19, 16, 12, 0.66);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 12px;
+          font-weight: 850;
+        }
+
+        .photo-grid {
+          gap: 18px;
+        }
+
+        .photo-card,
+        .photo-card-featured,
+        .photo-card-emphasis {
+          min-height: auto;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          background: rgba(255, 250, 242, 0.96);
+          border: 1px solid rgba(19, 16, 12, 0.12);
+          box-shadow: 0 16px 40px rgba(25, 22, 18, 0.08);
+        }
+
+        .photo-card-featured {
+          grid-column: span 6;
+        }
+
+        .photo-card:not(.photo-card-featured) {
+          grid-column: span 4;
+        }
+
+        .photo-card img {
+          width: 100%;
+          height: 280px;
+          max-height: 280px;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+          flex: 0 0 auto;
+        }
+
+        .photo-card-featured img {
+          height: 360px;
+          max-height: 360px;
+        }
+
+        .photo-card-emphasis img {
+          object-position: center 28%;
+        }
+
+        .photo-card::after,
+        .photo-card::before {
+          display: none;
+        }
+
+        .photo-card h3,
+        .photo-card p,
+        .photo-card figcaption,
+        .photo-caption {
+          position: static;
+          display: block;
+          padding: 14px 16px 16px;
+          background: rgba(255, 250, 242, 0.98);
+          color: #13100c;
+          text-shadow: none;
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 14px;
+          font-weight: 900;
+          line-height: 1.25;
+        }
+
+        .contact-panel,
+        .contact-box,
+        .contact-card {
+          color: #13100c;
+        }
+
+        .contact-panel h2,
+        .contact-box h2,
+        .contact-card h2 {
+          color: #13100c;
+        }
+
+        .contact-panel p,
+        .contact-box p,
+        .contact-card p {
+          color: rgba(19, 16, 12, 0.76);
+        }
+
+        @media (max-width: 980px) {
+          .hero-side {
+            min-height: auto;
+          }
+
+          .portrait img {
+            max-height: 420px;
+          }
+
+          .photo-card-featured,
+          .photo-card:not(.photo-card-featured) {
+            grid-column: span 6;
+          }
+
+          .photo-card img,
+          .photo-card-featured img {
+            height: 260px;
+            max-height: 260px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .photo-card-featured,
+          .photo-card:not(.photo-card-featured) {
+            grid-column: span 12;
+          }
+
+          .photo-card img,
+          .photo-card-featured img {
+            height: 240px;
+            max-height: 240px;
+          }
+
+          .portrait img {
+            max-height: 360px;
+          }
+        }
+
       `}</style>
 
       <div className="topbar">
@@ -2229,12 +2447,16 @@ footer {
         </div>
 
         <aside className="hero-side">
-          <div className="portrait">
+          <figure className="portrait">
             <img
               src="/images/vadym%20rekel.jpg"
               alt="Mgr Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
             />
-          </div>
+            <figcaption>
+              <strong>Mgr Vadym Rekel</strong>
+              <span>Tłumacz przysięgły języka ukraińskiego · TP/27/17</span>
+            </figcaption>
+          </figure>
         </aside>
       </section>
 
