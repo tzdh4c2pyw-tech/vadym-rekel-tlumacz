@@ -1174,6 +1174,275 @@ export default function HomePage() {
             width: auto;
           }
         }
+
+        .premium-ui-note {
+          display: none;
+        }
+
+        .section {
+          max-width: 1220px;
+          margin: 0 auto;
+          padding: 72px 22px;
+        }
+
+        .section + .section {
+          padding-top: 38px;
+        }
+
+        .section-heading {
+          margin-bottom: 34px;
+          align-items: flex-end;
+          gap: 28px;
+        }
+
+        .section-heading h2 {
+          max-width: 760px;
+          font-size: clamp(34px, 4.2vw, 58px);
+          line-height: 0.98;
+          letter-spacing: -0.055em;
+        }
+
+        .section-heading > p {
+          max-width: 520px;
+          color: var(--muted);
+          font-size: 17px;
+          line-height: 1.65;
+        }
+
+        .section-label {
+          display: inline-flex;
+          margin: 0 0 13px;
+          padding: 8px 12px;
+          border-radius: 999px;
+          background: rgba(18, 60, 49, 0.08);
+          color: var(--green);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 11px;
+          font-weight: 950;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .nav {
+          min-height: 74px;
+        }
+
+        .nav-links {
+          gap: 10px;
+        }
+
+        .nav-links a {
+          padding: 9px 10px;
+          border-radius: 999px;
+        }
+
+        .nav-links a:hover {
+          background: rgba(18, 60, 49, 0.08);
+        }
+
+        .hero {
+          padding-top: 38px;
+          padding-bottom: 56px;
+        }
+
+        .hero-main,
+        .hero-side {
+          border-radius: 34px;
+        }
+
+        .hero-main {
+          min-height: 610px;
+        }
+
+        .hero-side {
+          min-height: 610px;
+        }
+
+        .lead {
+          max-width: 690px;
+        }
+
+        .notice {
+          max-width: 720px;
+        }
+
+        .card,
+        .service-card,
+        .authority-card,
+        .specialization-card,
+        .qualification-card {
+          border-radius: 26px;
+          border: 1px solid var(--line);
+          background: rgba(255, 250, 242, 0.82);
+          box-shadow: 0 16px 42px rgba(25, 22, 18, 0.07);
+          transition:
+            transform 160ms ease,
+            box-shadow 160ms ease,
+            border-color 160ms ease;
+        }
+
+        .card:hover,
+        .service-card:hover,
+        .authority-card:hover,
+        .specialization-card:hover,
+        .qualification-card:hover {
+          transform: translateY(-3px);
+          border-color: rgba(18, 60, 49, 0.24);
+          box-shadow: 0 22px 54px rgba(25, 22, 18, 0.11);
+        }
+
+        .city-links {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 11px;
+        }
+
+        .city-link {
+          min-height: auto;
+          padding: 13px 15px;
+          border-radius: 999px;
+          background:
+            linear-gradient(180deg, rgba(255, 250, 242, 0.96), rgba(248, 241, 230, 0.96));
+          color: var(--green);
+          font-size: 12.5px;
+          justify-content: center;
+          text-align: center;
+          box-shadow: 0 8px 22px rgba(25, 22, 18, 0.055);
+        }
+
+        .city-link::after {
+          content: "→";
+          margin-left: 8px;
+          color: var(--gold-dark);
+        }
+
+        .city-link:hover {
+          background: var(--green);
+          color: #fff;
+        }
+
+        .city-link:hover::after {
+          color: #fff;
+        }
+
+        figure {
+          margin: 0;
+        }
+
+        figcaption {
+          margin-top: 10px;
+          color: var(--muted);
+          font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          font-size: 13px;
+          font-weight: 800;
+          line-height: 1.35;
+        }
+
+        figure img {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 22px;
+        }
+
+        .gallery img,
+        .photo-grid img,
+        .office-photos img,
+        .office-gallery img {
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
+        }
+
+        .floating-cta,
+        .sticky-cta {
+          right: 22px;
+          bottom: 22px;
+          max-width: 390px;
+          border-radius: 28px;
+          box-shadow: 0 22px 70px rgba(18, 60, 49, 0.22);
+        }
+
+        footer {
+          margin-top: 48px;
+        }
+
+        @media (max-width: 1120px) {
+          .nav {
+            align-items: flex-start;
+          }
+
+          .nav-links {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+          }
+
+          .hero {
+            grid-template-columns: 1fr;
+          }
+
+          .hero-main,
+          .hero-side {
+            min-height: auto;
+          }
+
+          .city-links {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        @media (max-width: 760px) {
+          .nav {
+            flex-direction: column;
+            align-items: stretch;
+          }
+
+          .nav-links {
+            justify-content: flex-start;
+            gap: 7px;
+          }
+
+          .nav-phone {
+            width: fit-content;
+          }
+
+          .hero {
+            padding-top: 24px;
+          }
+
+          .hero-main {
+            padding: 34px 24px;
+          }
+
+          .section {
+            padding: 54px 18px;
+          }
+
+          .section-heading {
+            display: block;
+          }
+
+          .section-heading > p {
+            margin-top: 16px;
+          }
+
+          .city-links {
+            grid-template-columns: 1fr;
+          }
+
+          .city-link {
+            justify-content: space-between;
+            text-align: left;
+            padding: 15px 18px;
+          }
+
+          .floating-cta,
+          .sticky-cta {
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            max-width: none;
+          }
+        }
+
       `}</style>
 
       <div className="topbar">
