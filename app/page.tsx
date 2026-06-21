@@ -2047,6 +2047,122 @@ footer {
           }
         }
 
+
+        .readability-fix-marker {
+          display: none;
+        }
+
+        .card,
+        .card-petrol,
+        .why-office-card,
+        .photo-card {
+          color: var(--ink);
+        }
+
+        .card h3,
+        .card-petrol h3,
+        .why-office-card h3,
+        .photo-card h3 {
+          color: #13100c;
+        }
+
+        .card p,
+        .card-petrol p,
+        .why-office-card p,
+        .photo-card p,
+        .section-heading > p,
+        .feature p {
+          color: rgba(19, 16, 12, 0.74);
+        }
+
+        .card .tag,
+        .card-petrol .tag,
+        .why-office-card span {
+          color: var(--green);
+          background: rgba(18, 60, 49, 0.10);
+        }
+
+        .card-link {
+          color: var(--green);
+          font-weight: 950;
+        }
+
+        .card-petrol {
+          background:
+            linear-gradient(145deg, rgba(255, 250, 242, 0.96), rgba(248, 241, 230, 0.88)),
+            radial-gradient(circle at 100% 0%, rgba(182, 138, 58, 0.12), transparent 36%);
+          border-color: rgba(19, 16, 12, 0.12);
+        }
+
+        .photo-grid {
+          grid-template-columns: repeat(12, 1fr);
+          gap: 16px;
+        }
+
+        .photo-card {
+          min-height: 280px;
+          border-radius: 26px;
+        }
+
+        .photo-card-featured {
+          grid-column: span 6;
+          min-height: 420px;
+        }
+
+        .photo-card:not(.photo-card-featured) {
+          grid-column: span 4;
+          min-height: 260px;
+        }
+
+        .photo-card img {
+          height: 100%;
+          max-height: 420px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .photo-card-featured img {
+          max-height: 420px;
+        }
+
+        .photo-card-emphasis img {
+          object-position: center 34%;
+        }
+
+        .photo-caption,
+        .photo-card figcaption,
+        .photo-card h3,
+        .photo-card p {
+          color: #13100c;
+          text-shadow: none;
+        }
+
+        @media (max-width: 980px) {
+          .photo-card-featured,
+          .photo-card:not(.photo-card-featured) {
+            grid-column: span 6;
+            min-height: 300px;
+          }
+
+          .photo-card img,
+          .photo-card-featured img {
+            max-height: 340px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .photo-card-featured,
+          .photo-card:not(.photo-card-featured) {
+            grid-column: span 12;
+            min-height: 260px;
+          }
+
+          .photo-card img,
+          .photo-card-featured img {
+            max-height: 300px;
+          }
+        }
+
       `}</style>
 
       <div className="topbar">
