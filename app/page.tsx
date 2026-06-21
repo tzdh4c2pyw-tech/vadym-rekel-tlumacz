@@ -2155,6 +2155,16 @@ export default function HomePage() {
           }
         }
 
+
+        .city-link-all {
+          background: linear-gradient(135deg, var(--green), var(--green-dark));
+          color: #fff;
+        }
+
+        .city-link-all::after {
+          color: #fff;
+        }
+
       `}</style>
 
       <div className="topbar">
@@ -2373,16 +2383,24 @@ export default function HomePage() {
       <section className="section">
         <SectionHeading
           label="Miasta"
-          title="Tłumacz przysięgły ukraiński w dużych miastach."
-          text="Obsługuję tłumaczenia przysięgłe języka ukraińskiego dla osób prywatnych, kancelarii, firm, sądów, Policji i prokuratury w całej Polsce. Dokumenty można przesłać do wstępnej wyceny online."
+          title="Obsługa dokumentów z całej Polski."
+          text="Dokumenty można przesłać elektronicznie do wstępnej wyceny. Kancelaria obsługuje klientów prywatnych, kancelarie prawne, firmy i instytucje z największych miast w Polsce."
         />
 
         <div className="city-links">
-          {cityLinks.map(([city, href]) => (
-            <a href={href} key={href} className="city-link">
-              Tłumacz przysięgły ukraiński {city}
+          {cityLinks.slice(0, 12).map(([city, href]) => (
+            <a
+              href={href}
+              key={href}
+              className="city-link"
+              aria-label={`Tłumacz przysięgły ukraiński ${city}`}
+            >
+              {city}
             </a>
           ))}
+          <a href="/miasta" className="city-link city-link-all">
+            Wszystkie miasta
+          </a>
         </div>
       </section>
 

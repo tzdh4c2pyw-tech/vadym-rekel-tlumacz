@@ -6,6 +6,7 @@ const mainRoutes = [
   "",
   "/kontakt",
   "/kwalifikacje",
+  "/miasta",
   "/dokumenty-z-ukrainy",
   "/tlumaczenia-dla-policji",
   "/tlumaczenia-dla-prokuratury",
