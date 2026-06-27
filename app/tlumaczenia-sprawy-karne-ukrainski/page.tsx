@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://vadym-rekel-tlumacz.vercel.app";
+const siteUrl = "https://vadymrekel.pro";
 const pageUrl = `${siteUrl}/tlumaczenia-sprawy-karne-ukrainski`;
 
 export const metadata: Metadata = {

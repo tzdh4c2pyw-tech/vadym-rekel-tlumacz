@@ -225,7 +225,7 @@ export default function QualificationsPage() {
     jobTitle: "Tłumacz przysięgły języka ukraińskiego",
     email,
     telephone: expertPhoneHref,
-    url: "https://www.tlumaczrosyjskiegoiukrainskiego.pl/kwalifikacje",
+    url: "https://vadymrekel.pro/kwalifikacje",
     worksFor: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel",

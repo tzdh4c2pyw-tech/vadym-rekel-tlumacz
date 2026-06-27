@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Tłumacz przysięgły ukraiński Warszawa | Vadym Rekel",
     description:
       "Tłumaczenia przysięgłe z języka ukraińskiego na polski i z polskiego na ukraiński dla osób z miasta Warszawa. Dokumenty urzędowe, sądowe i prywatne.",
-    url: "https://vadym-rekel-tlumacz.vercel.app/tlumacz-przysiegly-ukrainski-warszawa",
+    url: "https://vadymrekel.pro/tlumacz-przysiegly-ukrainski-warszawa",
     type: "website",
   },
 };

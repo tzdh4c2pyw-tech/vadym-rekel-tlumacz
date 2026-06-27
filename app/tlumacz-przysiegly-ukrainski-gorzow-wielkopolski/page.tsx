@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Tłumacz przysięgły ukraiński Gorzów Wielkopolski | Vadym Rekel",
     description:
       "Tłumaczenia przysięgłe z języka ukraińskiego na polski i z polskiego na ukraiński dla osób z miasta Gorzów Wielkopolski. Dokumenty urzędowe, sądowe i prywatne.",
-    url: "https://vadym-rekel-tlumacz.vercel.app/tlumacz-przysiegly-ukrainski-gorzow-wielkopolski",
+    url: "https://vadymrekel.pro/tlumacz-przysiegly-ukrainski-gorzow-wielkopolski",
     type: "website",
   },
 };

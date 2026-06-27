@@ -157,7 +157,7 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Kontakt i wycena tłumaczenia - Vadym Rekel",
-    url: "https://www.tlumaczrosyjskiegoiukrainskiego.pl/kontakt",
+    url: "https://vadymrekel.pro/kontakt",
     mainEntity: {
       "@type": "ProfessionalService",
       name: "Kancelaria Vadym Rekel - tłumacz przysięgły języka ukraińskiego",

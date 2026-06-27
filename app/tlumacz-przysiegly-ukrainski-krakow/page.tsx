@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Tłumacz przysięgły ukraiński Kraków | Vadym Rekel",
     description:
       "Tłumaczenia przysięgłe z języka ukraińskiego na polski i z polskiego na ukraiński dla osób z miasta Kraków. Dokumenty urzędowe, sądowe i prywatne.",
-    url: "https://vadym-rekel-tlumacz.vercel.app/tlumacz-przysiegly-ukrainski-krakow",
+    url: "https://vadymrekel.pro/tlumacz-przysiegly-ukrainski-krakow",
     type: "website",
   },
 };

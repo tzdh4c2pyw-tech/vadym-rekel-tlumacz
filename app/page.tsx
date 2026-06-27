@@ -1,7 +1,6 @@
-import { PremiumTrustSections } from "@/components/PremiumTrustSections";
 import type { Metadata } from "next";
 
-const siteUrl = "https://vadym-rekel-tlumacz.vercel.app";
+const siteUrl = "https://vadymrekel.pro";
 
 export const metadata: Metadata = {
   title: "Tłumacz przysięgły ukraiński Kraków | Vadym Rekel TP/27/17",
@@ -130,6 +129,21 @@ const qualificationCards = [
   {
     title: "CIOL · TEPIS · MBA · C1",
     text: "Dodatkowe kwalifikacje zawodowe i językowe prezentowane szczegółowo na stronie kwalifikacji."
+  }
+];
+
+const processCards = [
+  {
+    title: "Wyślij dokument",
+    text: "Do wstępnej wyceny wystarczy czytelny skan, zdjęcie albo plik PDF. Warto wskazać, czy dokument ma zostać użyty w urzędzie, sądzie, kancelarii, na uczelni albo w innym postępowaniu."
+  },
+  {
+    title: "Otrzymaj wycenę",
+    text: "W odpowiedzi otrzymasz informację o koszcie, terminie realizacji oraz sposobie odbioru tłumaczenia poświadczonego."
+  },
+  {
+    title: "Poufna obsługa",
+    text: "Dokumenty procesowe, dane osobowe, korespondencja, akta spraw i materiał cyfrowy są traktowane jako materiały poufne."
   }
 ];
 
@@ -2469,6 +2483,7 @@ footer {
             <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
             <a href="#specjalizacja">Specjalizacja</a>
             <a href="#kancelaria">Kancelaria</a>
+            <a href="#wycena">Wycena</a>
             <a href="/kwalifikacje">Kwalifikacje</a>
             <a href="/kontakt">Kontakt</a>
             <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
@@ -2721,6 +2736,41 @@ footer {
         </div>
       </section>
 
+      <section className="section" id="wycena">
+        <SectionHeading
+          label="Wycena i poufność"
+          title="Jak przekazać dokument do tłumaczenia?"
+          text="Do wstępnej wyceny wystarczy czytelny skan, zdjęcie albo plik PDF. Kancelaria przygotowuje tłumaczenia poświadczone dokumentów urzędowych, sądowych, prywatnych i procesowych."
+        />
+
+        <div className="grid-3">
+          {processCards.map((item) => (
+            <article className="card" key={item.title}>
+              <span className="tag">Etap</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="hero-actions">
+          <a className="button button-primary" href={`mailto:${email}`}>
+            Wyślij dokument e-mailem
+          </a>
+          <a className="button button-secondary" href="https://wa.me/48883040483">
+            WhatsApp
+          </a>
+          <a
+            className="button button-secondary"
+            href="https://arch-bip.ms.gov.pl/pl/rejestry-i-ewidencje/tlumacze-przysiegli/lista-tlumaczy-przysieglych/translator,11371.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sprawdź wpis w rejestrze
+          </a>
+        </div>
+      </section>
+
       <section className="section" id="kontakt">
         <div className="contact-panel">
           <div>
@@ -2866,7 +2916,6 @@ footer {
           </a>
         </div>
       </aside>
-          <PremiumTrustSections />
-    </main>
+</main>
   );
 }

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Tłumacz przysięgły ukraiński Bydgoszcz | Vadym Rekel",
     description:
       "Tłumaczenia przysięgłe z języka ukraińskiego na polski i z polskiego na ukraiński dla osób z miasta Bydgoszcz. Dokumenty urzędowe, sądowe i prywatne.",
-    url: "https://vadym-rekel-tlumacz.vercel.app/tlumacz-przysiegly-ukrainski-bydgoszcz",
+    url: "https://vadymrekel.pro/tlumacz-przysiegly-ukrainski-bydgoszcz",
     type: "website",
   },
 };

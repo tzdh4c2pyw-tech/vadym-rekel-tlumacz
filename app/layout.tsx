@@ -2,7 +2,10 @@ import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const siteUrl = "https://vadymrekel.pro";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vadymrekel.pro"),
   
 
   title: {
@@ -37,13 +40,13 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "/"
+    canonical: "https://vadymrekel.pro"
   },
 
   openGraph: {
     type: "website",
     locale: "pl_PL",
-    url: "https://www.tlumaczrosyjskiegoiukrainskiego.pl",
+    url: "https://vadymrekel.pro",
     siteName: "Kancelaria Vadym Rekel",
     title:
       "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel TP/27/17",
