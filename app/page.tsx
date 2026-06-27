@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia poświadczone dla sądów, Policji, prokuratury, kancelarii prawnych oraz klientów prywatnych.",
   keywords: [
     "tłumacz przysięgły ukraiński Kraków",
-    "tłumacz przysięgły języka ukraińskiego",
+    "tłumacz przysięgły",
     "tłumaczenia przysięgłe ukraiński",
     "tłumacz ukraiński sąd",
     "tłumacz ukraiński Policja",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/images/vadym%20rekel.jpg`,
         width: 1200,
         height: 630,
-        alt: "Mgr Vadym Rekel - tłumacz przysięgły języka ukraińskiego"
+        alt: "Mgr Vadym Rekel - tłumacz przysięgły"
       }
     ]
   }
@@ -125,7 +125,7 @@ const cityLinks = [
 const qualificationCards = [
   {
     title: "TP/27/17",
-    text: "Wpis na listę tłumaczy przysięgłych języka ukraińskiego. Podstawowa kwalifikacja kancelarii."
+    text: "Wpis na listę tłumaczy przysięgłych. Podstawowa kwalifikacja kancelarii."
   },
   {
     title: "Prawo i nowe technologie",
@@ -155,30 +155,30 @@ const processCards = [
 const officePhotos = [
   {
     src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20pracy%20vadym%20rekel.jpeg",
-    alt: "Mgr Vadym Rekel przy stanowisku pracy tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    alt: "Mgr Vadym Rekel przy stanowisku pracy w kancelarii w Krakowie",
     title: "Stanowisko pracy",
     featured: true,
     emphasis: true
   },
   {
     src: "/images/kancelaria%20tlumacza%20przysieglego%20stanowisko%20administracyjne%20vadym%20rekel.jpeg",
-    alt: "Stanowisko administracyjne kancelarii tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    alt: "Stanowisko administracyjne kancelarii w Krakowie",
     title: "Administracja",
     featured: true
   },
   {
     src: "/images/kancelaria-tlumacza-przysieglego-ukrainski-krakow-vadym-rekel-01.jpg",
-    alt: "Kancelaria tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    alt: "Kancelaria tłumacza przysięgłego w Krakowie",
     title: "Kancelaria w Krakowie"
   },
   {
     src: "/images/biuro-tlumacza-przysieglego-jezyk-ukrainski-krakow-vadym-rekel.jpg",
-    alt: "Biuro tłumacza przysięgłego języka ukraińskiego w Krakowie",
+    alt: "Biuro kancelarii tłumacza przysięgłego w Krakowie",
     title: "Biuro kancelarii"
   },
   {
     src: "/images/stanowisko-tlumacza-przysieglego-ukrainski-krakow-macbook-pro-vadym-rekel.jpg",
-    alt: "Stanowisko pracy tłumacza przysięgłego języka ukraińskiego",
+    alt: "Stanowisko pracy tłumacza przysięgłego",
     title: "Praca z dokumentami"
   },
   {
@@ -232,7 +232,7 @@ export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Kancelaria Mgr Vadym Rekel - tłumacz przysięgły języka ukraińskiego",
+    name: "Kancelaria Mgr Vadym Rekel - tłumacz przysięgły",
     image: `${siteUrl}/images/vadym%20rekel.jpg`,
     url: siteUrl,
     telephone: expertPhoneHref,
@@ -2541,11 +2541,11 @@ footer {
           <figure className="portrait">
             <img
               src="/images/vadym%20rekel.jpg"
-              alt="Mgr Vadym Rekel tłumacz przysięgły języka ukraińskiego Kraków"
+              alt="Mgr Vadym Rekel, tłumacz przysięgły w Krakowie"
             />
             <figcaption>
               <strong>Mgr Vadym Rekel</strong>
-              <span>Tłumacz przysięgły języka ukraińskiego · TP/27/17</span>
+              <span>Tłumacz przysięgły · TP/27/17</span>
             </figcaption>
           </figure>
         </aside>
@@ -2555,7 +2555,7 @@ footer {
         <div className="trust-inner">
           <div className="trust-item">
             <strong>TP/27/17</strong>
-            tłumacz przysięgły języka ukraińskiego
+            tłumacz przysięgły
           </div>
           <div className="trust-item">
             <strong>Kraków</strong>
@@ -2698,8 +2698,8 @@ footer {
       <section className="section">
         <SectionHeading
           label="Kwalifikacje"
-          title="TP/27/17 jako główny fundament zaufania."
-          text="Kwalifikacje dodatkowe wzmacniają profil specjalistyczny. Podstawą pozostaje formalny status tłumacza przysięgłego języka ukraińskiego."
+          title="TP/27/17 jako formalny fundament zaufania."
+          text="Kwalifikacje dodatkowe wzmacniają profil specjalistyczny. Podstawą pozostaje formalny status tłumacza przysięgłego."
         />
 
         <div className="grid-3">
@@ -2732,7 +2732,7 @@ footer {
               href={href}
               key={href}
               className="city-link"
-              aria-label={`Tłumacz przysięgły ukraiński ${city}`}
+              aria-label={`Szybka wycena dokumentu ${city}`}
             >
               {city}
             </a>
@@ -2908,12 +2908,12 @@ footer {
           <div className="floating-mark">VR</div>
           <div>
             <span className="compact-kicker">Szybka wycena</span>
-            <h2>Tłumacz przysięgły ukraiński</h2>
+            <h2>Szybka wycena dokumentu</h2>
           </div>
         </div>
 
         <p>
-          Wyślij skan dokumentu albo zadzwoń bezpośrednio do tłumacza.
+          Wyślij skan dokumentu albo zadzwoń w sprawie terminu i wyceny.
         </p>
 
         <a className="floating-phone" href={`tel:${expertPhoneHref}`}>
