@@ -176,12 +176,12 @@ const certificateLinks = [
 
 const faqItems = [
   {
-    question: "Która kwalifikacja jest najważniejsza dla strony kancelarii?",
+    question: "Która kwalifikacja jest najważniejsza dla kancelarii?",
     answer:
       "Najważniejsza jest kwalifikacja tłumacza przysięgłego języka ukraińskiego i numer wpisu TP/27/17. Pozostałe kwalifikacje wzmacniają profil specjalistyczny, ale nie powinny dominować nad podstawowym statusem zawodowym."
   },
   {
-    question: "Czy MBA powinno być mocno eksponowane na stronie głównej?",
+    question: "Jaką rolę pełni MBA w profilu zawodowym?",
     answer:
       "Nie. MBA warto pokazać na stronie kwalifikacji jako element profilu zarządczego i organizacyjnego kancelarii, natomiast na stronie głównej powinny dominować: tłumacz przysięgły języka ukraińskiego, TP/27/17, sąd, Policja i prokuratura."
   },
