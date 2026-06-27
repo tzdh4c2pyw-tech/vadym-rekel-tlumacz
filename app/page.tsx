@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 const siteUrl = "https://vadymrekel.pro";
 
 export const metadata: Metadata = {
-  title: "Tłumacz przysięgły ukraiński Kraków | Vadym Rekel TP/27/17",
+  title: "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel",
   description:
-    "Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia poświadczone dokumentów z Ukrainy, akt spraw, pism sądowych, spraw karnych i materiału cyfrowego.",
+    "Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia poświadczone dla sądów, Policji, prokuratury, kancelarii prawnych oraz klientów prywatnych.",
   keywords: [
     "tłumacz przysięgły ukraiński Kraków",
     "tłumacz przysięgły języka ukraińskiego",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     canonical: siteUrl
   },
   openGraph: {
-    title: "Tłumacz przysięgły ukraiński Kraków | Vadym Rekel",
+    title: "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel",
     description:
-      "Tłumaczenia poświadczone języka ukraińskiego dla sądów, Policji, prokuratury, kancelarii prawnych, firm i osób prywatnych.",
+      "Tłumaczenia poświadczone języka ukraińskiego dla sądów, Policji, prokuratury, kancelarii prawnych i osób prywatnych.",
     url: siteUrl,
     type: "website",
     locale: "pl_PL",
@@ -2485,11 +2485,10 @@ footer {
 
           <div className="nav-links">
             <a href="#organy">Dla organów</a>
+            <a href="/dokumenty-z-ukrainy">Dokumenty z Ukrainy</a>
             <a href="/tlumaczenia-sprawy-karne-ukrainski">Sprawy karne</a>
-            <a href="#specjalizacja">Specjalizacja</a>
-            <a href="#kancelaria">Kancelaria</a>
+            <a href="/tlumaczenia-dla-kancelarii">Dla kancelarii</a>
             <a href="#wycena">Wycena</a>
-            <a href="/kwalifikacje">Kwalifikacje</a>
             <a href="/kontakt">Kontakt</a>
             <a className="nav-phone" href={`tel:${expertPhoneHref}`}>
               {expertPhoneDisplay}
@@ -2505,20 +2504,23 @@ footer {
           <h1>Tłumacz przysięgły języka ukraińskiego w Krakowie.</h1>
 
           <p className="lead">
-            Kancelaria Mgr Vadym Rekel. Tłumaczenia poświadczone i ustne języka
-            ukraińskiego dla sądów, Policji, prokuratury, kancelarii prawnych,
-            instytucji i osób prywatnych.
+            Kancelaria Mgr Vadym Rekel. Tłumaczenia poświadczone języka ukraińskiego
+            dla sądów, Policji, prokuratury, kancelarii prawnych, instytucji
+            oraz klientów prywatnych.
           </p>
 
           <div className="hero-actions">
             <a className="button button-primary" href={`tel:${expertPhoneHref}`}>
-              Tłumacz / biegły: {expertPhoneDisplay}
+              Telefon: {expertPhoneDisplay}
             </a>
             <a className="button button-secondary" href={`tel:${officePhoneHref}`}>
               Kancelaria: {officePhoneDisplay}
             </a>
             <a className="button button-secondary" href="/kontakt">
               Wyślij dokument do wyceny
+            </a>
+            <a className="button button-secondary" href="/dokumenty-z-ukrainy">
+              Dokumenty z Ukrainy
             </a>
           </div>
 
@@ -2528,8 +2530,8 @@ footer {
           </p>
 
           <div className="notice">
-            Najważniejsza specjalizacja: język ukraiński, dokumenty procesowe,
-            sprawy karne, dokumenty z Ukrainy i materiał cyfrowy.
+            Specjalizacja kancelarii: dokumenty procesowe, sprawy karne,
+            dokumenty z Ukrainy, korespondencja oraz materiał cyfrowy.
           </div>
 
           <div className="signature">Mgr Vadym Rekel</div>
@@ -2574,14 +2576,14 @@ footer {
       <section className="why-office" aria-label="Dlaczego ta kancelaria">
         <div className="why-office-header">
           <p className="section-label">Dlaczego ta kancelaria</p>
-          <h2>Precyzja tłumacza przysięgłego. Doświadczenie w dokumentach procesowych.</h2>
+          <h2>Tłumaczenia poświadczone dokumentów urzędowych, sądowych i procesowych.</h2>
         </div>
 
         <div className="why-office-grid">
           <article className="why-office-card">
             <span>TP/27/17</span>
             <h3>Tłumacz przysięgły języka ukraińskiego</h3>
-            <p>Wpis na listę tłumaczy przysięgłych. Tłumaczenia poświadczone dokumentów urzędowych, sądowych i prywatnych.</p>
+            <p>Wpis na listę tłumaczy przysięgłych. Tłumaczenia poświadczone dokumentów urzędowych, sądowych, procesowych i prywatnych.</p>
           </article>
 
           <article className="why-office-card">
@@ -2602,7 +2604,7 @@ footer {
         <SectionHeading
           label="Dla organów"
           title="Tłumaczenia dla organów procesowych i instytucji publicznych."
-          text="Kancelaria obsługuje dokumenty przekazywane przez sądy, Policję, prokuraturę, kancelarie prawne, instytucje publiczne oraz klientów prywatnych."
+          text="Kancelaria obsługuje dokumenty przekazywane przez sądy, Policję, prokuraturę, kancelarie prawne, instytucje publiczne oraz klientów prywatnych. Zakres obejmuje akta, protokoły, postanowienia, pouczenia, pisma procesowe i materiał dowodowy."
         />
 
         <div className="grid-3">
@@ -2622,8 +2624,8 @@ footer {
       <section className="section" id="specjalizacja">
         <SectionHeading
           label="Specjalizacja"
-          title="Najczęściej przekazywane materiały."
-          text="Poniżej znajdują się główne rodzaje materiałów najczęściej przekazywanych do tłumaczenia poświadczonego języka ukraińskiego."
+          title="Najczęściej przekazywane dokumenty i materiały."
+          text="Poniżej znajdują się główne kategorie dokumentów i materiałów przekazywanych do tłumaczenia poświadczonego języka ukraińskiego."
         />
 
         <div className="grid-4">
@@ -2644,15 +2646,15 @@ footer {
         <div className="feature">
           <div>
             <p className="section-label">Profil kancelarii</p>
-            <h2>Prawo, język ukraiński i materiał procesowy.</h2>
+            <h2>Język ukraiński, prawo i materiał procesowy.</h2>
           </div>
 
           <div>
             <p>
-              Kancelaria pracuje z dokumentami, które wymagają nie tylko
-              przekładu językowego, lecz także rozumienia funkcji dokumentu:
-              w aktach sprawy, przy czynnościach procesowych, w korespondencji
-              organów albo jako materiał dowodowy.
+              Kancelaria pracuje z dokumentami, które wymagają nie tylko przekładu
+              językowego, lecz także rozumienia funkcji dokumentu w aktach
+              sprawy, przy czynnościach procesowych, w korespondencji organów
+              albo jako materiał dowodowy.
             </p>
 
             <div className="labels">
@@ -2671,7 +2673,7 @@ footer {
         <SectionHeading
           label="Kancelaria"
           title="Realne miejsce pracy w Krakowie."
-          text="Zdjęcia pokazują realne miejsce pracy kancelarii, stanowisko do pracy z dokumentami, zaplecze techniczne oraz warunki przygotowywania tłumaczeń poświadczonych."
+          text="Zdjęcia pokazują realne miejsce pracy kancelarii, stanowisko pracy z dokumentami, zaplecze techniczne oraz warunki przygotowywania tłumaczeń poświadczonych."
         />
 
         <div className="photo-grid">
@@ -2697,7 +2699,7 @@ footer {
         <SectionHeading
           label="Kwalifikacje"
           title="TP/27/17 jako główny fundament zaufania."
-          text="Kwalifikacje dodatkowe wzmacniają profil specjalistyczny, ale strona główna pozostaje skupiona na usłudze tłumacza przysięgłego języka ukraińskiego."
+          text="Kwalifikacje dodatkowe wzmacniają profil specjalistyczny. Podstawą pozostaje formalny status tłumacza przysięgłego języka ukraińskiego."
         />
 
         <div className="grid-3">
@@ -2721,7 +2723,7 @@ footer {
         <SectionHeading
           label="Miasta"
           title="Obsługa dokumentów z całej Polski."
-          text="Dokumenty można przesłać elektronicznie do wstępnej wyceny. Kancelaria obsługuje klientów prywatnych, kancelarie prawne, firmy i instytucje z największych miast w Polsce."
+          text="Dokumenty można przesłać elektronicznie do wstępnej wyceny. Kancelaria mieści się w Krakowie i obsługuje dokumenty przekazywane z całej Polski."
         />
 
         <div className="city-links">
@@ -2773,6 +2775,12 @@ footer {
           >
             Sprawdź wpis w rejestrze
           </a>
+          <a className="button button-secondary" href="/tlumaczenia-dla-policji">
+            Dla Policji
+          </a>
+          <a className="button button-secondary" href="/tlumaczenia-dla-prokuratury">
+            Dla prokuratury
+          </a>
         </div>
       </section>
 
@@ -2782,15 +2790,15 @@ footer {
             <p className="section-label">Kontakt</p>
             <h2>Wyślij dokument albo skontaktuj się telefonicznie.</h2>
             <p>
-              Numer 883 040 483 służy do bezpośredniego kontaktu z tłumaczem /
-              biegłym. Numer 735 753 383 służy do kontaktu z kancelarią.
-              Wszystkie sprawy można zgłaszać na oba numery.
+              Numer 883 040 483 służy do bezpośredniego kontaktu w sprawach pilnych,
+              procesowych i wymagających uzgodnienia zakresu tłumaczenia.
+              Numer 735 753 383 służy do kontaktu z kancelarią.
             </p>
           </div>
 
           <div className="contact-box">
             <span className="contact-line">
-              <strong>Tłumacz / biegły:</strong>{" "}
+              <strong>Telefon:</strong>{" "}
               <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
             </span>
             <span className="contact-line">
@@ -2850,7 +2858,7 @@ footer {
           <div>
             <span className="footer-title">Kontakt</span>
             <span className="footer-line">
-              Tłumacz / biegły:{" "}
+              Telefon:{" "}
               <a href={`tel:${expertPhoneHref}`}>{expertPhoneDisplay}</a>
             </span>
             <span className="footer-line">
