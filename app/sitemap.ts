@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/kwalifikacje",
     "/tlumaczenia-sadowe-ukrainski",
     "/tlumaczenia-sprawy-karne-ukrainski",
+    "/tlumaczenia-dla-kancelarii",
     "/tlumaczenia-dla-policji",
     "/tlumaczenia-dla-prokuratury",
     "/dokumenty-z-ukrainy",

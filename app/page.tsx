@@ -55,6 +55,11 @@ const authorityCards = [
     href: "/tlumaczenia-sadowe-ukrainski"
   },
   {
+    title: "Kancelarie prawne",
+    text: "Pisma procesowe, dokumenty klientów z Ukrainy, załączniki, korespondencja i materiał dowodowy.",
+    href: "/tlumaczenia-dla-kancelarii"
+  },
+  {
     title: "Policja",
     text: "Protokoły, pouczenia, notatki urzędowe, komunikatory, zrzuty ekranu i materiał cyfrowy.",
     href: "/tlumaczenia-dla-policji"
