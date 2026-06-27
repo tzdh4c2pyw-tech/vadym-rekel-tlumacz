@@ -2597,7 +2597,7 @@ footer {
         <SectionHeading
           label="Dla organów"
           title="Tłumaczenia dla organów procesowych i instytucji publicznych."
-          text="Strona główna pokazuje główne obszary pracy kancelarii. Szczegółowy zakres znajduje się na dedykowanych podstronach."
+          text="Kancelaria obsługuje dokumenty przekazywane przez sądy, Policję, prokuraturę, kancelarie prawne, instytucje publiczne oraz klientów prywatnych."
         />
 
         <div className="grid-3">
@@ -2618,7 +2618,7 @@ footer {
         <SectionHeading
           label="Specjalizacja"
           title="Najczęściej przekazywane materiały."
-          text="Główne obszary strony są krótkie i czytelne. Szczegółowy opis pracuje na osobnych podstronach SEO."
+          text="Poniżej znajdują się główne rodzaje materiałów najczęściej przekazywanych do tłumaczenia poświadczonego języka ukraińskiego."
         />
 
         <div className="grid-4">

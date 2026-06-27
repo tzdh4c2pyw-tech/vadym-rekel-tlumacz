@@ -186,9 +186,9 @@ const faqItems = [
       "Nie. MBA warto pokazać na stronie kwalifikacji jako element profilu zarządczego i organizacyjnego kancelarii, natomiast na stronie głównej powinny dominować: tłumacz przysięgły języka ukraińskiego, TP/27/17, sąd, Policja i prokuratura."
   },
   {
-    question: "Czy CIOL, TEPIS i LanguageCert są istotne dla SEO?",
+    question: "Czy CIOL, TEPIS i LanguageCert są istotne dla Wiarygodność?",
     answer:
-      "Są istotne dla zaufania, ale raczej na stronie kwalifikacji. SEO kancelarii powinno nadal opierać się przede wszystkim na frazach dotyczących tłumacza przysięgłego języka ukraińskiego, spraw karnych, dokumentów z Ukrainy i materiału cyfrowego."
+      "Są istotne dla zaufania, ale raczej na stronie kwalifikacji. Wiarygodność kancelarii powinno nadal opierać się przede wszystkim na frazach dotyczących tłumacza przysięgłego języka ukraińskiego, spraw karnych, dokumentów z Ukrainy i materiału cyfrowego."
   },
   {
     question: "Czy kwalifikacje prawne warto pokazywać?",
@@ -1051,7 +1051,7 @@ export default function QualificationsPage() {
         <SectionHeading
           label="Języki i organizacje"
           title="Kwalifikacje językowe i członkostwa."
-          text="Te dokumenty wzmacniają profil zawodowy, ale na stronie nie powinny zastępować głównego komunikatu: tłumacz przysięgły języka ukraińskiego TP/27/17."
+          text="Dokumenty językowe i członkostwa branżowe uzupełniają główny profil zawodowy: tłumacz przysięgły języka ukraińskiego TP/27/17."
         />
 
         <div className="grid-4">
@@ -1073,7 +1073,7 @@ export default function QualificationsPage() {
         <SectionHeading
           label="Dokumenty"
           title="Dokumenty potwierdzające kwalifikacje."
-          text="Lista dokumentów z folderu certyfikatów. Jeżeli zmienisz nazwy plików w folderze public/images/certyfikaty, trzeba będzie odpowiednio zmienić ścieżki w kodzie."
+          text="Poniżej znajdują się wybrane dokumenty potwierdzające kwalifikacje zawodowe, członkostwa branżowe oraz przygotowanie językowe i specjalistyczne."
         />
 
         <div className="certificate-list">
@@ -1093,9 +1093,9 @@ export default function QualificationsPage() {
 
       <section className="section">
         <SectionHeading
-          label="SEO"
-          title="Jak te kwalifikacje pracują dla strony?"
-          text="Strona kwalifikacji ma budować zaufanie, ale nie może rozpraszać głównego pozycjonowania kancelarii."
+          label="Wiarygodność"
+          title="Jak kwalifikacje wzmacniają wiarygodność kancelarii?"
+          text="Kwalifikacje potwierdzają przygotowanie do pracy z dokumentami poświadczonymi, procesowymi, sądowymi, urzędowymi i specjalistycznymi."
         />
 
         <div className="grid-3">
