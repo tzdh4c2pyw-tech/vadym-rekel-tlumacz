@@ -901,7 +901,7 @@ export default function DigitalCryptoTranslationsPage() {
         <SectionHeading
           label="Powiązane obszary"
           title="Materiał cyfrowy często trafia do akt Policji, prokuratury i sądu."
-          text="Dlatego ta strona jest połączona z podstronami dotyczącymi spraw karnych oraz organów procesowych."
+          text="Zakres ten łączy się z tłumaczeniami w sprawach karnych oraz obsługą materiałów przekazywanych przez organy procesowe."
         />
 
         <div className="grid-4">

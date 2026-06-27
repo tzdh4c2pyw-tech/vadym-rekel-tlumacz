@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tlumaczenia-dla-policji",
     "/tlumaczenia-dla-prokuratury",
     "/dokumenty-z-ukrainy",
+    "/tlumacz-przysiegly-ukrainski-krakow",
     "/tlumaczenia-it-krypto"
   ];
 

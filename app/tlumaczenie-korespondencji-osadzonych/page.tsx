@@ -899,7 +899,7 @@ export default function PrisonCorrespondencePage() {
         <SectionHeading
           label="Powiązane obszary"
           title="Korespondencja osadzonych często łączy się ze sprawami karnymi."
-          text="Dlatego ta strona jest połączona z podstronami dotyczącymi sądu, prokuratury, dokumentów z Ukrainy i spraw karnych."
+          text="Zakres ten łączy się z tłumaczeniami sądowymi, prokuratorskimi, dokumentami z Ukrainy oraz sprawami karnymi."
         />
 
         <div className="grid-4">

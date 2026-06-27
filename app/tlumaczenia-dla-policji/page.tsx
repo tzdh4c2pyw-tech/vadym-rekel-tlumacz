@@ -900,7 +900,7 @@ export default function PoliceTranslationsPage() {
         <SectionHeading
           label="Powiązane obszary"
           title="Policja, sąd i prokuratura często korzystają z tych samych materiałów."
-          text="Dlatego strona policyjna jest połączona z podstronami dotyczącymi spraw karnych, sądu, prokuratury i materiału cyfrowego."
+          text="Zakres policyjny obejmuje również tłumaczenia w sprawach karnych, materiał sądowy, prokuratorski oraz materiał cyfrowy."
         />
 
         <div className="grid-4">

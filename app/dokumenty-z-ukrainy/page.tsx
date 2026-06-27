@@ -899,7 +899,7 @@ export default function DocumentsFromUkrainePage() {
         <SectionHeading
           label="Powiązane obszary"
           title="Dokumenty z Ukrainy często trafiają do spraw sądowych, policyjnych i prokuratorskich."
-          text="Dlatego ta strona jest połączona z podstronami dotyczącymi spraw karnych oraz organów procesowych."
+          text="Zakres ten łączy się z tłumaczeniami w sprawach karnych oraz obsługą materiałów przekazywanych przez organy procesowe."
         />
 
         <div className="grid-4">

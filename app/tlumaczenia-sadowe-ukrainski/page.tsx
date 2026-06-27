@@ -863,7 +863,7 @@ export default function CourtTranslationsPage() {
         <SectionHeading
           label="Powiązane obszary"
           title="Sąd, Policja i prokuratura często korzystają z tych samych materiałów."
-          text="Dlatego strona sądowa jest połączona z podstronami dotyczącymi spraw karnych, Policji, prokuratury i materiału cyfrowego."
+          text="Zakres sądowy obejmuje również sprawy karne, materiały przekazywane przez Policję i prokuraturę oraz materiał cyfrowy."
         />
 
         <div className="grid-4">

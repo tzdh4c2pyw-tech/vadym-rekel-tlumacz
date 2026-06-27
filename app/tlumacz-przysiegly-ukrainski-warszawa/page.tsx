@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tłumacz przysięgły ukraiński Warszawa | Tłumaczenia dokumentów",
   description:
-    "Tłumacz przysięgły języka ukraińskiego Warszawie: tłumaczenia dokumentów do sądu, urzędu, Policji, prokuratury, uczelni i pracodawcy. Obsługa online i wysyłka.",
+    "Tłumacz przysięgły języka ukraińskiego Warszawie: tłumaczenia dokumentów do sądu, urzędu, Policji, prokuratury, uczelni i pracodawcy. Kancelaria mieści się w Krakowie. Dokumenty do wstępnej wyceny można przesłać elektronicznie z całej Polski. Obsługa online i wysyłka.",
   alternates: {
     canonical: "/tlumacz-przysiegly-ukrainski-warszawa",
   },

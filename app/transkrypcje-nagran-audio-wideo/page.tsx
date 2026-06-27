@@ -900,7 +900,7 @@ export default function AudioVideoTranscriptionPage() {
         <SectionHeading
           label="Powiązane obszary"
           title="Nagrania często łączą się ze sprawami karnymi i materiałem cyfrowym."
-          text="Dlatego ta strona jest połączona z podstronami dotyczącymi Policji, prokuratury, sądu i materiału cyfrowego."
+          text="Zakres ten łączy się z tłumaczeniami dla Policji, prokuratury, sądu oraz analizą materiału cyfrowego."
         />
 
         <div className="grid-4">
