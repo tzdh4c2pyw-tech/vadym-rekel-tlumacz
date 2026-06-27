@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tłumacz przysięgły ukraiński Kraków | Tłumaczenia dokumentów",
+  title: "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel",
   description:
-    "Tłumacz przysięgły języka ukraińskiego Krakowie: tłumaczenia dokumentów do sądu, urzędu, Policji, prokuratury, uczelni i pracodawcy. Kancelaria mieści się w Krakowie. Dokumenty do wstępnej wyceny można przesłać elektronicznie z całej Polski. Obsługa online i wysyłka.",
+    "Tłumacz przysięgły języka ukraińskiego w Krakowie. Tłumaczenia poświadczone dokumentów z Ukrainy, akt spraw, pism sądowych, dokumentów dla Policji, prokuratury, urzędów i kancelarii prawnych.",
   alternates: {
     canonical: "/tlumacz-przysiegly-ukrainski-krakow",
   },
   openGraph: {
-    title: "Tłumacz przysięgły ukraiński Kraków | Vadym Rekel",
+    title: "Tłumacz przysięgły języka ukraińskiego Kraków | Vadym Rekel",
     description:
-      "Tłumaczenia przysięgłe z języka ukraińskiego na polski i z polskiego na ukraiński dla osób z miasta Kraków. Dokumenty urzędowe, sądowe i prywatne.",
+      "Tłumaczenia poświadczone języka ukraińskiego w Krakowie. Dokumenty urzędowe, sądowe, procesowe, prywatne i dokumenty z Ukrainy.",
     url: "https://vadymrekel.pro/tlumacz-przysiegly-ukrainski-krakow",
     type: "website",
   },
@@ -24,23 +24,34 @@ export default function CityTranslationPage() {
     <main className="city-page">
       <section className="city-hero">
         <div className="city-container">
-          <p className="city-eyebrow">Tłumacz przysięgły języka ukraińskiego</p>
+          <p className="city-eyebrow">Kraków · TP/27/17 · język ukraiński</p>
 
-          <h1>Tłumacz przysięgły ukraiński Kraków — dokumenty, sąd, urząd</h1>
+          <h1>Tłumacz przysięgły języka ukraińskiego w Krakowie</h1>
 
           <p className="city-lead">
-            Potrzebujesz tłumaczenia przysięgłego z języka ukraińskiego na polski
-            albo z polskiego na ukraiński Krakowie? Przyjmuję dokumenty online,
-            wykonuję tłumaczenia pisemne i odsyłam gotowe tłumaczenia zgodnie z
-            ustalonym trybem.
+            Kancelaria Mgr Vadym Rekel, TP/27/17. Tłumaczenia poświadczone dokumentów
+            z Ukrainy, akt spraw, pism sądowych, dokumentów dla Policji,
+            prokuratury, urzędów, kancelarii prawnych oraz klientów prywatnych.
+            Dokumenty do wstępnej wyceny można przesłać elektronicznie.
+          </p>
+
+          <p className="city-lead">
+            Siedziba kancelarii: ul. Kielecka 2/53, 31-526 Kraków. Obsługa
+            dokumentów z Krakowa i z całej Polski.
           </p>
 
           <div className="city-actions">
             <a className="city-button city-button-primary" href="/kontakt">
-              Zapytaj o wycenę
+              Wyślij dokument do wyceny
+            </a>
+            <a className="city-button city-button-secondary" href="tel:+48883040483">
+              Zadzwoń: 883 040 483
+            </a>
+            <a className="city-button city-button-secondary" href="mailto:biegly@vadymrekel.pl">
+              E-mail
             </a>
             <a className="city-button city-button-secondary" href="/kwalifikacje">
-              Sprawdź kwalifikacje
+              Kwalifikacje TP/27/17
             </a>
           </div>
         </div>
@@ -50,28 +61,29 @@ export default function CityTranslationPage() {
         <div className="city-container">
           <div className="city-grid">
             <article className="city-card">
-              <h2>Dokumenty urzędowe</h2>
+              <h2>Dokumenty z Ukrainy i dokumenty urzędowe</h2>
               <p>
-                Tłumaczenia aktów urodzenia, małżeństwa, zgonu, zaświadczeń,
-                decyzji administracyjnych, dokumentów pobytowych i innych pism
-                potrzebnych w urzędach.
+                Akty urodzenia, akty małżeństwa, akty zgonu, zaświadczenia, decyzje
+                administracyjne, dokumenty pobytowe, dokumenty edukacyjne oraz inne
+                pisma potrzebne w urzędach.
               </p>
             </article>
 
             <article className="city-card">
-              <h2>Dokumenty sądowe</h2>
+              <h2>Sądy, Policja i prokuratura</h2>
               <p>
-                Tłumaczenia pism procesowych, wyroków, postanowień, wezwań,
-                pełnomocnictw, dokumentów dla organów procesowych i instytucji publicznych.
+                Akta spraw, protokoły, postanowienia, pouczenia, wezwania, pisma
+                procesowe, pełnomocnictwa, materiał dowodowy i dokumenty przekazywane
+                przez organy procesowe.
               </p>
             </article>
 
             <article className="city-card">
               <h2>Dokumenty prywatne i firmowe</h2>
               <p>
-                Tłumaczenia umów, świadectw, dyplomów, zaświadczeń o zatrudnieniu,
-                dokumentów firmowych i korespondencji wymagającej formy
-                tłumaczenia przysięgłego.
+                Umowy, świadectwa, dyplomy, zaświadczenia o zatrudnieniu, dokumenty
+                firmowe, korespondencja oraz załączniki wymagające formy tłumaczenia
+                poświadczonego.
               </p>
             </article>
           </div>
@@ -80,7 +92,7 @@ export default function CityTranslationPage() {
 
       <section className="city-section city-section-alt">
         <div className="city-container city-narrow">
-          <h2>Jak działa tłumaczenie przysięgłe dla osób z miasta Kraków?</h2>
+          <h2>Jak działa tłumaczenie poświadczone w Krakowie?</h2>
 
           <div className="city-steps">
             <article className="city-step">
@@ -115,14 +127,14 @@ export default function CityTranslationPage() {
 
       <section className="city-section">
         <div className="city-container">
-          <h2>Najczęstsze tłumaczenia z języka ukraińskiego Krakowie</h2>
+          <h2>Najczęstsze tłumaczenia z języka ukraińskiego w Krakowie</h2>
 
           <div className="city-link-grid">
             <a href="/tlumaczenia-dla-policji">Tłumaczenia dla Policji</a>
             <a href="/tlumaczenia-dla-prokuratury">Tłumaczenia dla prokuratury</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Tłumaczenia sądowe ukraiński</a>
-            <a href="/tlumaczenia-akt-krypto">Tłumaczenia dokumentów urzędowych</a>
-            <a href="/transkrypcje-nagran-audio-video">Transkrypcje nagrań</a>
+            <a href="/dokumenty-z-ukrainy">Dokumenty z Ukrainy</a>
+            <a href="/transkrypcje-nagran-audio-wideo">Transkrypcje nagrań</a>
             <a href="/kontakt">Kontakt i wycena</a>
           </div>
         </div>
@@ -130,14 +142,15 @@ export default function CityTranslationPage() {
 
       <section className="city-cta">
         <div className="city-container">
-          <h2>Potrzebujesz tłumacza przysięgłego ukraińskiego Krakowie?</h2>
+          <h2>Potrzebujesz tłumacza przysięgłego języka ukraińskiego w Krakowie?</h2>
           <p>
-            Wyślij dokument do wyceny. W wiadomości podaj język tłumaczenia,
-            termin, cel tłumaczenia oraz informację, czy dokument ma być użyty
-            w sądzie, urzędzie, na Policji, w prokuraturze, uczelni lub innej instytucji.
+            Wyślij dokument do wstępnej wyceny. W wiadomości podaj termin, cel
+            tłumaczenia oraz informację, czy dokument ma być użyty w sądzie,
+            urzędzie, na Policji, w prokuraturze, kancelarii prawnej, uczelni
+            albo innej instytucji.
           </p>
           <a className="city-button city-button-light" href="/kontakt">
-            Przejdź do kontaktu
+            Kontakt i wycena
           </a>
         </div>
       </section>
