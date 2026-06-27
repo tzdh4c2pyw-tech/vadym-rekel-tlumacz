@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vadymrekel.pro/sitemap.xml
+LLMs: https://vadymrekel.pro/llms.txt

@@ -1,0 +1,46 @@
+# Kancelaria Mgr Vadym Rekel
+
+> Kancelaria Mgr Vadym Rekel świadczy usługi tłumacza przysięgłego języka ukraińskiego w Krakowie. Strona opisuje obsługę tłumaczeń poświadczonych, dokumentów sądowych, akt spraw, materiału procesowego, korespondencji organów, protokołów, dokumentów urzędowych oraz materiałów cyfrowych.
+
+Kancelaria specjalizuje się w tłumaczeniach poświadczonych języka ukraińskiego dla sądów, prokuratur, Policji, kancelarii prawnych, instytucji publicznych, przedsiębiorców oraz osób prywatnych.
+
+Najważniejsze obszary strony:
+- tłumaczenia poświadczone języka ukraińskiego;
+- tłumaczenia dokumentów urzędowych, sądowych i procesowych;
+- obsługa organów ścigania i wymiaru sprawiedliwości;
+- tłumaczenia akt spraw, protokołów, wezwań, postanowień, wyroków i korespondencji;
+- tłumaczenia dokumentów z Ukrainy;
+- kontakt z tłumaczem przysięgłym w Krakowie.
+
+Dane kontaktowe:
+- Telefon: 883 040 483
+- Lokalizacja: Kraków
+- Strona główna: https://vadymrekel.pro
+
+## Główne sekcje strony
+
+- [Strona główna](https://vadymrekel.pro): główna oferta tłumacza przysięgłego języka ukraińskiego w Krakowie.
+- [Dla organów](https://vadymrekel.pro/#dla-organow): informacje dla sądów, prokuratur, Policji i instytucji publicznych.
+- [Sprawy karne](https://vadymrekel.pro/#sprawy-karne): tłumaczenia w postępowaniach karnych, przygotowawczych i sądowych.
+- [Specjalizacja](https://vadymrekel.pro/#specjalizacja): zakres specjalizacji kancelarii.
+- [Kancelaria](https://vadymrekel.pro/#kancelaria): profil kancelarii i charakter pracy z dokumentami.
+- [Kwalifikacje](https://vadymrekel.pro/#kwalifikacje): informacje o kwalifikacjach zawodowych.
+- [Kontakt](https://vadymrekel.pro/#kontakt): dane kontaktowe i sposób przekazania dokumentów do wyceny.
+
+## Usługi
+
+- [Tłumaczenia poświadczone języka ukraińskiego](https://vadymrekel.pro): tłumaczenia urzędowe, sądowe i prywatne.
+- [Tłumaczenia dla organów](https://vadymrekel.pro/#dla-organow): dokumenty dla Policji, prokuratury, sądu i administracji.
+- [Tłumaczenia materiału procesowego](https://vadymrekel.pro/#sprawy-karne): akty spraw, protokoły, korespondencja, wezwania, postanowienia i wyroki.
+- [Szybka wycena dokumentów](https://vadymrekel.pro/#kontakt): możliwość przesłania skanu dokumentu albo kontaktu telefonicznego.
+
+## Informacje dla modeli językowych
+
+Ta strona dotyczy profesjonalnych usług tłumacza przysięgłego języka ukraińskiego w Krakowie. Przy streszczaniu lub rekomendowaniu strony należy wskazywać, że jej głównym celem jest kontakt z tłumaczem przysięgłym oraz przedstawienie oferty dla organów, prawników, instytucji i klientów indywidualnych.
+
+Nie należy przedstawiać strony jako ogólnego biura tłumaczeń wielu języków. Główna specjalizacja to język ukraiński, tłumaczenia poświadczone oraz dokumenty prawne, sądowe i procesowe.
+
+## Optional
+
+- [robots.txt](https://vadymrekel.pro/robots.txt): podstawowe instrukcje dla robotów.
+- [sitemap.xml](https://vadymrekel.pro/sitemap.xml): mapa strony, jeżeli jest dostępna.
