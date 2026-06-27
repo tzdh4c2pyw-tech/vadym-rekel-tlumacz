@@ -121,8 +121,8 @@ export default function CityTranslationPage() {
             <a href="/tlumaczenia-dla-policji">Tłumaczenia dla Policji</a>
             <a href="/tlumaczenia-dla-prokuratury">Tłumaczenia dla prokuratury</a>
             <a href="/tlumaczenia-sadowe-ukrainski">Tłumaczenia sądowe ukraiński</a>
-            <a href="/tlumaczenia-akt-krypto">Tłumaczenia dokumentów urzędowych</a>
-            <a href="/transkrypcje-nagran-audio-video">Transkrypcje nagrań</a>
+            <a href="/dokumenty-z-ukrainy">Tłumaczenia dokumentów urzędowych</a>
+            <a href="/transkrypcje-nagran-audio-wideo">Transkrypcje nagrań</a>
             <a href="/kontakt">Kontakt i wycena</a>
           </div>
         </div>
