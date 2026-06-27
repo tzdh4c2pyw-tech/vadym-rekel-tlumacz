@@ -62,7 +62,7 @@ export default function CityTranslationPage() {
               <h2>Dokumenty sądowe</h2>
               <p>
                 Tłumaczenia pism procesowych, wyroków, postanowień, wezwań,
-                pełnomocnictw, dokumentów dla sądu, Policji i prokuratury.
+                pełnomocnictw, dokumentów dla organów procesowych i instytucji publicznych.
               </p>
             </article>
 

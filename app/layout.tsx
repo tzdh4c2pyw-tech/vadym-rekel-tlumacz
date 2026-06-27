@@ -1,8 +1,9 @@
+import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tlumaczrosyjskiegoiukrainskiego.pl"),
+  
 
   title: {
     default:
@@ -99,7 +100,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body>{children}</body>
+      <body>
+        <LocalBusinessJsonLd />{children}</body>
     </html>
   );
 }

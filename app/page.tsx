@@ -1,3 +1,4 @@
+import { PremiumTrustSections } from "@/components/PremiumTrustSections";
 import type { Metadata } from "next";
 
 const siteUrl = "https://vadym-rekel-tlumacz.vercel.app";
@@ -2580,7 +2581,7 @@ footer {
       <section className="section" id="organy">
         <SectionHeading
           label="Dla organów"
-          title="Tłumaczenia dla sądu, Policji i prokuratury."
+          title="Tłumaczenia dla organów procesowych i instytucji publicznych."
           text="Strona główna pokazuje główne obszary pracy kancelarii. Szczegółowy zakres znajduje się na dedykowanych podstronach."
         />
 
@@ -2650,7 +2651,7 @@ footer {
         <SectionHeading
           label="Kancelaria"
           title="Realne miejsce pracy w Krakowie."
-          text="Dwa główne zdjęcia są większe i bardziej czytelne. Pozostałe pokazują zaplecze pracy kancelarii."
+          text="Zdjęcia pokazują realne miejsce pracy kancelarii, stanowisko do pracy z dokumentami, zaplecze techniczne oraz warunki przygotowywania tłumaczeń poświadczonych."
         />
 
         <div className="photo-grid">
@@ -2865,6 +2866,7 @@ footer {
           </a>
         </div>
       </aside>
+          <PremiumTrustSections />
     </main>
   );
 }
